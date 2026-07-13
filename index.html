@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WAOW — The Ultimate Liveaboard, Indonesia</title>
+<meta name="description" content="WAOW — Liveaboard de plongée de luxe à travers les eaux les plus riches d'Indonésie.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"><span class="cursor-label" id="cursorLabel"></span></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">W<span>A</span>OW</a>
+  <ul class="nav-links">
+    <li><a href="le-bateau.html">Le Bateau</a></li>
+    <li><a href="itineraires.html">Itinéraires</a></li>
+    <li><a href="diving.html">Diving</a></li>
+    <li><a href="musee.html">Musée</a></li>
+    <li><a href="news.html">News</a></li>
+  </ul>
+  <a href="book.html" class="btn btn-accent">Book Now</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-media" id="heroParallax">
+    <img src="images/banner-hero.png"
+         onerror="this.onerror=null;this.src='https://placehold.co/1920x1200/0A0E1A/C9A45C?text=WAOW'"
+         alt="WAOW liveaboard cruising Indonesian waters">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-bubbles"><canvas id="bubbleCanvas"></canvas></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <p class="eyebrow hero-eyebrow">Liveaboard · Indonesia</p>
+      <h1 class="hero-title split-words">
+        <span class="line">The ultimate</span>
+        <span class="line"><em>dive experience.</em></span>
+      </h1>
+      <div class="btn-row">
+        <a href="itineraires.html" class="btn btn-accent">Explore Itineraries</a>
+        <a href="le-bateau.html" class="btn">Discover the Vessel</a>
+      </div>
+    </div>
+    <div class="hero-scroll">Scroll</div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats reveal" id="stats">
+  <div class="stat">
+    <div class="stat-num" data-count="24">0</div>
+    <div class="stat-label">Crew Members</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num" data-count="16">0</div>
+    <div class="stat-label">Guest Capacity</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num" data-count="6" data-suffix="+">0</div>
+    <div class="stat-label">Destinations</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num" data-count="10" data-suffix="+">0</div>
+    <div class="stat-label">Years at Sea</div>
+  </div>
+</section>
+
+<!-- TEASER — LE BATEAU -->
+<section class="section teaser" id="bateau">
+  <div class="grid-2">
+    <div class="teaser-media media zoom-media reveal" id="vesselMedia">
+      <img src="images/vessel_home.png"
+           onerror="this.onerror=null;this.src='https://placehold.co/1200x1500/0A0E1A/C9A45C?text=WAOW+Vessel'"
+           alt="Le bateau WAOW, Phinisi de luxe">
+
+      <div class="vessel-compass" aria-hidden="true">
+        <svg viewBox="0 0 64 64">
+          <circle cx="32" cy="32" r="26"/>
+          <path d="M32 4v10M32 50v10M4 32h10M50 32h10"/>
+          <path d="M32 14l6 18-6 18-6-18z"/>
+        </svg>
+      </div>
+
+      <button class="vessel-hotspot" style="top:28%;left:66%" data-title="Guest Suites" data-desc="16 passagers accueillis dans des cabines climatisées, chacune ouverte sur l'océan."><span></span></button>
+      <button class="vessel-hotspot" style="top:52%;left:82%" data-title="Crew Quarters" data-desc="24 membres d'équipage, dont un directeur de croisière francophone à bord en permanence."><span></span></button>
+      <button class="vessel-hotspot" style="top:66%;left:38%" data-title="Dive Deck" data-desc="4 tenders de plongée et une zone d'équipement dédiée, accès direct à l'eau."><span></span></button>
+      <button class="vessel-hotspot" style="top:38%;left:18%" data-title="Length Overall" data-desc="40 mètres de long — une coque de Phinisi taillée pour la haute mer."><span></span></button>
+
+      <div class="vessel-tooltip" id="vesselTooltip" hidden>
+        <h4 id="vesselTooltipTitle"></h4>
+        <p id="vesselTooltipDesc"></p>
+      </div>
+    </div>
+    <div class="teaser-body reveal">
+      <p class="eyebrow">The Vessel</p>
+      <h2 class="split-words">A Phinisi built<br><em>for the sea.</em></h2>
+      <p>Née des chantiers navals de Sulawesi, WAOW marie l'héritage du Phinisi indonésien aux standards de confort et de sécurité les plus exigeants. Chaque cabine, chaque pont a été pensé pour l'exploration au long cours.</p>
+      <div class="teaser-specs">
+        <div class="spec">
+          <div class="spec-num" data-count="24">0</div>
+          <div class="spec-label">Crew on board</div>
+        </div>
+        <div class="spec">
+          <div class="spec-num" data-count="16">0</div>
+          <div class="spec-label">Guest capacity</div>
+        </div>
+        <div class="spec">
+          <div class="spec-num" data-count="40" data-suffix="m">0</div>
+          <div class="spec-label">Vessel length</div>
+        </div>
+        <div class="spec">
+          <div class="spec-num" data-count="4">0</div>
+          <div class="spec-label">Dive tenders</div>
+        </div>
+      </div>
+      <a href="le-bateau.html" class="link-underline">Discover the vessel →</a>
+      <p class="vessel-caption">✛ Click the points on the photo to explore</p>
+    </div>
+  </div>
+</section>
+
+<!-- TEASER — ITINERAIRES -->
+<section class="section" id="itineraires">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-index">01</div>
+      <h2>Destinations &amp;<br><em>Itineraries</em></h2>
+    </div>
+    <a href="itineraires.html" class="btn">View All Itineraries</a>
+  </div>
+  <div class="itin-grid reveal">
+    <div class="itin-card">
+      <div class="media">
+        <img src="https://placehold.co/600x800/0A0E1A/00D4FF?text=Raja+Ampat" onerror="this.onerror=null;this.src='https://placehold.co/600x800/0A0E1A/C9A45C?text=Raja+Ampat'" alt="Raja Ampat">
+        <div class="media-overlay"></div>
+      </div>
+      <div class="itin-card-content">
+        <p class="itin-location">West Papua</p>
+        <h3 class="itin-name">Raja Ampat</h3>
+        <p class="itin-desc">La biodiversité marine la plus riche de la planète. Raies manta, requins-baleines et murs de corail à couper le souffle.</p>
+        <a href="itineraires.html" class="link-underline">Learn more →</a>
+      </div>
+    </div>
+    <div class="itin-card">
+      <div class="media">
+        <img src="https://placehold.co/600x800/0A0E1A/00D4FF?text=Cenderawasih" onerror="this.onerror=null;this.src='https://placehold.co/600x800/0A0E1A/C9A45C?text=Cenderawasih'" alt="Cenderawasih Bay">
+        <div class="media-overlay"></div>
+      </div>
+      <div class="itin-card-content">
+        <p class="itin-location">West Papua</p>
+        <h3 class="itin-name">Cenderawasih Bay</h3>
+        <p class="itin-desc">Le plus grand parc marin national d'Indonésie, où les requins-baleines se rassemblent toute l'année.</p>
+        <a href="itineraires.html" class="link-underline">Learn more →</a>
+      </div>
+    </div>
+    <div class="itin-card">
+      <div class="media">
+        <img src="https://placehold.co/600x800/0A0E1A/00D4FF?text=Lembeh" onerror="this.onerror=null;this.src='https://placehold.co/600x800/0A0E1A/C9A45C?text=Lembeh'" alt="Lembeh Strait">
+        <div class="media-overlay"></div>
+      </div>
+      <div class="itin-card-content">
+        <p class="itin-location">North Sulawesi</p>
+        <h3 class="itin-name">Lembeh Strait</h3>
+        <p class="itin-desc">La capitale mondiale du muck diving. Un paysage sous-marin surréaliste peuplé de créatures rares.</p>
+        <a href="itineraires.html" class="link-underline">Learn more →</a>
+      </div>
+    </div>
+    <div class="itin-card">
+      <div class="media">
+        <img src="https://placehold.co/600x800/0A0E1A/00D4FF?text=Sangihe" onerror="this.onerror=null;this.src='https://placehold.co/600x800/0A0E1A/C9A45C?text=Sangihe'" alt="Sangihe Islands">
+        <div class="media-overlay"></div>
+      </div>
+      <div class="itin-card-content">
+        <p class="itin-location">North Sulawesi</p>
+        <h3 class="itin-name">Sangihe Islands</h3>
+        <p class="itin-desc">« Les perles du Nord » — l'une des dernières frontières inexplorées d'Indonésie, sans foule de plongeurs.</p>
+        <a href="itineraires.html" class="link-underline">Learn more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 02 — CONSTRUCTION (horizontal pinned scroll timeline) -->
+<section class="construction-section" id="construction">
+  <div class="construction-intro">
+    <div class="construction-intro-top reveal">
+      <div>
+        <div class="section-index">02</div>
+        <p class="eyebrow">Construction</p>
+        <h2 class="split-words">Building<br><em>the impossible.</em></h2>
+      </div>
+      <div class="construction-progress-badge">
+        <div class="construction-progress-num" data-count="28" data-suffix="%">0%</div>
+        <div class="construction-progress-label">Hull Complete</div>
+      </div>
+    </div>
+    <p class="lead reveal">WAOW prend forme aux chantiers navals de Tanjung Bira, Sulawesi — berceau du Phinisi indonésien depuis six générations de charpentiers Konjo. Faites défiler pour suivre chaque étape, de la quille à la mer.</p>
+  </div>
+
+  <div class="construction-progress-track">
+    <div class="construction-progress-fill" id="constructionFill" data-progress="28"></div>
+  </div>
+
+  <div class="construction-pin" id="constructionPin">
+    <div class="construction-track" id="constructionTrack">
+
+      <div class="step-card is-done">
+        <div class="step-card-media media">
+          <img src="images/banner-hero1.jpg" onerror="this.onerror=null;this.src='https://placehold.co/800x600/0A0E1A/C9A45C?text=Design'" alt="Rendu 3D du design naval de WAOW">
+          <span class="step-status">Complete</span>
+        </div>
+        <div class="step-num">01</div>
+        <h3>Naval Architecture</h3>
+        <p>Les lignes de coque finalisées, chaque courbe pensée pour la performance et le confort en haute mer.</p>
+        <div class="step-date">2025 — 3D Render</div>
+      </div>
+
+      <div class="step-card is-done">
+        <div class="step-card-media icon-media">
+          <svg viewBox="0 0 64 64"><path d="M32 8v28M20 20l12-12 12 12M14 40c4 10 12 16 18 16s14-6 18-16"/><circle cx="32" cy="14" r="3"/></svg>
+          <span class="step-status">Complete</span>
+        </div>
+        <div class="step-num">02</div>
+        <h3>Keel Laid</h3>
+        <p>La quille repose désormais sur la plage de Tanjung Bira, prête à recevoir sa première membrure.</p>
+        <div class="step-date">March 2026</div>
+      </div>
+
+      <div class="step-card is-current">
+        <div class="step-card-media icon-media">
+          <svg viewBox="0 0 64 64"><path d="M8 40c8-18 40-18 48 0M16 40v-14M32 40V16M48 40V26"/></svg>
+          <span class="step-status">In Progress</span>
+        </div>
+        <div class="step-num">03</div>
+        <h3>Hull Structure</h3>
+        <p>Membrures et bordé en cours d'assemblage par les charpentiers Konjo, planche après planche.</p>
+        <div class="step-date">Underway — 62%</div>
+      </div>
+
+      <div class="step-card is-upcoming">
+        <div class="step-card-media icon-media">
+          <svg viewBox="0 0 64 64"><path d="M32 6v42M32 10l16 8-16 10z"/><path d="M10 48c10 6 34 6 44 0"/></svg>
+          <span class="step-status">Upcoming</span>
+        </div>
+        <div class="step-num">04</div>
+        <h3>Rigging &amp; Decks</h3>
+        <p>Pose des mâts, du pont supérieur et des espaces de vie extérieurs.</p>
+        <div class="step-date">Est. 2027</div>
+      </div>
+
+      <div class="step-card is-upcoming">
+        <div class="step-card-media icon-media">
+          <svg viewBox="0 0 64 64"><rect x="12" y="18" width="40" height="28" rx="2"/><path d="M12 30h40M24 18v28"/></svg>
+          <span class="step-status">Upcoming</span>
+        </div>
+        <div class="step-num">05</div>
+        <h3>Interior Fit-Out</h3>
+        <p>Aménagement des cabines, du salon et des espaces de bien-être à bord.</p>
+        <div class="step-date">Est. 2027–28</div>
+      </div>
+
+      <div class="step-card is-upcoming">
+        <div class="step-card-media icon-media">
+          <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="22"/><path d="M32 18l6 14-6 14-6-14z"/></svg>
+          <span class="step-status">Upcoming</span>
+        </div>
+        <div class="step-num">06</div>
+        <h3>Sea Trials &amp; Launch</h3>
+        <p>Essais en mer, puis mise à l'eau officielle à Tanjung Bira.</p>
+        <div class="step-date">Q4 2028</div>
+      </div>
+
+    </div>
+  </div>
+  <p class="construction-hint">Scroll to explore the build →</p>
+</section>
+
+<!-- SECTION 03 — TEAM -->
+<section class="section" id="team">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-index">03</div>
+      <p class="eyebrow">The Team</p>
+      <h2 class="split-words">Faces behind<br><em>the voyage.</em></h2>
+    </div>
+  </div>
+  <div class="team-grid reveal">
+    <div class="team-card">
+      <div class="team-card-inner">
+        <div class="team-photo media">
+          <img src="https://placehold.co/500x500/0A0E1A/C9A45C?text=M.D." alt="Michel Deville">
+        </div>
+        <div class="team-num">01</div>
+        <h3 class="team-name">Michel Deville</h3>
+        <p class="team-role">Founder &amp; Visionary</p>
+        <p class="team-bio">Il a rêvé de ce bateau si intensément, si obstinément, qu'il ne pouvait plus dormir — jusqu'à donner vie à WAOW. L'âme du projet, et sa force motrice.</p>
+      </div>
+    </div>
+    <div class="team-card">
+      <div class="team-card-inner">
+        <div class="team-photo media">
+          <img src="https://placehold.co/500x500/0A0E1A/C9A45C?text=J.D." alt="Julia Deville">
+        </div>
+        <div class="team-num">02</div>
+        <h3 class="team-name">Julia Deville</h3>
+        <p class="team-role">Co-Founder &amp; Operations</p>
+        <p class="team-bio">Après 18 ans en tant que Key Account Manager et Directrice de Projet dans l'industrie, Julia a tout quitté pour rejoindre le projet le plus exigeant — et le plus beau — de sa vie.</p>
+      </div>
+    </div>
+    <div class="team-card">
+      <div class="team-card-inner">
+        <div class="team-photo media">
+          <img src="https://placehold.co/500x500/0A0E1A/C9A45C?text=A.L." alt="Andrew Laughlin">
+        </div>
+        <div class="team-num">03</div>
+        <h3 class="team-name">Andrew Laughlin</h3>
+        <p class="team-role">Director — PT WAOW Charters, Bali</p>
+        <p class="team-bio">Le globe-trotter des océans et de la vie. L'un des plus jeunes instructeurs de plongée à 20 ans en 1988, Andrew a passé sa vie à naviguer entre continents et sites de plongée.</p>
+      </div>
+    </div>
+    <div class="team-card">
+      <div class="team-card-inner">
+        <div class="team-photo media">
+          <img src="https://placehold.co/500x500/0A0E1A/C9A45C?text=R.S." alt="Reto Schläpfer">
+        </div>
+        <div class="team-num">04</div>
+        <h3 class="team-name">Reto Schläpfer</h3>
+        <p class="team-role">Cruise Director</p>
+        <p class="team-bio">Né en Suisse, vivant en Indonésie depuis 2005. Parlant couramment français, allemand, anglais et indonésien — Reto est le pont entre les mondes, à bord et sous l'eau.</p>
+      </div>
+    </div>
+    <div class="team-card">
+      <div class="team-card-inner">
+        <div class="team-photo media">
+          <img src="https://placehold.co/500x500/0A0E1A/C9A45C?text=W.S." alt="Wulan Sane">
+        </div>
+        <div class="team-num">05</div>
+        <h3 class="team-name">Wulan Sane</h3>
+        <p class="team-role">Indonesian Relations</p>
+        <p class="team-bio">La bonne fée indonésienne de WAOW. La personne qui a toujours su ouvrir des portes que personne d'autre ne pouvait ouvrir. Un pont irremplaçable vers le monde local.</p>
+      </div>
+    </div>
+    <div class="team-card">
+      <div class="team-card-inner">
+        <div class="team-photo media">
+          <img src="https://placehold.co/500x500/0A0E1A/C9A45C?text=S.G." alt="Stéphane Griveau">
+        </div>
+        <div class="team-num">06</div>
+        <h3 class="team-name">Stéphane Griveau</h3>
+        <p class="team-role">Dive Travel Expert</p>
+        <p class="team-bio">Plus de 20 ans en tant que spécialiste du voyage de plongée, travaillant avec des tour-opérateurs en France et en Suisse, toujours à la recherche des plus beaux spots de la planète.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 04 — PRE-SALE -->
+<section class="section presale-section" id="presale">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-index">04</div>
+      <p class="eyebrow">Pre-Sale</p>
+      <h2 class="split-words">Reserve your place<br><em>before she sails.</em></h2>
+    </div>
+  </div>
+  <div class="presale-grid">
+    <div class="presale-text reveal">
+      <p>Rejoindre le Cercle Fondateur, c'est réserver bien plus qu'une cabine : c'est inscrire son nom sur la plaque de plankowner de WAOW, verrouiller le tarif de lancement, et embarquer en priorité absolue lors de la traversée inaugurale.</p>
+      <ul class="presale-perks">
+        <li>Tarif fondateur verrouillé à vie</li>
+        <li>Nom gravé sur la plaque du navire</li>
+        <li>Priorité absolue — traversée inaugurale</li>
+        <li>Invitation privée à la cérémonie de mise à l'eau</li>
+      </ul>
+      <a href="book.html" class="btn btn-accent">Reserve Your Cabin</a>
+    </div>
+    <div class="presale-panel reveal">
+      <div class="countdown" id="countdown">
+        <div class="countdown-item"><div class="countdown-num" data-cd="days">00</div><div class="countdown-label">Days</div></div>
+        <div class="countdown-item"><div class="countdown-num" data-cd="hours">00</div><div class="countdown-label">Hours</div></div>
+        <div class="countdown-item"><div class="countdown-num" data-cd="mins">00</div><div class="countdown-label">Min</div></div>
+        <div class="countdown-item"><div class="countdown-num" data-cd="secs">00</div><div class="countdown-label">Sec</div></div>
+      </div>
+      <div class="scarcity-row">
+        <span class="scarcity-label">Cabins Reserved</span>
+        <span class="scarcity-value">3 / 8</span>
+      </div>
+      <div class="scarcity-track"><div class="scarcity-fill" id="scarcityFill" data-progress="37.5"></div></div>
+      <p style="font-size:0.78rem;">Places limitées par croisière. Rejoignez la liste d'attente pour la pré-vente et bénéficiez des tarifs early bird avant le lancement officiel.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 05 — NEWS & EVENTS -->
+<section class="section" id="news-events">
+  <div class="section-header reveal">
+    <div>
+      <div class="section-index">05</div>
+      <p class="eyebrow">News &amp; Events</p>
+      <h2 class="split-words">Latest<br><em>dispatches.</em></h2>
+    </div>
+    <a href="news.html" class="btn">View All News</a>
+  </div>
+
+  <div class="news-filters reveal">
+    <button class="news-filter-btn is-active" data-filter="all">All</button>
+    <button class="news-filter-btn" data-filter="construction">Construction</button>
+    <button class="news-filter-btn" data-filter="diving">Diving</button>
+    <button class="news-filter-btn" data-filter="presale">Pre-Sale</button>
+  </div>
+
+  <div class="news-grid reveal">
+    <article class="news-card" data-category="construction">
+      <div class="media"><img src="https://placehold.co/700x525/0A0E1A/00D4FF?text=Keel+Laid" onerror="this.onerror=null;this.src='https://placehold.co/700x525/0A0E1A/C9A45C?text=Keel+Laid'" alt="La quille de WAOW posée à Tanjung Bira"></div>
+      <div class="news-meta"><span class="news-tag">Construction</span><span class="news-date">Jun 12, 2026</span></div>
+      <h3 class="news-title">Keel Laid at Tanjung Bira</h3>
+      <p class="news-excerpt">Un moment fondateur pour WAOW : la quille repose désormais sur la plage, prête à recevoir sa première membrure.</p>
+      <a href="news.html" class="link-underline">Read more →</a>
+    </article>
+    <article class="news-card" data-category="diving">
+      <div class="media"><img src="https://placehold.co/700x525/0A0E1A/00D4FF?text=Raja+Ampat" onerror="this.onerror=null;this.src='https://placehold.co/700x525/0A0E1A/C9A45C?text=Raja+Ampat'" alt="Nouvel itinéraire signature à Raja Ampat"></div>
+      <div class="news-meta"><span class="news-tag">Diving</span><span class="news-date">Mar 3, 2026</span></div>
+      <h3 class="news-title">Raja Ampat: Our Signature Itinerary</h3>
+      <p class="news-excerpt">Huit jours à travers les murs de corail les plus riches de la planète, dévoilés en exclusivité.</p>
+      <a href="news.html" class="link-underline">Read more →</a>
+    </article>
+    <article class="news-card" data-category="presale">
+      <div class="media"><img src="https://placehold.co/700x525/0A0E1A/00D4FF?text=Founders+Circle" onerror="this.onerror=null;this.src='https://placehold.co/700x525/0A0E1A/C9A45C?text=Founders+Circle'" alt="Ouverture du Cercle Fondateur"></div>
+      <div class="news-meta"><span class="news-tag">Pre-Sale</span><span class="news-date">Jan 18, 2026</span></div>
+      <h3 class="news-title">The Founders' Circle Opens</h3>
+      <p class="news-excerpt">Un nombre limité de cabines à tarif de lancement, réservées aux tout premiers membres du projet.</p>
+      <a href="news.html" class="link-underline">Read more →</a>
+    </article>
+    <article class="news-card" data-category="construction">
+      <div class="media"><img src="https://placehold.co/700x525/0A0E1A/00D4FF?text=Konjo+Shipwrights" onerror="this.onerror=null;this.src='https://placehold.co/700x525/0A0E1A/C9A45C?text=Konjo+Shipwrights'" alt="Rencontre avec les charpentiers Konjo"></div>
+      <div class="news-meta"><span class="news-tag">Construction</span><span class="news-date">Apr 22, 2026</span></div>
+      <h3 class="news-title">Meet the Konjo Shipwrights</h3>
+      <p class="news-excerpt">Six générations de savoir-faire transmis à la main, au cœur du chantier de Tanjung Bira.</p>
+      <a href="news.html" class="link-underline">Read more →</a>
+    </article>
+    <article class="news-card" data-category="diving">
+      <div class="media"><img src="https://placehold.co/700x525/0A0E1A/00D4FF?text=Cenderawasih" onerror="this.onerror=null;this.src='https://placehold.co/700x525/0A0E1A/C9A45C?text=Cenderawasih'" alt="Retour des requins-baleines à Cenderawasih Bay"></div>
+      <div class="news-meta"><span class="news-tag">Diving</span><span class="news-date">Feb 9, 2026</span></div>
+      <h3 class="news-title">Cenderawasih Bay: Whale Sharks Return</h3>
+      <p class="news-excerpt">Le plus grand parc marin d'Indonésie s'apprête à accueillir sa saison de requins-baleines.</p>
+      <a href="news.html" class="link-underline">Read more →</a>
+    </article>
+    <article class="news-card" data-category="presale">
+      <div class="media"><img src="https://placehold.co/700x525/0A0E1A/00D4FF?text=Early+Bird" onerror="this.onerror=null;this.src='https://placehold.co/700x525/0A0E1A/C9A45C?text=Early+Bird'" alt="Fin des tarifs early bird"></div>
+      <div class="news-meta"><span class="news-tag">Pre-Sale</span><span class="news-date">May 30, 2026</span></div>
+      <h3 class="news-title">Early Bird Rates End Soon</h3>
+      <p class="news-excerpt">Les tarifs de lancement 2026 seront verrouillés pour les membres fondateurs jusqu'à fin d'année.</p>
+      <a href="news.html" class="link-underline">Read more →</a>
+    </article>
+  </div>
+</section>
+
+<!-- CTA — BOOKING -->
+<section class="cta" id="booking">
+  <div class="hero-media">
+    <img src="https://placehold.co/1920x1000/0A0E1A/00D4FF?text=WAOW" onerror="this.onerror=null;this.src='https://placehold.co/1920x1000/0A0E1A/C9A45C?text=WAOW'" alt="">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="cta-content reveal">
+    <p class="eyebrow mx-auto" style="justify-content:center;">Ready to dive?</p>
+    <h2>Your next expedition<br><em>starts here.</em></h2>
+    <p class="mx-auto">Places limitées par croisière. Rejoignez la liste d'attente pour la pré-vente et bénéficiez des tarifs early bird.</p>
+    <div class="btn-row">
+      <a href="book.html" class="btn btn-accent">Join the Waitlist</a>
+      <a href="mailto:info@waow.ch" class="btn">Request a Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo">W<span>A</span>OW</div>
+      <p>Le liveaboard ultime pour une expérience de plongée d'exception en Indonésie. Croisières dans les eaux les plus biodiverses de la planète depuis 2013.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Destinations</h4>
+      <a href="itineraires.html">Raja Ampat</a>
+      <a href="itineraires.html">Cenderawasih Bay</a>
+      <a href="itineraires.html">Lembeh Strait</a>
+      <a href="itineraires.html">Sangihe Islands</a>
+    </div>
+    <div class="footer-col">
+      <h4>On Board</h4>
+      <a href="le-bateau.html">The Vessel</a>
+      <a href="diving.html">Diving</a>
+      <a href="musee.html">Musée WAOW 1</a>
+    </div>
+    <div class="footer-col">
+      <h4>The Project</h4>
+      <a href="#construction">Construction</a>
+      <a href="#team">Team</a>
+      <a href="#presale">Pre-Sale</a>
+      <a href="#news-events">News &amp; Events</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:info@waow.ch">info@waow.ch</a>
+      <a href="book.html">Book / Pré-vente</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 WAOW Charters — All rights reserved</span>
+    <span>PT WAOW Charters, Bali, Indonesia</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
