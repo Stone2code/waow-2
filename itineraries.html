@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Itineraries — Waow Charters</title>
+<meta name="description" content="Twenty routes aboard Waow 2 across eastern Indonesia — Komodo, Raja Ampat, the Banda Sea, Alor and beyond — each a different length, depth and mood.">
+
+<!-- TODO: replace with real favicon files -->
+<link rel="icon" href="data:,">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--
+  Brand fonts (Lemon Milk, Have Heart Two) are licensed, not on Google Fonts.
+  TODO: once licensed font files are available, replace the @font-face-free
+  stack below with local @font-face declarations for Lemon Milk and Have
+  Heart Two. Outfit and Caveat are close-in-spirit stand-ins used for V1.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Outfit:wght@500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+<symbol id="icon-starfish" viewBox="15 17 237 240"><rect x="45.8" y="49.3" width="175.4" height="175.4" rx="10.5" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.46" stroke-dasharray="4.9 3.5"/><circle cx="115.3" cy="113.3" r="10.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.46"/><path d="M87.9,166.2 L129.9,127.9 L151.7,149.8 L153.6,118.8 L179.1,166.2" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.46" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-octopus" viewBox="10 -16 238 285"><rect x="40.9" y="38.4" width="176.1" height="176.1" rx="10.6" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.47" stroke-dasharray="4.9 3.5"/><circle cx="110.7" cy="102.7" r="10.1" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.47"/><path d="M83.2,155.8 L125.3,117.3 L147.3,139.3 L149.1,108.2 L174.8,155.8" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.47" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-turtle" viewBox="2 28 245 230"><rect x="39.4" y="57.9" width="170.2" height="170.2" rx="10.2" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.38" stroke-dasharray="4.8 3.4"/><circle cx="106.8" cy="120.0" r="9.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.38"/><path d="M80.2,171.3 L121.0,134.1 L142.2,155.4 L144.0,125.3 L168.8,171.3" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.38" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-komodo" viewBox="-34 79 390 153"><rect x="104.4" y="98.9" width="113.2" height="113.2" rx="6.8" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.59" stroke-dasharray="3.2 2.3"/><circle cx="149.2" cy="140.2" r="6.5" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.59"/><path d="M131.6,174.3 L158.6,149.6 L172.8,163.7 L174.0,143.7 L190.4,174.3" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.59" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-phinisi" viewBox="-4 8 326 223"><rect x="76.5" y="37.0" width="165.0" height="165.0" rx="9.9" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.31" stroke-dasharray="4.6 3.3"/><circle cx="141.8" cy="97.2" r="9.4" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.31"/><path d="M116.1,147.0 L155.6,110.9 L176.2,131.5 L177.9,102.3 L201.9,147.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.31" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-dive-mask" viewBox="11 -37 278 256"><rect x="55.3" y="-3.7" width="189.4" height="189.4" rx="11.4" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.65" stroke-dasharray="5.3 3.8"/><circle cx="130.3" cy="65.4" r="10.8" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.65"/><path d="M100.7,122.5 L146.1,81.1 L169.7,104.8 L171.7,71.3 L199.3,122.5" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.65" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-shell" viewBox="6 44 140 233"><rect x="24.2" y="108.7" width="103.6" height="103.6" rx="6.2" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.45" stroke-dasharray="2.9 2.1"/><circle cx="65.2" cy="146.5" r="5.9" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.45"/><path d="M49.1,177.7 L73.8,155.1 L86.8,168.0 L87.9,149.7 L102.9,177.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-crab" viewBox="-2 60 264 166"><rect x="68.6" y="81.6" width="122.8" height="122.8" rx="7.4" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.72" stroke-dasharray="3.4 2.5"/><circle cx="117.2" cy="126.4" r="7.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.72"/><path d="M98.1,163.4 L127.4,136.6 L142.8,151.9 L144.1,130.2 L161.9,163.4" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.72" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-jellyfish" viewBox="48 17 162 208"><rect x="69.1" y="61.1" width="119.9" height="119.9" rx="7.2" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.68" stroke-dasharray="3.4 2.4"/><circle cx="116.5" cy="104.8" r="6.9" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.68"/><path d="M97.8,140.9 L126.5,114.8 L141.5,129.7 L142.7,108.5 L160.2,140.9" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.68" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-angelfish" viewBox="55 6 184 236"><rect x="78.9" y="55.9" width="136.2" height="136.2" rx="8.2" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.91" stroke-dasharray="3.8 2.7"/><circle cx="132.8" cy="105.6" r="7.8" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.91"/><path d="M111.6,146.7 L144.2,116.9 L161.2,133.9 L162.6,109.8 L182.4,146.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.91" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-flatfish" viewBox="44 42 202 176"><rect x="79.9" y="64.9" width="130.2" height="130.2" rx="7.8" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.82" stroke-dasharray="3.6 2.6"/><circle cx="131.5" cy="112.4" r="7.4" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.82"/><path d="M111.1,151.7 L142.3,123.2 L158.5,139.5 L159.9,116.5 L178.9,151.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.82" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-urchin" viewBox="10 19 224 204"><rect x="46.5" y="45.5" width="151.0" height="151.0" rx="9.1" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.11" stroke-dasharray="4.2 3.0"/><circle cx="106.3" cy="100.6" r="8.6" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.11"/><path d="M82.8,146.1 L118.9,113.2 L137.7,132.0 L139.3,105.3 L161.2,146.1" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.11" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-ammonite" viewBox="49 39 182 202"><rect x="72.7" y="72.7" width="134.7" height="134.7" rx="8.1" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.89" stroke-dasharray="3.8 2.7"/><circle cx="126.0" cy="121.8" r="7.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.89"/><path d="M105.0,162.4 L137.2,133.0 L154.0,149.8 L155.4,126.0 L175.0,162.4" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.89" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-coral" viewBox="-117 -25 402 331"><rect x="-38.5" y="18.0" width="244.9" height="244.9" rx="14.7" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="3.43" stroke-dasharray="6.9 4.9"/><circle cx="58.5" cy="107.4" r="14.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="3.43"/><path d="M20.3,181.3 L78.9,127.8 L109.5,158.3 L112.0,115.0 L147.7,181.3" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="3.43" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Pointillism icon sprite (bejeweled-mosaic style) is inlined just below, defs only, so <use href="#icon-x"> resolves reliably on every page. -->
+<header class="site-header" id="site-header">
+  <div class="container site-header__row">
+    <a class="logo" href="index.html" aria-label="Waow Charters, home">
+      <picture>
+        <source srcset="images/logo-waow2.webp" type="image/webp">
+        <img src="images/logo-waow2.png" alt="Waow 2" width="180" height="41">
+      </picture>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a href="the-boat.html">The Boat</a></li>
+        <li><a href="itineraries.html" class="is-active" aria-current="page">Itineraries</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--solid" href="booking.html">Book your trip</a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <ul>
+      <li><a href="the-boat.html">The Boat</a></li>
+      <li><a href="itineraries.html" class="is-active" aria-current="page">Itineraries</a></li>
+      <li><a href="booking.html">Booking</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a class="btn btn--solid" href="booking.html">Book your trip</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= PAGE HERO ================= -->
+  <section class="page-hero">
+    <svg class="dot-icon sea-life" aria-hidden="true" style="top:2%;right:5%;width:104px;transform:rotate(-8deg);opacity:.9;" viewBox="55 6 184 236"><use href="#icon-angelfish"></use></svg>
+    <div class="container page-hero__inner">
+      <p class="eyebrow"><span class="eyebrow__rule" aria-hidden="true"></span>Itineraries</p>
+      <h1>Twenty routes, one boat, no two crossings the same.</h1>
+      <p class="page-hero__lead">Waow 2 runs the same handful of passages each season — long enough to learn them well, not so often they stop surprising us. Pick a length and a mood; the reefs take care of the rest.</p>
+    </div>
+  </section>
+
+  <!-- Stylised, clickable trip map — an illustration, not a real chart.
+       Twenty routes, each its own dashed mark, linking to its own card
+       in the grid below (id="itin-{slug}"). -->
+  <div class="trip-map-wrap">
+    <div class="trip-map">
+      <svg class="trip-map__canvas" viewBox="0 0 1700 780">
+        <defs>
+          <linearGradient id="tripMapSea" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#BFDCE3"/>
+            <stop offset="55%" stop-color="#6FA3B0"/>
+            <stop offset="100%" stop-color="#1D4E63"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="1700" height="780" fill="url(#tripMapSea)"/>
+
+        <!-- Kalimantan, with a stub toward Berau / Derawan in the NE -->
+        <path class="trip-map__island" d="M24,105 Q30,90 70,68 Q110,45 155,42 Q200,40 235,58 Q270,75 290,102 Q310,130 318,160 Q325,190 345,200 Q365,210 380,230 Q395,250 385,272 Q375,295 352,298 Q330,300 315,280 Q300,260 290,290 Q280,320 255,340 Q230,360 195,358 Q160,355 128,338 Q95,320 70,290 Q45,260 30,220 Q15,180 16,150 Q18,120 24,105 Z"/>
+        <!-- Java, a hint at the SW edge -->
+        <path class="trip-map__island trip-map__island--faint" d="M-40,572 Q-40,555 10,542 Q60,530 115,538 Q170,545 215,560 Q260,575 280,588 Q300,600 265,608 Q230,615 175,610 Q120,605 65,602 Q10,600 -15,595 Q-40,590 -40,572 Z"/>
+        <!-- Sulawesi, four-armed silhouette -->
+        <path class="trip-map__island" d="M495,148 Q505,150 518,128 Q530,105 545,92 Q560,80 580,72 Q600,65 615,70 Q630,75 622,88 Q615,100 600,110 Q585,120 598,132 Q610,145 628,155 Q645,165 655,180 Q665,195 658,205 Q650,215 635,210 Q620,205 608,192 Q595,180 588,200 Q580,220 572,240 Q565,260 555,270 Q545,280 535,272 Q525,265 530,245 Q535,225 538,208 Q540,190 522,192 Q505,195 490,188 Q475,180 470,170 Q465,160 475,152 Q485,145 495,148 Z"/>
+        <!-- Wakatobi, a small cluster SE of Sulawesi -->
+        <path class="trip-map__island trip-map__island--faint" d="M689,312 Q690,305 702,300 Q715,295 725,300 Q735,305 732,315 Q730,325 718,328 Q705,330 696,325 Q688,320 689,312 Z"/>
+        <!-- Nusa Tenggara chain: Sumbawa, Flores, Lembata, Alor, Timor -->
+        <path class="trip-map__island" d="M432,608 Q430,600 440,594 Q450,588 462,590 Q475,592 482,598 Q490,605 484,612 Q478,618 466,620 Q455,622 445,618 Q435,615 432,608 Z"/>
+        <path class="trip-map__island" d="M520,606 Q520,600 540,595 Q560,590 580,592 Q600,594 620,591 Q640,588 658,592 Q675,596 668,603 Q660,610 640,609 Q620,608 600,611 Q580,614 562,615 Q545,616 532,614 Q520,612 520,606 Z"/>
+        <path class="trip-map__island" d="M696,603 Q695,598 702,595 Q708,592 713,596 Q718,600 714,606 Q710,612 704,610 Q697,608 696,603 Z"/>
+        <path class="trip-map__island" d="M738,608 Q735,600 744,594 Q752,588 762,591 Q772,594 775,602 Q778,610 770,616 Q762,622 752,619 Q742,616 738,608 Z"/>
+        <path class="trip-map__island trip-map__island--faint" d="M808,628 Q800,615 820,606 Q840,598 862,602 Q885,605 898,615 Q910,625 902,638 Q895,650 875,652 Q855,655 835,648 Q815,640 808,628 Z"/>
+        <!-- Sumba, separate to the south -->
+        <path class="trip-map__island trip-map__island--faint" d="M380,682 Q370,665 400,658 Q430,650 465,655 Q500,660 525,670 Q550,680 535,692 Q520,705 485,710 Q450,715 420,708 Q390,700 380,682 Z"/>
+        <!-- Buru and Seram, cradling the Banda Sea -->
+        <path class="trip-map__island" d="M820,409 Q815,400 828,390 Q840,380 854,384 Q868,388 872,399 Q875,410 865,418 Q855,425 840,422 Q825,418 820,409 Z"/>
+        <path class="trip-map__island" d="M888,395 Q885,385 908,370 Q930,355 958,358 Q985,360 1002,369 Q1020,378 1015,388 Q1010,398 985,394 Q960,390 938,395 Q915,400 902,402 Q890,405 888,395 Z"/>
+        <circle class="trip-map__islet" cx="905" cy="440" r="3.5"/>
+        <circle class="trip-map__islet" cx="920" cy="447" r="2.8"/>
+        <circle class="trip-map__islet" cx="895" cy="450" r="2.3"/>
+        <!-- Halmahera -->
+        <path class="trip-map__island" d="M918,220 Q915,210 930,188 Q945,165 958,150 Q970,135 980,145 Q990,155 985,170 Q980,185 995,182 Q1010,180 1025,172 Q1040,165 1048,172 Q1055,178 1042,188 Q1030,198 1018,202 Q1005,205 1015,218 Q1025,230 1035,248 Q1045,265 1035,272 Q1025,280 1012,268 Q1000,255 992,240 Q985,225 978,240 Q970,255 962,270 Q955,285 942,280 Q930,275 932,258 Q935,240 928,235 Q920,230 918,220 Z"/>
+        <!-- West Papua: Bird's Head, Cenderawasih Bay, Bomberai / Triton Bay -->
+        <path class="trip-map__island" d="M1292,345 Q1290,330 1282,318 Q1275,305 1285,292 Q1295,280 1310,268 Q1325,255 1335,240 Q1345,225 1362,215 Q1380,205 1400,200 Q1420,195 1440,202 Q1460,210 1465,228 Q1470,245 1460,258 Q1450,270 1465,272 Q1480,275 1502,270 Q1525,265 1548,270 Q1570,275 1585,288 Q1600,300 1595,315 Q1590,330 1572,332 Q1555,335 1542,328 Q1530,320 1522,335 Q1515,350 1508,368 Q1500,385 1485,392 Q1470,400 1475,412 Q1480,425 1475,442 Q1470,460 1452,470 Q1435,480 1415,475 Q1395,470 1388,455 Q1380,440 1390,428 Q1400,415 1385,408 Q1370,400 1358,388 Q1345,375 1332,378 Q1320,380 1308,370 Q1295,360 1292,345 Z"/>
+        <!-- Raja Ampat's scatter of islands, off the peninsula's tip -->
+        <circle class="trip-map__islet" cx="1255" cy="290" r="3.2"/>
+        <circle class="trip-map__islet" cx="1240" cy="305" r="2.6"/>
+        <circle class="trip-map__islet" cx="1262" cy="315" r="2.3"/>
+
+        <!-- Twenty routes — the mark, not a port, is what's clickable -->
+        <g id="trip-map-routes">
+        <!-- generated: see itineraries.html build notes — one <a> per itinerary slug -->
+        <a class="trip-map__route" href="#itin-dragon-ground" aria-label="Dragon Ground — see this route">
+          <path class="trip-map__route-hit" d="M516,614 Q514,589 512,581"/>
+          <path class="trip-map__route-line" d="M516,614 Q514,589 512,581"/>
+          <circle class="trip-map__route-mark" cx="512" cy="581" r="4.5"/>
+        </a>
+        <a class="trip-map__route" href="#itin-komodo-express" aria-label="Komodo Express — see this route">
+          <path class="trip-map__route-hit" d="M518,613 Q525,589 531,582"/>
+          <path class="trip-map__route-line" d="M518,613 Q525,589 531,582"/>
+          <circle class="trip-map__route-mark" cx="531" cy="582" r="4.5"/>
+        </a>
+        <a class="trip-map__route" href="#itin-south-komodo" aria-label="South Komodo & Sumbawa — see this route">
+          <path class="trip-map__route-hit" d="M522,613 Q535,591 548,587"/>
+          <path class="trip-map__route-line" d="M522,613 Q535,591 548,587"/>
+          <circle class="trip-map__route-mark" cx="548" cy="587" r="4.5"/>
+        </a>
+        <a class="trip-map__route" href="#itin-grand-traverse" aria-label="The Grand Traverse — see this route">
+          <path class="trip-map__route-hit" d="M524,614 Q540,596 556,596"/>
+          <path class="trip-map__route-line" d="M524,614 Q540,596 556,596"/>
+          <circle class="trip-map__route-mark" cx="556" cy="596" r="4.5"/>
+        </a>
+        <a class="trip-map__route" href="#itin-flores-volcano-traverse" aria-label="Flores Volcano Traverse — see this route">
+          <path class="trip-map__route-hit" d="M600,598 Q610,575 620,569"/>
+          <path class="trip-map__route-line" d="M600,598 Q610,575 620,569"/>
+          <circle class="trip-map__route-mark" cx="620" cy="569" r="4.5"/>
+        </a>
+        <a class="trip-map__route" href="#itin-lembata-whalers-coast" aria-label="Lembata & the Whale Hunters' Coast — see this route">
+          <path class="trip-map__route-hit" d="M706,598 Q716,575 726,569"/>
+          <path class="trip-map__route-line" d="M706,598 Q716,575 726,569"/>
+          <circle class="trip-map__route-mark" cx="726" cy="569" r="4.5"/>
+        </a>
+        <a class="trip-map__route" href="#itin-alor-coast" aria-label="Alor & the Alorese Coast — see this route">
+          <path class="trip-map__route-hit" d="M754,602 Q761,578 767,571"/>
+          <path class="trip-map__route-line" d="M754,602 Q761,578 767,571"/>
+          <circle class="trip-map__route-mark" cx="767" cy="571" r="4.5"/>
+        </a>
+        <a class="trip-map__route" href="#itin-timor-strait-crossing" aria-label="Timor Strait Crossing — see this route">
+          <path class="trip-map__route-hit" d="M758,602 Q771,580 784,576"/>
+          <path class="trip-map__route-line" d="M758,602 Q771,580 784,576"/>
+          <circle class="trip-map__route-mark" cx="784" cy="576" r="4.5"/>
+        </a>
+        <a class="trip-map__route" href="#itin-sumba-solitude" aria-label="Sumba Solitude — see this route">
+          <path class="trip-map__route-hit" d="M450,680 Q460,657 470,651"/>
+          <path class="trip-map__route-line" d="M450,680 Q460,657 470,651"/>
+          <circle class="trip-map__route-mark" cx="470" cy="651" r="4.5"/>
+        </a>
+        <a class="trip-map__route" href="#itin-wakatobi-wander" aria-label="Wakatobi Wander — see this route">
+          <path class="trip-map__route-hit" d="M710,310 Q720,287 730,281"/>
+          <path class="trip-map__route-line" d="M710,310 Q720,287 730,281"/>
+          <circle class="trip-map__route-mark" cx="730" cy="281" r="4.5"/>
+        </a>
+        <a class="trip-map__route" href="#itin-ambon-lease" aria-label="Ambon & the Lease Islands — see this route">
+          <path class="trip-map__route-hit" d="M857,428 Q859,403 862,396"/>
+          <path class="trip-map__route-line" d="M857,428 Q859,403 862,396"/>
+          <circle class="trip-map__route-mark" cx="862" cy="396" r="4.5"/>
+        </a>
+        <a class="trip-map__route" href="#itin-spice-route" aria-label="Spice Route: Banda to Ambon — see this route">
+          <path class="trip-map__route-hit" d="M860,428 Q870,405 880,399"/>
+          <path class="trip-map__route-line" d="M860,428 Q870,405 880,399"/>
+          <circle class="trip-map__route-mark" cx="880" cy="399" r="4.5"/>
+        </a>
+        <a class="trip-map__route" href="#itin-forgotten-islands" aria-label="The Forgotten Islands — see this route">
+          <path class="trip-map__route-hit" d="M863,428 Q878,409 893,407"/>
+          <path class="trip-map__route-line" d="M863,428 Q878,409 893,407"/>
+          <circle class="trip-map__route-mark" cx="893" cy="407" r="4.5"/>
+        </a>
+        <a class="trip-map__route" href="#itin-halmahera-hidden-reefs" aria-label="Halmahera's Hidden Reefs — see this route">
+          <path class="trip-map__route-hit" d="M975,208 Q985,185 995,179"/>
+          <path class="trip-map__route-line" d="M975,208 Q985,185 995,179"/>
+          <circle class="trip-map__route-mark" cx="995" cy="179" r="4.5"/>
+        </a>
+        <a class="trip-map__route" href="#itin-derawan-sangalaki" aria-label="Derawan & Sangalaki — see this route">
+          <path class="trip-map__route-hit" d="M355,223 Q365,200 375,194"/>
+          <path class="trip-map__route-line" d="M355,223 Q365,200 375,194"/>
+          <circle class="trip-map__route-mark" cx="375" cy="194" r="4.5"/>
+        </a>
+        <a class="trip-map__route" href="#itin-raja-ampat-crossing" aria-label="Raja Ampat Crossing — see this route">
+          <path class="trip-map__route-hit" d="M1272,298 Q1274,273 1277,266"/>
+          <path class="trip-map__route-line" d="M1272,298 Q1274,273 1277,266"/>
+          <circle class="trip-map__route-mark" cx="1277" cy="266" r="4.5"/>
+        </a>
+        <a class="trip-map__route" href="#itin-dampier-misool" aria-label="Dampier Strait & Misool — see this route">
+          <path class="trip-map__route-hit" d="M1275,298 Q1285,275 1295,269"/>
+          <path class="trip-map__route-line" d="M1275,298 Q1285,275 1295,269"/>
+          <circle class="trip-map__route-mark" cx="1295" cy="269" r="4.5"/>
+        </a>
+        <a class="trip-map__route" href="#itin-wayag-circuit" aria-label="The Wayag Circuit — see this route">
+          <path class="trip-map__route-hit" d="M1278,298 Q1293,279 1308,277"/>
+          <path class="trip-map__route-line" d="M1278,298 Q1293,279 1308,277"/>
+          <circle class="trip-map__route-mark" cx="1308" cy="277" r="4.5"/>
+        </a>
+        <a class="trip-map__route" href="#itin-cenderawasih-whale-sharks" aria-label="Cenderawasih Bay Whale Sharks — see this route">
+          <path class="trip-map__route-hit" d="M1465,256 Q1475,233 1485,227"/>
+          <path class="trip-map__route-line" d="M1465,256 Q1475,233 1485,227"/>
+          <circle class="trip-map__route-mark" cx="1485" cy="227" r="4.5"/>
+        </a>
+        <a class="trip-map__route" href="#itin-triton-bay" aria-label="Triton Bay & the Fak Fak Coast — see this route">
+          <path class="trip-map__route-hit" d="M1390,413 Q1400,390 1410,384"/>
+          <path class="trip-map__route-line" d="M1390,413 Q1400,390 1410,384"/>
+          <circle class="trip-map__route-mark" cx="1410" cy="384" r="4.5"/>
+        </a>
+        </g>
+
+        <text class="trip-map__sea-label" x="250" y="490" text-anchor="middle">Java Sea</text>
+        <text class="trip-map__sea-label" x="575" y="50" text-anchor="middle">Celebes Sea</text>
+        <text class="trip-map__sea-label" x="610" y="450" text-anchor="middle">Flores Sea</text>
+
+        <g class="trip-map__compass" transform="translate(90,700)">
+          <circle r="24" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M0,-17 L4.2,0 L0,17 L-4.2,0 Z" fill="currentColor"/>
+          <text y="-30" text-anchor="middle">N</text>
+        </g>
+      </svg>
+
+      <span class="trip-map__stop" style="left:30.6%; top:78.8%;">
+        <span class="trip-map__dot"></span>
+        <span class="trip-map__label">Komodo</span>
+      </span>
+      <span class="trip-map__stop" style="left:44.5%; top:77.4%;">
+        <span class="trip-map__dot"></span>
+        <span class="trip-map__label">Alor</span>
+      </span>
+      <span class="trip-map__stop" style="left:50.6%; top:55.1%;">
+        <span class="trip-map__dot"></span>
+        <span class="trip-map__label">Banda Sea</span>
+      </span>
+      <span class="trip-map__stop" style="left:75%; top:38.5%;">
+        <span class="trip-map__dot"></span>
+        <span class="trip-map__label">Raja Ampat</span>
+      </span>
+    </div>
+    <p class="trip-map__hint">A sketch, not a chart — every dashed mark is a route. Select one to see it below.</p>
+  </div>
+
+  <!-- ================= ITINERARY GRID ================= -->
+  <section class="section" id="itinerary-grid-section">
+    <svg class="dot-icon sea-life" aria-hidden="true" style="top:1%;left:2%;width:96px;transform:rotate(9deg);opacity:.85;" viewBox="10 19 224 204"><use href="#icon-urchin"></use></svg>
+    <div class="container">
+      <p class="itin-grid__intro">Twenty routes, one page each. Tap a card for a one-line preview, tap it again for the full route — nights, level, season, and what a day actually looks like.</p>
+      <div class="itin-grid itin-grid--loading" id="itinerary-grid">
+        <!-- Rendered by itinerary-cards.js from itineraries-data.js -->
+      </div>
+      <!-- TODO: confirm exact nights/zones/levels/seasonality with the owner, and add real departure dates once the season calendar is set -->
+    </div>
+  </section>
+
+  <!-- ================= WANDER — collage break ================= -->
+  <section class="wander wander--2">
+    <div class="wander__row">
+      <div class="wander__text">
+        <p>None of these routes are fixed to the hour. If the wind, the tide, or a pod of dolphins asks for a detour, we tend to take it.</p>
+      </div>
+      <div class="wander__cluster">
+        <!-- TEMP stock photos — replace with real Waow 2 photos -->
+        <figure class="wander__media wander__media--a">
+          <picture>
+            <source srcset="images/manta-ray.webp" type="image/webp">
+            <img src="images/manta-ray.jpg" loading="lazy" alt="A manta ray gliding over the reef.">
+          </picture>
+        </figure>
+        <figure class="wander__media wander__media--b">
+          <picture>
+            <source srcset="images/diver-reef.webp" type="image/webp">
+            <img src="images/diver-reef.jpg" loading="lazy" alt="A diver exploring a vivid coral reef.">
+          </picture>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CLOSING CTA ================= -->
+  <section class="section section--panel section--tight" id="next">
+    <div class="container cta-split">
+      <div class="reveal">
+        <p class="eyebrow">Not Sure Which One</p>
+        <h2>Meet the boat first.</h2>
+        <p>Every route runs on the same twelve-guest phinisi, with the same crew. Start there if the routes all sound good.</p>
+        <a class="link-arrow" href="the-boat.html">
+          See the boat
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="reveal reveal--delay-1">
+        <p class="eyebrow">Ready When You Are</p>
+        <h2>Hold a cabin.</h2>
+        <p>No payment, no pressure — just a look at what's currently open aboard.</p>
+        <a class="btn btn--solid" href="booking.html">See availability</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <svg class="dot-icon sea-life" aria-hidden="true" style="top:10%;right:8%;width:82px;transform:rotate(-12deg);opacity:.85;" viewBox="10 19 224 204"><use href="#icon-urchin"></use></svg>
+  <div class="container site-footer__grid">
+    <div class="site-footer__brand">
+      <a class="logo logo--light" href="index.html" aria-label="Waow Charters, home">
+        <picture>
+          <source srcset="images/logo-waow2-reversed.webp" type="image/webp">
+          <img src="images/logo-waow2-reversed.png" alt="Waow 2" width="180" height="41">
+        </picture>
+      </a>
+      <p>Indonesia, beyond the surface.</p>
+    </div>
+
+    <nav class="site-footer__nav" aria-label="Footer">
+      <ul>
+        <li><a href="the-boat.html">The Boat</a></li>
+        <li><a href="itineraries.html" class="is-active" aria-current="page">Itineraries</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </nav>
+
+    <nav class="site-footer__nav" aria-label="Explore">
+      <ul>
+        <li><a href="index.html#destinations">Destinations</a></li>
+        <li><a href="index.html#diving">Diving</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="the-boat.html#crew">About Us</a></li>
+      </ul>
+    </nav>
+
+    <nav class="site-footer__nav" aria-label="Support">
+      <ul>
+        <!-- TODO: link to real FAQ / contact pages -->
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-footer__lang">
+      <label class="sr-only" for="lang-select">Language</label>
+      <!-- TODO: wire up real localization when a second language is ready -->
+      <select id="lang-select" disabled>
+        <option>EN</option>
+        <option>FR</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="container site-footer__legal">
+    <p>&copy; <span id="year"></span> Waow Charters. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="itineraries-data.js"></script>
+<script src="itinerary-cards.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

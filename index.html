@@ -1,526 +1,532 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!doctype html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WAOW — The Ultimate Liveaboard, Indonesia</title>
-<meta name="description" content="WAOW — Liveaboard de plongée de luxe à travers les eaux les plus riches d'Indonésie.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Waow Charters — Indonesia, beyond the surface</title>
+<meta name="description" content="Waow 2 is a traditional phinisi sailing the Indonesian archipelago — Raja Ampat, Komodo, the Banda Sea and Alor — for guests who dive, and for those who have never wanted to before now.">
+
+<!-- TODO: replace with real favicon files -->
+<link rel="icon" href="data:,">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--
+  Brand fonts (Lemon Milk, Have Heart Two) are licensed, not on Google Fonts.
+  TODO: once licensed font files are available, replace the @font-face-free
+  stack below with local @font-face declarations for Lemon Milk and Have
+  Heart Two. Outfit and Caveat are close-in-spirit stand-ins used for V1.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Outfit:wght@500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- CUSTOM CURSOR -->
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cursor-ring" id="cursorRing"><span class="cursor-label" id="cursorLabel"></span></div>
+<a class="skip-link" href="#main">Skip to content</a>
 
-<!-- NAV -->
-<nav class="nav" id="nav">
-  <a href="index.html" class="nav-logo">W<span>A</span>OW</a>
-  <ul class="nav-links">
-    <li><a href="le-bateau.html">Le Bateau</a></li>
-    <li><a href="itineraires.html">Itinéraires</a></li>
-    <li><a href="diving.html">Diving</a></li>
-    <li><a href="musee.html">Musée</a></li>
-    <li><a href="news.html">News</a></li>
-  </ul>
-  <a href="book.html" class="btn btn-accent">Book Now</a>
-  <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+<symbol id="icon-starfish" viewBox="15 17 237 240"><rect x="45.8" y="49.3" width="175.4" height="175.4" rx="10.5" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.46" stroke-dasharray="4.9 3.5"/><circle cx="115.3" cy="113.3" r="10.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.46"/><path d="M87.9,166.2 L129.9,127.9 L151.7,149.8 L153.6,118.8 L179.1,166.2" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.46" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-octopus" viewBox="10 -16 238 285"><rect x="40.9" y="38.4" width="176.1" height="176.1" rx="10.6" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.47" stroke-dasharray="4.9 3.5"/><circle cx="110.7" cy="102.7" r="10.1" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.47"/><path d="M83.2,155.8 L125.3,117.3 L147.3,139.3 L149.1,108.2 L174.8,155.8" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.47" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-turtle" viewBox="2 28 245 230"><rect x="39.4" y="57.9" width="170.2" height="170.2" rx="10.2" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.38" stroke-dasharray="4.8 3.4"/><circle cx="106.8" cy="120.0" r="9.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.38"/><path d="M80.2,171.3 L121.0,134.1 L142.2,155.4 L144.0,125.3 L168.8,171.3" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.38" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-komodo" viewBox="-34 79 390 153"><rect x="104.4" y="98.9" width="113.2" height="113.2" rx="6.8" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.59" stroke-dasharray="3.2 2.3"/><circle cx="149.2" cy="140.2" r="6.5" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.59"/><path d="M131.6,174.3 L158.6,149.6 L172.8,163.7 L174.0,143.7 L190.4,174.3" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.59" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-phinisi" viewBox="-4 8 326 223"><rect x="76.5" y="37.0" width="165.0" height="165.0" rx="9.9" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.31" stroke-dasharray="4.6 3.3"/><circle cx="141.8" cy="97.2" r="9.4" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.31"/><path d="M116.1,147.0 L155.6,110.9 L176.2,131.5 L177.9,102.3 L201.9,147.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.31" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-dive-mask" viewBox="11 -37 278 256"><rect x="55.3" y="-3.7" width="189.4" height="189.4" rx="11.4" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.65" stroke-dasharray="5.3 3.8"/><circle cx="130.3" cy="65.4" r="10.8" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.65"/><path d="M100.7,122.5 L146.1,81.1 L169.7,104.8 L171.7,71.3 L199.3,122.5" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.65" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-shell" viewBox="6 44 140 233"><rect x="24.2" y="108.7" width="103.6" height="103.6" rx="6.2" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.45" stroke-dasharray="2.9 2.1"/><circle cx="65.2" cy="146.5" r="5.9" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.45"/><path d="M49.1,177.7 L73.8,155.1 L86.8,168.0 L87.9,149.7 L102.9,177.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-crab" viewBox="-2 60 264 166"><rect x="68.6" y="81.6" width="122.8" height="122.8" rx="7.4" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.72" stroke-dasharray="3.4 2.5"/><circle cx="117.2" cy="126.4" r="7.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.72"/><path d="M98.1,163.4 L127.4,136.6 L142.8,151.9 L144.1,130.2 L161.9,163.4" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.72" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-jellyfish" viewBox="48 17 162 208"><rect x="69.1" y="61.1" width="119.9" height="119.9" rx="7.2" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.68" stroke-dasharray="3.4 2.4"/><circle cx="116.5" cy="104.8" r="6.9" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.68"/><path d="M97.8,140.9 L126.5,114.8 L141.5,129.7 L142.7,108.5 L160.2,140.9" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.68" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-angelfish" viewBox="55 6 184 236"><rect x="78.9" y="55.9" width="136.2" height="136.2" rx="8.2" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.91" stroke-dasharray="3.8 2.7"/><circle cx="132.8" cy="105.6" r="7.8" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.91"/><path d="M111.6,146.7 L144.2,116.9 L161.2,133.9 L162.6,109.8 L182.4,146.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.91" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-flatfish" viewBox="44 42 202 176"><rect x="79.9" y="64.9" width="130.2" height="130.2" rx="7.8" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.82" stroke-dasharray="3.6 2.6"/><circle cx="131.5" cy="112.4" r="7.4" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.82"/><path d="M111.1,151.7 L142.3,123.2 L158.5,139.5 L159.9,116.5 L178.9,151.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.82" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-urchin" viewBox="10 19 224 204"><rect x="46.5" y="45.5" width="151.0" height="151.0" rx="9.1" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.11" stroke-dasharray="4.2 3.0"/><circle cx="106.3" cy="100.6" r="8.6" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.11"/><path d="M82.8,146.1 L118.9,113.2 L137.7,132.0 L139.3,105.3 L161.2,146.1" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.11" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-ammonite" viewBox="49 39 182 202"><rect x="72.7" y="72.7" width="134.7" height="134.7" rx="8.1" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.89" stroke-dasharray="3.8 2.7"/><circle cx="126.0" cy="121.8" r="7.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.89"/><path d="M105.0,162.4 L137.2,133.0 L154.0,149.8 L155.4,126.0 L175.0,162.4" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.89" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-coral" viewBox="-117 -25 402 331"><rect x="-38.5" y="18.0" width="244.9" height="244.9" rx="14.7" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="3.43" stroke-dasharray="6.9 4.9"/><circle cx="58.5" cy="107.4" r="14.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="3.43"/><path d="M20.3,181.3 L78.9,127.8 L109.5,158.3 L112.0,115.0 L147.7,181.3" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="3.43" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+</svg>
 
-<!-- HERO -->
-<section class="hero" id="hero">
-  <div class="hero-media" id="heroParallax">
-    <img src="images/banner-hero.png"
-         onerror="this.onerror=null;this.src='https://placehold.co/1920x1200/0A0E1A/C9A45C?text=WAOW'"
-         alt="WAOW liveaboard cruising Indonesian waters">
-  </div>
-  <div class="hero-overlay"></div>
-  <div class="hero-bubbles"><canvas id="bubbleCanvas"></canvas></div>
-  <div class="hero-content">
-    <div class="hero-left">
-      <p class="eyebrow hero-eyebrow">Liveaboard · Indonesia</p>
-      <h1 class="hero-title split-words">
-        <span class="line">The ultimate</span>
-        <span class="line"><em>dive experience.</em></span>
-      </h1>
-      <div class="btn-row">
-        <a href="itineraires.html" class="btn btn-accent">Explore Itineraries</a>
-        <a href="le-bateau.html" class="btn">Discover the Vessel</a>
-      </div>
+<!--
+  HOMEPAGE v2 — rebuilt from the designer's Canva export (HOMEPAGE-WAOW2.png)
+  to match its section order, proportions and visual hierarchy. Colors were
+  colour-picked from that export (all matched existing brand tokens exactly).
+  Nav/footer links below intentionally follow the new mockup rather than the
+  nav used on the other pages (The Boat / Itineraries / Booking / News) —
+  Destinations/Experience/About Us/News/Q&A are this mockup's own structure;
+  bringing the rest of the site in line is a separate pass.
+-->
+<header class="site-header" id="site-header">
+  <div class="container site-header__row">
+    <a class="logo" href="index.html" aria-label="Waow Charters, home">
+      <picture>
+        <source srcset="images/logo-waow2.webp" type="image/webp">
+        <img src="images/logo-waow2.png" alt="Waow 2" width="180" height="41">
+      </picture>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a href="the-boat.html">The Boat</a></li>
+        <li><a href="itineraries.html">Destinations</a></li>
+        <li><a href="#life">Experience</a></li>
+        <li><a href="#family">About Us</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--outline" href="booking.html">Dates &amp; Rates</a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <div class="hero-scroll">Scroll</div>
   </div>
-</section>
 
-<!-- STATS -->
-<section class="stats reveal" id="stats">
-  <div class="stat">
-    <div class="stat-num" data-count="24">0</div>
-    <div class="stat-label">Crew Members</div>
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <ul>
+      <li><a href="the-boat.html">The Boat</a></li>
+      <li><a href="itineraries.html">Destinations</a></li>
+      <li><a href="#life">Experience</a></li>
+      <li><a href="#family">About Us</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a class="btn btn--outline" href="booking.html">Dates &amp; Rates</a></li>
+    </ul>
   </div>
-  <div class="stat">
-    <div class="stat-num" data-count="16">0</div>
-    <div class="stat-label">Guest Capacity</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num" data-count="6" data-suffix="+">0</div>
-    <div class="stat-label">Destinations</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num" data-count="10" data-suffix="+">0</div>
-    <div class="stat-label">Years at Sea</div>
-  </div>
-</section>
+</header>
+<div class="hp-divider" aria-hidden="true"></div>
 
-<!-- TEASER — LE BATEAU -->
-<section class="section teaser" id="bateau">
-  <div class="grid-2">
-    <div class="teaser-media media zoom-media reveal" id="vesselMedia">
-      <img src="images/vessel_home.png"
-           onerror="this.onerror=null;this.src='https://placehold.co/1200x1500/0A0E1A/C9A45C?text=WAOW+Vessel'"
-           alt="Le bateau WAOW, Phinisi de luxe">
+<main id="main">
 
-      <div class="vessel-compass" aria-hidden="true">
-        <svg viewBox="0 0 64 64">
-          <circle cx="32" cy="32" r="26"/>
-          <path d="M32 4v10M32 50v10M4 32h10M50 32h10"/>
-          <path d="M32 14l6 18-6 18-6-18z"/>
+  <!-- ================= HERO ================= -->
+  <section class="hp-hero">
+    <div class="container" style="max-width: 100% !important">
+      <figure class="hp-hero__photo">
+        <picture>
+          <source srcset="images/hero-waow2.webp" type="image/webp">
+          <img src="images/hero-waow2.jpg" width="1874" height="839" alt="Waow 2, a traditional three-masted phinisi, under full sail at sunset in the Flores Sea." fetchpriority="high">
+        </picture>
+        <svg class="hp-stamp" viewBox="0 0 168 168" aria-hidden="true">
+          <rect x="8" y="8" width="152" height="152" stroke-dasharray="2 3"/>
+          <rect x="16" y="16" width="136" height="136"/>
+          <path class="hp-stamp__ship" d="M84,58 L84,96 M84,58 L66,64 M84,58 L102,64 M60,96 L108,96 L104,106 L64,106 Z M70,96 L70,70 M84,96 L84,64 M98,96 L98,70 M70,72 L84,64 L98,72"/>
+          <text x="84" y="42" font-size="10" letter-spacing="3" font-weight="700">WAOW</text>
+          <text x="84" y="128" font-size="8" letter-spacing="2.5">CHARTERS</text>
+          <text x="26" y="80" font-size="7" letter-spacing="1.5" transform="rotate(-90 26 80)">EST.</text>
+          <text x="142" y="80" font-size="7" letter-spacing="1.5" transform="rotate(90 142 80)">2011</text>
+        </svg>
+      </figure>
+    </div>
+  </section>
+  <div class="hp-divider" aria-hidden="true"></div>
+
+  <!-- ================= INDONESIA, BEYOND THE SURFACE ================= -->
+  <section class="hp-intro" id="top">
+    <div class="container hp-intro__grid">
+      <div class="hp-intro__copy reveal">
+        <h1>Indonesia,<br>beyond the surface.</h1>
+        <p>Exceptional diving, discreet comfort, and true connection.<br>A family adventure, sailing since 2011.</p>
+        <p>Set to set sail end of 2028.</p>
+        <a class="link-arrow" href="#boat">
+          discover WAOW 2
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="hp-intro__visual reveal reveal--delay-1">
+        <!-- TODO: replace with two unique Waow 2 sailing shots once available -->
+        <figure class="hp-intro__photo hp-intro__photo--a">
+          <picture>
+            <source srcset="images/waow2-portrait.webp" type="image/webp">
+            <img src="images/waow2-portrait.jpg" loading="lazy" alt="Waow 2 under full sail, broadside to the camera.">
+          </picture>
+        </figure>
+        <figure class="hp-intro__photo hp-intro__photo--b">
+          <picture>
+            <source srcset="images/waow2-detail.webp" type="image/webp">
+            <img src="images/waow2-detail.jpg" loading="lazy" alt="Waow 2's bow, sails set against open sky.">
+          </picture>
+        </figure>
+        <svg class="hp-postmark" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="30" cy="30" r="24" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M6,70 Q22,60 38,70 T70,70 T100,70" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M6,80 Q22,70 38,80 T70,80 T100,80" fill="none" stroke="currentColor" stroke-width="1.2"/>
         </svg>
       </div>
+    </div>
+  </section>
+  <div class="hp-divider" aria-hidden="true"></div>
 
-      <button class="vessel-hotspot" style="top:28%;left:66%" data-title="Guest Suites" data-desc="16 passagers accueillis dans des cabines climatisées, chacune ouverte sur l'océan."><span></span></button>
-      <button class="vessel-hotspot" style="top:52%;left:82%" data-title="Crew Quarters" data-desc="24 membres d'équipage, dont un directeur de croisière francophone à bord en permanence."><span></span></button>
-      <button class="vessel-hotspot" style="top:66%;left:38%" data-title="Dive Deck" data-desc="4 tenders de plongée et une zone d'équipement dédiée, accès direct à l'eau."><span></span></button>
-      <button class="vessel-hotspot" style="top:38%;left:18%" data-title="Length Overall" data-desc="40 mètres de long — une coque de Phinisi taillée pour la haute mer."><span></span></button>
-
-      <div class="vessel-tooltip" id="vesselTooltip" hidden>
-        <h4 id="vesselTooltipTitle"></h4>
-        <p id="vesselTooltipDesc"></p>
+  <!-- ================= THE BOAT ================= -->
+  <section class="hp-boat" id="boat">
+    <div class="hp-boat__stripes" aria-hidden="true"></div>
+    <div class="container hp-boat__grid">
+      <div class="hp-boat__collage reveal">
+        <!-- TODO: replace with two unique Waow 2 sailing shots once available -->
+        <figure class="hp-boat__photo hp-boat__photo--a">
+          <picture>
+            <source srcset="images/hero-waow2.webp" type="image/webp">
+            <img src="images/hero-waow2.jpg" loading="lazy" alt="Waow 2 under full sail.">
+          </picture>
+        </figure>
+        <figure class="hp-boat__photo hp-boat__photo--b">
+          <picture>
+            <source srcset="images/sunset-deck.webp" type="image/webp">
+            <img src="images/sunset-deck.jpg" loading="lazy" alt="Waow 2's bow at sunset, sails silhouetted.">
+          </picture>
+        </figure>
+      </div>
+      <p class="hp-boat__script" aria-hidden="true">A phinisi, built to carry twenty.</p>
+      <div class="hp-boat__copy reveal reveal--delay-1">
+        <h2>The<br>Boat.</h2>
+        <p>Hand-built in South Sulawesi in the old way — ironwood frames, teak decks, three masts rising above a vessel shaped by generations of craftsmanship.</p>
+        <a class="link-arrow" href="the-boat.html">
+          discover the boat
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <ul class="hp-boat__stats">
+          <li><span>32m</span>Meters</li>
+          <li><span>6</span>Cabins</li>
+          <li><span>12</span>Guests</li>
+          <li><span>10</span>Crew</li>
+        </ul>
       </div>
     </div>
-    <div class="teaser-body reveal">
-      <p class="eyebrow">The Vessel</p>
-      <h2 class="split-words">A Phinisi built<br><em>for the sea.</em></h2>
-      <p>Née des chantiers navals de Sulawesi, WAOW marie l'héritage du Phinisi indonésien aux standards de confort et de sécurité les plus exigeants. Chaque cabine, chaque pont a été pensé pour l'exploration au long cours.</p>
-      <div class="teaser-specs">
-        <div class="spec">
-          <div class="spec-num" data-count="24">0</div>
-          <div class="spec-label">Crew on board</div>
-        </div>
-        <div class="spec">
-          <div class="spec-num" data-count="16">0</div>
-          <div class="spec-label">Guest capacity</div>
-        </div>
-        <div class="spec">
-          <div class="spec-num" data-count="40" data-suffix="m">0</div>
-          <div class="spec-label">Vessel length</div>
-        </div>
-        <div class="spec">
-          <div class="spec-num" data-count="4">0</div>
-          <div class="spec-label">Dive tenders</div>
-        </div>
-      </div>
-      <a href="le-bateau.html" class="link-underline">Discover the vessel →</a>
-      <p class="vessel-caption">✛ Click the points on the photo to explore</p>
-    </div>
-  </div>
-</section>
+  </section>
+  <div class="hp-divider" aria-hidden="true"></div>
 
-<!-- TEASER — ITINERAIRES -->
-<section class="section" id="itineraires">
-  <div class="section-header reveal">
-    <div>
-      <div class="section-index">01</div>
-      <h2>Destinations &amp;<br><em>Itineraries</em></h2>
+  <!-- ================= LIFE ONBOARD ================= -->
+  <section class="hp-life" id="life">
+    <div class="container">
+      <p class="hp-eyebrow-script reveal">Life Onboard</p>
+      <div class="hp-life__grid">
+        <article class="reveal">
+          <figure>
+            <picture>
+              <source srcset="images/interior-saloon.webp" type="image/webp">
+              <img src="images/interior-saloon.jpg" loading="lazy" alt="Warm wooden interior seating aboard Waow 2.">
+            </picture>
+          </figure>
+          <h3>Suites.</h3>
+          <p>Your cabin becomes a private retreat, spacious, beautifully designed and luxurious, with all the comfort you wouldn't expect to find this far from anywhere.</p>
+        </article>
+        <article class="reveal reveal--delay-1">
+          <figure>
+            <picture>
+              <source srcset="images/chef-galley.webp" type="image/webp">
+              <img src="images/chef-galley.jpg" loading="lazy" alt="Waow 2's chef preparing a fresh catch." style="object-position:50% 30%;">
+            </picture>
+          </figure>
+          <h3>Gastronomy.</h3>
+          <p>Five gastronomic moments a day, bold flavors, comforting favorites and every dietary preference met with creativity, never compromise.</p>
+        </article>
+        <article class="reveal reveal--delay-2">
+          <figure>
+            <picture>
+              <source srcset="images/diver-reef.webp" type="image/webp">
+              <img src="images/diver-reef.jpg" loading="lazy" alt="A diver descending at sunset off Waow 2's dive deck.">
+            </picture>
+          </figure>
+          <h3>Diving.</h3>
+          <p>From vibrant reefs to dramatic walls and encounters with remarkable marine life, all explored with experienced guides and safety at the heart of every dive.</p>
+        </article>
+      </div>
+      <a class="link-arrow hp-life__link reveal" href="the-boat.html">
+        discover the boat
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
     </div>
-    <a href="itineraires.html" class="btn">View All Itineraries</a>
-  </div>
-  <div class="itin-grid reveal">
-    <div class="itin-card">
-      <div class="media">
-        <img src="https://placehold.co/600x800/0A0E1A/00D4FF?text=Raja+Ampat" onerror="this.onerror=null;this.src='https://placehold.co/600x800/0A0E1A/C9A45C?text=Raja+Ampat'" alt="Raja Ampat">
-        <div class="media-overlay"></div>
+  </section>
+  <div class="hp-divider" aria-hidden="true"></div>
+
+  <!-- ================= A FAMILY AFFAIR ================= -->
+  <section class="hp-family" id="family">
+    <div class="hp-family__stripes" aria-hidden="true"></div>
+    <div class="container hp-family__grid">
+      <div class="hp-family__copy reveal">
+        <h2>A Family<br>Affair.</h2>
+        <p class="hp-family__script">— sailing since 2011</p>
+        <p>More than ten years ago, the Deville family launched the first Waow to open Indonesia's reefs to travellers who wanted more than a deck chair. Waow 2 carries that same idea further, the same attention below deck, the same standards underwater, extended to a new generation of guests.</p>
+        <a class="link-arrow hp-family__link" href="the-boat.html#crew">
+          about us
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
       </div>
-      <div class="itin-card-content">
-        <p class="itin-location">West Papua</p>
-        <h3 class="itin-name">Raja Ampat</h3>
-        <p class="itin-desc">La biodiversité marine la plus riche de la planète. Raies manta, requins-baleines et murs de corail à couper le souffle.</p>
-        <a href="itineraires.html" class="link-underline">Learn more →</a>
-      </div>
-    </div>
-    <div class="itin-card">
-      <div class="media">
-        <img src="https://placehold.co/600x800/0A0E1A/00D4FF?text=Cenderawasih" onerror="this.onerror=null;this.src='https://placehold.co/600x800/0A0E1A/C9A45C?text=Cenderawasih'" alt="Cenderawasih Bay">
-        <div class="media-overlay"></div>
-      </div>
-      <div class="itin-card-content">
-        <p class="itin-location">West Papua</p>
-        <h3 class="itin-name">Cenderawasih Bay</h3>
-        <p class="itin-desc">Le plus grand parc marin national d'Indonésie, où les requins-baleines se rassemblent toute l'année.</p>
-        <a href="itineraires.html" class="link-underline">Learn more →</a>
-      </div>
-    </div>
-    <div class="itin-card">
-      <div class="media">
-        <img src="https://placehold.co/600x800/0A0E1A/00D4FF?text=Lembeh" onerror="this.onerror=null;this.src='https://placehold.co/600x800/0A0E1A/C9A45C?text=Lembeh'" alt="Lembeh Strait">
-        <div class="media-overlay"></div>
-      </div>
-      <div class="itin-card-content">
-        <p class="itin-location">North Sulawesi</p>
-        <h3 class="itin-name">Lembeh Strait</h3>
-        <p class="itin-desc">La capitale mondiale du muck diving. Un paysage sous-marin surréaliste peuplé de créatures rares.</p>
-        <a href="itineraires.html" class="link-underline">Learn more →</a>
+      <div class="hp-family__visual reveal reveal--delay-1">
+        <!-- TODO: replace with the real Deville family photo shown in the mockup -->
+        <figure>
+          <picture>
+            <source srcset="images/captain-wheel.webp" type="image/webp">
+            <img src="images/captain-wheel.jpg" loading="lazy" alt="A captain's hands on Waow 2's wheel, a generation of experience behind them.">
+          </picture>
+        </figure>
+        <svg class="dot-icon" aria-hidden="true" viewBox="-4 8 326 223"><use href="#icon-phinisi"></use></svg>
       </div>
     </div>
-    <div class="itin-card">
-      <div class="media">
-        <img src="https://placehold.co/600x800/0A0E1A/00D4FF?text=Sangihe" onerror="this.onerror=null;this.src='https://placehold.co/600x800/0A0E1A/C9A45C?text=Sangihe'" alt="Sangihe Islands">
-        <div class="media-overlay"></div>
+  </section>
+  <div class="hp-divider" aria-hidden="true"></div>
+
+  <!-- ================= DIVE INTO INDONESIA ================= -->
+  <section class="hp-dive" id="diving">
+    <div class="container hp-dive__grid">
+      <div class="hp-dive__col reveal">
+        <figure class="hp-dive__photo hp-dive__photo--left">
+          <picture>
+            <source srcset="images/waow2-detail.webp" type="image/webp">
+            <img src="images/waow2-detail.jpg" loading="lazy" alt="Waow 2 under sail, a different reef waiting at every anchorage.">
+          </picture>
+          <figcaption>A different world,</figcaption>
+        </figure>
+        <p class="hp-dive__caption-out">every day</p>
       </div>
-      <div class="itin-card-content">
-        <p class="itin-location">North Sulawesi</p>
-        <h3 class="itin-name">Sangihe Islands</h3>
-        <p class="itin-desc">« Les perles du Nord » — l'une des dernières frontières inexplorées d'Indonésie, sans foule de plongeurs.</p>
-        <a href="itineraires.html" class="link-underline">Learn more →</a>
+      <div class="hp-dive__copy reveal reveal--delay-1">
+        <h2>Dive into<br>Indonesia</h2>
+        <p>Two weeks of exploration, four dives a day and a different underwater world at every turn.</p>
+        <p>Meet manta rays, wobbegong sharks, walking sharks and tiny pygmy seahorses, alongside vast schools of reef fish and some of the richest coral gardens on Earth.</p>
+        <a class="link-arrow" href="itineraries.html">
+          discover itineraries
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="hp-dive__col reveal reveal--delay-2">
+        <figure class="hp-dive__photo hp-dive__photo--right">
+          <span class="hp-dive__photo-inner">
+            <picture>
+              <source srcset="images/manta-ray.webp" type="image/webp">
+              <img src="images/manta-ray.jpg" loading="lazy" alt="A manta ray gliding past a diver over the reef.">
+            </picture>
+          </span>
+          <svg class="dot-icon hp-dive__mask-icon" aria-hidden="true" viewBox="11 -37 278 256"><use href="#icon-dive-mask"></use></svg>
+        </figure>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+  <div class="hp-divider" aria-hidden="true"></div>
 
-<!-- SECTION 02 — CONSTRUCTION (horizontal pinned scroll timeline) -->
-<section class="construction-section" id="construction">
-  <div class="construction-intro">
-    <div class="construction-intro-top reveal">
-      <div>
-        <div class="section-index">02</div>
-        <p class="eyebrow">Construction</p>
-        <h2 class="split-words">Building<br><em>the impossible.</em></h2>
-      </div>
-      <div class="construction-progress-badge">
-        <div class="construction-progress-num" data-count="28" data-suffix="%">0%</div>
-        <div class="construction-progress-label">Hull Complete</div>
+  <!-- ================= SAFETY FIRST ================= -->
+  <section class="hp-safety">
+    <div class="container hp-safety__grid">
+      <figure class="hp-safety__photo reveal">
+        <picture>
+          <source srcset="images/diver-reef.webp" type="image/webp">
+          <img src="images/diver-reef.jpg" loading="lazy" alt="A vivid coral reef, schooling fish overhead.">
+        </picture>
+        <svg class="dot-icon" aria-hidden="true" viewBox="10 -16 238 285"><use href="#icon-octopus"></use></svg>
+      </figure>
+      <div class="hp-safety__copy reveal reveal--delay-1">
+        <p class="hp-safety__title">Safety First. Always.</p>
+        <p>Safety is non-negotiable. From the design of WAOW 2 to crew training and the equipment on board, every detail is considered with safety in mind.</p>
+        <a class="link-arrow" href="the-boat.html#specs">
+          explore our safety standards
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
       </div>
     </div>
-    <p class="lead reveal">WAOW prend forme aux chantiers navals de Tanjung Bira, Sulawesi — berceau du Phinisi indonésien depuis six générations de charpentiers Konjo. Faites défiler pour suivre chaque étape, de la quille à la mer.</p>
-  </div>
+  </section>
 
-  <div class="construction-progress-track">
-    <div class="construction-progress-fill" id="constructionFill" data-progress="28"></div>
-  </div>
-
-  <div class="construction-pin" id="constructionPin">
-    <div class="construction-track" id="constructionTrack">
-
-      <div class="step-card is-done">
-        <div class="step-card-media media">
-          <img src="images/banner-hero1.jpg" onerror="this.onerror=null;this.src='https://placehold.co/800x600/0A0E1A/C9A45C?text=Design'" alt="Rendu 3D du design naval de WAOW">
-          <span class="step-status">Complete</span>
-        </div>
-        <div class="step-num">01</div>
-        <h3>Naval Architecture</h3>
-        <p>Les lignes de coque finalisées, chaque courbe pensée pour la performance et le confort en haute mer.</p>
-        <div class="step-date">2025 — 3D Render</div>
-      </div>
-
-      <div class="step-card is-done">
-        <div class="step-card-media icon-media">
-          <svg viewBox="0 0 64 64"><path d="M32 8v28M20 20l12-12 12 12M14 40c4 10 12 16 18 16s14-6 18-16"/><circle cx="32" cy="14" r="3"/></svg>
-          <span class="step-status">Complete</span>
-        </div>
-        <div class="step-num">02</div>
-        <h3>Keel Laid</h3>
-        <p>La quille repose désormais sur la plage de Tanjung Bira, prête à recevoir sa première membrure.</p>
-        <div class="step-date">March 2026</div>
-      </div>
-
-      <div class="step-card is-current">
-        <div class="step-card-media icon-media">
-          <svg viewBox="0 0 64 64"><path d="M8 40c8-18 40-18 48 0M16 40v-14M32 40V16M48 40V26"/></svg>
-          <span class="step-status">In Progress</span>
-        </div>
-        <div class="step-num">03</div>
-        <h3>Hull Structure</h3>
-        <p>Membrures et bordé en cours d'assemblage par les charpentiers Konjo, planche après planche.</p>
-        <div class="step-date">Underway — 62%</div>
-      </div>
-
-      <div class="step-card is-upcoming">
-        <div class="step-card-media icon-media">
-          <svg viewBox="0 0 64 64"><path d="M32 6v42M32 10l16 8-16 10z"/><path d="M10 48c10 6 34 6 44 0"/></svg>
-          <span class="step-status">Upcoming</span>
-        </div>
-        <div class="step-num">04</div>
-        <h3>Rigging &amp; Decks</h3>
-        <p>Pose des mâts, du pont supérieur et des espaces de vie extérieurs.</p>
-        <div class="step-date">Est. 2027</div>
-      </div>
-
-      <div class="step-card is-upcoming">
-        <div class="step-card-media icon-media">
-          <svg viewBox="0 0 64 64"><rect x="12" y="18" width="40" height="28" rx="2"/><path d="M12 30h40M24 18v28"/></svg>
-          <span class="step-status">Upcoming</span>
-        </div>
-        <div class="step-num">05</div>
-        <h3>Interior Fit-Out</h3>
-        <p>Aménagement des cabines, du salon et des espaces de bien-être à bord.</p>
-        <div class="step-date">Est. 2027–28</div>
-      </div>
-
-      <div class="step-card is-upcoming">
-        <div class="step-card-media icon-media">
-          <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="22"/><path d="M32 18l6 14-6 14-6-14z"/></svg>
-          <span class="step-status">Upcoming</span>
-        </div>
-        <div class="step-num">06</div>
-        <h3>Sea Trials &amp; Launch</h3>
-        <p>Essais en mer, puis mise à l'eau officielle à Tanjung Bira.</p>
-        <div class="step-date">Q4 2028</div>
+  <!-- ================= EXPLORE INDONESIA ================= -->
+  <section class="hp-explore" id="destinations">
+    <div class="container">
+      <div class="hp-explore__head reveal">
+        <h2>Explore<br>Indonesia</h2>
+        <p>From Raja Ampat to Kalimantan and beyond, discover more than 20 itineraries across Indonesia's most remarkable waters. Each route offers a different landscape, season and underwater world.</p>
+        <a class="link-arrow" href="itineraries.html">
+          all destinations
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
       </div>
 
-    </div>
-  </div>
-  <p class="construction-hint">Scroll to explore the build →</p>
-</section>
-
-<!-- SECTION 03 — TEAM -->
-<section class="section" id="team">
-  <div class="section-header reveal">
-    <div>
-      <div class="section-index">03</div>
-      <p class="eyebrow">The Team</p>
-      <h2 class="split-words">Faces behind<br><em>the voyage.</em></h2>
-    </div>
-  </div>
-  <div class="team-grid reveal">
-    <div class="team-card">
-      <div class="team-card-inner">
-        <div class="team-photo media">
-          <img src="https://placehold.co/500x500/0A0E1A/C9A45C?text=M.D." alt="Michel Deville">
-        </div>
-        <div class="team-num">01</div>
-        <h3 class="team-name">Michel Deville</h3>
-        <p class="team-role">Founder &amp; Visionary</p>
-        <p class="team-bio">Il a rêvé de ce bateau si intensément, si obstinément, qu'il ne pouvait plus dormir — jusqu'à donner vie à WAOW. L'âme du projet, et sa force motrice.</p>
-      </div>
-    </div>
-    <div class="team-card">
-      <div class="team-card-inner">
-        <div class="team-photo media">
-          <img src="https://placehold.co/500x500/0A0E1A/C9A45C?text=J.D." alt="Julia Deville">
-        </div>
-        <div class="team-num">02</div>
-        <h3 class="team-name">Julia Deville</h3>
-        <p class="team-role">Co-Founder &amp; Operations</p>
-        <p class="team-bio">Après 18 ans en tant que Key Account Manager et Directrice de Projet dans l'industrie, Julia a tout quitté pour rejoindre le projet le plus exigeant — et le plus beau — de sa vie.</p>
-      </div>
-    </div>
-    <div class="team-card">
-      <div class="team-card-inner">
-        <div class="team-photo media">
-          <img src="https://placehold.co/500x500/0A0E1A/C9A45C?text=A.L." alt="Andrew Laughlin">
-        </div>
-        <div class="team-num">03</div>
-        <h3 class="team-name">Andrew Laughlin</h3>
-        <p class="team-role">Director — PT WAOW Charters, Bali</p>
-        <p class="team-bio">Le globe-trotter des océans et de la vie. L'un des plus jeunes instructeurs de plongée à 20 ans en 1988, Andrew a passé sa vie à naviguer entre continents et sites de plongée.</p>
-      </div>
-    </div>
-    <div class="team-card">
-      <div class="team-card-inner">
-        <div class="team-photo media">
-          <img src="https://placehold.co/500x500/0A0E1A/C9A45C?text=R.S." alt="Reto Schläpfer">
-        </div>
-        <div class="team-num">04</div>
-        <h3 class="team-name">Reto Schläpfer</h3>
-        <p class="team-role">Cruise Director</p>
-        <p class="team-bio">Né en Suisse, vivant en Indonésie depuis 2005. Parlant couramment français, allemand, anglais et indonésien — Reto est le pont entre les mondes, à bord et sous l'eau.</p>
-      </div>
-    </div>
-    <div class="team-card">
-      <div class="team-card-inner">
-        <div class="team-photo media">
-          <img src="https://placehold.co/500x500/0A0E1A/C9A45C?text=W.S." alt="Wulan Sane">
-        </div>
-        <div class="team-num">05</div>
-        <h3 class="team-name">Wulan Sane</h3>
-        <p class="team-role">Indonesian Relations</p>
-        <p class="team-bio">La bonne fée indonésienne de WAOW. La personne qui a toujours su ouvrir des portes que personne d'autre ne pouvait ouvrir. Un pont irremplaçable vers le monde local.</p>
-      </div>
-    </div>
-    <div class="team-card">
-      <div class="team-card-inner">
-        <div class="team-photo media">
-          <img src="https://placehold.co/500x500/0A0E1A/C9A45C?text=S.G." alt="Stéphane Griveau">
-        </div>
-        <div class="team-num">06</div>
-        <h3 class="team-name">Stéphane Griveau</h3>
-        <p class="team-role">Dive Travel Expert</p>
-        <p class="team-bio">Plus de 20 ans en tant que spécialiste du voyage de plongée, travaillant avec des tour-opérateurs en France et en Suisse, toujours à la recherche des plus beaux spots de la planète.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SECTION 04 — PRE-SALE -->
-<section class="section presale-section" id="presale">
-  <div class="section-header reveal">
-    <div>
-      <div class="section-index">04</div>
-      <p class="eyebrow">Pre-Sale</p>
-      <h2 class="split-words">Reserve your place<br><em>before she sails.</em></h2>
-    </div>
-  </div>
-  <div class="presale-grid">
-    <div class="presale-text reveal">
-      <p>Rejoindre le Cercle Fondateur, c'est réserver bien plus qu'une cabine : c'est inscrire son nom sur la plaque de plankowner de WAOW, verrouiller le tarif de lancement, et embarquer en priorité absolue lors de la traversée inaugurale.</p>
-      <ul class="presale-perks">
-        <li>Tarif fondateur verrouillé à vie</li>
-        <li>Nom gravé sur la plaque du navire</li>
-        <li>Priorité absolue — traversée inaugurale</li>
-        <li>Invitation privée à la cérémonie de mise à l'eau</li>
+      <!-- TODO: replace with the real destination stamp illustrations once the set is designed -->
+      <ul class="hp-stamp-row reveal reveal--delay-1">
+        <li>
+          <svg class="hp-dest-stamp" viewBox="0 0 132 96" aria-hidden="true">
+            <rect x="4" y="4" width="124" height="88"/>
+            <svg x="40" y="14" width="52" height="52" viewBox="15 17 237 240"><use href="#icon-starfish"></use></svg>
+            <text x="66" y="82" font-size="9" letter-spacing="1">DESTINATION</text>
+          </svg>
+        </li>
+        <li>
+          <svg class="hp-dest-stamp" viewBox="0 0 132 96" aria-hidden="true">
+            <rect x="4" y="4" width="124" height="88"/>
+            <svg x="40" y="14" width="52" height="52" viewBox="10 -16 238 285"><use href="#icon-octopus"></use></svg>
+            <text x="66" y="82" font-size="9" letter-spacing="1">DESTINATION</text>
+          </svg>
+        </li>
+        <li>
+          <svg class="hp-dest-stamp" viewBox="0 0 132 96" aria-hidden="true">
+            <rect x="4" y="4" width="124" height="88"/>
+            <svg x="40" y="14" width="52" height="52" viewBox="2 28 245 230"><use href="#icon-turtle"></use></svg>
+            <text x="66" y="82" font-size="9" letter-spacing="1">DESTINATION</text>
+          </svg>
+        </li>
+        <li>
+          <svg class="hp-dest-stamp" viewBox="0 0 132 96" aria-hidden="true">
+            <rect x="4" y="4" width="124" height="88"/>
+            <svg x="40" y="14" width="52" height="52" viewBox="6 44 140 233"><use href="#icon-shell"></use></svg>
+            <text x="66" y="82" font-size="9" letter-spacing="1">DESTINATION</text>
+          </svg>
+        </li>
+        <li>
+          <svg class="hp-dest-stamp" viewBox="0 0 132 96" aria-hidden="true">
+            <rect x="4" y="4" width="124" height="88"/>
+            <svg x="40" y="14" width="52" height="52" viewBox="-2 60 264 166"><use href="#icon-crab"></use></svg>
+            <text x="66" y="82" font-size="9" letter-spacing="1">DESTINATION</text>
+          </svg>
+        </li>
       </ul>
-      <a href="book.html" class="btn btn-accent">Reserve Your Cabin</a>
-    </div>
-    <div class="presale-panel reveal">
-      <div class="countdown" id="countdown">
-        <div class="countdown-item"><div class="countdown-num" data-cd="days">00</div><div class="countdown-label">Days</div></div>
-        <div class="countdown-item"><div class="countdown-num" data-cd="hours">00</div><div class="countdown-label">Hours</div></div>
-        <div class="countdown-item"><div class="countdown-num" data-cd="mins">00</div><div class="countdown-label">Min</div></div>
-        <div class="countdown-item"><div class="countdown-num" data-cd="secs">00</div><div class="countdown-label">Sec</div></div>
-      </div>
-      <div class="scarcity-row">
-        <span class="scarcity-label">Cabins Reserved</span>
-        <span class="scarcity-value">3 / 8</span>
-      </div>
-      <div class="scarcity-track"><div class="scarcity-fill" id="scarcityFill" data-progress="37.5"></div></div>
-      <p style="font-size:0.78rem;">Places limitées par croisière. Rejoignez la liste d'attente pour la pré-vente et bénéficiez des tarifs early bird avant le lancement officiel.</p>
-    </div>
-  </div>
-</section>
 
-<!-- SECTION 05 — NEWS & EVENTS -->
-<section class="section" id="news-events">
-  <div class="section-header reveal">
+      <div class="hp-coming-next reveal reveal--delay-2">
+        <div class="hp-coming-next__head">
+          <p class="hp-eyebrow-script" style="color:var(--sea-foam); margin-bottom:0;">Coming next…</p>
+        </div>
+        <div class="hp-coming-next__row">
+          <div class="hp-coming-next__track" id="coming-next-track">
+            <article class="hp-coming-next__card">
+              <figure>
+                <picture>
+                  <source srcset="images/komodo-island.webp" type="image/webp">
+                  <img src="images/komodo-island.jpg" loading="lazy" alt="Padar Island's hills rising over the bays of Komodo National Park.">
+                </picture>
+                <figcaption>West Meets East</figcaption>
+              </figure>
+              <p>Bali – Maumere</p>
+            </article>
+            <article class="hp-coming-next__card">
+              <figure>
+                <picture>
+                  <source srcset="images/manta-ray.webp" type="image/webp">
+                  <img src="images/manta-ray.jpg" loading="lazy" alt="A diver alongside a manta ray and schooling fish.">
+                </picture>
+                <figcaption>Forts and Forests</figcaption>
+              </figure>
+              <p>Maumere – Ambon</p>
+            </article>
+            <article class="hp-coming-next__card">
+              <figure>
+                <picture>
+                  <source srcset="images/banda-sea.webp" type="image/webp">
+                  <img src="images/banda-sea.jpg" loading="lazy" alt="A volcanic island silhouette at sunset over the Banda Sea.">
+                </picture>
+                <figcaption>Spices and Snakes</figcaption>
+              </figure>
+              <p>Ambon – Kaimana</p>
+            </article>
+            <article class="hp-coming-next__card">
+              <figure>
+                <picture>
+                  <source srcset="images/raja-ampat.webp" type="image/webp">
+                  <img src="images/raja-ampat.jpg" loading="lazy" alt="Aerial view of karst islands and turquoise lagoons in Raja Ampat.">
+                </picture>
+                <figcaption>Tale of Two Papuas</figcaption>
+              </figure>
+              <p>Kaimana – Sorong</p>
+            </article>
+          </div>
+          <button class="hp-coming-next__nav" type="button" id="coming-next-next" aria-label="Scroll to next route">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MEMORIES OF WAOW 1 ================= -->
+  <section class="hp-memories">
+    <div class="container">
+      <div class="hp-memories__head reveal">
+        <h2>Memories of WAOW</h2>
+        <p>For years, WAOW took divers across Indonesia — from Raja Ampat to Komodo, the Banda Sea and beyond. The boat may now be part of the story, but the memories remain.</p>
+        <p>A few words from the people who experienced it for themselves.</p>
+        <a class="link-arrow" href="#">
+          more about WAOW
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="hp-postcards reveal reveal--delay-1">
+        <article class="hp-postcard">
+          <div class="hp-postcard__stamp" aria-hidden="true"></div>
+          <p class="hp-postcard__meta">Raja Ampat · 2015</p>
+          <p class="hp-postcard__quote">"Beautiful boat, beautiful diving and awesome people. Loved every second!"</p>
+          <p class="hp-postcard__author">Elly S. — UK</p>
+        </article>
+        <article class="hp-postcard">
+          <div class="hp-postcard__stamp" aria-hidden="true"></div>
+          <p class="hp-postcard__meta">Komodo · 2017</p>
+          <p class="hp-postcard__quote">"The entire experience on the Waow was exceptional in every way."</p>
+          <p class="hp-postcard__author">Ann — U.K.</p>
+        </article>
+        <article class="hp-postcard">
+          <div class="hp-postcard__stamp" aria-hidden="true"></div>
+          <p class="hp-postcard__meta">Raja Ampat · 2015</p>
+          <p class="hp-postcard__quote">"Those 12 days were 'Waow'!"</p>
+          <p class="hp-postcard__author">Dieter C. — Belgium</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NEWSLETTER ================= -->
+  <section class="hp-newsletter">
+    <div class="container hp-newsletter__row">
+      <p>Stay informed –<br>sign up to our newsletter for the latest offers and destinations</p>
+      <form class="hp-newsletter__form" id="newsletter-form">
+        <label class="sr-only" for="newsletter-email">Email address</label>
+        <input type="email" id="newsletter-email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="sr-only" id="newsletter-note" role="status"></p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER (page-scoped, matches the new mockup) ================= -->
+<footer class="hp-footer">
+  <div class="container hp-footer__grid">
     <div>
-      <div class="section-index">05</div>
-      <p class="eyebrow">News &amp; Events</p>
-      <h2 class="split-words">Latest<br><em>dispatches.</em></h2>
-    </div>
-    <a href="news.html" class="btn">View All News</a>
-  </div>
-
-  <div class="news-filters reveal">
-    <button class="news-filter-btn is-active" data-filter="all">All</button>
-    <button class="news-filter-btn" data-filter="construction">Construction</button>
-    <button class="news-filter-btn" data-filter="diving">Diving</button>
-    <button class="news-filter-btn" data-filter="presale">Pre-Sale</button>
-  </div>
-
-  <div class="news-grid reveal">
-    <article class="news-card" data-category="construction">
-      <div class="media"><img src="https://placehold.co/700x525/0A0E1A/00D4FF?text=Keel+Laid" onerror="this.onerror=null;this.src='https://placehold.co/700x525/0A0E1A/C9A45C?text=Keel+Laid'" alt="La quille de WAOW posée à Tanjung Bira"></div>
-      <div class="news-meta"><span class="news-tag">Construction</span><span class="news-date">Jun 12, 2026</span></div>
-      <h3 class="news-title">Keel Laid at Tanjung Bira</h3>
-      <p class="news-excerpt">Un moment fondateur pour WAOW : la quille repose désormais sur la plage, prête à recevoir sa première membrure.</p>
-      <a href="news.html" class="link-underline">Read more →</a>
-    </article>
-    <article class="news-card" data-category="diving">
-      <div class="media"><img src="https://placehold.co/700x525/0A0E1A/00D4FF?text=Raja+Ampat" onerror="this.onerror=null;this.src='https://placehold.co/700x525/0A0E1A/C9A45C?text=Raja+Ampat'" alt="Nouvel itinéraire signature à Raja Ampat"></div>
-      <div class="news-meta"><span class="news-tag">Diving</span><span class="news-date">Mar 3, 2026</span></div>
-      <h3 class="news-title">Raja Ampat: Our Signature Itinerary</h3>
-      <p class="news-excerpt">Huit jours à travers les murs de corail les plus riches de la planète, dévoilés en exclusivité.</p>
-      <a href="news.html" class="link-underline">Read more →</a>
-    </article>
-    <article class="news-card" data-category="presale">
-      <div class="media"><img src="https://placehold.co/700x525/0A0E1A/00D4FF?text=Founders+Circle" onerror="this.onerror=null;this.src='https://placehold.co/700x525/0A0E1A/C9A45C?text=Founders+Circle'" alt="Ouverture du Cercle Fondateur"></div>
-      <div class="news-meta"><span class="news-tag">Pre-Sale</span><span class="news-date">Jan 18, 2026</span></div>
-      <h3 class="news-title">The Founders' Circle Opens</h3>
-      <p class="news-excerpt">Un nombre limité de cabines à tarif de lancement, réservées aux tout premiers membres du projet.</p>
-      <a href="news.html" class="link-underline">Read more →</a>
-    </article>
-    <article class="news-card" data-category="construction">
-      <div class="media"><img src="https://placehold.co/700x525/0A0E1A/00D4FF?text=Konjo+Shipwrights" onerror="this.onerror=null;this.src='https://placehold.co/700x525/0A0E1A/C9A45C?text=Konjo+Shipwrights'" alt="Rencontre avec les charpentiers Konjo"></div>
-      <div class="news-meta"><span class="news-tag">Construction</span><span class="news-date">Apr 22, 2026</span></div>
-      <h3 class="news-title">Meet the Konjo Shipwrights</h3>
-      <p class="news-excerpt">Six générations de savoir-faire transmis à la main, au cœur du chantier de Tanjung Bira.</p>
-      <a href="news.html" class="link-underline">Read more →</a>
-    </article>
-    <article class="news-card" data-category="diving">
-      <div class="media"><img src="https://placehold.co/700x525/0A0E1A/00D4FF?text=Cenderawasih" onerror="this.onerror=null;this.src='https://placehold.co/700x525/0A0E1A/C9A45C?text=Cenderawasih'" alt="Retour des requins-baleines à Cenderawasih Bay"></div>
-      <div class="news-meta"><span class="news-tag">Diving</span><span class="news-date">Feb 9, 2026</span></div>
-      <h3 class="news-title">Cenderawasih Bay: Whale Sharks Return</h3>
-      <p class="news-excerpt">Le plus grand parc marin d'Indonésie s'apprête à accueillir sa saison de requins-baleines.</p>
-      <a href="news.html" class="link-underline">Read more →</a>
-    </article>
-    <article class="news-card" data-category="presale">
-      <div class="media"><img src="https://placehold.co/700x525/0A0E1A/00D4FF?text=Early+Bird" onerror="this.onerror=null;this.src='https://placehold.co/700x525/0A0E1A/C9A45C?text=Early+Bird'" alt="Fin des tarifs early bird"></div>
-      <div class="news-meta"><span class="news-tag">Pre-Sale</span><span class="news-date">May 30, 2026</span></div>
-      <h3 class="news-title">Early Bird Rates End Soon</h3>
-      <p class="news-excerpt">Les tarifs de lancement 2026 seront verrouillés pour les membres fondateurs jusqu'à fin d'année.</p>
-      <a href="news.html" class="link-underline">Read more →</a>
-    </article>
-  </div>
-</section>
-
-<!-- CTA — BOOKING -->
-<section class="cta" id="booking">
-  <div class="hero-media">
-    <img src="https://placehold.co/1920x1000/0A0E1A/00D4FF?text=WAOW" onerror="this.onerror=null;this.src='https://placehold.co/1920x1000/0A0E1A/C9A45C?text=WAOW'" alt="">
-  </div>
-  <div class="hero-overlay"></div>
-  <div class="cta-content reveal">
-    <p class="eyebrow mx-auto" style="justify-content:center;">Ready to dive?</p>
-    <h2>Your next expedition<br><em>starts here.</em></h2>
-    <p class="mx-auto">Places limitées par croisière. Rejoignez la liste d'attente pour la pré-vente et bénéficiez des tarifs early bird.</p>
-    <div class="btn-row">
-      <a href="book.html" class="btn btn-accent">Join the Waitlist</a>
-      <a href="mailto:info@waow.ch" class="btn">Request a Quote</a>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <div class="nav-logo">W<span>A</span>OW</div>
-      <p>Le liveaboard ultime pour une expérience de plongée d'exception en Indonésie. Croisières dans les eaux les plus biodiverses de la planète depuis 2013.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Destinations</h4>
-      <a href="itineraires.html">Raja Ampat</a>
-      <a href="itineraires.html">Cenderawasih Bay</a>
-      <a href="itineraires.html">Lembeh Strait</a>
-      <a href="itineraires.html">Sangihe Islands</a>
-    </div>
-    <div class="footer-col">
-      <h4>On Board</h4>
-      <a href="le-bateau.html">The Vessel</a>
-      <a href="diving.html">Diving</a>
-      <a href="musee.html">Musée WAOW 1</a>
-    </div>
-    <div class="footer-col">
-      <h4>The Project</h4>
-      <a href="#construction">Construction</a>
-      <a href="#team">Team</a>
-      <a href="#presale">Pre-Sale</a>
-      <a href="#news-events">News &amp; Events</a>
-    </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
+      <h3>Contact Us</h3>
       <a href="mailto:info@waow.ch">info@waow.ch</a>
-      <a href="book.html">Book / Pré-vente</a>
     </div>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="the-boat.html">The Boat</a></li>
+        <li><a href="itineraries.html">Destinations</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="#life">Experience</a></li>
+        <li><a href="#family">About Us</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Footer">
+      <ul>
+        <!-- TODO: link to real Events / Q&A pages once they exist -->
+        <li><a href="news.html">Events</a></li>
+        <li><a href="/qa">Q&amp;A</a></li>
+      </ul>
+    </nav>
   </div>
-  <div class="footer-bottom">
-    <span>© 2026 WAOW Charters — All rights reserved</span>
-    <span>PT WAOW Charters, Bali, Indonesia</span>
+
+  <div class="hp-divider" aria-hidden="true"></div>
+
+  <div class="container hp-footer__legal">
+    <p>Copyright <span id="year"></span><br>WAOW Charters</p>
+    <div class="hp-footer__policies">
+      <label class="sr-only" for="hp-lang-select">Language</label>
+      <!-- TODO: wire up real localization when a second language is ready -->
+      <select class="hp-footer__lang-select" id="hp-lang-select" disabled>
+        <option>English ∨</option>
+        <option>Français</option>
+      </select>
+      <!-- TODO: link to real legal pages -->
+      <a href="/cookies">Cookies policy</a>
+      <a href="/privacy">Privacy policy</a>
+      <a href="/terms">Terms and conditions</a>
+    </div>
+    <div class="hp-footer__social">
+      <a href="#" aria-label="Waow Charters on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="Waow Charters on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></a>
+      <a href="#" aria-label="Waow Charters on YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 9.5l5 2.5-5 2.5z" fill="currentColor"/></svg></a>
+    </div>
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="main.js"></script>
+<script>
+(function () {
+  "use strict";
+  var track = document.getElementById("coming-next-track");
+  var next = document.getElementById("coming-next-next");
+  if (track && next) {
+    next.addEventListener("click", function () {
+      var card = track.querySelector(".hp-coming-next__card");
+      var step = card ? card.getBoundingClientRect().width + 24 : 260;
+      track.scrollBy({ left: step, behavior: "smooth" });
+    });
+  }
+})();
+</script>
 </body>
 </html>

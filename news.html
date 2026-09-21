@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>News &amp; Logbook — Waow Charters</title>
+<meta name="description" content="Entries from the Waow 2 logbook, and what's coming up aboard — full moon dives, seasonal departures, and the ordinary days in between.">
+
+<!-- TODO: replace with real favicon files -->
+<link rel="icon" href="data:,">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--
+  Brand fonts (Lemon Milk, Have Heart Two) are licensed, not on Google Fonts.
+  TODO: once licensed font files are available, replace the @font-face-free
+  stack below with local @font-face declarations for Lemon Milk and Have
+  Heart Two. Outfit and Caveat are close-in-spirit stand-ins used for V1.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Outfit:wght@500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+<symbol id="icon-starfish" viewBox="15 17 237 240"><rect x="45.8" y="49.3" width="175.4" height="175.4" rx="10.5" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.46" stroke-dasharray="4.9 3.5"/><circle cx="115.3" cy="113.3" r="10.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.46"/><path d="M87.9,166.2 L129.9,127.9 L151.7,149.8 L153.6,118.8 L179.1,166.2" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.46" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-octopus" viewBox="10 -16 238 285"><rect x="40.9" y="38.4" width="176.1" height="176.1" rx="10.6" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.47" stroke-dasharray="4.9 3.5"/><circle cx="110.7" cy="102.7" r="10.1" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.47"/><path d="M83.2,155.8 L125.3,117.3 L147.3,139.3 L149.1,108.2 L174.8,155.8" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.47" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-turtle" viewBox="2 28 245 230"><rect x="39.4" y="57.9" width="170.2" height="170.2" rx="10.2" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.38" stroke-dasharray="4.8 3.4"/><circle cx="106.8" cy="120.0" r="9.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.38"/><path d="M80.2,171.3 L121.0,134.1 L142.2,155.4 L144.0,125.3 L168.8,171.3" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.38" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-komodo" viewBox="-34 79 390 153"><rect x="104.4" y="98.9" width="113.2" height="113.2" rx="6.8" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.59" stroke-dasharray="3.2 2.3"/><circle cx="149.2" cy="140.2" r="6.5" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.59"/><path d="M131.6,174.3 L158.6,149.6 L172.8,163.7 L174.0,143.7 L190.4,174.3" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.59" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-phinisi" viewBox="-4 8 326 223"><rect x="76.5" y="37.0" width="165.0" height="165.0" rx="9.9" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.31" stroke-dasharray="4.6 3.3"/><circle cx="141.8" cy="97.2" r="9.4" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.31"/><path d="M116.1,147.0 L155.6,110.9 L176.2,131.5 L177.9,102.3 L201.9,147.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.31" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-dive-mask" viewBox="11 -37 278 256"><rect x="55.3" y="-3.7" width="189.4" height="189.4" rx="11.4" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.65" stroke-dasharray="5.3 3.8"/><circle cx="130.3" cy="65.4" r="10.8" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.65"/><path d="M100.7,122.5 L146.1,81.1 L169.7,104.8 L171.7,71.3 L199.3,122.5" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.65" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-shell" viewBox="6 44 140 233"><rect x="24.2" y="108.7" width="103.6" height="103.6" rx="6.2" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.45" stroke-dasharray="2.9 2.1"/><circle cx="65.2" cy="146.5" r="5.9" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.45"/><path d="M49.1,177.7 L73.8,155.1 L86.8,168.0 L87.9,149.7 L102.9,177.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-crab" viewBox="-2 60 264 166"><rect x="68.6" y="81.6" width="122.8" height="122.8" rx="7.4" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.72" stroke-dasharray="3.4 2.5"/><circle cx="117.2" cy="126.4" r="7.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.72"/><path d="M98.1,163.4 L127.4,136.6 L142.8,151.9 L144.1,130.2 L161.9,163.4" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.72" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-jellyfish" viewBox="48 17 162 208"><rect x="69.1" y="61.1" width="119.9" height="119.9" rx="7.2" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.68" stroke-dasharray="3.4 2.4"/><circle cx="116.5" cy="104.8" r="6.9" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.68"/><path d="M97.8,140.9 L126.5,114.8 L141.5,129.7 L142.7,108.5 L160.2,140.9" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.68" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-angelfish" viewBox="55 6 184 236"><rect x="78.9" y="55.9" width="136.2" height="136.2" rx="8.2" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.91" stroke-dasharray="3.8 2.7"/><circle cx="132.8" cy="105.6" r="7.8" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.91"/><path d="M111.6,146.7 L144.2,116.9 L161.2,133.9 L162.6,109.8 L182.4,146.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.91" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-flatfish" viewBox="44 42 202 176"><rect x="79.9" y="64.9" width="130.2" height="130.2" rx="7.8" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.82" stroke-dasharray="3.6 2.6"/><circle cx="131.5" cy="112.4" r="7.4" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.82"/><path d="M111.1,151.7 L142.3,123.2 L158.5,139.5 L159.9,116.5 L178.9,151.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.82" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-urchin" viewBox="10 19 224 204"><rect x="46.5" y="45.5" width="151.0" height="151.0" rx="9.1" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.11" stroke-dasharray="4.2 3.0"/><circle cx="106.3" cy="100.6" r="8.6" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.11"/><path d="M82.8,146.1 L118.9,113.2 L137.7,132.0 L139.3,105.3 L161.2,146.1" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.11" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-ammonite" viewBox="49 39 182 202"><rect x="72.7" y="72.7" width="134.7" height="134.7" rx="8.1" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.89" stroke-dasharray="3.8 2.7"/><circle cx="126.0" cy="121.8" r="7.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.89"/><path d="M105.0,162.4 L137.2,133.0 L154.0,149.8 L155.4,126.0 L175.0,162.4" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.89" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-coral" viewBox="-117 -25 402 331"><rect x="-38.5" y="18.0" width="244.9" height="244.9" rx="14.7" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="3.43" stroke-dasharray="6.9 4.9"/><circle cx="58.5" cy="107.4" r="14.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="3.43"/><path d="M20.3,181.3 L78.9,127.8 L109.5,158.3 L112.0,115.0 L147.7,181.3" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="3.43" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Pointillism icon sprite (bejeweled-mosaic style) is inlined just below, defs only, so <use href="#icon-x"> resolves reliably on every page. -->
+<header class="site-header" id="site-header">
+  <div class="container site-header__row">
+    <a class="logo" href="index.html" aria-label="Waow Charters, home">
+      <picture>
+        <source srcset="images/logo-waow2.webp" type="image/webp">
+        <img src="images/logo-waow2.png" alt="Waow 2" width="180" height="41">
+      </picture>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a href="the-boat.html">The Boat</a></li>
+        <li><a href="itineraries.html">Itineraries</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="news.html" class="is-active" aria-current="page">News</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--solid" href="booking.html">Book your trip</a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <ul>
+      <li><a href="the-boat.html">The Boat</a></li>
+      <li><a href="itineraries.html">Itineraries</a></li>
+      <li><a href="booking.html">Booking</a></li>
+      <li><a href="news.html" class="is-active" aria-current="page">News</a></li>
+      <li><a class="btn btn--solid" href="booking.html">Book your trip</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= PAGE HERO ================= -->
+  <section class="page-hero">
+    <svg class="dot-icon sea-life" aria-hidden="true" style="top:2%;right:6%;width:104px;transform:rotate(10deg);opacity:.9;" viewBox="10 -16 238 285"><use href="#icon-octopus"></use></svg>
+    <div class="container page-hero__inner">
+      <p class="eyebrow"><span class="eyebrow__rule" aria-hidden="true"></span>News &amp; Logbook</p>
+      <h1>What's ahead, and what already happened.</h1>
+      <p class="page-hero__lead">A running record of Waow 2 — the departures worth marking a calendar for, and the ordinary entries in between that don't fit anywhere else on the site.</p>
+    </div>
+  </section>
+
+  <!-- ================= UPCOMING EVENTS ================= -->
+  <section class="section section--dark boat-panel" id="events">
+    <div class="boat-panel__ledger" aria-hidden="true"></div>
+    <svg class="dot-icon sea-life" aria-hidden="true" style="top:6%;right:4%;width:90px;transform:rotate(-8deg);opacity:.5;" viewBox="49 39 182 202"><use href="#icon-ammonite"></use></svg>
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow eyebrow--on-dark">Coming Up</p>
+        <h2>Worth marking a calendar for.</h2>
+      </div>
+
+      <div class="event-strip">
+        <div class="event-card reveal">
+          <div class="event-card__date"><b>17</b><span>Oct</span></div>
+          <div>
+            <h3>Full Moon Night Dive</h3>
+            <p>Komodo — dropping in after dark to watch the reef feed. Ask when you book if your dates line up.</p>
+          </div>
+        </div>
+        <div class="event-card reveal reveal--delay-1">
+          <div class="event-card__date"><b>02</b><span>Nov</span></div>
+          <div>
+            <h3>Manta Season Departure</h3>
+            <p>Raja Ampat — first crossing of the season, timed for the manta aggregation at Manta Sandy.</p>
+          </div>
+        </div>
+        <div class="event-card reveal reveal--delay-2">
+          <div class="event-card__date"><b>14</b><span>Mar</span></div>
+          <div>
+            <h3>Nutmeg Route Anniversary</h3>
+            <p>Banda Sea — a one-off charter marking ten years of Waow in these islands. A few places still open.</p>
+          </div>
+        </div>
+      </div>
+      <!-- TODO: replace with real, current event dates before publishing -->
+    </div>
+  </section>
+
+  <!-- ================= LOGBOOK / JOURNAL ================= -->
+  <section class="section" id="logbook-entries">
+    <svg class="dot-icon sea-life" aria-hidden="true" style="top:1%;left:2%;width:96px;transform:rotate(8deg);opacity:.85;" viewBox="10 19 224 204"><use href="#icon-urchin"></use></svg>
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow"><span class="eyebrow__rule" aria-hidden="true"></span>From the Logbook</p>
+        <h2>The ordinary entries, mostly.</h2>
+      </div>
+
+      <div class="journal-grid">
+        <article class="journal-entry journal-entry--tilt-a reveal">
+          <p class="journal-entry__date">August 2026</p>
+          <div class="journal-entry__photo">
+            <!-- TEMP stock photo — replace with a real Waow 2 dive photo -->
+            <figure class="polaroid polaroid--tilt-left">
+              <span class="polaroid__photo torn-edge">
+                <picture>
+                  <source srcset="images/diver-reef.webp" type="image/webp">
+                  <img src="images/diver-reef.jpg" loading="lazy" alt="A diver exploring a vivid coral reef in Indonesian waters.">
+                </picture>
+              </span>
+              <figcaption>Cauldron, at last</figcaption>
+            </figure>
+          </div>
+          <h3>The current at Cauldron finally cooperated</h3>
+          <p>Three trips this year we'd turned back at the entry point. This time the slack held for eleven minutes — long enough for everyone to see the sharks holding in the blue before the current picked back up.</p>
+        </article>
+
+        <article class="journal-entry journal-entry--tilt-b reveal reveal--delay-1">
+          <p class="journal-entry__date">July 2026</p>
+          <h3>Wayan's ten years aboard</h3>
+          <p>Ten years ago this month, Wayan joined as a deckhand on the first Waow. He's turned down two chances to run his own boat since. When we asked why, he shrugged and said the coffee here is better.</p>
+          <p class="journal-entry__quote">"Somebody has to keep this crew in line."</p>
+        </article>
+
+        <article class="journal-entry journal-entry--tilt-a reveal reveal--delay-2">
+          <p class="journal-entry__date">June 2026</p>
+          <div class="journal-entry__photo">
+            <!-- TEMP stock photo — replace with a real Waow 2 photo of the pilot whale encounter -->
+            <figure class="polaroid polaroid--tilt-right polaroid--tape">
+              <span class="polaroid__photo torn-edge">
+                <picture>
+                  <source srcset="images/manta-ray.webp" type="image/webp">
+                  <img src="images/manta-ray.jpg" loading="lazy" alt="A manta ray gliding over the reef, Raja Ampat.">
+                </picture>
+              </span>
+              <figcaption>An hour off Alor</figcaption>
+            </figure>
+          </div>
+          <h3>A pod of pilot whales followed us for an hour off Alor</h3>
+          <p>Nobody planned it — they simply appeared off the port side mid-crossing and stayed. The engine came off, the guests came up, and the whales seemed in no hurry to leave either.</p>
+        </article>
+
+        <article class="journal-entry reveal">
+          <p class="journal-entry__date">May 2026</p>
+          <h3>Rebuilt the tender engine, finally</h3>
+          <p>It had been running rough since March. Two days in a Labuan Bajo workshop and it now starts on the first pull, which the dive guides have noted with some suspicion.</p>
+        </article>
+
+        <article class="journal-entry journal-entry--tilt-b reveal reveal--delay-1">
+          <p class="journal-entry__date">April 2026</p>
+          <div class="journal-entry__photo">
+            <!-- TEMP stock photo — replace with a real Waow 2 dinner-on-deck photo -->
+            <figure class="polaroid polaroid--tilt-left">
+              <span class="polaroid__photo torn-edge">
+                <picture>
+                  <source srcset="images/guests-table.webp" type="image/webp">
+                  <img src="images/guests-table.jpg" loading="lazy" alt="A table set on deck, ready for dinner.">
+                </picture>
+              </span>
+              <figcaption>Dinner, no set menu</figcaption>
+            </figure>
+          </div>
+          <h3>Rina cooked from what the market had, and nobody minded</h3>
+          <p>A supply run in Maumere came back with more fish than vegetables. Dinner that night was decided on the spot. It remains one of the more requested recipes since.</p>
+        </article>
+
+        <article class="journal-entry reveal reveal--delay-2">
+          <p class="journal-entry__date">March 2026</p>
+          <h3>First manta of the season at Manta Sandy</h3>
+          <p>Earlier than usual, and alone — one reef manta, circling the cleaning station for nearly twenty minutes before three more arrived. A good sign for the season ahead.</p>
+          <p class="journal-entry__quote">"She just kept coming back around."</p>
+        </article>
+      </div>
+      <!-- TODO: replace with real logbook entries, dates and photos once available -->
+    </div>
+  </section>
+
+  <!-- ================= CLOSING CTA ================= -->
+  <section class="section section--panel section--tight" id="next">
+    <div class="container cta-split">
+      <div class="reveal">
+        <p class="eyebrow">Plan Around One</p>
+        <h2>See the full season.</h2>
+        <p>Four routes run on rotation. Check which one lines up with an event above.</p>
+        <a class="link-arrow" href="itineraries.html">
+          Browse the itineraries
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="reveal reveal--delay-1">
+        <p class="eyebrow">Ready When You Are</p>
+        <h2>Hold a cabin.</h2>
+        <p>No payment, no pressure — just a look at what's currently open aboard.</p>
+        <a class="btn btn--solid" href="booking.html">See availability</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <svg class="dot-icon sea-life" aria-hidden="true" style="top:10%;right:8%;width:82px;transform:rotate(-12deg);opacity:.85;" viewBox="10 19 224 204"><use href="#icon-urchin"></use></svg>
+  <div class="container site-footer__grid">
+    <div class="site-footer__brand">
+      <a class="logo logo--light" href="index.html" aria-label="Waow Charters, home">
+        <picture>
+          <source srcset="images/logo-waow2-reversed.webp" type="image/webp">
+          <img src="images/logo-waow2-reversed.png" alt="Waow 2" width="180" height="41">
+        </picture>
+      </a>
+      <p>Indonesia, beyond the surface.</p>
+    </div>
+
+    <nav class="site-footer__nav" aria-label="Footer">
+      <ul>
+        <li><a href="the-boat.html">The Boat</a></li>
+        <li><a href="itineraries.html">Itineraries</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="news.html" class="is-active" aria-current="page">News</a></li>
+      </ul>
+    </nav>
+
+    <nav class="site-footer__nav" aria-label="Explore">
+      <ul>
+        <li><a href="index.html#destinations">Destinations</a></li>
+        <li><a href="index.html#diving">Diving</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="the-boat.html#crew">About Us</a></li>
+      </ul>
+    </nav>
+
+    <nav class="site-footer__nav" aria-label="Support">
+      <ul>
+        <!-- TODO: link to real FAQ / contact pages -->
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-footer__lang">
+      <label class="sr-only" for="lang-select">Language</label>
+      <!-- TODO: wire up real localization when a second language is ready -->
+      <select id="lang-select" disabled>
+        <option>EN</option>
+        <option>FR</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="container site-footer__legal">
+    <p>&copy; <span id="year"></span> Waow Charters. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

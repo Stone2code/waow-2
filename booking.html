@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Booking — Waow Charters</title>
+<meta name="description" content="Search Waow 2's upcoming departures by itinerary, date, cabin or length, and see real cabin availability for each one. No payment, no pressure.">
+
+<!-- TODO: replace with real favicon files -->
+<link rel="icon" href="data:,">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--
+  Brand fonts (Lemon Milk, Have Heart Two) are licensed, not on Google Fonts.
+  TODO: once licensed font files are available, replace the @font-face-free
+  stack below with local @font-face declarations for Lemon Milk and Have
+  Heart Two. Outfit and Caveat are close-in-spirit stand-ins used for V1.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Outfit:wght@500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+<symbol id="icon-starfish" viewBox="15 17 237 240"><rect x="45.8" y="49.3" width="175.4" height="175.4" rx="10.5" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.46" stroke-dasharray="4.9 3.5"/><circle cx="115.3" cy="113.3" r="10.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.46"/><path d="M87.9,166.2 L129.9,127.9 L151.7,149.8 L153.6,118.8 L179.1,166.2" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.46" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-octopus" viewBox="10 -16 238 285"><rect x="40.9" y="38.4" width="176.1" height="176.1" rx="10.6" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.47" stroke-dasharray="4.9 3.5"/><circle cx="110.7" cy="102.7" r="10.1" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.47"/><path d="M83.2,155.8 L125.3,117.3 L147.3,139.3 L149.1,108.2 L174.8,155.8" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.47" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-turtle" viewBox="2 28 245 230"><rect x="39.4" y="57.9" width="170.2" height="170.2" rx="10.2" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.38" stroke-dasharray="4.8 3.4"/><circle cx="106.8" cy="120.0" r="9.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.38"/><path d="M80.2,171.3 L121.0,134.1 L142.2,155.4 L144.0,125.3 L168.8,171.3" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.38" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-komodo" viewBox="-34 79 390 153"><rect x="104.4" y="98.9" width="113.2" height="113.2" rx="6.8" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.59" stroke-dasharray="3.2 2.3"/><circle cx="149.2" cy="140.2" r="6.5" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.59"/><path d="M131.6,174.3 L158.6,149.6 L172.8,163.7 L174.0,143.7 L190.4,174.3" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.59" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-phinisi" viewBox="-4 8 326 223"><rect x="76.5" y="37.0" width="165.0" height="165.0" rx="9.9" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.31" stroke-dasharray="4.6 3.3"/><circle cx="141.8" cy="97.2" r="9.4" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.31"/><path d="M116.1,147.0 L155.6,110.9 L176.2,131.5 L177.9,102.3 L201.9,147.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.31" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-dive-mask" viewBox="11 -37 278 256"><rect x="55.3" y="-3.7" width="189.4" height="189.4" rx="11.4" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.65" stroke-dasharray="5.3 3.8"/><circle cx="130.3" cy="65.4" r="10.8" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.65"/><path d="M100.7,122.5 L146.1,81.1 L169.7,104.8 L171.7,71.3 L199.3,122.5" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.65" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-shell" viewBox="6 44 140 233"><rect x="24.2" y="108.7" width="103.6" height="103.6" rx="6.2" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.45" stroke-dasharray="2.9 2.1"/><circle cx="65.2" cy="146.5" r="5.9" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.45"/><path d="M49.1,177.7 L73.8,155.1 L86.8,168.0 L87.9,149.7 L102.9,177.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-crab" viewBox="-2 60 264 166"><rect x="68.6" y="81.6" width="122.8" height="122.8" rx="7.4" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.72" stroke-dasharray="3.4 2.5"/><circle cx="117.2" cy="126.4" r="7.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.72"/><path d="M98.1,163.4 L127.4,136.6 L142.8,151.9 L144.1,130.2 L161.9,163.4" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.72" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-jellyfish" viewBox="48 17 162 208"><rect x="69.1" y="61.1" width="119.9" height="119.9" rx="7.2" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.68" stroke-dasharray="3.4 2.4"/><circle cx="116.5" cy="104.8" r="6.9" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.68"/><path d="M97.8,140.9 L126.5,114.8 L141.5,129.7 L142.7,108.5 L160.2,140.9" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.68" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-angelfish" viewBox="55 6 184 236"><rect x="78.9" y="55.9" width="136.2" height="136.2" rx="8.2" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.91" stroke-dasharray="3.8 2.7"/><circle cx="132.8" cy="105.6" r="7.8" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.91"/><path d="M111.6,146.7 L144.2,116.9 L161.2,133.9 L162.6,109.8 L182.4,146.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.91" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-flatfish" viewBox="44 42 202 176"><rect x="79.9" y="64.9" width="130.2" height="130.2" rx="7.8" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.82" stroke-dasharray="3.6 2.6"/><circle cx="131.5" cy="112.4" r="7.4" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.82"/><path d="M111.1,151.7 L142.3,123.2 L158.5,139.5 L159.9,116.5 L178.9,151.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.82" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-urchin" viewBox="10 19 224 204"><rect x="46.5" y="45.5" width="151.0" height="151.0" rx="9.1" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.11" stroke-dasharray="4.2 3.0"/><circle cx="106.3" cy="100.6" r="8.6" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.11"/><path d="M82.8,146.1 L118.9,113.2 L137.7,132.0 L139.3,105.3 L161.2,146.1" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.11" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-ammonite" viewBox="49 39 182 202"><rect x="72.7" y="72.7" width="134.7" height="134.7" rx="8.1" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.89" stroke-dasharray="3.8 2.7"/><circle cx="126.0" cy="121.8" r="7.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.89"/><path d="M105.0,162.4 L137.2,133.0 L154.0,149.8 L155.4,126.0 L175.0,162.4" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.89" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-coral" viewBox="-117 -25 402 331"><rect x="-38.5" y="18.0" width="244.9" height="244.9" rx="14.7" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="3.43" stroke-dasharray="6.9 4.9"/><circle cx="58.5" cy="107.4" r="14.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="3.43"/><path d="M20.3,181.3 L78.9,127.8 L109.5,158.3 L112.0,115.0 L147.7,181.3" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="3.43" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Pointillism icon sprite (bejeweled-mosaic style) is inlined just below, defs only, so <use href="#icon-x"> resolves reliably on every page. -->
+<header class="site-header" id="site-header">
+  <div class="container site-header__row">
+    <a class="logo" href="index.html" aria-label="Waow Charters, home">
+      <picture>
+        <source srcset="images/logo-waow2.webp" type="image/webp">
+        <img src="images/logo-waow2.png" alt="Waow 2" width="180" height="41">
+      </picture>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a href="the-boat.html">The Boat</a></li>
+        <li><a href="itineraries.html">Itineraries</a></li>
+        <li><a href="booking.html" class="is-active" aria-current="page">Booking</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--solid" href="booking.html">Book your trip</a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <ul>
+      <li><a href="the-boat.html">The Boat</a></li>
+      <li><a href="itineraries.html">Itineraries</a></li>
+      <li><a href="booking.html" class="is-active" aria-current="page">Booking</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a class="btn btn--solid" href="booking.html">Book your trip</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= PAGE HERO ================= -->
+  <section class="page-hero">
+    <svg class="dot-icon sea-life" aria-hidden="true" style="top:3%;right:5%;width:100px;transform:rotate(-9deg);opacity:.9;" viewBox="2 28 245 230"><use href="#icon-turtle"></use></svg>
+    <div class="container page-hero__inner">
+      <p class="eyebrow"><span class="eyebrow__rule" aria-hidden="true"></span>Booking</p>
+      <h1>Search the season, see what's actually open.</h1>
+      <p class="page-hero__lead">This page is a preview, not a checkout — there's no payment here, and nothing to add to a cart. Search or filter by itinerary, date, cabin or length, and see real cabin availability for each departure.</p>
+      <!-- TODO: this is a static V1 demo — wire up real availability data and an actual enquiry/booking flow before launch -->
+    </div>
+  </section>
+
+  <!-- ================= SEARCH ================= -->
+  <section class="section" id="search">
+    <svg class="dot-icon sea-life" aria-hidden="true" style="top:1%;left:2%;width:100px;transform:rotate(8deg);opacity:.85;" viewBox="44 42 202 176"><use href="#icon-flatfish"></use></svg>
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow"><span class="eyebrow__rule" aria-hidden="true"></span>Upcoming Departures</p>
+        <h2>Twenty routes, one calendar.</h2>
+      </div>
+
+      <!--
+        Everything below is rendered by booking-search.js from
+        cruises-data.js (mock cruises + the getCruises() seam meant to be
+        swapped for a real Gurita API call later) and itineraries-data.js.
+      -->
+      <div class="booking-search">
+        <form class="booking-search__bar" role="search" id="booking-search-form">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="16.2" y1="16.2" x2="21" y2="21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <label class="sr-only" for="booking-search-input">Search itineraries or regions</label>
+          <input type="search" id="booking-search-input" placeholder="Search itineraries, regions…" autocomplete="off">
+        </form>
+        <div class="booking-search__filters">
+          <label class="booking-search__filter">
+            <span>Itinerary</span>
+            <select id="filter-itinerary"><option value="">Any itinerary</option></select>
+          </label>
+          <label class="booking-search__filter">
+            <span>Departure</span>
+            <select id="filter-month"><option value="">Any month</option></select>
+          </label>
+          <label class="booking-search__filter">
+            <span>Cabin</span>
+            <select id="filter-cabin">
+              <option value="">Any cabin</option>
+              <option value="Suite">Suite</option>
+              <option value="Cabin">Standard cabin</option>
+            </select>
+          </label>
+          <label class="booking-search__filter">
+            <span>Nights</span>
+            <select id="filter-nights">
+              <option value="">Any length</option>
+              <option value="short">Up to 6 nights</option>
+              <option value="mid">7–9 nights</option>
+              <option value="long">10+ nights</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="booking-calendar" id="booking-calendar">
+        <!-- rendered by booking-search.js -->
+      </div>
+
+      <p class="booking-results__count" id="booking-results-count"></p>
+      <div class="booking-results" id="booking-results">
+        <!-- rendered by booking-search.js -->
+      </div>
+
+      <ul class="cabin-map__legend">
+        <li>Available</li>
+        <li>Unavailable</li>
+      </ul>
+      <!-- TODO: swap cruises-data.js's mock for a real Gurita API integration once credentials/endpoint are available -->
+    </div>
+  </section>
+
+  <!-- ================= WANDER — collage break ================= -->
+  <section class="wander wander--1">
+    <div class="wander__row">
+      <figure class="wander__media">
+        <!-- TEMP stock photo — replace with a real photo of a Waow 2 cabin interior -->
+        <picture>
+          <source srcset="images/interior-saloon.webp" type="image/webp">
+          <img src="images/interior-saloon.jpg" loading="lazy" alt="Warm wooden interior seating aboard a traditional sailing boat.">
+        </picture>
+      </figure>
+      <div class="wander__text">
+        <p>Every cabin looks out at water, not a corridor. None of them are large — none of them need to be, on a boat this size.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HOW BOOKING ACTUALLY WORKS ================= -->
+  <section class="section section--panel" id="how-it-works">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <p class="eyebrow"><span class="eyebrow__rule" aria-hidden="true"></span>How It Actually Works</p>
+        <h2>No cart, no countdown timer.</h2>
+      </div>
+
+      <div class="pillar-grid">
+        <article class="pillar-card reveal">
+          <svg class="dot-icon pillar-card__icon" aria-hidden="true" viewBox="-4 8 326 223"><use href="#icon-phinisi"></use></svg>
+          <h3>Tell us the dates</h3>
+          <p>Pick an itinerary and a rough window. We'll confirm which cabins are genuinely free for it.</p>
+        </article>
+        <article class="pillar-card reveal reveal--delay-1">
+          <svg class="dot-icon pillar-card__icon" aria-hidden="true" viewBox="6 44 140 233"><use href="#icon-shell"></use></svg>
+          <h3>We hold, you decide</h3>
+          <p>A cabin is held for a few days while you confirm — no deposit required just to think it over.</p>
+        </article>
+        <article class="pillar-card reveal reveal--delay-2">
+          <svg class="dot-icon pillar-card__icon" aria-hidden="true" viewBox="11 -37 278 256"><use href="#icon-dive-mask"></use></svg>
+          <h3>A deposit secures it</h3>
+          <p>Once you're sure, a deposit locks in the cabin. The balance isn't due until closer to departure.</p>
+        </article>
+        <article class="pillar-card reveal reveal--delay-3">
+          <svg class="dot-icon pillar-card__icon" aria-hidden="true" viewBox="-34 79 390 153"><use href="#icon-komodo"></use></svg>
+          <h3>We handle the rest</h3>
+          <p>Certification checks, dietary notes, arrival logistics — sorted before you ever step aboard.</p>
+        </article>
+      </div>
+      <!-- TODO: replace this section with the real enquiry form / booking flow copy once it exists -->
+    </div>
+  </section>
+
+  <!-- ================= CLOSING CTA ================= -->
+  <section class="section section--tight" id="next">
+    <div class="container cta-split">
+      <div class="reveal">
+        <p class="eyebrow">Pick A Route First</p>
+        <h2>Not sure which crossing.</h2>
+        <p>Twenty routes run each season, from four nights to twenty-one. See which one matches your dates.</p>
+        <a class="link-arrow" href="itineraries.html">
+          Browse the itineraries
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="reveal reveal--delay-1">
+        <p class="eyebrow">Still Deciding</p>
+        <h2>Meet the boat.</h2>
+        <p>Specifications, the story of how she was built, and the crew who run her.</p>
+        <a class="btn btn--solid" href="the-boat.html">See the boat</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <svg class="dot-icon sea-life" aria-hidden="true" style="top:10%;right:8%;width:82px;transform:rotate(-12deg);opacity:.85;" viewBox="10 19 224 204"><use href="#icon-urchin"></use></svg>
+  <div class="container site-footer__grid">
+    <div class="site-footer__brand">
+      <a class="logo logo--light" href="index.html" aria-label="Waow Charters, home">
+        <picture>
+          <source srcset="images/logo-waow2-reversed.webp" type="image/webp">
+          <img src="images/logo-waow2-reversed.png" alt="Waow 2" width="180" height="41">
+        </picture>
+      </a>
+      <p>Indonesia, beyond the surface.</p>
+    </div>
+
+    <nav class="site-footer__nav" aria-label="Footer">
+      <ul>
+        <li><a href="the-boat.html">The Boat</a></li>
+        <li><a href="itineraries.html">Itineraries</a></li>
+        <li><a href="booking.html" class="is-active" aria-current="page">Booking</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </nav>
+
+    <nav class="site-footer__nav" aria-label="Explore">
+      <ul>
+        <li><a href="index.html#destinations">Destinations</a></li>
+        <li><a href="index.html#diving">Diving</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="the-boat.html#crew">About Us</a></li>
+      </ul>
+    </nav>
+
+    <nav class="site-footer__nav" aria-label="Support">
+      <ul>
+        <!-- TODO: link to real FAQ / contact pages -->
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-footer__lang">
+      <label class="sr-only" for="lang-select">Language</label>
+      <!-- TODO: wire up real localization when a second language is ready -->
+      <select id="lang-select" disabled>
+        <option>EN</option>
+        <option>FR</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="container site-footer__legal">
+    <p>&copy; <span id="year"></span> Waow Charters. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="itineraries-data.js"></script>
+<script src="cruises-data.js"></script>
+<script src="booking-search.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

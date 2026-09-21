@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Boat — Waow Charters</title>
+<meta name="description" content="Meet Waow 2, a hand-built phinisi for long days at sea, colorful dives and slow journeys through Indonesia. Set to set sail October 2028.">
+
+<!-- TODO: replace with real favicon files -->
+<link rel="icon" href="data:,">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--
+  Brand fonts (Lemon Milk, Have Heart Two) are licensed, not on Google Fonts.
+  TODO: once licensed font files are available, replace the @font-face-free
+  stack below with local @font-face declarations for Lemon Milk and Have
+  Heart Two. Outfit and Caveat are close-in-spirit stand-ins used for V1.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Outfit:wght@500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+<symbol id="icon-starfish" viewBox="15 17 237 240"><rect x="45.8" y="49.3" width="175.4" height="175.4" rx="10.5" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.46" stroke-dasharray="4.9 3.5"/><circle cx="115.3" cy="113.3" r="10.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.46"/><path d="M87.9,166.2 L129.9,127.9 L151.7,149.8 L153.6,118.8 L179.1,166.2" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.46" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-octopus" viewBox="10 -16 238 285"><rect x="40.9" y="38.4" width="176.1" height="176.1" rx="10.6" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.47" stroke-dasharray="4.9 3.5"/><circle cx="110.7" cy="102.7" r="10.1" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.47"/><path d="M83.2,155.8 L125.3,117.3 L147.3,139.3 L149.1,108.2 L174.8,155.8" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.47" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-turtle" viewBox="2 28 245 230"><rect x="39.4" y="57.9" width="170.2" height="170.2" rx="10.2" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.38" stroke-dasharray="4.8 3.4"/><circle cx="106.8" cy="120.0" r="9.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.38"/><path d="M80.2,171.3 L121.0,134.1 L142.2,155.4 L144.0,125.3 L168.8,171.3" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.38" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-komodo" viewBox="-34 79 390 153"><rect x="104.4" y="98.9" width="113.2" height="113.2" rx="6.8" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.59" stroke-dasharray="3.2 2.3"/><circle cx="149.2" cy="140.2" r="6.5" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.59"/><path d="M131.6,174.3 L158.6,149.6 L172.8,163.7 L174.0,143.7 L190.4,174.3" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.59" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-phinisi" viewBox="-4 8 326 223"><rect x="76.5" y="37.0" width="165.0" height="165.0" rx="9.9" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.31" stroke-dasharray="4.6 3.3"/><circle cx="141.8" cy="97.2" r="9.4" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.31"/><path d="M116.1,147.0 L155.6,110.9 L176.2,131.5 L177.9,102.3 L201.9,147.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.31" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-dive-mask" viewBox="11 -37 278 256"><rect x="55.3" y="-3.7" width="189.4" height="189.4" rx="11.4" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.65" stroke-dasharray="5.3 3.8"/><circle cx="130.3" cy="65.4" r="10.8" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.65"/><path d="M100.7,122.5 L146.1,81.1 L169.7,104.8 L171.7,71.3 L199.3,122.5" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.65" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-shell" viewBox="6 44 140 233"><rect x="24.2" y="108.7" width="103.6" height="103.6" rx="6.2" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.45" stroke-dasharray="2.9 2.1"/><circle cx="65.2" cy="146.5" r="5.9" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.45"/><path d="M49.1,177.7 L73.8,155.1 L86.8,168.0 L87.9,149.7 L102.9,177.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.45" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-crab" viewBox="-2 60 264 166"><rect x="68.6" y="81.6" width="122.8" height="122.8" rx="7.4" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.72" stroke-dasharray="3.4 2.5"/><circle cx="117.2" cy="126.4" r="7.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.72"/><path d="M98.1,163.4 L127.4,136.6 L142.8,151.9 L144.1,130.2 L161.9,163.4" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.72" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-jellyfish" viewBox="48 17 162 208"><rect x="69.1" y="61.1" width="119.9" height="119.9" rx="7.2" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.68" stroke-dasharray="3.4 2.4"/><circle cx="116.5" cy="104.8" r="6.9" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.68"/><path d="M97.8,140.9 L126.5,114.8 L141.5,129.7 L142.7,108.5 L160.2,140.9" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.68" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-angelfish" viewBox="55 6 184 236"><rect x="78.9" y="55.9" width="136.2" height="136.2" rx="8.2" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.91" stroke-dasharray="3.8 2.7"/><circle cx="132.8" cy="105.6" r="7.8" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.91"/><path d="M111.6,146.7 L144.2,116.9 L161.2,133.9 L162.6,109.8 L182.4,146.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.91" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-flatfish" viewBox="44 42 202 176"><rect x="79.9" y="64.9" width="130.2" height="130.2" rx="7.8" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.82" stroke-dasharray="3.6 2.6"/><circle cx="131.5" cy="112.4" r="7.4" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.82"/><path d="M111.1,151.7 L142.3,123.2 L158.5,139.5 L159.9,116.5 L178.9,151.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.82" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-urchin" viewBox="10 19 224 204"><rect x="46.5" y="45.5" width="151.0" height="151.0" rx="9.1" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.11" stroke-dasharray="4.2 3.0"/><circle cx="106.3" cy="100.6" r="8.6" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.11"/><path d="M82.8,146.1 L118.9,113.2 L137.7,132.0 L139.3,105.3 L161.2,146.1" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.11" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-ammonite" viewBox="49 39 182 202"><rect x="72.7" y="72.7" width="134.7" height="134.7" rx="8.1" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="1.89" stroke-dasharray="3.8 2.7"/><circle cx="126.0" cy="121.8" r="7.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.89"/><path d="M105.0,162.4 L137.2,133.0 L154.0,149.8 L155.4,126.0 L175.0,162.4" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="1.89" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-coral" viewBox="-117 -25 402 331"><rect x="-38.5" y="18.0" width="244.9" height="244.9" rx="14.7" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="3.43" stroke-dasharray="6.9 4.9"/><circle cx="58.5" cy="107.4" r="14.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="3.43"/><path d="M20.3,181.3 L78.9,127.8 L109.5,158.3 L112.0,115.0 L147.7,181.3" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="3.43" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+</svg>
+
+<!--
+  THE BOAT PAGE v2 — rebuilt from the designer's Canva export (THE BOAT.png)
+  to match its section order, proportions and visual hierarchy. See the
+  ".tbp-" CSS block in style.css for notes on the numbers/cabin-category
+  reconciliation with the rest of the site, and the Outdoor/Indoor Spaces
+  copy fix (the export had the same paragraph duplicated under both
+  headings). No crew/team section here — it isn't part of this mockup.
+-->
+<header class="site-header" id="site-header">
+  <div class="container site-header__row">
+    <a class="logo" href="index.html" aria-label="Waow Charters, home">
+      <picture>
+        <source srcset="images/logo-waow2.webp" type="image/webp">
+        <img src="images/logo-waow2.png" alt="Waow 2" width="180" height="41">
+      </picture>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a href="the-boat.html" class="is-active" aria-current="page">The Boat</a></li>
+        <li><a href="itineraries.html">Destinations</a></li>
+        <li><a href="#life">Experience</a></li>
+        <li><a href="#family">About Us</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--outline" href="booking.html">Dates &amp; Rates</a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <ul>
+      <li><a href="the-boat.html" class="is-active" aria-current="page">The Boat</a></li>
+      <li><a href="itineraries.html">Destinations</a></li>
+      <li><a href="#life">Experience</a></li>
+      <li><a href="#family">About Us</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a class="btn btn--outline" href="booking.html">Dates &amp; Rates</a></li>
+    </ul>
+  </div>
+</header>
+<div class="hp-divider" aria-hidden="true"></div>
+
+<main id="main">
+
+  <!-- ================= TITLE ================= -->
+  <section class="tbp-hero" id="top">
+    <div class="container">
+      <h1>The Boat.</h1>
+      <p>Meet Waow 2, a 32-meter phinisi built for long days at sea, colorful dives and slow journeys through Indonesia.</p>
+      <p>Set to set sail October 2028.</p>
+    </div>
+  </section>
+
+  <!-- ================= INTRO PHOTOS + COPY ================= -->
+  <section class="tbp-intro">
+    <div class="container">
+      <div class="tbp-intro__collage reveal">
+        <!-- TODO: replace with two unique Waow 2 sailing shots once available -->
+        <figure class="tbp-intro__photo tbp-intro__photo--a">
+          <picture>
+            <source srcset="images/hero-waow2.webp" type="image/webp">
+            <img src="images/hero-waow2.jpg" loading="lazy" alt="Waow 2 under full sail.">
+          </picture>
+        </figure>
+        <figure class="tbp-intro__photo tbp-intro__photo--b">
+          <picture>
+            <source srcset="images/waow2-detail.webp" type="image/webp">
+            <img src="images/waow2-detail.jpg" loading="lazy" alt="Waow 2's bow, sails set against open sky.">
+          </picture>
+        </figure>
+      </div>
+      <div class="tbp-intro__copy reveal reveal--delay-1">
+        <p>Waow 2 was built in the classic phinisi tradition, with all the amenities of a modern yacht providing guests an ultimate sailing experience. A multi-level outdoor lounge area offers guests ample space to sit back and let the hours pass by.</p>
+        <p>While the covered outdoor communal dining area is the center of the ship and the perfect spot to enjoy the specially crafted menu sourced with local ingredients.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 3D MODEL (placeholder) ================= -->
+  <!-- TODO: replace with an interactive 3D model of Waow 2 -->
+  
+
+  <!-- ================= SHIP DIAGRAM ================= -->
+  <section class="tbp-diagram">
+    <div class="container tbp-diagram__grid">
+      <p class="tbp-diagram__lead reveal">Six zones, one deck plan — a quick look at where everything lives aboard Waow 2, from the cabins to the dive center.</p>
+      <section class="tbp-model">
+        <div class="container">
+          <div class="tbp-model__box reveal">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4 L44 15 V33 L24 44 L4 33 V15 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 15 L24 26 L44 15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><line x1="24" y1="26" x2="24" y2="44" stroke="currentColor" stroke-width="1.6"/></svg>
+            <p>Interactive 3D model</p>
+            <span>Coming soon — explore Waow 2 from every angle.</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- ================= KEY FIGURES ================= -->
+  <section class="tbp-figures">
+    <div class="container">
+      <h2>Key Figures</h2>
+      <div class="tbp-figures__frame reveal">
+        <div class="tbp-figures__inner">
+          <dl class="tbp-figures__grid">
+            <div><dt>32m</dt><span class="tbp-figures__label">Meters</span><dd>Of space to roam.</dd></div>
+            <div><dt>3</dt><span class="tbp-figures__label">Masts</span><dd>The spirit of a phinisi.</dd></div>
+            <div><dt>6</dt><span class="tbp-figures__label">Cabins</span><dd>Made for unwinding.</dd></div>
+            <div><dt>12</dt><span class="tbp-figures__label">Guests</span><dd>Even full. Never crowded.</dd></div>
+            <div><dt>8kn</dt><span class="tbp-figures__label">Cruising</span><dd>At our own pace.</dd></div>
+            <div><dt>10</dt><span class="tbp-figures__label">Crew</span><dd>Here to make it effortless.</dd></div>
+            <div><dt>240+</dt><span class="tbp-figures__label">Sqm2</span><dd>Of outdoor spaces.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DECK PLAN SELECTOR ================= -->
+  <section class="tbp-deckplan">
+    <div class="container">
+      <div class="tbp-deckplan__tabs" role="tablist" aria-label="Deck plan">
+        <button class="tbp-deckplan__tab is-active" type="button" role="tab" aria-selected="true" aria-controls="deck-upper">Upper Deck</button>
+        <button class="tbp-deckplan__tab" type="button" role="tab" aria-selected="false" aria-controls="deck-main">Main Deck</button>
+        <button class="tbp-deckplan__tab" type="button" role="tab" aria-selected="false" aria-controls="deck-lower">Lower Deck</button>
+      </div>
+      <div class="tbp-deckplan__stage reveal">
+        <!-- TODO: real deck plan illustrations to replace these placeholders -->
+        <img class="tbp-deckplan__img is-active" id="deck-upper" src="images/waow2-detail.jpg" loading="lazy" alt="Upper deck plan (placeholder — final plan to come).">
+        <img class="tbp-deckplan__img" id="deck-main" src="images/interior-saloon.jpg" loading="lazy" alt="Main deck plan (placeholder — final plan to come).">
+        <img class="tbp-deckplan__img" id="deck-lower" src="images/boat-construction.jpg" loading="lazy" alt="Lower deck plan (placeholder — final plan to come).">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= THE MAKING OF WAOW 2 ================= -->
+  <section class="tbp-timeline" id="construction">
+    <div class="container">
+      <h2>The Making of Waow 2.</h2>
+      <p class="tbp-timeline__lead">WAOW 2 is being built piece by piece in Indonesia, following the traditions of the phinisi while bringing a new vision to life. Follow her journey from the first day of construction to the moment she sets sail.</p>
+      <a class="link-arrow tbp-timeline__cta" href="#frise">
+        follow the current
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <div class="tbp-slider">
+        <div class="tbp-slider__track" id="tbp-slider-track">
+          <!-- rendered by the-boat-page.js, centered on today's date -->
+        </div>
+        <div class="tbp-slider__baseline" aria-hidden="true">
+          <span style="left:16.66%"></span><span style="left:50%"></span><span style="left:83.33%"></span>
+        </div>
+        <div class="tbp-slider__nav">
+          <button class="tbp-slider__arrow" type="button" id="tbp-slider-prev" aria-label="Earlier step">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5L8 12l7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="tbp-slider__arrow" type="button" id="tbp-slider-next" aria-label="Later step">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+      <!-- TODO: real dated milestones and photography from the owner -->
+    </div>
+  </section>
+  <div class="hp-divider" aria-hidden="true"></div>
+
+  <!-- ================= THE CABINS ================= -->
+  <section class="tbp-cabins" id="cabins">
+    <div class="container">
+      <h2>The Cabins.</h2>
+      <div class="tbp-cabins__grid">
+        <article class="reveal">
+          <figure>
+            <picture>
+              <source srcset="images/interior-saloon.webp" type="image/webp">
+              <img src="images/interior-saloon.jpg" loading="lazy" alt="Warm wooden cabin interior aboard Waow 2.">
+            </picture>
+          </figure>
+          <h3>Upper Deck Suite</h3>
+          <p>Komodo Suite and Banda Suite. Queen bed, private balcony, ensuite — the quietest berths aboard.</p>
+        </article>
+        <article class="reveal reveal--delay-1">
+          <figure>
+            <picture>
+              <source srcset="images/captain-wheel.webp" type="image/webp">
+              <img src="images/captain-wheel.jpg" loading="lazy" alt="A view from a main deck cabin window.">
+            </picture>
+          </figure>
+          <h3>Main Deck Double</h3>
+          <p>Raja Cabin and Flores Cabin. Queen bed, ensuite, and a proper window onto the water.</p>
+        </article>
+        <article class="reveal reveal--delay-2">
+          <figure>
+            <picture>
+              <source srcset="images/steward-towels.webp" type="image/webp">
+              <img src="images/steward-towels.jpg" loading="lazy" alt="A cabin being made up aboard Waow 2.">
+            </picture>
+          </figure>
+          <h3>Twin, Sea View</h3>
+          <p>Alor Cabin. Twin beds for friends or family travelling together, ensuite, full sea view.</p>
+        </article>
+        <article class="reveal reveal--delay-3">
+          <figure>
+            <picture>
+              <source srcset="images/sunset-deck.webp" type="image/webp">
+              <img src="images/sunset-deck.jpg" loading="lazy" alt="The view through a cabin porthole at sunset.">
+            </picture>
+          </figure>
+          <h3>Twin, Porthole</h3>
+          <p>Rinca Cabin. The same twin layout, a porthole instead of a picture window, same ensuite.</p>
+        </article>
+      </div>
+      <a class="link-arrow tbp-cabins__link" href="booking.html">
+        sea more
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+  <div class="hp-divider" aria-hidden="true"></div>
+
+  <!-- ================= OUTDOOR SPACES (full-bleed) ================= -->
+  <section class="tbp-fullbleed" id="outdoor">
+    <!-- TODO: replace with unique Waow 2 outdoor-deck photography -->
+    <figure class="tbp-fullbleed__photo tbp-fullbleed__photo--tl reveal">
+      <picture>
+        <source srcset="images/guests-table.webp" type="image/webp">
+        <img src="images/guests-table.jpg" loading="lazy" alt="Guests dining on Waow 2's deck under sail.">
+      </picture>
+    </figure>
+    <div class="tbp-fullbleed__copy reveal reveal--delay-1">
+      <h2>Outdoor Spaces</h2>
+      <p>A multi-level outdoor lounge offers guests ample space to sit back and let the hours pass by.</p>
+      <p>The covered communal dining area is the center of the ship — the perfect spot for a specially crafted menu, sourced with local ingredients, under open sky.</p>
+    </div>
+    <figure class="tbp-fullbleed__photo tbp-fullbleed__photo--br reveal reveal--delay-2">
+      <picture>
+        <source srcset="images/waow2-portrait.webp" type="image/webp">
+        <img src="images/waow2-portrait.jpg" loading="lazy" alt="Waow 2 seen from above, under full sail.">
+      </picture>
+    </figure>
+    <svg class="dot-icon" aria-hidden="true" style="left:2%; bottom:38%;" viewBox="-4 8 326 223"><use href="#icon-phinisi"></use></svg>
+  </section>
+  <div class="hp-divider" aria-hidden="true"></div>
+
+  <!-- ================= INDOOR SPACES (full-bleed) ================= -->
+  <section class="tbp-fullbleed" id="outdoor" style="margin-top: 100px !important">
+    <!-- TODO: replace with unique Waow 2 outdoor-deck photography -->
+    <figure class="tbp-fullbleed__photo tbp-fullbleed__photo--tr reveal reveal--delay-2">
+      <picture>
+        <source srcset="images/waow2-portrait.webp" type="image/webp">
+        <img src="images/waow2-portrait.jpg" loading="lazy" alt="Waow 2 seen from above, under full sail.">
+      </picture>
+    </figure>
+    <div class="tbp-fullbleed__copy reveal reveal--delay-1">
+      <h2>Indoor Spaces</h2>
+      <p>A multi-level outdoor lounge offers guests ample space to sit back and let the hours pass by.</p>
+      <p>The covered communal dining area is the center of the ship — the perfect spot for a specially crafted menu, sourced with local ingredients, under open sky.</p>
+    </div>
+    <figure class="tbp-fullbleed__photo tbp-fullbleed__photo--bl reveal">
+      <picture>
+        <source srcset="images/guests-table.webp" type="image/webp">
+        <img src="images/guests-table.jpg" loading="lazy" alt="Guests dining on Waow 2's deck under sail.">
+      </picture>
+    </figure>
+    <svg class="dot-icon" aria-hidden="true" style="left:2%; bottom:38%;" viewBox="-4 8 326 223"><use href="#icon-phinisi"></use></svg>
+  </section>
+  <div class="hp-divider" aria-hidden="true"></div>
+
+  <!-- ================= MADE FOR DIVERS ================= -->
+  <section class="tbp-divers">
+    <div class="tbp-divers__stripes" aria-hidden="true"></div>
+    <div class="container tbp-divers__grid">
+      <div class="tbp-divers__collage reveal">
+        <!-- TODO: replace with unique Waow 2 dive-deck photography -->
+        <figure class="tbp-divers__photo tbp-divers__photo--a">
+          <picture>
+            <source srcset="images/dive-gear-deck.webp" type="image/webp">
+            <img src="images/dive-gear-deck.jpg" loading="lazy" alt="Dive masks and fins racked on Waow 2's dive deck.">
+          </picture>
+        </figure>
+        <figure class="tbp-divers__photo tbp-divers__photo--b">
+          <picture>
+            <source srcset="images/diver-reef.webp" type="image/webp">
+            <img src="images/diver-reef.jpg" loading="lazy" alt="Dive gear laid out ready for a morning dive.">
+          </picture>
+        </figure>
+        <p class="tbp-divers__caption">Built for<br>the dive.</p>
+      </div>
+      <div class="tbp-divers__copy reveal reveal--delay-1">
+        <h2>Made for<br>Divers.</h2>
+        <p>WAOW 2 was designed from the start as a dive boat, with everything you need between dives, and nothing that gets in the way of them.</p>
+        <p>A dedicated dive centre, camera room, generous tenders, smart gear storage and safety systems are all designed around a full boat of guests and guides, keeping life on board smooth from the first descent to the last surface interval.</p>
+        <a class="link-arrow" href="the-boat.html#specs">
+          sea you below
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  <div class="hp-divider" aria-hidden="true"></div>
+
+  <!-- ================= LIFE AT SEA ================= -->
+  <section class="tbp-life">
+    <div class="container tbp-life__grid">
+      <div class="tbp-life__copy reveal">
+        <h2>Life at Sea</h2>
+        <p>Come for the diving. Stay for everything else.<br>Discover what a day on WAOW 2 looks like, from the first descent to the last drink on deck.</p>
+        <a class="link-arrow" href="itineraries.html">
+          discover life on board
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="tbp-life__visual reveal reveal--delay-1">
+        <figure>
+          <picture>
+            <source srcset="images/sunset-deck.webp" type="image/webp">
+            <img src="images/sunset-deck.jpg" loading="lazy" alt="A guest stretching on deck at sunset.">
+          </picture>
+        </figure>
+        <svg class="dot-icon" aria-hidden="true" viewBox="15 17 237 240"><use href="#icon-starfish"></use></svg>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER (shared with the homepage) ================= -->
+<footer class="hp-footer">
+  <div class="container hp-footer__grid">
+    <div>
+      <h3>Contact Us</h3>
+      <a href="mailto:info@waow.ch">info@waow.ch</a>
+    </div>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="the-boat.html">The Boat</a></li>
+        <li><a href="itineraries.html">Destinations</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="#life">Experience</a></li>
+        <li><a href="#family">About Us</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Footer">
+      <ul>
+        <!-- TODO: link to real Events / Q&A pages once they exist -->
+        <li><a href="news.html">Events</a></li>
+        <li><a href="/qa">Q&amp;A</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="hp-divider" aria-hidden="true"></div>
+
+  <div class="container hp-footer__legal">
+    <p>Copyright <span id="year"></span><br>WAOW Charters</p>
+    <div class="hp-footer__policies">
+      <label class="sr-only" for="hp-lang-select">Language</label>
+      <!-- TODO: wire up real localization when a second language is ready -->
+      <select class="hp-footer__lang-select" id="hp-lang-select" disabled>
+        <option>English ∨</option>
+        <option>Français</option>
+      </select>
+      <!-- TODO: link to real legal pages -->
+      <a href="/cookies">Cookies policy</a>
+      <a href="/privacy">Privacy policy</a>
+      <a href="/terms">Terms and conditions</a>
+    </div>
+    <div class="hp-footer__social">
+      <a href="#" aria-label="Waow Charters on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="Waow Charters on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></a>
+      <a href="#" aria-label="Waow Charters on YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 9.5l5 2.5-5 2.5z" fill="currentColor"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= REFERENCE FRISE ================= -->
+<!-- Simple reference thumbnail strip, not a feature — a quick photo/date
+     index of the build, reusing the same milestone list as the timeline
+     above (rendered by the-boat-page.js would be redundant here since
+     this is meant as a plain static reference; kept as static markup). -->
+<section class="tbp-frise" id="frise" hidden>
+  <div class="container">
+    <h2>Reference Frise</h2>
+    <div class="tbp-frise__track">
+      <div class="tbp-frise__item"><figure><img src="images/boat-construction.jpg" loading="lazy" alt="Contract signature, May 2025 (placeholder)."></figure><p><span class="tbp-frise__date">May 2025</span>Contract Signature</p></div>
+      <div class="tbp-frise__item"><figure><img src="images/waow2-detail.jpg" loading="lazy" alt="Gathering wood, June 2025 (placeholder)."></figure><p><span class="tbp-frise__date">June 2025</span>Gathering Wood</p></div>
+      <div class="tbp-frise__item"><figure><img src="images/boat-construction.jpg" loading="lazy" alt="Keel ceremony, September 2025 (placeholder)."></figure><p><span class="tbp-frise__date">Sept. 2025</span>Keel Ceremony</p></div>
+      <div class="tbp-frise__item"><figure><img src="images/deckhand-rope.jpg" loading="lazy" alt="Keel, ribs, planks, October 2025 (placeholder)."></figure><p><span class="tbp-frise__date">Oct. 2025</span>Keel, Ribs, Planks</p></div>
+      <div class="tbp-frise__item"><figure><img src="images/boat-construction.jpg" loading="lazy" alt="Stringers and deck, March 2026 (placeholder)."></figure><p><span class="tbp-frise__date">March 2026</span>Stringers, Deck</p></div>
+      <div class="tbp-frise__item"><figure><img src="images/waow2-detail.jpg" loading="lazy" alt="Cabins, bulkheads, lower deck, July 2026 (placeholder)."></figure><p><span class="tbp-frise__date">July 2026</span>Cabins, Bulkheads, Lowerdeck</p></div>
+      <div class="tbp-frise__item"><figure><img src="images/boat-construction.jpg" loading="lazy" alt="Caulking, installations, painting, October 2026 (placeholder)."></figure><p><span class="tbp-frise__date">Oct. 2026</span>Caulking, Installations, Painting</p></div>
+      <div class="tbp-frise__item"><figure><img src="images/deckhand-rope.jpg" loading="lazy" alt="Boat launch, April 2027 (placeholder)."></figure><p><span class="tbp-frise__date">April 2027</span>Boat Launch</p></div>
+      <div class="tbp-frise__item"><figure><img src="images/boat-construction.jpg" loading="lazy" alt="Engine installation, May 2027 (placeholder)."></figure><p><span class="tbp-frise__date">May 2027</span>Engine Installation</p></div>
+      <div class="tbp-frise__item"><figure><img src="images/waow2-detail.jpg" loading="lazy" alt="Interiors, June 2027 (placeholder)."></figure><p><span class="tbp-frise__date">June 2027</span>Interiors</p></div>
+      <div class="tbp-frise__item"><figure><img src="images/boat-construction.jpg" loading="lazy" alt="Crossing to Bali, April 2028 (placeholder)."></figure><p><span class="tbp-frise__date">April 2028</span>Crossing to Bali</p></div>
+      <div class="tbp-frise__item"><figure><img src="images/deckhand-rope.jpg" loading="lazy" alt="Masts and decor, May 2028 (placeholder)."></figure><p><span class="tbp-frise__date">May 2028</span>Masts &amp; Decor</p></div>
+      <div class="tbp-frise__item"><figure><img src="images/boat-construction.jpg" loading="lazy" alt="Sea trials, September 2028 (placeholder)."></figure><p><span class="tbp-frise__date">Sept. 2028</span>Sea Trials</p></div>
+      <div class="tbp-frise__item"><figure><img src="images/waow2-detail.jpg" loading="lazy" alt="Maiden voyage, October 2028 (placeholder)."></figure><p><span class="tbp-frise__date">Oct. 2028</span>Maiden Voyage</p></div>
+    </div>
+    <p class="tbp-timeline__lead" style="margin-top:2rem;">WAOW 2 is being built piece by piece in Indonesia, following the traditions of the phinisi while bringing a new vision to life. Follow her journey from the first day of construction to the moment she sets sail.</p>
+    <a class="link-arrow" href="#construction" style="color:var(--ironwood); margin-top:1rem;">
+      follow the current
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
+
+<script src="the-boat-page.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
