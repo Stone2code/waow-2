@@ -2600,7 +2600,7 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
   .hp-home .logo img { width: 170px; height: auto; }
   .hp-home .nav { position: absolute; left: 470px; top: 66px; width: 433px; }
   .hp-home .nav__list { display: flex; justify-content: space-between; gap: 0; }
-  .hp-home .nav__list a { font-size: 14px; }
+  .hp-home .nav__list a { font-size: 13px; letter-spacing: 0.06em; }
   .hp-home .site-header__actions { position: absolute; left: 1123px; top: 60px; width: 156px; height: 35px; }
   .hp-home .site-header__actions .btn { width: 156px; height: 35px; padding: 0; font-size: 12px; }
   .hp-home .burger { display: none; }
@@ -2807,9 +2807,9 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
   .tbp-page .site-header__row { height: 110px; }
   .tbp-page .logo { position: absolute; left: 62px; top: 52px; }
   .tbp-page .logo img { width: 113px; height: auto; }
-  .tbp-page .nav { position: absolute; left: 406px; top: 57px; width: 378px; }
+  .tbp-page .nav { position: absolute; left: 379px; top: 57px; width: 433px; }
   .tbp-page .nav__list { display: flex; justify-content: space-between; gap: 0; }
-  .tbp-page .nav__list a { font-size: 12.5px; letter-spacing: 0.06em; }
+  .tbp-page .nav__list a { font-size: 13px; letter-spacing: 0.06em; }
   .tbp-page .site-header__actions { position: absolute; left: 984px; top: 54px; width: 116px; height: 25px; }
   .tbp-page .site-header__actions .btn { width: 116px; height: 25px; padding: 0; font-size: 10.5px; }
   .tbp-page .burger { display: none; }
@@ -2829,35 +2829,35 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
   .tbp-page .tbp-diagram { height: calc(668px * var(--z)); }
   .tbp-page .tbp-diagram > .tbp-stage { height: 668px; }
   .tbp-page .tbp-diagram__lead { position: absolute; left: 83px; top: 121px; width: 240px; max-width: none; margin: 0; font-size: 17px; line-height: 24.5px; }
-  .tbp-page .tbp-diagram__art { position: absolute; left: 340px; top: 150px; width: 820px; }
+  .tbp-page .tbp-diagram__art { position: absolute; left: 340px; top: 124px; width: 780px; }
 
   /* ---------- Key Figures (y 2009-2438) ---------- */
-  .tbp-page .tbp-figures { height: calc(429px * var(--z)); text-align: left; }
-  .tbp-page .tbp-figures > .tbp-stage { height: 429px; }
-  .tbp-page .tbp-figures h2 { position: absolute; left: 0; width: 1190px; top: 42px; margin: 0; text-align: center; font-size: 44px; line-height: 60px; letter-spacing: 0.06em; text-transform: uppercase; }
-  .tbp-page .tbp-figures__frame { position: absolute; left: 272px; top: 125px; width: 646px; height: 270px; max-width: none; margin: 0; }
+  .tbp-page .tbp-figures { height: calc(600px * var(--z)); text-align: left; }
+  .tbp-page .tbp-figures > .tbp-stage { height: 600px; }
+  .tbp-page .tbp-figures h2 { position: absolute; left: 0; width: 1190px; top: 72px; margin: 0; text-align: center; font-size: 44px; line-height: 60px; letter-spacing: 0.06em; text-transform: uppercase; }
+  .tbp-page .tbp-figures__frame { position: absolute; left: 232px; top: 180px; width: 726px; height: 330px; max-width: none; margin: 0; }
   .tbp-page .tbp-figures__inner { position: relative; height: 100%; padding: 0; }
   .tbp-page .tbp-figures__grid > div { position: absolute; width: 170px; text-align: center; }
   .tbp-page .tbp-figures__grid dt { font-size: 38px; line-height: 40px; }
   .tbp-page .tbp-figures__grid .tbp-figures__label { font-size: 17px; line-height: 20px; margin: 0; letter-spacing: 0.02em; }
   .tbp-page .tbp-figures__grid dd { font-size: 12.5px; line-height: 20px; margin: 10px 0 0; }
-  .tbp-page .tbp-figures__grid > div:nth-child(1) { left: 5px; top: 27px; }
-  .tbp-page .tbp-figures__grid > div:nth-child(2) { left: 133px; top: 27px; }
-  .tbp-page .tbp-figures__grid > div:nth-child(3) { left: 270px; top: 27px; }
-  .tbp-page .tbp-figures__grid > div:nth-child(4) { left: 429px; top: 27px; }
-  .tbp-page .tbp-figures__grid > div:nth-child(5) { left: 72px; top: 148px; }
-  .tbp-page .tbp-figures__grid > div:nth-child(6) { left: 211px; top: 148px; }
-  .tbp-page .tbp-figures__grid > div:nth-child(7) { left: 371px; top: 148px; }
+  .tbp-page .tbp-figures__grid > div:nth-child(1) { left: 45px; top: 48px; }
+  .tbp-page .tbp-figures__grid > div:nth-child(2) { left: 173px; top: 48px; }
+  .tbp-page .tbp-figures__grid > div:nth-child(3) { left: 310px; top: 48px; }
+  .tbp-page .tbp-figures__grid > div:nth-child(4) { left: 469px; top: 48px; }
+  .tbp-page .tbp-figures__grid > div:nth-child(5) { left: 112px; top: 181px; }
+  .tbp-page .tbp-figures__grid > div:nth-child(6) { left: 251px; top: 181px; }
+  .tbp-page .tbp-figures__grid > div:nth-child(7) { left: 411px; top: 181px; }
 
   /* ---------- Deck plan selector (y 2438-2936) ---------- */
-  .tbp-page .tbp-deckplan { height: calc(498px * var(--z)); }
-  .tbp-page .tbp-deckplan > .tbp-stage { height: 498px; }
-  .tbp-page .tbp-deckplan__tab { position: absolute; top: 60px; text-align: center; font-size: 17px; letter-spacing: 0.04em; padding-bottom: 9px; margin: 0; }
+  .tbp-page .tbp-deckplan { height: calc(620px * var(--z)); }
+  .tbp-page .tbp-deckplan > .tbp-stage { height: 620px; }
+  .tbp-page .tbp-deckplan__tab { position: absolute; top: 100px; text-align: center; font-size: 17px; letter-spacing: 0.04em; padding-bottom: 9px; margin: 0; }
   .tbp-page .tbp-deckplan__tab:nth-child(1) { left: 274px; width: 126px; }
   .tbp-page .tbp-deckplan__tab { white-space: nowrap; }
   .tbp-page .tbp-deckplan__tab:nth-child(2) { left: 519px; width: 140px; }
   .tbp-page .tbp-deckplan__tab:nth-child(3) { left: 782px; width: 140px; }
-  .tbp-page .tbp-deckplan__stage { position: absolute; left: 248px; top: 175px; width: 732px; height: 235px; aspect-ratio: auto; max-width: none; margin: 0; }
+  .tbp-page .tbp-deckplan__stage { position: absolute; left: 248px; top: 235px; width: 732px; height: 235px; aspect-ratio: auto; max-width: none; margin: 0; }
 
   /* ---------- The Making of Waow 2 (y 2936-4021) ---------- */
   .tbp-page .tbp-timeline { height: calc(1085px * var(--z)); text-align: left; }
@@ -2869,26 +2869,28 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
   .tbp-page .tbp-slider { position: static; }
   .tbp-page .tbp-slider__track { position: static; display: block; padding: 0; }
   .tbp-page .tbp-slider__baseline { position: absolute; left: calc(-1 * var(--offz)); width: calc(1190px + 2 * var(--offz)); top: 645px; height: 1px; opacity: 0.75; }
-  .tbp-page .tbp-slider__baseline span { width: 1px; height: 56px; top: -30px; border-radius: 0; transform: none; }
-  .tbp-page .tbp-slider__baseline span:nth-child(1) { left: 270px !important; }
-  .tbp-page .tbp-slider__baseline span:nth-child(2) { left: 595px !important; }
-  .tbp-page .tbp-slider__baseline span:nth-child(3) { left: 920px !important; }
   .tbp-page .tbp-slider__step { position: absolute; top: 0; width: 330px; height: 1085px; display: block; transform: none; }
   .tbp-page .tbp-slider__step::after { display: none; }
   .tbp-page .tbp-slider__step:nth-child(1) { left: 105px; }
   .tbp-page .tbp-slider__step:nth-child(2) { left: 430px; }
   .tbp-page .tbp-slider__step:nth-child(3) { left: 755px; }
   .tbp-page .tbp-stack { position: absolute; width: 208px; height: 172px; }
-  .tbp-page .tbp-slider__step:nth-child(1) .tbp-stack { left: 65px; top: 413px; }
+  .tbp-page .tbp-slider__step:nth-child(1) .tbp-stack, .tbp-page .tbp-slider__step:nth-child(3) .tbp-stack { left: 61px; top: 417px; }
   .tbp-page .tbp-slider__step:nth-child(2) .tbp-stack { left: 61px; top: 697px; }
-  .tbp-page .tbp-slider__step:nth-child(3) .tbp-stack { left: 61px; top: 421px; }
+  /* tick + dot joining each step to the timeline (baseline y=645), centred on the step and touching its photo stack */
+  .tbp-page .tbp-slider__tick { display: block; position: absolute; left: 165px; width: 1px; background: var(--ironwood); opacity: 0.8; }
+  .tbp-page .tbp-slider__tick::after { content: ""; position: absolute; left: -3px; width: 7px; height: 7px; border-radius: 50%; background: var(--ironwood); }
+  .tbp-page .tbp-slider__step:nth-child(odd) .tbp-slider__tick { top: 592px; height: 53px; }
+  .tbp-page .tbp-slider__step:nth-child(odd) .tbp-slider__tick::after { bottom: -3px; }
+  .tbp-page .tbp-slider__step:nth-child(2) .tbp-slider__tick { top: 645px; height: 49px; }
+  .tbp-page .tbp-slider__step:nth-child(2) .tbp-slider__tick::after { top: -3px; }
   .tbp-page .tbp-slider__date { position: absolute; left: 0; width: 330px; margin: 0; text-align: center; font-size: 20px; line-height: 24px; text-transform: uppercase; letter-spacing: 0.05em; order: 0; }
   .tbp-page .tbp-slider__desc { position: absolute; left: 15px; width: 300px; margin: 0; text-align: center; font-size: 14.5px; line-height: 20px; max-width: none; order: 0; }
   .tbp-page .tbp-slider__step:nth-child(1) .tbp-slider__date, .tbp-page .tbp-slider__step:nth-child(3) .tbp-slider__date { top: 716px; }
   .tbp-page .tbp-slider__step:nth-child(1) .tbp-slider__desc, .tbp-page .tbp-slider__step:nth-child(3) .tbp-slider__desc { top: 766px; }
   .tbp-page .tbp-slider__step:nth-child(2) .tbp-slider__date { top: 453px; }
   .tbp-page .tbp-slider__step:nth-child(2) .tbp-slider__desc { top: 501px; }
-  .tbp-page .tbp-slider__nav { position: absolute; left: 549px; top: 958px; margin: 0; gap: 24px; }
+  .tbp-page .tbp-slider__nav { position: absolute; left: 445px; width: 300px; top: 958px; margin: 0; gap: 22px; align-items: center; }
   .tbp-page .tbp-slider__arrow { width: 34px; height: 34px; }
 
   /* ---------- The Cabins (y 4021-4680) ---------- */
@@ -3618,4 +3620,36 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
   .px-it .rc-card__title, .px-it .rc-card__route { position: static; display: block; }
   .px-it .rg-explore .px-stage, .px-it .rg-others .px-stage { display: grid; gap: 1.25rem; }
   .px-it .rg-explore__sub { margin-bottom: 1.5rem; }
+}
+
+
+/* ==========================================================================
+   Images: 1px black frame, square corners — every photo/stamp/plan placeholder
+   on every page. Logos and the transparent Indonesia map are not framed.
+   ========================================================================== */
+img:not([src*="logo-waow2"]):not([src*="indonesia-map"]) { border: 1px solid #000; box-sizing: border-box; }
+.cb-cabin__plan, .dst-region__stamp, .rg-stamp { border: 1px solid #000 !important; }
+.px-rg .rc-card__photo { border: 0; }
+img, picture, figure, [class*="photo"], [class*="__visual"], [class*="__img"], .trip-map, .cb-cabin__plan,
+.dst-region__stamp, .rg-stamp, .hp-postcard__stamp, .itin-card__face, .boat-explorer__stage { border-radius: 0 !important; }
+
+/* The Boat: sober placeholder slot for the future 3D model (replaces the hand-drawn hull) */
+.tbp-model-slot {
+  width: 100%; aspect-ratio: 820 / 420; border: 1px solid #000; background: rgba(244, 239, 228, 0.1);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem; text-align: center;
+  color: var(--paper); padding: 1.5rem;
+}
+.tbp-model-slot svg { width: 56px; height: 56px; opacity: 0.85; }
+.tbp-model-slot p { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; letter-spacing: 0.08em; text-transform: uppercase; margin: 0; }
+.tbp-model-slot span { font-family: var(--font-body); font-style: italic; font-size: var(--fs-small); color: var(--sea-foam); }
+
+/* timeline slider: tick markers (desktop only) and step counter */
+.tbp-slider__tick { display: none; }
+.tbp-slider__count { font-family: var(--font-body); font-size: 0.95rem; color: var(--ironwood); min-width: 5.5ch; text-align: center; font-variant-numeric: tabular-nums; }
+.tbp-slider__arrow { cursor: pointer; }
+/* pixel-stage pages scale with `zoom`: counter-scale the frame so it always renders as 1px */
+@media (min-width: 1100px) {
+  .hp-home img:not([src*="logo-waow2"]):not([src*="indonesia-map"]), .tbp-page img:not([src*="logo-waow2"]):not([src*="indonesia-map"]),
+  .cb-page img:not([src*="logo-waow2"]):not([src*="indonesia-map"]), .px-page img:not([src*="logo-waow2"]):not([src*="indonesia-map"]) { border-width: calc(1px / var(--z, 1)); }
+  .cb-cabin__plan, .dst-region__stamp, .rg-stamp { border-width: calc(1px / var(--z, 1)) !important; }
 }
