@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dive Deep — Waow Charters</title>
+<meta name="description" content="WAOW 2 was designed around diving — four dives a day, small groups, a dedicated dive centre and 32 itineraries across the Indonesian archipelago.">
+
+<!-- TODO: replace with real favicon files -->
+<link rel="icon" href="data:,">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--
+  Brand fonts (Lemon Milk, Have Heart Two) are licensed, not on Google Fonts.
+  TODO: once licensed font files are available, replace the @font-face-free
+  stack below with local @font-face declarations for Lemon Milk and Have
+  Heart Two. Outfit and Caveat are close-in-spirit stand-ins used for V1.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Outfit:wght@500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<script src="home-stage.js" data-stage="1366"></script>
+</head>
+<body class="px-page px-hdB px-dd">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+<symbol id="icon-dive-mask" viewBox="11 -37 278 256"><rect x="55.3" y="-3.7" width="189.4" height="189.4" rx="11.4" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.65" stroke-dasharray="5.3 3.8"/><circle cx="130.3" cy="65.4" r="10.8" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.65"/><path d="M100.7,122.5 L146.1,81.1 L169.7,104.8 L171.7,71.3 L199.3,122.5" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.65" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+<symbol id="icon-octopus" viewBox="10 -16 238 285"><rect x="40.9" y="38.4" width="176.1" height="176.1" rx="10.6" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.47" stroke-dasharray="4.9 3.5"/><circle cx="110.7" cy="102.7" r="10.1" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.47"/><path d="M83.2,155.8 L125.3,117.3 L147.3,139.3 L149.1,108.2 L174.8,155.8" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.47" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+</svg>
+
+<!--
+  THE DIVE DEEP PAGE — built from the designer's Canva export (DIVING.pdf).
+  Reached only from the Experience page's "dive deeper" link, so it's
+  treated as a sub-page of Experience (nav highlights "Experience", same
+  pattern as Cabins highlighting "The Boat").
+
+  Per instruction: the mockup's header still shows "EVENTS" and
+  "RATES & DATES" — both stale, not yet updated on the Canva side. This
+  page uses the site's already-decided values instead: "News" in the nav
+  and "Pre-Bookings" for the CTA (matching experience.html).
+
+  The Cabins section's amenities list ("Air Conditioning / Private
+  Bathroom / Minibar / Safe") that appears under "New Sites. Every Day."
+  in the export is a copy-paste leftover from the Cabins mockup — omitted
+  here entirely, per instruction.
+-->
+<header class="site-header" id="site-header">
+  <div class="container site-header__row">
+    <a class="logo" href="index.html" aria-label="Waow Charters, home">
+      <picture>
+        <source srcset="images/logo-waow2.webp" type="image/webp">
+        <img src="images/logo-waow2.png" alt="Waow 2" width="180" height="41">
+      </picture>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a href="the-boat.html">The Boat</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="experience.html" class="is-active" aria-current="page">Experience</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--outline" href="booking.html">Pre-Bookings</a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <ul>
+      <li><a href="the-boat.html">The Boat</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="experience.html" class="is-active" aria-current="page">Experience</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a class="btn btn--outline" href="booking.html">Pre-Bookings</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+<section class="dd-hero px-sec px-gold-b" id="top" style="--sh:1077px;"><div class="container px-stage">
+<h1 class="p" style="--x:133px;--y:104px;--w:1100px;--fs:59px;--lh:72px;--ta:center;">Dive Deep Into Indonesia.</h1>
+<p class="dd-hero__tagline p" style="--x:233px;--y:218px;--w:900px;--fs:19px;--lh:28px;--ta:center;">WAOW 2 was designed around diving.</p>
+<div class="dd-hero__lead px-flat">
+<p class="p" style="--x:233px;--y:246px;--w:900px;--fs:19px;--lh:28px;--ta:center;">From the first descent to the last surface interval, every detail is<br>there to make your time underwater as seamless as possible.</p></div>
+<div class="dd-hero__collage px-flat reveal">
+<figure class="dd-hero__photo dd-hero__photo--a p" style="--x:181px;--y:354px;--w:846px;--h:540px;"><picture><source srcset="images/manta-ray.webp" type="image/webp"><img src="images/manta-ray.jpg" loading="lazy" alt="A reef teeming with fish near Waow 2's dive sites."></picture></figure>
+<figure class="dd-hero__photo dd-hero__photo--b p" style="--x:871px;--y:594px;--w:314px;--h:392px;"><picture><source srcset="images/diver-reef.webp" type="image/webp"><img src="images/diver-reef.jpg" loading="lazy" alt="A diver exploring a coral reef."></picture></figure>
+</div></div></section>
+<section class="dd-newsites px-sec px-gold-b" style="--sh:776px;"><div class="container px-stage dd-newsites__grid">
+<div class="dd-newsites__copy px-flat reveal">
+<h2 class="p" style="--x:333px;--y:266px;--w:700px;--fs:31.5px;--lh:40px;--ta:center;">New Sites. Every Day.</h2>
+<p class="p" style="--x:438px;--y:350px;--w:490px;--fs:17.5px;--lh:24.5px;--ta:center;">On WAOW, the day follows the rhythm of the sea.<br>A first dive in the morning. Another after breakfast.<br>One in the afternoon. And one more before the sun<br>goes down.<br>Four dives a day means more time underwater, more<br>sites to discover and more chances to encounter the<br>extraordinary marine life of Indonesia.<br>And between them? Good food, warm drinks, a little<br>rest and plenty of time to enjoy being at sea.</p>
+</div><div class="dd-newsites__visual px-flat reveal reveal--delay-1">
+<figure class="dd-newsites__photo dd-newsites__photo--a p fr" style="--x:1033px;--y:0px;--w:333px;--h:441px;"><picture><source srcset="images/raja-ampat.webp" type="image/webp"><img src="images/raja-ampat.jpg" loading="lazy" alt="Aerial view of a turquoise lagoon and waterfall."></picture></figure>
+<figure class="dd-newsites__photo dd-newsites__photo--b p fl" style="--x:0px;--y:350px;--w:312px;--h:426px;"><picture><source srcset="images/dive-gear-deck.webp" type="image/webp"><img src="images/dive-gear-deck.jpg" loading="lazy" alt="Masks and snorkels on the edge of a dive boat."></picture></figure>
+<svg class="dot-icon p" aria-hidden="true" style="--x:995px;--y:365px;--w:135px;--h:145px;" viewBox="11 -37 278 256"><use href="#icon-dive-mask"></use></svg>
+</div></div></section>
+<section class="dd-groups px-sec" style="--sh:759px;"><div class="container px-stage dd-groups__grid">
+<div class="dd-groups__visual px-flat reveal">
+<figure class="dd-groups__photo p" style="--x:100px;--y:96px;--w:419px;--h:573px;"><picture><source srcset="images/manta-ray.webp" type="image/webp"><img src="images/manta-ray.jpg" loading="lazy" alt="A diver, a manta ray and a school of fish."></picture></figure>
+<div class="dd-groups__stats p px-annot" style="--x:425px;--y:182px;--w:260px;--fs:22px;--lh:45px;--ta:left;"><p>20 guests.<br>5 guides.<br>Small groups.</p></div>
+<svg class="dot-icon p" aria-hidden="true" style="--x:460px;--y:345px;--w:132px;--h:170px;" viewBox="10 -16 238 285"><use href="#icon-dive-tank"></use></svg>
+</div><div class="dd-groups__copy px-flat reveal reveal--delay-1">
+<h2 class="p" style="--x:583px;--y:105px;--w:600px;--fs:47.7px;--lh:63px;--ta:right;">Less People.<br>More Ocean.</h2>
+<p class="p" style="--x:583px;--y:280px;--w:600px;--fs:17.5px;--lh:24px;--ta:right;">With five experienced dive guides for a<br>maximum of 20 guests, groups are kept small &mdash;<br>with a maximum ratio of 1 guide to 4 divers.<br>Small groups mean more freedom in the water,<br>more personal guidance and more space to<br>experience each dive at your own pace.<br>Our guides bring years of experience, a deep<br>knowledge of the region and, most importantly, a<br>genuine love for being underwater.</p>
+<a class="link-arrow p la-r" href="booking.html" style="--x:883px;--y:607px;--w:300px;">book your stay <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div></div></section>
+<section class="dd-built px-sec" style="--sh:789px;"><div class="container px-stage">
+<div class="dd-built__stripes px-stripes" style="--sx:1145px" aria-hidden="true"></div>
+<div class="dd-built__head px-flat reveal">
+<h2 class="p" style="--x:126px;--y:110px;--w:600px;--fs:46px;--lh:52px;--ta:left;">Built for Diving.</h2>
+<p class="p" style="--x:126px;--y:211px;--w:650px;--fs:17.5px;--lh:24px;--ta:left;">Everything has been designed around the dive, from getting to the reef<br>to getting your gear ready for the next descent.</p></div>
+<div class="dd-built__items px-flat reveal reveal--delay-1">
+<div class="dd-built__item p" style="--x:126px;--y:289px;--w:620px;"><h3>Dive Centre</h3><p>A dedicated space for gear preparation, storage and rinsing, with<br>everything ready for your next dive.</p></div>
+<div class="dd-built__item p" style="--x:126px;--y:385px;--w:620px;"><h3>Dive Tenders</h3><p>Multiple tenders keep groups small and make it easy to reach remote<br>dive sites.</p></div>
+<div class="dd-built__item p" style="--x:126px;--y:481px;--w:620px;"><h3>Camera Room</h3><p>A dedicated space to prepare, organise and take care of your<br>underwater photo and video equipment between dives.</p></div>
+</div><div class="dd-built__visual px-flat reveal reveal--delay-2">
+<figure class="dd-built__photo dd-built__photo--a p" style="--x:775px;--y:112px;--w:407px;--h:545px;"><picture><source srcset="images/guests-table.webp" type="image/webp"><img src="images/guests-table.jpg" loading="lazy" alt="Divers gathered on the dive deck of Waow 2."></picture></figure>
+<p class="dd-built__caption p px-annot" style="--x:1050px;--y:159px;--w:230px;--fs:17px;--lh:37px;--ta:left;">Less logistics<br>more bottom time</p>
+</div></div></section>
+<section class="dd-longer px-sec" style="--sh:769px;"><div class="container px-stage dd-longer__grid">
+<div class="dd-longer__visual px-flat reveal">
+<figure class="dd-longer__photo dd-longer__photo--a p fl" style="--x:0px;--y:0px;--w:313px;--h:440px;"><picture><source srcset="images/interior-saloon.webp" type="image/webp"><img src="images/interior-saloon.jpg" loading="lazy" alt="Masks hung on a blue wall in the dive centre."></picture></figure>
+<svg class="dot-icon p" aria-hidden="true" style="--x:207px;--y:353px;--w:172px;--h:205px;" viewBox="10 -16 238 285"><use href="#icon-dive-tank"></use></svg>
+<figure class="dd-longer__photo dd-longer__photo--b p fr" style="--x:1053px;--y:286px;--w:313px;--h:476px;"><picture><source srcset="images/dive-gear-deck.webp" type="image/webp"><img src="images/dive-gear-deck.jpg" loading="lazy" alt="Divers preparing on the dive deck."></picture></figure>
+</div><div class="dd-longer__copy px-flat reveal reveal--delay-1">
+<h2 class="p" style="--x:283px;--y:95px;--w:800px;--fs:44px;--lh:56px;--ta:center;">Dive Longer.<br>Learn Along the Way.</h2>
+<p class="p" style="--x:383px;--y:261px;--w:600px;--fs:17.5px;--lh:24px;--ta:center;">Make more of your time underwater, or take the opportunity<br>to learn something new while you're on board.</p>
+<div class="dd-longer__item p" style="--x:333px;--y:337px;--w:700px;--ta:center;"><h3>Nitrox</h3><p>More time underwater. Nitrox is available on board for certified<br>divers free of charge. Nitrox matters more on a liveaboard,<br>with dives stacking up, it eases nitrogen loading and lowers the<br>risk of DCS. Nitrox training is available on board.</p></div>
+<div class="dd-longer__item p" style="--x:333px;--y:481px;--w:700px;--ta:center;"><h3>Private PADI Courses</h3><p>Want to improve your skills, work towards a new certification or<br>simply feel more confident underwater?<br>Private PADI instruction is available on board, with one-to-one<br>guidance tailored to your experience and goals.</p></div>
+<div class="dd-longer__item p" style="--x:333px;--y:625px;--w:700px;--ta:center;"><h3>Private Guide</h3><p>For a more personal experience, a private guide can accompany<br>you underwater.</p></div>
+</div></div></section>
+<section class="dd-philosophy px-sec" style="--sh:745px;"><div class="container px-stage">
+<figure class="dd-philosophy__photo reveal p fl" style="--x:0px;--y:0px;--w:478px;--h:745px;"><picture><source srcset="images/banda-sea.webp" type="image/webp"><img src="images/banda-sea.jpg" loading="lazy" alt="Divers silhouetted at sunset."></picture></figure>
+<div class="dd-philosophy__head px-flat reveal">
+<h2 class="p" style="--x:618px;--y:101px;--w:620px;--fs:47px;--lh:52px;--ta:center;">Our Philosophy.</h2>
+<p class="p" style="--x:538px;--y:206px;--w:770px;--fs:17.5px;--lh:24px;--ta:center;">With more than 30 years of experience in the industry,<br>our philosophy is built around four simple ideas: explore further, keep groups small,<br>make diving effortless and give divers the freedom to focus on the experience itself.</p></div>
+<div class="dd-philosophy__grid px-flat">
+<div class="dd-philosophy__cell reveal p" style="--x:572px;--y:386px;--w:360px;--ta:center;"><h3>Go Further</h3><p>Explore destinations as remote as they are<br>extraordinary, with the range to travel<br>across the Indonesian Archipelago.</p></div>
+<div class="dd-philosophy__cell reveal p" style="--x:572px;--y:521px;--w:360px;--ta:center;"><h3>Keep It Personal</h3><p>Five experienced guides for 20 guests,<br>with a maximum of four divers per guide.</p></div>
+<div class="dd-philosophy__cell reveal p" style="--x:976px;--y:386px;--w:360px;--ta:center;"><h3>Make It Effortless</h3><p>From equipment preparation and<br>rinsing to storage, the practical details<br>are taken care of.</p></div>
+<div class="dd-philosophy__cell reveal p" style="--x:976px;--y:521px;--w:360px;--ta:center;"><h3>Dive With Confidence</h3><p>Modern facilities, experienced guides<br>and safety systems designed for<br>remote diving operations.</p></div>
+</div></div></section>
+<section class="dd-underwater px-sec" style="--sh:769px;"><div class="container px-stage dd-underwater__grid">
+<div class="dd-underwater__visual px-flat reveal">
+<figure class="dd-underwater__photo p fl" style="--x:0px;--y:293px;--w:357px;--h:476px;"><picture><source srcset="images/manta-ray.webp" type="image/webp"><img src="images/manta-ray.jpg" loading="lazy" alt="A diver beside a manta ray and a school of fish."></picture></figure>
+<p class="dd-underwater__caption p px-annot" style="--x:243px;--y:583px;--w:240px;--fs:19px;--lh:44px;--ta:center;">The best part<br>is below.</p>
+</div><div class="dd-underwater__copy px-flat reveal reveal--delay-1">
+<h2 class="p" style="--x:383px;--y:174px;--w:600px;--fs:45px;--lh:60px;--ta:center;">The Underwater<br>World</h2>
+<p class="p" style="--x:503px;--y:331px;--w:360px;--fs:17.5px;--lh:24px;--ta:center;">From manta rays and wobbegong sharks<br>to pygmy seahorses, walking sharks and<br>huge schools of reef fish, Indonesia's<br>waters are home to an extraordinary<br>diversity of marine life.</p>
+<p class="p" style="--x:503px;--y:475px;--w:360px;--fs:17.5px;--lh:24px;--ta:center;">And with 32 itineraries across the<br>archipelago, the underwater world<br>changes with every route.</p>
+<a class="link-arrow p" href="itineraries.html" style="--x:583px;--y:597px;--w:200px;">explore destinations <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<svg class="dd-icon p" viewBox="0 0 32 32" aria-hidden="true" style="--x:965px;--y:398px;--w:80px;--h:105px;"><circle cx="16" cy="6" r="3" fill="none" stroke="currentColor" stroke-width="1"/><line x1="16" y1="9" x2="16" y2="26" stroke="currentColor" stroke-width="1"/><line x1="9" y1="13" x2="23" y2="13" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><path d="M6 18c0 6 4 9 10 9s10-3 10-9" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>
+</div>
+<figure class="dd-underwater__photo dd-underwater__photo--r reveal p fr" style="--x:1015px;--y:0px;--w:351px;--h:470px;"><picture><source srcset="images/diver-reef.webp" type="image/webp"><img src="images/diver-reef.jpg" loading="lazy" alt="A coral reef under a school of fish."></picture></figure>
+</div></section>
+<section class="hp-safety px-sec px-gold-b" style="--sh:776px"><div class="container px-stage hp-safety__grid">
+<figure class="hp-safety__photo p reveal" style="--x:150px;--y:77px;--w:510px;--h:549px;"><picture><source srcset="images/diver-reef.webp" type="image/webp"><img src="images/diver-reef.jpg" loading="lazy" alt="A vivid coral reef, schooling fish overhead."></picture><svg class="dot-icon p" aria-hidden="true" style="--x:454px;--y:478px;--w:160px;--h:110px" viewBox="10 -16 238 285"><use href="#icon-octopus"></use></svg></figure>
+<div class="hp-safety__copy px-flat reveal reveal--delay-1">
+<p class="hp-safety__title p" style="--x:854px;--y:210px;--w:400px;--fs:24.4px;--lh:34px;--ta:center;">Safety First. Always.</p>
+<p class="p" style="--x:904px;--y:289px;--w:300px;--fs:17.5px;--lh:24px;--ta:center;">Safety is non-negotiable. From the<br>design of WAOW 2 to crew training<br>and the equipment on board, every<br>detail is considered with safety in<br>mind.</p>
+<a class="link-arrow p" href="the-boat.html#specs" style="--x:914px;--y:464px;--w:280px;">explore our safety standards <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div></div></section>
+<section class="dd-closing px-sec" style="--sh:336px;"><div class="container px-stage">
+<h2 class="p reveal" style="--x:283px;--y:58px;--w:800px;--fs:32.8px;--lh:36px;--ta:center;">Ready for your next descent?</h2>
+<p class="p reveal" style="--x:283px;--y:153px;--w:800px;--fs:17.5px;--lh:24px;--ta:center;">32 ways into Indonesia.<br>And an entire world below the surface.</p>
+<a class="link-arrow p" href="itineraries.html" style="--x:583px;--y:255px;--w:200px;">itineraries <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div></section></main>
+
+<!-- ================= FOOTER (shared with other pages) ================= -->
+<footer class="hp-footer">
+  <div class="container hp-footer__grid">
+    <div>
+      <h3>Contact Us</h3>
+      <a href="mailto:info@waow.ch">info@waow.ch</a>
+      <address>Chemin de la Vuarpill&egrave;re 25,<br>1260 Nyon, Switzerland</address>
+    </div>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="the-boat.html">The Boat</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="giving-back.html">Engagement</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Footer">
+      <ul>
+        <!-- TODO: link to real Events / Q&A pages once they exist -->
+        <li><a href="news.html">News</a></li>
+        <li><a href="/qa">Q&amp;A</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="hp-divider" aria-hidden="true"></div>
+
+  <div class="container hp-footer__legal">
+    <p>Copyright <span id="year"></span><br>WAOW Charters</p>
+    <div class="hp-footer__policies">
+      <label class="sr-only" for="hp-lang-select">Language</label>
+      <!-- TODO: wire up real localization when a second language is ready -->
+      <select class="hp-footer__lang-select" id="hp-lang-select" disabled>
+        <option>English &or;</option>
+        <option>Fran&ccedil;ais</option>
+      </select>
+      <!-- TODO: link to real legal pages -->
+      <a href="/cookies">Cookies policy</a>
+      <a href="/privacy">Privacy policy</a>
+      <a href="/terms">Terms and conditions</a>
+    </div>
+    <div class="hp-footer__social">
+      <a href="#" aria-label="Waow Charters on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="Waow Charters on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></a>
+      <a href="#" aria-label="Waow Charters on YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 9.5l5 2.5-5 2.5z" fill="currentColor"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

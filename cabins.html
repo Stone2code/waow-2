@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Cabins — Waow Charters</title>
+<meta name="description" content="Private spaces designed for long days above and below the water. 11 cabins across three decks, in four categories, aboard Waow 2.">
+
+<!-- TODO: replace with real favicon files -->
+<link rel="icon" href="data:,">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--
+  Brand fonts (Lemon Milk, Have Heart Two) are licensed, not on Google Fonts.
+  TODO: once licensed font files are available, replace the @font-face-free
+  stack below with local @font-face declarations for Lemon Milk and Have
+  Heart Two. Outfit and Caveat are close-in-spirit stand-ins used for V1.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Outfit:wght@500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<script src="home-stage.js" data-stage="1366"></script>
+</head>
+<body class="cb-page">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!--
+  THE CABINS PAGE — built from the designer's Canva export (CABINS.pdf) to
+  match its section order and visual hierarchy. Reached only via "The
+  Boat" page's Cabins grid "sea more" CTA — not part of the primary nav,
+  so it's treated as a sub-page of The Boat (nav highlights "The Boat").
+  See the ".cb-" CSS block in style.css for layout notes.
+-->
+<header class="site-header" id="site-header">
+  <div class="container site-header__row">
+    <a class="logo" href="index.html" aria-label="Waow Charters, home">
+      <picture>
+        <source srcset="images/logo-waow2.webp" type="image/webp">
+        <img src="images/logo-waow2.png" alt="Waow 2" width="180" height="41">
+      </picture>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a href="the-boat.html" class="is-active" aria-current="page">The Boat</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--outline" href="booking.html">Pre-Bookings</a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <ul>
+      <li><a href="the-boat.html" class="is-active" aria-current="page">The Boat</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a class="btn btn--outline" href="booking.html">Pre-Bookings</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= YOUR ROOM AT SEA ================= -->
+  <section class="cb-hero" id="top">
+    <div class="container cb-stage">
+      <h1>Your room at sea.</h1>
+      <p class="cb-hero__lead">Private spaces designed for long days above and below the water.</p>
+      <div class="cb-hero__collage reveal">
+        <!-- TODO: replace with a real cabin-balcony photo once available -->
+        <figure class="cb-hero__photo cb-hero__photo--a"><picture><source srcset="images/sunset-deck.webp" type="image/webp"><img src="images/sunset-deck.jpg" loading="lazy" alt="View from a cabin balcony aboard Waow 2."></picture></figure>
+        <figure class="cb-hero__photo cb-hero__photo--b"><picture><source srcset="images/interior-saloon.webp" type="image/webp"><img src="images/interior-saloon.jpg" loading="lazy" alt="Warm wooden cabin interior aboard Waow 2."></picture></figure>
+      </div>
+    </div>
+  </section>
+  <div class="hp-divider" aria-hidden="true"></div>
+
+  <!-- ================= A PLACE TO COME BACK TO ================= -->
+  <section class="cb-return">
+    <div class="container cb-return__grid cb-stage">
+      <div class="cb-return__collage reveal">
+        <!-- TODO: replace with unique Waow 2 cabin-deck photography -->
+        <figure class="cb-return__photo cb-return__photo--a"><picture><source srcset="images/deckhand-rope.webp" type="image/webp"><img src="images/deckhand-rope.jpg" loading="lazy" alt="Rope detail on Waow 2's deck."></picture></figure>
+        <figure class="cb-return__photo cb-return__photo--b"><picture><source srcset="images/captain-wheel.webp" type="image/webp"><img src="images/captain-wheel.jpg" loading="lazy" alt="A view along Waow 2's deck."></picture></figure>
+      </div>
+      <div class="cb-return__copy reveal reveal--delay-1">
+        <svg class="cb-return__icon" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="6" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <line x1="16" y1="9" x2="16" y2="26" stroke="currentColor" stroke-width="1.6"/>
+          <line x1="9" y1="13" x2="23" y2="13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M6 18c0 6 4 9 10 9s10-3 10-9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <h2>A place to come back to</h2>
+        <p>There is something different about waking up at sea.<br>The light changes. The horizon moves.<br>And your view never quite stays the same.<br>WAOW II offers 11 cabins across three decks,<br>with four cabin categories designed for different ways of travelling.</p>
+        <ul class="cb-return__amenities">
+          <li>Air Conditioning</li>
+          <li>Private Bathroom</li>
+          <li>Minibar</li>
+          <li>Safe</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <div class="hp-divider" aria-hidden="true"></div>
+
+  <section class="cb-cabin" id="master-cabin">
+    <div class="container cb-cabin__grid cb-stage">
+      <div class="cb-cabin__visual reveal">
+        <p class="cb-cabin__annotation">180&deg; views<br>private balcony<br>Upper Deck</p>
+        <div class="cb-cabin__frame">
+          <!-- TODO: replace with the real hand-drawn floor plan (the mockup shows no photo on the plan) -->
+          <div class="cb-cabin__plan">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="6" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="6" y1="24" x2="42" y2="24" stroke="currentColor" stroke-width="1.2"/><line x1="24" y1="6" x2="24" y2="24" stroke="currentColor" stroke-width="1.2"/><circle cx="33" cy="33" r="4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+            <span>Floor plan coming soon</span>
+          </div>
+          <figure class="cb-cabin__photo"><picture><source srcset="images/interior-saloon.webp" type="image/webp"><img src="images/interior-saloon.jpg" loading="lazy" alt="Inside the Master Cabin aboard Waow 2."></picture></figure>
+        </div>
+      </div>
+      <div class="cb-cabin__copy reveal">
+        <p class="cb-cabin__deck">Upper Deck</p>
+        <h2>Master Cabin.</h2>
+        <p>Our largest cabin, 50 m&sup2; with 180&deg; views and a private balcony overlooking the sea.</p>
+        <p>More space to wake up slowly, watch the horizon and have your own corner of Indonesia.</p>
+        <a class="link-arrow" href="booking.html">book your stay <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </section>
+  <section class="cb-cabin cb-cabin--reverse" id="superior-cabins">
+    <div class="container cb-cabin__grid cb-stage">
+      <div class="cb-cabin__copy reveal">
+        <p class="cb-cabin__deck">Main Deck</p>
+        <h2>Superior Cabins.</h2>
+        <p>Located on the Main Deck, 20 m&sup2;, the Superior Cabins put you right at the heart of life on board while giving you a comfortable space to retreat to between dives.</p>
+        <a class="link-arrow" href="booking.html">book your stay <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="cb-cabin__visual reveal">
+        <p class="cb-cabin__annotation">Main Deck Location<br>20 m&sup2;<br>shared balcony</p>
+        <div class="cb-cabin__frame">
+          <!-- TODO: replace with the real hand-drawn floor plan (the mockup shows no photo on the plan) -->
+          <div class="cb-cabin__plan">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="6" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="6" y1="24" x2="42" y2="24" stroke="currentColor" stroke-width="1.2"/><line x1="24" y1="6" x2="24" y2="24" stroke="currentColor" stroke-width="1.2"/><circle cx="33" cy="33" r="4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+            <span>Floor plan coming soon</span>
+          </div>
+          <figure class="cb-cabin__photo"><picture><source srcset="images/steward-towels.webp" type="image/webp"><img src="images/steward-towels.jpg" loading="lazy" alt="A Superior Cabin being made up aboard Waow 2."></picture></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="cb-cabin" id="single-cabins">
+    <div class="container cb-cabin__grid cb-stage">
+      <div class="cb-cabin__visual reveal">
+        <p class="cb-cabin__annotation">13 m&sup2;<br>Upper Deck<br>Beautiful Sea Views</p>
+        <div class="cb-cabin__frame">
+          <!-- TODO: replace with the real hand-drawn floor plan (the mockup shows no photo on the plan) -->
+          <div class="cb-cabin__plan">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="6" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="6" y1="24" x2="42" y2="24" stroke="currentColor" stroke-width="1.2"/><line x1="24" y1="6" x2="24" y2="24" stroke="currentColor" stroke-width="1.2"/><circle cx="33" cy="33" r="4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+            <span>Floor plan coming soon</span>
+          </div>
+          <figure class="cb-cabin__photo"><picture><source srcset="images/captain-wheel.webp" type="image/webp"><img src="images/captain-wheel.jpg" loading="lazy" alt="Inside a Single Cabin aboard Waow 2."></picture></figure>
+        </div>
+      </div>
+      <div class="cb-cabin__copy reveal">
+        <p class="cb-cabin__deck">Upper Deck</p>
+        <h2>Single Cabins.</h2>
+        <p>Designed for solo travellers, these 13 m&sup2; cabins make the most of their space while giving you an Upper Deck position and beautiful views out to sea.</p>
+        <p>Your own room. Your own rhythm.</p>
+        <a class="link-arrow" href="booking.html">book your stay <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </section>
+  <section class="cb-cabin cb-cabin--reverse" id="deluxe-cabins">
+    <div class="container cb-cabin__grid cb-stage">
+      <div class="cb-cabin__copy reveal">
+        <p class="cb-cabin__deck">Lower Deck</p>
+        <h2>Deluxe Cabins.</h2>
+        <p>At 22 m&sup2;, the Deluxe Cabins offer generous space on the Lower Deck, with porthole windows bringing glimpses of the sea into your room.</p>
+        <p>A little more room to stretch out after a day underwater.</p>
+        <a class="link-arrow" href="booking.html">book your stay <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="cb-cabin__visual reveal">
+        <p class="cb-cabin__annotation">22 m&sup2; of space<br>Lower Deck<br>porthole windows</p>
+        <div class="cb-cabin__frame">
+          <!-- TODO: replace with the real hand-drawn floor plan (the mockup shows no photo on the plan) -->
+          <div class="cb-cabin__plan">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="6" width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="6" y1="24" x2="42" y2="24" stroke="currentColor" stroke-width="1.2"/><line x1="24" y1="6" x2="24" y2="24" stroke="currentColor" stroke-width="1.2"/><circle cx="33" cy="33" r="4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+            <span>Floor plan coming soon</span>
+          </div>
+          <figure class="cb-cabin__photo"><picture><source srcset="images/waow2-detail.webp" type="image/webp"><img src="images/waow2-detail.jpg" loading="lazy" alt="Detail inside a Deluxe Cabin aboard Waow 2."></picture></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="hp-divider" aria-hidden="true"></div>
+
+  <!-- ================= BETWEEN ONE DIVE AND THE NEXT ================= -->
+  <section class="cb-closing">
+    <div class="container cb-closing__grid cb-stage">
+      <div class="cb-closing__copy reveal">
+        <h2>Between one dive and the next</h2>
+        <p>A shower.<br>A change of clothes.<br>A little time with the door closed.</p>
+        <p class="cb-closing__then">Then back on deck.</p>
+        <p>Because on WAOW, your cabin isn't just where you sleep.<br>It's where you pause between adventures.</p>
+        <a class="link-arrow" href="booking.html">ready to go <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <figure class="cb-closing__photo reveal reveal--delay-1"><picture><source srcset="images/dive-gear-deck.webp" type="image/webp"><img src="images/dive-gear-deck.jpg" loading="lazy" alt="Dive gear ready on Waow 2's deck between dives."></picture></figure>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER (shared with other pages) ================= -->
+<footer class="hp-footer">
+  <div class="container hp-footer__grid">
+    <div>
+      <h3>Contact Us</h3>
+      <a href="mailto:info@waow.ch">info@waow.ch</a>
+      <address>Chemin de la Vuarpill&egrave;re 25,<br>1260 Nyon, Switzerland</address>
+    </div>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="the-boat.html">The Boat</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="giving-back.html">Engagement</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Footer">
+      <ul>
+        <!-- TODO: link to real Events / Q&A pages once they exist -->
+        <li><a href="news.html">News</a></li>
+        <li><a href="/qa">Q&amp;A</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="hp-divider" aria-hidden="true"></div>
+
+  <div class="container hp-footer__legal">
+    <p>Copyright <span id="year"></span><br>WAOW Charters</p>
+    <div class="hp-footer__policies">
+      <label class="sr-only" for="hp-lang-select">Language</label>
+      <!-- TODO: wire up real localization when a second language is ready -->
+      <select class="hp-footer__lang-select" id="hp-lang-select" disabled>
+        <option>English &or;</option>
+        <option>Fran&ccedil;ais</option>
+      </select>
+      <!-- TODO: link to real legal pages -->
+      <a href="/cookies">Cookies policy</a>
+      <a href="/privacy">Privacy policy</a>
+      <a href="/terms">Terms and conditions</a>
+    </div>
+    <div class="hp-footer__social">
+      <a href="#" aria-label="Waow Charters on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="Waow Charters on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></a>
+      <a href="#" aria-label="Waow Charters on YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 9.5l5 2.5-5 2.5z" fill="currentColor"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

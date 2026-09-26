@@ -13,6 +13,21 @@
 
 const ITINERARIES = [
   {
+    slug: "east-meets-west",
+    name: "East Meets West",
+    eyebrow: "Signature Route",
+    region: "Flores to Bali",
+    nights: 11,
+    level: "All certified levels",
+    season: "End of May, one departure a year",
+    teaser: "Flores to Bali, across the invisible border of Wallacea.",
+    description: "Some routes become classics because a marketing department decided they should. This one became a classic because generations of divers sailed it, came home changed, and told everybody. You fly out to the far end of the archipelago, join Waow 2 in Flores, and spend eleven days sailing home.",
+    detailExtra: "In between is a border that appears on no political map and still separates more deeply than most: you leave the Indonesia almost nobody has seen, and arrive in the one everybody thinks they know.",
+    image: "komodo-island",
+    imageAlt: "Padar Island's hills rising over the bays of Komodo National Park.",
+    photoCaption: "East Meets West, Flores to Bali",
+  },
+  {
     slug: "dragon-ground",
     name: "Dragon Ground",
     eyebrow: "Signature Route",

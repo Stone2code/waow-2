@@ -70,20 +70,12 @@
   }
 
   function stepMarkup(m) {
-    var dateBlock = '<p class="tbp-slider__date">' + m.label + "<br>" + m.title + "</p>";
+    var dateBlock = '<p class="tbp-slider__date">' + m.label + '<span class="tbp-slider__title"><br>' + m.title + "</span></p>";
     var descBlock = '<p class="tbp-slider__desc">' + m.desc + "</p>";
     if (m.side === "above") {
-      return (
-        '<div class="tbp-slider__step tbp-slider__step--above">' +
-        dateBlock + stackMarkup(m) +
-        "</div>"
-      );
+      return '<div class="tbp-slider__step tbp-slider__step--above">' + dateBlock + stackMarkup(m) + descBlock + "</div>";
     }
-    return (
-      '<div class="tbp-slider__step tbp-slider__step--below">' +
-      stackMarkup(m) + dateBlock + descBlock +
-      "</div>"
-    );
+    return '<div class="tbp-slider__step tbp-slider__step--below">' + stackMarkup(m) + dateBlock + descBlock + "</div>";
   }
 
   function render() {

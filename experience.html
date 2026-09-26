@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Waow Experience — Waow Charters</title>
+<meta name="description" content="Seven to twelve nights. One journey built around diving — four dives a day, gastronomy, hotel service and life between the dives aboard Waow 2.">
+
+<!-- TODO: replace with real favicon files -->
+<link rel="icon" href="data:,">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--
+  Brand fonts (Lemon Milk, Have Heart Two) are licensed, not on Google Fonts.
+  TODO: once licensed font files are available, replace the @font-face-free
+  stack below with local @font-face declarations for Lemon Milk and Have
+  Heart Two. Outfit and Caveat are close-in-spirit stand-ins used for V1.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Outfit:wght@500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<script src="home-stage.js" data-stage="1366"></script>
+</head>
+<body class="px-page px-hdA px-xp">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+<symbol id="icon-starfish" viewBox="15 17 237 240"><rect x="45.8" y="49.3" width="175.4" height="175.4" rx="10.5" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.46" stroke-dasharray="4.9 3.5"/><circle cx="115.3" cy="113.3" r="10.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.46"/><path d="M87.9,166.2 L129.9,127.9 L151.7,149.8 L153.6,118.8 L179.1,166.2" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.46" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+<!-- TODO: no dive-tank / helm-wheel glyphs exist yet — reusing the site's
+     generic "missing image" placeholder shape (see the-boat.html's sprite)
+     under new ids until the real icons are drawn. -->
+<symbol id="icon-dive-tank" viewBox="10 -16 238 285"><rect x="40.9" y="38.4" width="176.1" height="176.1" rx="10.6" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.47" stroke-dasharray="4.9 3.5"/><circle cx="110.7" cy="102.7" r="10.1" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.47"/><path d="M83.2,155.8 L125.3,117.3 L147.3,139.3 L149.1,108.2 L174.8,155.8" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.47" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+<symbol id="icon-helm" viewBox="2 28 245 230"><rect x="39.4" y="57.9" width="170.2" height="170.2" rx="10.2" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.38" stroke-dasharray="4.8 3.4"/><circle cx="106.8" cy="120.0" r="9.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.38"/><path d="M80.2,171.3 L121.0,134.1 L142.2,155.4 L144.0,125.3 L168.8,171.3" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.38" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+</svg>
+
+<!--
+  THE EXPERIENCE PAGE — built from the designer's Canva export
+  (EXPERIENCE.pdf). Linked from the site-wide "Experience" nav item, so
+  it's marked active here (unlike Cabins, which is only reached via a CTA).
+
+  Header CTA note: the mockup shows "PRE-BOOKiNGS" here instead of the
+  "Dates & Rates" / "Book your trip" text used elsewhere. The site already
+  varies this button's copy per page (compare index.html/the-boat.html's
+  "Dates & Rates" with booking.html/itineraries.html's "Book your trip"),
+  so this page follows the mockup's own text rather than forcing one of
+  the other two — same href (booking.html) and the "outline" style shared
+  with the other content pages (The Boat, Cabins).
+-->
+<header class="site-header" id="site-header">
+  <div class="container site-header__row">
+    <a class="logo" href="index.html" aria-label="Waow Charters, home">
+      <picture>
+        <source srcset="images/logo-waow2.webp" type="image/webp">
+        <img src="images/logo-waow2.png" alt="Waow 2" width="180" height="41">
+      </picture>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a href="the-boat.html">The Boat</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="experience.html" class="is-active" aria-current="page">Experience</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--outline" href="booking.html">Pre-Bookings</a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <ul>
+      <li><a href="the-boat.html">The Boat</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="experience.html" class="is-active" aria-current="page">Experience</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a class="btn btn--outline" href="booking.html">Pre-Bookings</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+<section class="xp-hero px-sec" id="top" style="--sh:1087px;"><div class="container px-stage">
+<h1 class="p" style="--x:350px;--y:89px;--w:700px;--fs:57px;--lh:68px;--ta:center;">The Waow Experience</h1>
+<p class="xp-hero__subtitle p px-annot" style="--x:383px;--y:206px;--w:650px;--fs:16.7px;--lh:24px;--ta:center;">Seven to twelve nights. One journey built around diving.</p>
+<div class="xp-hero__collage px-flat reveal">
+<figure class="xp-hero__photo xp-hero__photo--a p" style="--x:241px;--y:290px;--w:559px;--h:441px;"><picture><source srcset="images/hero-waow2.webp" type="image/webp"><img src="images/hero-waow2.jpg" loading="lazy" alt="Waow 2 under full sail."></picture></figure>
+<figure class="xp-hero__photo xp-hero__photo--b p" style="--x:768px;--y:434px;--w:425px;--h:337px;"><picture><source srcset="images/crew-hospitality.webp" type="image/webp"><img src="images/crew-hospitality.jpg" loading="lazy" alt="A guest being welcomed aboard Waow 2."></picture></figure>
+<svg class="dot-icon p" aria-hidden="true" style="--x:895px;--y:393px;--w:105px;--h:77px;" viewBox="15 17 237 240"><use href="#icon-starfish"></use></svg>
+</div><div class="xp-hero__lead px-flat">
+<p class="p" style="--x:300px;--y:824px;--w:783px;--fs:19px;--lh:26px;--ta:center;">From four dives a day to long lunches, local flavours, time on deck and excursions ashore,<br>life on WAOW 2 revolves around the sea and everything that comes with it.</p>
+<p class="p" style="--x:300px;--y:902px;--w:783px;--fs:19px;--lh:26px;--ta:center;">Our cruises range from 7 to 12 nights, with at least one land excursion depending on the<br>itinerary, taking you closer to some of Indonesia's most remote gems.</p>
+</div></div></section>
+<section class="xp-diving px-sec" style="--sh:768px;"><div class="container px-stage xp-diving__grid">
+<div class="xp-diving__copy px-flat reveal">
+<h2 class="p" style="--x:93px;--y:111px;--w:600px;--fs:66px;--lh:72px;--ta:left;">Diving.</h2>
+<p class="xp-diving__tagline p px-annot" style="--x:91px;--y:233px;--w:700px;--fs:20px;--lh:26px;--ta:left;">Four dives a day. Everything else taken care of.</p>
+<p class="p" style="--x:93px;--y:336px;--w:700px;--fs:17.5px;--lh:24px;--ta:left;">Diving is at the heart of every WAOW journey.<br>Four dives a day take you into Indonesia's extraordinary underwater world,<br>with small groups of no more than four divers per guide.</p>
+<p class="p" style="--x:93px;--y:432px;--w:700px;--fs:17.5px;--lh:24px;--ta:left;">From the first descent to the last surface interval, the crew takes care of the<br>details: preparing, rinsing and storing your gear, keeping your equipment<br>ready and making sure you can simply focus on the next dive.</p>
+<p class="p" style="--x:93px;--y:528px;--w:700px;--fs:17.5px;--lh:24px;--ta:left;">Back on board, there's always something warm waiting for you.</p>
+<a class="link-arrow p la-l" href="dive-deep.html" style="--x:93px;--y:593px;--fs:17px;">dive deeper <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div><div class="xp-diving__visual px-flat reveal reveal--delay-1">
+<figure class="xp-diving__photo p" style="--x:857px;--y:130px;--w:341px;--h:507px;"><picture><source srcset="images/manta-ray.webp" type="image/webp"><img src="images/manta-ray.jpg" loading="lazy" alt="A diver and a manta ray on a reef."></picture></figure>
+<svg class="dot-icon p" aria-hidden="true" style="--x:800px;--y:476px;--w:128px;--h:210px;" viewBox="10 -16 238 285"><use href="#icon-dive-tank"></use></svg>
+</div></div></section>
+<section class="xp-lifebetween px-sec px-gold-b" style="--sh:323px;"><div class="container px-stage">
+<h2 class="xp-lifebetween__title p reveal" style="--x:383px;--y:85px;--w:600px;--fs:30px;--lh:36px;--ta:center;">Life between the dives</h2>
+<p class="xp-diving__outro p reveal" style="--x:233px;--y:165px;--w:900px;--fs:18px;--lh:24.5px;--ta:center;">Between dives, the pace slows down.<br>Meals are served, the deck becomes the place to linger, and there is always time for a paddle,<br>a massage, a shore excursion, or absolutely nothing at all.</p>
+</div></section>
+<section class="xp-gastro px-sec px-gold-b" style="--sh:767px;"><div class="container px-stage xp-gastro__grid">
+<div class="xp-gastro__collage px-flat reveal">
+<figure class="xp-gastro__photo p" style="--x:80px;--y:119px;--w:364px;--h:510px;"><picture><source srcset="images/chef-galley.webp" type="image/webp"><img src="images/chef-galley.jpg" loading="lazy" alt="Waow 2's chef preparing the day's catch."></picture></figure>
+<p class="xp-gastro__photo-quote p px-annot" style="--x:318px;--y:128px;--w:285px;--fs:17px;--lh:29px;--ta:center;">The first sip of the drink<br>is after the last dip in the sea</p>
+<div class="xp-gastro__menu p" style="--x:368px;--y:223px;--w:184px;--h:462px;"><div class="xp-gastro__q" style="--y:39px"><h3>Early Breakfast</h3><p>Something simple before the first dive.</p></div><div class="xp-gastro__q" style="--y:133px"><h3>Brunch</h3><p>Buffet or &agrave; la carte:<br>your choice, your pace.</p></div><div class="xp-gastro__q" style="--y:209px"><h3>Lunch</h3><p>Served at the table.</p></div><div class="xp-gastro__q" style="--y:285px"><h3>Afternoon Snack</h3><p>A little something<br>between dives.</p></div><div class="xp-gastro__q" style="--y:380px"><h3>Dinner</h3><p>A slower meal to end the day.</p></div></div>
+</div><div class="xp-gastro__copy px-flat reveal reveal--delay-1">
+<h2 class="p" style="--x:600px;--y:127px;--w:588px;--fs:51px;--lh:58px;--ta:right;">Gastronomy.</h2>
+<p class="p" style="--x:600px;--y:266px;--w:590px;--fs:17.5px;--lh:24px;--ta:right;">Five moments around the table punctuate each day, a light<br>breakfast before the first dive, a generous one after, then<br>lunch, afternoon snacks and dinner.</p>
+<p class="p" style="--x:600px;--y:362px;--w:590px;--fs:17.5px;--lh:24px;--ta:right;">Our kitchen blends Indonesian flavours with inspirations<br>from around the world, built on fresh, local ingredients. In<br>remote waters, local fishermen sometimes come alongside<br>with the day's catch, fresh from the sea, and sometimes on<br>your plate that evening.</p>
+<p class="p" style="--x:600px;--y:506px;--w:590px;--fs:17.5px;--lh:24px;--ta:right;">Vegetarian, vegan and other diets get the same passion and<br>creativity as every menu, never an afterthought.</p>
+<p class="xp-gastro__note p" style="--x:600px;--y:577px;--w:590px;--fs:17.5px;--lh:24px;--ta:right;">Special diets on request.</p>
+</div></div></section>
+<section class="xp-hotel px-sec" style="--sh:761px;"><div class="container px-stage xp-hotel__grid">
+<div class="xp-hotel__copy px-flat reveal">
+<h2 class="p" style="--x:97px;--y:62px;--w:500px;--fs:49px;--lh:68px;--ta:left;">Hotel<br>Service.</h2>
+<p class="xp-hotel__lead p" style="--x:96px;--y:249px;--w:700px;--fs:17px;--lh:24px;--ta:left;">Housekeeping is done every day, laundry is available on request,<br>and the crew quietly keeps everything running while you get on with your day.</p>
+<div class="xp-hotel__item p" style="--x:96px;--y:370px;--w:600px;"><h3>Housekeeping</h3><p>Every day, while you're out exploring.</p></div>
+<div class="xp-hotel__item p" style="--x:96px;--y:442px;--w:600px;"><h3>Laundry</h3><p>Available on request.</p></div>
+<div class="xp-hotel__item p" style="--x:96px;--y:514px;--w:600px;"><h3>Drinks &amp; Snacks</h3><p>Soft drinks, water, tea, coffee and snacks throughout the day.</p></div>
+<div class="xp-hotel__item p" style="--x:96px;--y:586px;--w:600px;"><h3>Massages</h3><p>&Agrave; la carte</p></div>
+</div><div class="xp-hotel__collage px-flat reveal reveal--delay-1">
+<figure class="xp-hotel__photo xp-hotel__photo--main p" style="--x:903px;--y:75px;--w:367px;--h:497px;"><picture><source srcset="images/steward-towels.webp" type="image/webp"><img src="images/steward-towels.jpg" loading="lazy" alt="A cabin being made up aboard Waow 2."></picture></figure>
+<figure class="xp-hotel__photo xp-hotel__photo--b p" style="--x:793px;--y:368px;--w:221px;--h:307px;"><picture><source srcset="images/guests-table.webp" type="image/webp"><img src="images/guests-table.jpg" loading="lazy" alt="Drinks served on Waow 2's deck."></picture></figure>
+<p class="xp-hotel__caption p px-annot" style="--x:990px;--y:539px;--w:280px;--fs:19px;--lh:44px;--ta:center;">The little things<br>are taken care of.</p>
+</div></div></section>
+<section class="xp-beyond px-sec px-gold-b" style="--sh:775px;"><div class="container px-stage xp-beyond__grid">
+<figure class="xp-beyond__photo xp-beyond__photo--l reveal p fl" style="--x:0px;--y:0px;--w:339px;--h:507px;"><picture><source srcset="images/alor-island.webp" type="image/webp"><img src="images/alor-island.jpg" loading="lazy" alt="Someone raising two cocktails from the sea."></picture></figure>
+<div class="xp-beyond__copy px-flat reveal reveal--delay-1">
+<h2 class="p" style="--x:453px;--y:178px;--w:460px;--fs:49px;--lh:70px;--ta:center;">Beyond<br>Diving.</h2>
+<p class="xp-beyond__eyebrow p px-annot" style="--x:453px;--y:331px;--w:460px;--fs:18px;--lh:24px;--ta:center;">When you're not underwater</p>
+<p class="p" style="--x:483px;--y:413px;--w:400px;--fs:15px;--lh:18.5px;--ta:center;">There is plenty to do above it.<br>Grab a paddle and explore the coastline. Join a shore<br>excursion and discover life beyond the reef. Go<br>snorkelling with the non-divers in your group. Or<br>simply find a quiet corner on deck and watch<br>Indonesia go by.</p>
+<span class="xp-beyond__tag p" style="--x:148px;--y:637px;--w:220px;--fs:18px;--lh:24px;--ta:left;">Paddleboarding</span>
+<span class="xp-beyond__tag p" style="--x:333px;--y:637px;--w:220px;--fs:18px;--lh:24px;--ta:left;">Snorkelling</span>
+<span class="xp-beyond__tag p" style="--x:487px;--y:637px;--w:220px;--fs:18px;--lh:24px;--ta:left;">Land Excursions</span>
+<span class="xp-beyond__tag p" style="--x:676px;--y:637px;--w:220px;--fs:18px;--lh:24px;--ta:left;">&Agrave; La Carte Massage</span>
+<svg class="dot-icon p" aria-hidden="true" style="--x:973px;--y:190px;--w:167px;--h:176px;" viewBox="15 17 237 240"><use href="#icon-starfish"></use></svg>
+</div>
+<figure class="xp-beyond__photo xp-beyond__photo--r reveal reveal--delay-2 p fr" style="--x:1028px;--y:293px;--w:338px;--h:482px;"><picture><source srcset="images/banda-sea.webp" type="image/webp"><img src="images/banda-sea.jpg" loading="lazy" alt="Two people floating on inflatable rings in deep blue water."></picture></figure>
+</div></section>
+<section class="xp-ashore px-sec" style="--sh:305px;"><div class="container px-stage">
+<h2 class="p reveal" style="--x:383px;--y:47px;--w:600px;--fs:23px;--lh:30px;--ta:center;">One evening ashore</h2>
+<p class="p reveal" style="--x:183px;--y:114px;--w:1000px;--fs:17.5px;--lh:24px;--ta:center;">Once during every cruise, we swap the deck for the beach.<br>As the sun goes down, join the crew for a beach aperitif, feet in the sand, drinks in hand and the last light of the day around you.</p>
+<p class="p reveal" style="--x:183px;--y:182px;--w:1000px;--fs:17.5px;--lh:24px;--ta:center;"><em>Drinks are on us.</em><br>Just one of those WAOW moments you don't plan for.</p>
+</div></section>
+<section class="xp-included px-sec" style="--sh:768px;"><div class="container px-stage xp-included__grid">
+<div class="xp-included__col reveal px-flat">
+<h2 class="p" style="--x:99px;--y:127px;--w:420px;--fs:62px;--lh:92px;--ta:left;">What's<br>Included.</h2>
+<h3 class="p px-annot" style="--x:97px;--y:358px;--w:400px;--fs:19px;--lh:26px;--ta:left;">Your stay includes:</h3>
+<ul class="p" style="--x:98px;--y:391px;--w:380px;--fs:17.5px;--lh:24px;--ta:left;"><li>Airport or hotel transfers</li><li>3-4 dives per day</li><li>Nitrox</li><li>5 meals per day</li><li>Non-alcoholic drinks</li><li>Snacks throughout the day</li><li>Daily housekeeping</li><li>Land excursions</li><li>Snorkelling trips for non-diving guests</li></ul>
+<a class="link-arrow p la-l" href="booking.html" style="--x:99px;--y:638px;">sea you there <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div><div class="xp-included__visual px-flat reveal reveal--delay-1">
+<figure class="xp-included__photo p" style="--x:505px;--y:142px;--w:510px;--h:551px;"><picture><source srcset="images/waow2-portrait.webp" type="image/webp"><img src="images/waow2-portrait.jpg" loading="lazy" alt="Guests jumping into the sea from Waow 2."></picture></figure>
+<svg class="dot-icon p" aria-hidden="true" style="--x:940px;--y:95px;--w:162px;--h:155px;" viewBox="2 28 245 230"><use href="#icon-helm"></use></svg>
+</div><div class="xp-included__col xp-included__col--r reveal reveal--delay-2 px-flat">
+<h3 class="p px-annot" style="--x:1097px;--y:401px;--w:260px;--fs:19px;--lh:37px;--ta:left;">Not included<br>but available :</h3>
+<ul class="p" style="--x:1098px;--y:485px;--w:260px;--fs:17.5px;--lh:24px;--ta:left;"><li>Rental gear</li><li>Alcohol beverages</li><li>A la carte massage</li><li>Private guide</li><li>Dive courses</li></ul>
+</div></div></section>
+<section class="xp-make px-sec px-gold-b" style="--sh:777px;"><div class="container px-stage xp-make__grid">
+<h2 class="p reveal" style="--x:283px;--y:91px;--w:800px;--fs:67px;--lh:80px;--ta:center;">Make Waow Yours</h2>
+<p class="xp-make__eyebrow p px-annot reveal" style="--x:433px;--y:201px;--w:500px;--fs:16px;--lh:22px;--ta:center;">Available for full charters.</p>
+<div class="xp-make__copy px-flat reveal">
+<p class="p" style="--x:63px;--y:379px;--w:400px;--fs:17.5px;--lh:24px;--ta:right;">Bring your family, your closest<br>friends or your dive crew and<br>make the journey your own.</p>
+<p class="p" style="--x:63px;--y:475px;--w:400px;--fs:17.5px;--lh:24px;--ta:right;">Choose your dates, shape the<br>itinerary, set the pace. Spend<br>longer at a favourite dive site,<br>add a land adventure, change<br>the rhythm of the days or<br>simply follow the conditions.</p>
+</div>
+<figure class="xp-make__photo reveal reveal--delay-1 p" style="--x:511px;--y:309px;--w:344px;--h:368px;"><picture><source srcset="images/hero-waow2.webp" type="image/webp"><img src="images/hero-waow2.jpg" loading="lazy" alt="Waow 2 under full sail, ready for a full charter."></picture></figure>
+<div class="xp-make__aside px-flat reveal reveal--delay-2">
+<p class="p" style="--x:920px;--y:409px;--w:300px;--fs:17.5px;--lh:24px;--ta:left;">Your boat.<br>Your people.<br>Your way.</p>
+<a class="link-arrow p la-l" href="mailto:info@waow.ch" style="--x:921px;--y:560px;">Enquire <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div></div></section>
+<section class="xp-closing px-sec" style="--sh:331px;"><div class="container px-stage">
+<h2 class="p reveal" style="--x:383px;--y:48px;--w:600px;--fs:26px;--lh:34px;--ta:center;">Ready for the next dive?</h2>
+<p class="p reveal" style="--x:183px;--y:133px;--w:1000px;--fs:17.5px;--lh:24px;--ta:center;">Four dives a day is only the beginning.<br>Discover the destinations, dive sites and underwater worlds waiting along the way.</p>
+<a class="link-arrow p" href="itineraries.html" style="--x:583px;--y:227px;--w:200px;">explore itineraries <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div></section></main>
+
+<!-- ================= FOOTER (shared with other pages) ================= -->
+<footer class="hp-footer">
+  <div class="container hp-footer__grid">
+    <div>
+      <h3>Contact Us</h3>
+      <a href="mailto:info@waow.ch">info@waow.ch</a>
+      <address>Chemin de la Vuarpill&egrave;re 25,<br>1260 Nyon, Switzerland</address>
+    </div>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="the-boat.html">The Boat</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="giving-back.html">Engagement</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Footer">
+      <ul>
+        <!-- TODO: link to real Events / Q&A pages once they exist -->
+        <li><a href="news.html">News</a></li>
+        <li><a href="/qa">Q&amp;A</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="hp-divider" aria-hidden="true"></div>
+
+  <div class="container hp-footer__legal">
+    <p>Copyright <span id="year"></span><br>WAOW Charters</p>
+    <div class="hp-footer__policies">
+      <label class="sr-only" for="hp-lang-select">Language</label>
+      <!-- TODO: wire up real localization when a second language is ready -->
+      <select class="hp-footer__lang-select" id="hp-lang-select" disabled>
+        <option>English &or;</option>
+        <option>Fran&ccedil;ais</option>
+      </select>
+      <!-- TODO: link to real legal pages -->
+      <a href="/cookies">Cookies policy</a>
+      <a href="/privacy">Privacy policy</a>
+      <a href="/terms">Terms and conditions</a>
+    </div>
+    <div class="hp-footer__social">
+      <a href="#" aria-label="Waow Charters on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="Waow Charters on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></a>
+      <a href="#" aria-label="Waow Charters on YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 9.5l5 2.5-5 2.5z" fill="currentColor"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

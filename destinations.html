@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Destinations — Waow Charters</title>
+<meta name="description" content="32 itineraries. One extraordinary archipelago. Explore Indonesia by region — Banda Sea, Sunda Islands, Papua, Sulawesi and the Moluccas.">
+
+<!-- TODO: replace with real favicon files -->
+<link rel="icon" href="data:,">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--
+  Brand fonts (Lemon Milk, Have Heart Two) are licensed, not on Google Fonts.
+  TODO: once licensed font files are available, replace the @font-face-free
+  stack below with local @font-face declarations for Lemon Milk and Have
+  Heart Two. Outfit and Caveat are close-in-spirit stand-ins used for V1.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Outfit:wght@500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<script src="home-stage.js" data-stage="1366"></script>
+</head>
+<body class="px-page px-hdA px-ds">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+<symbol id="icon-starfish" viewBox="15 17 237 240"><rect x="45.8" y="49.3" width="175.4" height="175.4" rx="10.5" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.46" stroke-dasharray="4.9 3.5"/><circle cx="115.3" cy="113.3" r="10.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.46"/><path d="M87.9,166.2 L129.9,127.9 L151.7,149.8 L153.6,118.8 L179.1,166.2" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.46" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+</svg>
+
+<!-- Destinations — built from the designer's Canva export (DESTINATIONS.png); see the "PIXEL-MEASURED PAGES" block in style.css. Map interaction: destinations-map.js + regions-data.js. Region illustrations are placeholder stamps (TODO: real artwork). -->
+<header class="site-header" id="site-header">
+  <div class="container site-header__row">
+    <a class="logo" href="index.html" aria-label="Waow Charters, home">
+      <picture>
+        <source srcset="images/logo-waow2.webp" type="image/webp">
+        <img src="images/logo-waow2.png" alt="Waow 2" width="180" height="41">
+      </picture>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a href="the-boat.html">The Boat</a></li>
+        <li><a href="destinations.html" class="is-active" aria-current="page">Destinations</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--outline" href="booking.html">Pre-Bookings</a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <ul>
+      <li><a href="the-boat.html">The Boat</a></li>
+      <li><a href="destinations.html" class="is-active" aria-current="page">Destinations</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a class="btn btn--outline" href="booking.html">Pre-Bookings</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+<section class="ds-hero px-sec" id="top" style="--sh:200px;"><div class="container px-stage">
+<h1 class="p" style="--x:283px;--y:84px;--w:800px;--fs:57px;--lh:66px;--ta:center;">Indonesia, Your Way</h1>
+<p class="dst-hero__subtitle p px-annot" style="--x:283px;--y:172px;--w:800px;--fs:17px;--lh:24px;--ta:center;">32 itineraries. One extraordinary archipelago.</p>
+</div></section>
+<section class="dst-map px-sec" aria-label="Interactive map of Indonesia by region" style="--sh:767px">
+<img class="dst-map__img" src="images/indonesia-map.png" alt="Map of the Indonesian archipelago, with Sulawesi, the Moluccas, Papua, the Banda Sea and the Sunda Islands.">
+<button class="dst-map__label" type="button" data-region="sulawesi" style="left:40.5%; top:35.9%;">Sulawesi</button>
+<button class="dst-map__label" type="button" data-region="moluccas" style="left:58.8%; top:47.7%;">Moluccas</button>
+<button class="dst-map__label" type="button" data-region="papua" style="left:74.3%; top:33.9%;">Papua</button>
+<button class="dst-map__label" type="button" data-region="banda-sea" style="left:66.5%; top:68.6%;">Banda Sea</button>
+<button class="dst-map__label" type="button" data-region="sunda-islands" style="left:28.9%; top:75.5%;">Sunda Islands</button>
+<div class="dst-map__overlay"></div>
+    <aside class="dst-map__panel" aria-label="Region itineraries">
+      <div class="dst-map__panel-head"><div><p class="dst-map__panel-eyebrow">Itineraries</p><h3>Region</h3></div>
+        <button class="dst-map__close" type="button" aria-label="Close and return to the full map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>
+      <div class="dst-map__panel-list"></div>
+    </aside></section>
+<section class="dst-intro px-sec" id="intro" style="--sh:381px;"><div class="container px-stage">
+<p class="p reveal" style="--x:183px;--y:133px;--w:1000px;--fs:17.5px;--lh:24.5px;--ta:center;">Indonesia is made of thousands of islands, countless reefs and waters that change from one region to the next.<br>From the volcanic islands of the Banda Sea to the reefs of Papua, the remote corners of the Moluccas and the<br>rich waters of Sulawesi, WAOW 2 &nbsp;takes you far beyond the usual routes.<br>Five regions. Thirty-two ways to explore them.</p>
+<a class="link-arrow p reveal" href="itineraries.html" style="--x:583px;--y:247px;--w:200px;">find your route <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+</div></section>
+<section class="dst-regions px-sec" style="--sh:3843px;"><div class="container px-stage">
+<h2 class="p reveal" style="--x:133px;--y:91px;--w:1100px;--fs:47px;--lh:60px;--ta:center;">Five Regions. Countless Ways to Explore.</h2>
+<div class="dst-region px-flat reveal"><div class="dst-region__copy px-flat">
+<h3 class="p" style="--x:176px;--y:299px;--w:420px;--fs:30px;--lh:40px;--ta:left;">Banda Sea</h3>
+<p class="p" style="--x:176px;--y:383px;--w:500px;--fs:17.5px;--lh:24px;--ta:left;">Deep blue. Remote islands. Wild waters.</p>
+<p class="p" style="--x:176px;--y:431px;--w:520px;--fs:17.5px;--lh:24px;--ta:left;">Volcanic islands, steep underwater walls and vast stretches of open ocean. The Banda Sea is made for those who want to go<br>further from the familiar.</p>
+<a class="link-arrow p la-l" href="banda-sea.html" style="--x:176px;--y:531px;">explore the Banda Sea <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+<div class="dst-region__stamp p" style="--x:797px;--y:273px;--w:470px;--h:330px;"><span class="dst-region__stamp-eyebrow">Waow Charters</span><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="46" cy="16" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 44 L20 26 L32 38 L44 22 L60 44 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><line x1="4" y1="50" x2="60" y2="50" stroke="currentColor" stroke-width="1.6"/></svg><span class="dst-region__stamp-name">Banda Sea</span></div>
+</div>
+<div class="dst-region px-flat reveal"><div class="dst-region__copy px-flat">
+<h3 class="p" style="--x:737px;--y:972px;--w:420px;--fs:30px;--lh:40px;--ta:left;">Sunda Islands</h3>
+<p class="p" style="--x:737px;--y:1057px;--w:500px;--fs:17.5px;--lh:24px;--ta:left;">Volcanic landscapes. Powerful currents.</p>
+<p class="p" style="--x:737px;--y:1108px;--w:520px;--fs:17.5px;--lh:24px;--ta:left;">Stretching east from Bali through Komodo and beyond, the<br>Sunda Islands combine dramatic landscapes above the water<br>with some of Indonesia's most dynamic diving below it.<br>Mantas, reef sharks, schooling fish and current-swept reefs<br>are part of the journey.</p>
+<a class="link-arrow p la-l" href="sunda-islands.html" style="--x:737px;--y:1281px;">explore the Sunda Islands <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+<div class="dst-region__stamp p" style="--x:157px;--y:970px;--w:470px;--h:330px;"><span class="dst-region__stamp-eyebrow">Waow Charters</span><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="46" cy="16" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 44 L20 26 L32 38 L44 22 L60 44 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><line x1="4" y1="50" x2="60" y2="50" stroke="currentColor" stroke-width="1.6"/></svg><span class="dst-region__stamp-name">Sunda Islands</span></div>
+</div>
+<div class="dst-region px-flat reveal"><div class="dst-region__copy px-flat">
+<h3 class="p" style="--x:198px;--y:1737px;--w:420px;--fs:30px;--lh:40px;--ta:left;">Papua</h3>
+<p class="p" style="--x:198px;--y:1821px;--w:500px;--fs:17.5px;--lh:24px;--ta:left;">Where the reef comes alive.</p>
+<p class="p" style="--x:198px;--y:1882px;--w:520px;--fs:17.5px;--lh:24px;--ta:left;">From Raja Ampat to the remote waters of the Bird's Head<br>Peninsula and Triton Bay, Papua is home to some of the<br>richest marine ecosystems on Earth.<br>Mantas, sharks, pygmy seahorses, vast schools of fish and<br>coral reefs in extraordinary abundance.</p>
+<a class="link-arrow p la-l" href="papua.html" style="--x:198px;--y:2020px;">explore Papua <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+<div class="dst-region__stamp p" style="--x:746px;--y:1729px;--w:470px;--h:330px;"><span class="dst-region__stamp-eyebrow">Waow Charters</span><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="46" cy="16" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 44 L20 26 L32 38 L44 22 L60 44 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><line x1="4" y1="50" x2="60" y2="50" stroke="currentColor" stroke-width="1.6"/></svg><span class="dst-region__stamp-name">Papua</span></div>
+</div>
+<div class="dst-region px-flat reveal"><div class="dst-region__copy px-flat">
+<h3 class="p" style="--x:707px;--y:2526px;--w:420px;--fs:30px;--lh:40px;--ta:left;">Sulawesi</h3>
+<p class="p" style="--x:707px;--y:2612px;--w:500px;--fs:17.5px;--lh:24px;--ta:left;">A world of contrasts.</p>
+<p class="p" style="--x:707px;--y:2667px;--w:520px;--fs:17.5px;--lh:24px;--ta:left;">From the volcanic landscapes of the north to the<br>extraordinary reefs of Wakatobi, Sulawesi offers remarkable<br>variety above and below the surface.<br>Macro life, coral gardens, pelagics and some of Indonesia's<br>most distinctive underwater environments.</p>
+<a class="link-arrow p la-l" href="sulawesi.html" style="--x:707px;--y:2836px;">explore Sulawesi <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+<div class="dst-region__stamp p" style="--x:150px;--y:2512px;--w:470px;--h:330px;"><span class="dst-region__stamp-eyebrow">Waow Charters</span><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="46" cy="16" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 44 L20 26 L32 38 L44 22 L60 44 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><line x1="4" y1="50" x2="60" y2="50" stroke="currentColor" stroke-width="1.6"/></svg><span class="dst-region__stamp-name">Sulawesi</span></div>
+</div>
+<div class="dst-region px-flat reveal"><div class="dst-region__copy px-flat">
+<h3 class="p" style="--x:198px;--y:3272px;--w:420px;--fs:30px;--lh:40px;--ta:left;">Moluccas</h3>
+<p class="p" style="--x:198px;--y:3358px;--w:500px;--fs:17.5px;--lh:24px;--ta:left;">Far from the usual routes.</p>
+<p class="p" style="--x:198px;--y:3414px;--w:520px;--fs:17.5px;--lh:24px;--ta:left;">The Moluccas are a world of remote islands, coral reefs and<br>quiet waters, with some of Indonesia's least-explored dive<br>sites.<br>A place to slow down, go further and discover what lies<br>beyond the familiar.</p>
+<a class="link-arrow p la-l" href="moluccas.html" style="--x:198px;--y:3553px;">explore the Moluccas <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+<div class="dst-region__stamp p" style="--x:759px;--y:3268px;--w:470px;--h:330px;"><span class="dst-region__stamp-eyebrow">Waow Charters</span><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="46" cy="16" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 44 L20 26 L32 38 L44 22 L60 44 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><line x1="4" y1="50" x2="60" y2="50" stroke="currentColor" stroke-width="1.6"/></svg><span class="dst-region__stamp-name">Moluccas</span></div>
+</div>
+</div></section>
+<section class="hp-newsletter">
+    <div class="container hp-newsletter__row">
+      <p>Stay informed &ndash;<br>sign up to our newsletter for the latest offers and destinations</p>
+      <form class="hp-newsletter__form" id="newsletter-form">
+        <label class="sr-only" for="newsletter-email">Email address</label>
+        <input type="email" id="newsletter-email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="sr-only" id="newsletter-note" role="status"></p>
+    </div>
+  </section></main>
+
+<!-- ================= FOOTER (shared with other pages) ================= -->
+<footer class="hp-footer">
+  <div class="container hp-footer__grid">
+    <div>
+      <h3>Contact Us</h3>
+      <a href="mailto:info@waow.ch">info@waow.ch</a>
+      <address>Chemin de la Vuarpill&egrave;re 25,<br>1260 Nyon, Switzerland</address>
+    </div>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="the-boat.html">The Boat</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="giving-back.html">Engagement</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Footer">
+      <ul>
+        <!-- TODO: link to real Events / Q&A pages once they exist -->
+        <li><a href="news.html">News</a></li>
+        <li><a href="/qa">Q&amp;A</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="hp-divider" aria-hidden="true"></div>
+
+  <div class="container hp-footer__legal">
+    <p>Copyright <span id="year"></span><br>WAOW Charters</p>
+    <div class="hp-footer__policies">
+      <label class="sr-only" for="hp-lang-select">Language</label>
+      <!-- TODO: wire up real localization when a second language is ready -->
+      <select class="hp-footer__lang-select" id="hp-lang-select" disabled>
+        <option>English &or;</option>
+        <option>Fran&ccedil;ais</option>
+      </select>
+      <!-- TODO: link to real legal pages -->
+      <a href="/cookies">Cookies policy</a>
+      <a href="/privacy">Privacy policy</a>
+      <a href="/terms">Terms and conditions</a>
+    </div>
+    <div class="hp-footer__social">
+      <a href="#" aria-label="Waow Charters on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="Waow Charters on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></a>
+      <a href="#" aria-label="Waow Charters on YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 9.5l5 2.5-5 2.5z" fill="currentColor"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script src="itineraries-data.js"></script>
+<script src="regions-data.js"></script>
+<script src="destinations-map.js"></script>
+</body>
+</html>
