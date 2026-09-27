@@ -70,10 +70,23 @@
   var center = Math.min(Math.max(closestIndex(), 1), MILESTONES.length - 2);
 
   function stackMarkup(m, i) {
-    var alt = "Construction progress: " + m.title.replace(/<br>/g, " ") + ".";
-    var imgs = "";
-    for (var p = 0; p < 4; p++) imgs += '<img class="tbp-stack__photo" src="images/' + m.img + '.jpg" loading="lazy" alt="' + (p === 0 ? alt : "") + '">';
-    return '<div class="tbp-stack" tabindex="0" data-i="' + i + '" aria-label="' + m.title.replace(/<br>/g, " ") + " — see all four photos" + '">' + imgs + "</div>";
+    var title = m.title.replace(/<br>/g, " ");
+    var alt = "Construction progress: " + title + ".";
+    var thumbs = "";
+    for (var p = 0; p < 4; p++) thumbs += '<img class="tbp-stack__photo" src="images/' + m.img + '.jpg" loading="lazy" alt="' + (p === 0 ? alt : "") + '">';
+    // the "zoom" block is a position:fixed descendant of .tbp-stack: showing it
+    // is driven purely by :hover/:focus-within on the stack (see style.css), so
+    // there's no JS timing to get wrong — the trigger never moves, and the
+    // photos themselves are pointer-events:none (purely a preview, not a
+    // target you have to chase across the screen).
+    var zoomPhotos = "";
+    for (var z = 0; z < 4; z++) zoomPhotos += '<img class="tbp-stack__zoom-photo" src="images/' + m.img + '.jpg" loading="lazy" alt="">';
+    var zoom =
+      '<div class="tbp-stack__zoom" aria-hidden="true"><div class="tbp-stack__zoom-inner">' +
+      '<p class="tbp-stack__zoom-title">' + title + "</p>" +
+      '<div class="tbp-stack__zoom-grid">' + zoomPhotos + "</div>" +
+      "</div></div>";
+    return '<div class="tbp-stack" tabindex="0" data-i="' + i + '" aria-label="' + title + " — see all four photos" + '">' + thumbs + zoom + "</div>";
   }
 
   function stepMarkup(m, i) {
@@ -138,64 +151,24 @@
   });
   dragSurface.addEventListener("pointercancel", function () { startX = null; });
 
-  // ---- hover/focus a step's photo stack: the four photos enlarge into a
-  // grid centered on the screen; move the pointer out of the stack and the
-  // grid (with a short grace period to cross the gap between them) and it
-  // reverts. Built once, reused for whichever stack is hovered.
-  var lightbox = document.createElement("div");
-  lightbox.className = "tbp-lightbox";
-  lightbox.setAttribute("aria-hidden", "true");
-  lightbox.innerHTML =
-    '<div class="tbp-lightbox__inner">' +
-    '<p class="tbp-lightbox__title"></p>' +
-    '<div class="tbp-lightbox__grid">' +
-    '<img class="tbp-lightbox__photo" alt="">'.repeat(4) +
-    "</div></div>";
-  document.body.appendChild(lightbox);
-  var lightboxImgs = lightbox.querySelectorAll(".tbp-lightbox__photo");
-  var lightboxTitle = lightbox.querySelector(".tbp-lightbox__title");
-  var hideTimer = null;
-
-  function openLightbox(m) {
-    if (!m) return;
-    clearTimeout(hideTimer);
-    var title = m.title.replace(/<br>/g, " ");
-    lightboxTitle.textContent = title;
-    lightboxImgs.forEach(function (img) {
-      img.src = "images/" + m.img + ".jpg";
-      img.alt = "Construction progress: " + title + ".";
-    });
-    lightbox.classList.add("is-open");
+  // ---- hover/focus a step's photo stack: the four photos grow and fly from
+  // the stack's own position to the center of the screen. Show/hide is pure
+  // CSS (:hover/:focus-within on .tbp-stack — see style.css), so there is no
+  // JS timer that can get the open/close timing wrong; only the flight's
+  // start offset (so it visibly travels from the stack, not just pops) is
+  // computed here, once per hover/focus.
+  track.addEventListener("mouseover", function (e) { positionZoom(e.target.closest(".tbp-stack")); });
+  track.addEventListener("focusin", function (e) { positionZoom(e.target.closest(".tbp-stack")); });
+  function positionZoom(stack) {
+    if (!stack) return;
+    var inner = stack.querySelector(".tbp-stack__zoom-inner");
+    if (!inner) return;
+    var r = stack.getBoundingClientRect();
+    var fromX = r.left + r.width / 2 - window.innerWidth / 2;
+    var fromY = r.top + r.height / 2 - window.innerHeight / 2;
+    inner.style.setProperty("--fly-x", fromX + "px");
+    inner.style.setProperty("--fly-y", fromY + "px");
   }
-  function scheduleClose() {
-    clearTimeout(hideTimer);
-    hideTimer = setTimeout(function () { lightbox.classList.remove("is-open"); }, 350);
-  }
-  function cancelClose() { clearTimeout(hideTimer); }
-
-  track.addEventListener("mouseover", function (e) {
-    var stack = e.target.closest(".tbp-stack");
-    if (stack) openLightbox(visible[+stack.getAttribute("data-i")]);
-  });
-  track.addEventListener("mouseout", function (e) {
-    var stack = e.target.closest(".tbp-stack");
-    if (stack && !(e.relatedTarget && stack.contains(e.relatedTarget))) scheduleClose();
-  });
-  track.addEventListener("focusin", function (e) {
-    var stack = e.target.closest(".tbp-stack");
-    if (stack) openLightbox(visible[+stack.getAttribute("data-i")]);
-  });
-  track.addEventListener("focusout", function (e) {
-    var stack = e.target.closest(".tbp-stack");
-    if (stack) scheduleClose();
-  });
-  // only the fitted inner box (photos + title) keeps it open — the dimmed
-  // backdrop fills the whole viewport, so it must NOT count as "still hovering"
-  var lightboxInner = lightbox.querySelector(".tbp-lightbox__inner");
-  lightboxInner.addEventListener("mouseenter", cancelClose);
-  lightboxInner.addEventListener("mouseleave", scheduleClose);
-  lightboxInner.addEventListener("focusin", cancelClose);
-  lightboxInner.addEventListener("focusout", scheduleClose);
 
   render();
 
