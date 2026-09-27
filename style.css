@@ -2455,6 +2455,9 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
 .dst-map__img--region { opacity: 0; transition: opacity 0.45s var(--ease); pointer-events: none; }
 .dst-map__img--region.is-peek { opacity: 0.55; }
 .dst-map__img--region.is-on { opacity: 1; }
+/* single-itinerary highlight: sits above the region layers, shown on hover/focus of a route in the side panel */
+.dst-map__img--itinerary { z-index: 1; opacity: 0; transition: opacity 0.3s var(--ease); pointer-events: none; }
+.dst-map__img--itinerary.is-on { opacity: 1; }
 .dst-map__label {
   position: absolute; transform: translate(-50%, -50%); z-index: 2;
   background: none; border: 0; padding: 0.4em 0.7em; cursor: pointer;

@@ -10,7 +10,7 @@
   var main = document.getElementById("main");
   if (!main || typeof ITINERARIES === "undefined") return;
 
-  var slug = new URLSearchParams(window.location.search).get("slug") || "east-meets-west";
+  var slug = new URLSearchParams(window.location.search).get("slug") || "sunda-east-meets-west";
   var trip = ITINERARIES.filter(function (t) { return t.slug === slug; })[0];
   if (!trip) {
     main.innerHTML = '<section class="it-missing"><div class="container"><h1>We couldn’t find that route.</h1><p>It may have been renamed or retired. <a class="link-arrow" href="itineraries.html">See all itineraries</a></p></div></section>';

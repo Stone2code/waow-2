@@ -6,7 +6,7 @@
  * `steps` is repeatable: any number of steps, alternating left/right.
  */
 const ITINERARY_PAGES = {
-  "east-meets-west": {
+  "sunda-east-meets-west": {
     subtitle: "From Flores to Bali - 11 days",
     hook: [
       "Some routes become classics because a marketing department decided they should.",
