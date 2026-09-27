@@ -73,20 +73,12 @@
     var title = m.title.replace(/<br>/g, " ");
     var alt = "Construction progress: " + title + ".";
     var thumbs = "";
+    // hovering/focusing the stack bursts these four photos outward to
+    // scattered, larger, individually-rotated positions (see the
+    // .tbp-stack__photo:nth-child(n):hover rules in style.css) — pure CSS,
+    // no JS needed for the effect itself.
     for (var p = 0; p < 4; p++) thumbs += '<img class="tbp-stack__photo" src="images/' + m.img + '.jpg" loading="lazy" alt="' + (p === 0 ? alt : "") + '">';
-    // the "zoom" block is a position:fixed descendant of .tbp-stack: showing it
-    // is driven purely by :hover/:focus-within on the stack (see style.css), so
-    // there's no JS timing to get wrong — the trigger never moves, and the
-    // photos themselves are pointer-events:none (purely a preview, not a
-    // target you have to chase across the screen).
-    var zoomPhotos = "";
-    for (var z = 0; z < 4; z++) zoomPhotos += '<img class="tbp-stack__zoom-photo" src="images/' + m.img + '.jpg" loading="lazy" alt="">';
-    var zoom =
-      '<div class="tbp-stack__zoom" aria-hidden="true"><div class="tbp-stack__zoom-inner">' +
-      '<p class="tbp-stack__zoom-title">' + title + "</p>" +
-      '<div class="tbp-stack__zoom-grid">' + zoomPhotos + "</div>" +
-      "</div></div>";
-    return '<div class="tbp-stack" tabindex="0" data-i="' + i + '" aria-label="' + title + " — see all four photos" + '">' + thumbs + zoom + "</div>";
+    return '<div class="tbp-stack" tabindex="0" data-i="' + i + '" aria-label="' + title + " — see all four photos" + '">' + thumbs + "</div>";
   }
 
   function stepMarkup(m, i) {
