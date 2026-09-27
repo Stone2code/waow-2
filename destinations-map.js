@@ -1,14 +1,15 @@
 /**
- * Interactive Indonesia map for the Destinations page: click a region
- * label to zoom the map onto that region (animated), then slide in a
- * side panel with placeholder itineraries for it. Click the panel's
- * close button or the backdrop to zoom back out.
+ * Interactive Indonesia map for the Destinations page.
  *
- * Region data (label position x/y as percentages, itinerary slugs) lives in
- * regions-data.js; x/y are percentages of the map image's own box (the map's
- * aspect-ratio is locked to the source PNG's, so object-fit: cover
- * never crops it — a region's % position always matches its on-screen
- * position 1:1, no cover-crop math needed).
+ * The map is a stack of same-size images: a faint base map plus one image per
+ * region with that region's coastline and routes drawn in full. Clicking a
+ * region label cross-fades the base to that region's image (a "highlight",
+ * no zoom, no layout shift) and slides a small itinerary list in over the
+ * map from the right. Hovering a label previews the highlight. Close with the
+ * button, Escape, the same label again, or a click on the empty map.
+ *
+ * Region data (itinerary slugs, page) lives in regions-data.js; trips in
+ * itineraries-data.js.
  */
 (function () {
   "use strict";
@@ -16,64 +17,68 @@
   var map = document.querySelector(".dst-map");
   if (!map) return;
 
-  var img = map.querySelector(".dst-map__img");
-  var overlay = map.querySelector(".dst-map__overlay");
+  var layers = map.querySelectorAll(".dst-map__img--region");
+  var labels = map.querySelectorAll(".dst-map__label");
   var panel = map.querySelector(".dst-map__panel");
-  var panelHeading = panel.querySelector(".dst-map__panel-head h3");
-  var panelList = panel.querySelector(".dst-map__panel-list");
+  var title = panel.querySelector(".dst-map__panel-title");
+  var list = panel.querySelector(".dst-map__panel-list");
+  var regionLink = panel.querySelector(".dst-map__region-link");
   var closeBtn = panel.querySelector(".dst-map__close");
+  var current = null;
 
-  var ZOOM_SCALE = 2.3;
-  var ZOOM_MS = 900;
+  function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
 
-  function cardMarkup(trip) {
-    return (
-      '<article class="dst-map__card">' +
-      "<h4>" + trip.name + "</h4>" +
-      "<p>" + trip.teaser + "</p>" +
-      '<a href="itinerary.html?slug=' + trip.slug + '">See more</a>' +
-      "</article>"
-    );
+  function rowMarkup(trip) {
+    return '<li><a href="itinerary.html?slug=' + encodeURIComponent(trip.slug) + '">' +
+      '<span class="dst-map__row-name">' + esc(trip.name) + "</span>" +
+      '<span class="dst-map__row-meta">' + esc(trip.nights) + " nights &middot; " + esc(String(trip.region).split(",")[0]) + "</span>" +
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+      "</a></li>";
   }
 
-  function openRegion(region) {
-    var rect = map.getBoundingClientRect();
-    var px = (region.x / 100) * rect.width;
-    var py = (region.y / 100) * rect.height;
-    var cx = rect.width / 2;
-    var cy = rect.height / 2;
-
-    img.style.transform =
-      "translate(" + cx + "px," + cy + "px) scale(" + ZOOM_SCALE + ") translate(" + -px + "px," + -py + "px)";
-    map.classList.add("is-zoomed");
-
-    panelHeading.textContent = region.name;
-    var trips = region.slugs.map(function (sl) { return ITINERARIES.filter(function (t) { return t.slug === sl; })[0]; }).filter(Boolean);
-    panelList.innerHTML = trips.map(cardMarkup).join("") +
-      '<a class="dst-map__region-link" href="' + region.page + '">Discover the ' + region.name + '</a>';
-
-    setTimeout(function () {
-      map.classList.add("is-open");
-      closeBtn.focus();
-    }, ZOOM_MS);
+  function paint(id, cls) {
+    layers.forEach(function (img) { img.classList.toggle(cls, img.getAttribute("data-region") === id); });
   }
 
-  function closePanel() {
-    map.classList.remove("is-open");
-    img.style.transform = "translate(0,0) scale(1)";
-    map.classList.remove("is-zoomed");
-  }
-
-  map.querySelectorAll(".dst-map__label").forEach(function (btn) {
-    var id = btn.getAttribute("data-region");
+  function open(id) {
     var region = REGIONS.filter(function (r) { return r.id === id; })[0];
     if (!region) return;
-    btn.addEventListener("click", function () { openRegion(region); });
+    current = id;
+    paint(null, "is-peek");
+    paint(id, "is-on");
+    labels.forEach(function (l) {
+      var on = l.getAttribute("data-region") === id;
+      l.classList.toggle("is-active", on);
+      l.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+    var trips = region.slugs.map(function (sl) { return ITINERARIES.filter(function (t) { return t.slug === sl; })[0]; }).filter(Boolean);
+    title.textContent = region.name;
+    list.innerHTML = trips.map(rowMarkup).join("");
+    regionLink.setAttribute("href", region.page);
+    regionLink.textContent = "Discover " + (/^(banda-sea|sunda-islands|moluccas)$/.test(id) ? "the " : "") + region.name;
+    panel.setAttribute("aria-hidden", "false");
+    map.classList.add("is-open");
+  }
+
+  function close() {
+    current = null;
+    paint(null, "is-on");
+    labels.forEach(function (l) { l.classList.remove("is-active"); l.setAttribute("aria-pressed", "false"); });
+    panel.setAttribute("aria-hidden", "true");
+    map.classList.remove("is-open");
+  }
+
+  labels.forEach(function (btn) {
+    var id = btn.getAttribute("data-region");
+    btn.addEventListener("click", function (e) { e.stopPropagation(); if (current === id) close(); else open(id); });
+    btn.addEventListener("mouseenter", function () { if (current !== id) paint(id, "is-peek"); });
+    btn.addEventListener("mouseleave", function () { paint(null, "is-peek"); });
+    btn.addEventListener("focus", function () { if (current !== id) paint(id, "is-peek"); });
+    btn.addEventListener("blur", function () { paint(null, "is-peek"); });
   });
 
-  closeBtn.addEventListener("click", closePanel);
-  overlay.addEventListener("click", closePanel);
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && map.classList.contains("is-open")) closePanel();
-  });
+  closeBtn.addEventListener("click", close);
+  panel.addEventListener("click", function (e) { e.stopPropagation(); });
+  map.addEventListener("click", function () { if (current) close(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && current) close(); });
 })();

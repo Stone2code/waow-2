@@ -76,17 +76,25 @@
 <p class="dst-hero__subtitle p px-annot" style="--x:283px;--y:172px;--w:800px;--fs:17px;--lh:24px;--ta:center;">32 itineraries. One extraordinary archipelago.</p>
 </div></section>
 <section class="dst-map px-sec" aria-label="Interactive map of Indonesia by region" style="--sh:767px">
-<img class="dst-map__img" src="images/indonesia-map.png" alt="Map of the Indonesian archipelago, with Sulawesi, the Moluccas, Papua, the Banda Sea and the Sunda Islands.">
-<button class="dst-map__label" type="button" data-region="sulawesi" style="left:40.5%; top:35.9%;">Sulawesi</button>
-<button class="dst-map__label" type="button" data-region="moluccas" style="left:58.8%; top:47.7%;">Moluccas</button>
-<button class="dst-map__label" type="button" data-region="papua" style="left:74.3%; top:33.9%;">Papua</button>
-<button class="dst-map__label" type="button" data-region="banda-sea" style="left:66.5%; top:68.6%;">Banda Sea</button>
-<button class="dst-map__label" type="button" data-region="sunda-islands" style="left:28.9%; top:75.5%;">Sunda Islands</button>
-<div class="dst-map__overlay"></div>
-    <aside class="dst-map__panel" aria-label="Region itineraries">
-      <div class="dst-map__panel-head"><div><p class="dst-map__panel-eyebrow">Itineraries</p><h3>Region</h3></div>
-        <button class="dst-map__close" type="button" aria-label="Close and return to the full map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>
-      <div class="dst-map__panel-list"></div>
+<div class="dst-map__stage">
+<img class="dst-map__img dst-map__img--base" src="images/map-base.webp" alt="Map of the Indonesian archipelago, with Sulawesi, the Moluccas, Papua, the Banda Sea and the Sunda Islands.">
+<img class="dst-map__img dst-map__img--region" data-region="sulawesi" src="images/map-sulawesi.webp" alt="" aria-hidden="true" loading="lazy">
+<img class="dst-map__img dst-map__img--region" data-region="moluccas" src="images/map-moluccas.webp" alt="" aria-hidden="true" loading="lazy">
+<img class="dst-map__img dst-map__img--region" data-region="papua" src="images/map-papua.webp" alt="" aria-hidden="true" loading="lazy">
+<img class="dst-map__img dst-map__img--region" data-region="banda-sea" src="images/map-banda-sea.webp" alt="" aria-hidden="true" loading="lazy">
+<img class="dst-map__img dst-map__img--region" data-region="sunda-islands" src="images/map-sunda-islands.webp" alt="" aria-hidden="true" loading="lazy">
+<button class="dst-map__label" type="button" data-region="sulawesi" aria-pressed="false" style="left:29.5%; top:47.3%;">Sulawesi</button>
+<button class="dst-map__label" type="button" data-region="moluccas" aria-pressed="false" style="left:66%; top:33%;">Moluccas</button>
+<button class="dst-map__label" type="button" data-region="papua" aria-pressed="false" style="left:88%; top:76.5%;">Papua</button>
+<button class="dst-map__label" type="button" data-region="banda-sea" aria-pressed="false" style="left:58.2%; top:69.2%;">Banda Sea</button>
+<button class="dst-map__label" type="button" data-region="sunda-islands" aria-pressed="false" style="left:24.4%; top:77%;">Sunda Islands</button>
+</div>
+    <aside class="dst-map__panel" aria-label="Region itineraries" aria-hidden="true">
+      <button class="dst-map__close" type="button" aria-label="Close the itinerary list"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+      <p class="dst-map__panel-eyebrow">Itineraries</p>
+      <h3 class="dst-map__panel-title">Region</h3>
+      <ul class="dst-map__panel-list"></ul>
+      <a class="dst-map__region-link" href="#">Discover the region</a>
     </aside></section>
 <section class="dst-intro px-sec" id="intro" style="--sh:381px;"><div class="container px-stage">
 <p class="p reveal" style="--x:183px;--y:133px;--w:1000px;--fs:17.5px;--lh:24.5px;--ta:center;">Indonesia is made of thousands of islands, countless reefs and waters that change from one region to the next.<br>From the volcanic islands of the Banda Sea to the reefs of Papua, the remote corners of the Moluccas and the<br>rich waters of Sulawesi, WAOW 2 &nbsp;takes you far beyond the usual routes.<br>Five regions. Thirty-two ways to explore them.</p>
