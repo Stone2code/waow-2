@@ -1658,6 +1658,7 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
 .tbp-diagram__lead { font-family: var(--font-body); color: var(--paper); max-width: 34ch; }
 .tbp-diagram__art { position: relative; }
 .tbp-diagram__art svg.tbp-hull { width: 100%; height: auto; color: var(--paper); }
+.tbp-diagram__sketch { display: block; width: 100%; height: auto; border: none !important; }
 .tbp-diagram__callout {
   position: absolute; font-family: var(--font-script); font-weight: 700; font-size: clamp(0.85rem, 0.75rem + 0.4vw, 1.05rem);
   color: var(--abyss); white-space: nowrap;
@@ -2883,8 +2884,8 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
   /* ---------- Ship diagram (y 1341-2009) ---------- */
   .tbp-page .tbp-diagram { height: calc(668px * var(--z)); }
   .tbp-page .tbp-diagram > .tbp-stage { height: 668px; }
-  .tbp-page .tbp-diagram__lead { position: absolute; left: 83px; top: 121px; width: 240px; max-width: none; margin: 0; font-size: 17px; line-height: 24.5px; }
-  .tbp-page .tbp-diagram__art { position: absolute; left: 340px; top: 124px; width: 780px; }
+  .tbp-page .tbp-diagram__lead { position: absolute; left: 195px; top: 50%; transform: translateY(-50%); width: 300px; max-width: none; margin: 0; font-size: 17px; line-height: 24.5px; text-align: right; }
+  .tbp-page .tbp-diagram__art { position: absolute; left: 695px; top: 50%; transform: translateY(-50%); width: 420px; }
 
   /* ---------- Key Figures (y 2009-2438) ---------- */
   .tbp-page .tbp-figures { height: calc(600px * var(--z)); text-align: left; }
