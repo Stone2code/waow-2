@@ -1319,7 +1319,7 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
    ========================================================================= */
 
 .btn--outline {
-  background: none; color: var(--abyss); border: 1.5px solid var(--abyss); border-radius: var(--radius-sm);
+  background: none; color: var(--abyss); border: 1.5px solid var(--abyss); border-radius: 0;
 }
 .btn--outline:hover { background: var(--abyss); color: var(--paper); }
 
