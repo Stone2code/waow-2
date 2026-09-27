@@ -71,8 +71,9 @@
     var trips = region.slugs.map(function (sl) { return ITINERARIES.filter(function (t) { return t.slug === sl; })[0]; }).filter(Boolean);
     title.textContent = region.name;
     list.innerHTML = trips.map(rowMarkup).join("");
-    regionLink.setAttribute("href", region.page);
-    regionLink.textContent = "Discover " + (/^(banda-sea|sunda-islands|moluccas)$/.test(id) ? "the " : "") + region.name;
+    // Region overview pages are unlinked for now (real copy not written yet) —
+    // hide the CTA instead of pointing it at an unfinished page.
+    regionLink.style.display = "none";
     panel.setAttribute("aria-hidden", "false");
     map.classList.add("is-open");
   }
