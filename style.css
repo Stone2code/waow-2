@@ -68,10 +68,15 @@
 @font-face { font-family: 'Lemon Milk'; src: url('fonts/LEMONMILK-LightItalic.woff2') format('woff2'); font-weight: 300; font-style: italic; font-display: swap; }
 @font-face { font-family: 'Lemon Milk'; src: url('fonts/LEMONMILK-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: 'Lemon Milk'; src: url('fonts/LEMONMILK-RegularItalic.woff2') format('woff2'); font-weight: 400; font-style: italic; font-display: swap; }
-@font-face { font-family: 'Lemon Milk'; src: url('fonts/LEMONMILK-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Lemon Milk'; src: url('fonts/LEMONMILK-MediumItalic.woff2') format('woff2'); font-weight: 500; font-style: italic; font-display: swap; }
-@font-face { font-family: 'Lemon Milk'; src: url('fonts/LEMONMILK-Bold.woff2') format('woff2'); font-weight: 600 800; font-style: normal; font-display: swap; }
-@font-face { font-family: 'Lemon Milk'; src: url('fonts/LEMONMILK-BoldItalic.woff2') format('woff2'); font-weight: 600 800; font-style: italic; font-display: swap; }
+/* Most headings in the site ask for weight 600/700 ("bold"); the true Bold
+   cut of Lemon Milk reads too heavy at heading size, so 500-800 all load
+   the Medium cut instead — visibly lighter without touching every rule
+   that sets font-weight. The true Bold stays available at 900, for
+   anywhere that deliberately wants the heaviest cut. */
+@font-face { font-family: 'Lemon Milk'; src: url('fonts/LEMONMILK-Medium.woff2') format('woff2'); font-weight: 500 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Lemon Milk'; src: url('fonts/LEMONMILK-MediumItalic.woff2') format('woff2'); font-weight: 500 800; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Lemon Milk'; src: url('fonts/LEMONMILK-Bold.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Lemon Milk'; src: url('fonts/LEMONMILK-BoldItalic.woff2') format('woff2'); font-weight: 900; font-style: italic; font-display: swap; }
 /* single-weight script face — declared over the full weight range so every
    existing font-weight:600/700 rule written for the old Caveat stand-in
    still resolves to it instead of a synthetic bold */
