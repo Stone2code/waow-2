@@ -2575,7 +2575,8 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
   font-family: var(--font-script); font-weight: 700; color: var(--open-sea);
   font-size: clamp(1.5rem, 1.3rem + 1vw, 2rem); margin-bottom: 1rem;
 }
-.dst-region__copy p:not(.px-annot):not(.hp-family__script):not(.hp-safety__title) { font-family: var(--font-body); color: var(--abyss); max-width: 44ch; }
+.dst-region__copy p:not(.px-annot):not(.hp-family__script):not(.hp-safety__title):not(.p) { font-family: var(--font-body); color: var(--abyss); max-width: 44ch; }
+.dst-region__copy p.p { font-family: var(--font-body); color: var(--abyss); }
 .dst-region__copy .link-arrow { color: var(--open-sea); margin-top: 1.25rem; }
 
 /* Postal-stamp placeholder card, standing in for the real vintage-poster
