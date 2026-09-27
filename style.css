@@ -2548,7 +2548,8 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
 
 /* --- Intro paragraph (blue) --- */
 .dst-intro { background: var(--open-sea); color: var(--paper); padding-block: var(--section-pad); text-align: center; }
-.dst-intro p:not(.px-annot):not(.hp-family__script):not(.hp-safety__title) { font-family: var(--font-body); color: var(--paper); max-width: 68ch; margin-inline: auto; }
+.dst-intro p:not(.px-annot):not(.hp-family__script):not(.hp-safety__title):not(.p) { font-family: var(--font-body); color: var(--paper); max-width: 68ch; margin-inline: auto; }
+.dst-intro p.p { font-family: var(--font-body); color: var(--paper); }
 .dst-intro p + p { margin-top: 0.85rem; }
 .dst-intro .link-arrow { justify-content: center; color: var(--paper); margin-top: 1.5rem; }
 .dst-intro .link-arrow:hover { color: var(--sea-foam); }
