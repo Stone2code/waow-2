@@ -151,24 +151,10 @@
   });
   dragSurface.addEventListener("pointercancel", function () { startX = null; });
 
-  // ---- hover/focus a step's photo stack: the four photos grow and fly from
-  // the stack's own position to the center of the screen. Show/hide is pure
-  // CSS (:hover/:focus-within on .tbp-stack — see style.css), so there is no
-  // JS timer that can get the open/close timing wrong; only the flight's
-  // start offset (so it visibly travels from the stack, not just pops) is
-  // computed here, once per hover/focus.
-  track.addEventListener("mouseover", function (e) { positionZoom(e.target.closest(".tbp-stack")); });
-  track.addEventListener("focusin", function (e) { positionZoom(e.target.closest(".tbp-stack")); });
-  function positionZoom(stack) {
-    if (!stack) return;
-    var inner = stack.querySelector(".tbp-stack__zoom-inner");
-    if (!inner) return;
-    var r = stack.getBoundingClientRect();
-    var fromX = r.left + r.width / 2 - window.innerWidth / 2;
-    var fromY = r.top + r.height / 2 - window.innerHeight / 2;
-    inner.style.setProperty("--fly-x", fromX + "px");
-    inner.style.setProperty("--fly-y", fromY + "px");
-  }
+  // Hovering/focusing a step's photo stack explodes it into a small 2x2
+  // grid right on top of the stack itself. Pure CSS (:hover/:focus-within
+  // on .tbp-stack — see style.css): no JS involved, so there's nothing to
+  // get out of sync.
 
   render();
 
