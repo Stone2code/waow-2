@@ -69,29 +69,27 @@
   // center index: the visible window is [center-1, center, center+1]
   var center = Math.min(Math.max(closestIndex(), 1), MILESTONES.length - 2);
 
-  function stackMarkup(m) {
-    return (
-      '<div class="tbp-stack" tabindex="0" aria-label="' + m.title + ' — photo detail">' +
-      '<img class="tbp-stack__photo" src="images/' + m.img + '.jpg" loading="lazy" alt="Construction progress: ' + m.title + '.">' +
-      '<img class="tbp-stack__photo" src="images/' + m.img + '.jpg" loading="lazy" alt="">' +
-      '<img class="tbp-stack__photo" src="images/' + m.img + '.jpg" loading="lazy" alt="">' +
-      "</div>"
-    );
+  function stackMarkup(m, i) {
+    var alt = "Construction progress: " + m.title.replace(/<br>/g, " ") + ".";
+    var imgs = "";
+    for (var p = 0; p < 4; p++) imgs += '<img class="tbp-stack__photo" src="images/' + m.img + '.jpg" loading="lazy" alt="' + (p === 0 ? alt : "") + '">';
+    return '<div class="tbp-stack" tabindex="0" data-i="' + i + '" aria-label="' + m.title.replace(/<br>/g, " ") + " — see all four photos" + '">' + imgs + "</div>";
   }
 
-  function stepMarkup(m) {
+  function stepMarkup(m, i) {
     var dateBlock = '<p class="tbp-slider__date">' + m.label + '<span class="tbp-slider__title"><br>' + m.title + "</span></p>";
     var descBlock = '<p class="tbp-slider__desc">' + m.desc + "</p>";
     var tick = '<span class="tbp-slider__tick" aria-hidden="true"></span>';
     if (m.side === "above") {
-      return '<div class="tbp-slider__step tbp-slider__step--above">' + dateBlock + stackMarkup(m) + descBlock + tick + "</div>";
+      return '<div class="tbp-slider__step tbp-slider__step--above">' + dateBlock + stackMarkup(m, i) + descBlock + tick + "</div>";
     }
-    return '<div class="tbp-slider__step tbp-slider__step--below">' + stackMarkup(m) + dateBlock + descBlock + tick + "</div>";
+    return '<div class="tbp-slider__step tbp-slider__step--below">' + stackMarkup(m, i) + dateBlock + descBlock + tick + "</div>";
   }
 
   var countEl = document.getElementById("tbp-slider-count");
+  var visible = [];
   function render() {
-    var visible = [MILESTONES[center - 1], MILESTONES[center], MILESTONES[center + 1]];
+    visible = [MILESTONES[center - 1], MILESTONES[center], MILESTONES[center + 1]];
     track.innerHTML = visible.map(stepMarkup).join("");
     if (prevBtn) prevBtn.disabled = center <= 1;
     if (nextBtn) nextBtn.disabled = center >= MILESTONES.length - 2;
@@ -122,19 +120,82 @@
   if (prevBtn) prevBtn.addEventListener("click", function () { go(-1); });
   if (nextBtn) nextBtn.addEventListener("click", function () { go(1); });
 
-  // keyboard (arrow keys while focus is inside the slider) + swipe/drag
-  var slider = track.closest(".tbp-slider");
-  slider.addEventListener("keydown", function (e) {
+  // Keyboard + swipe/drag anywhere on the timeline section — not just on a
+  // step. (.tbp-slider itself has no real box on the pixel-measured layout:
+  // every one of its children is position:absolute, so it collapses to
+  // ~0 height and most of what looks like "the slider" is only hit-testable
+  // through .tbp-timeline, its positioned ancestor.)
+  var dragSurface = track.closest(".tbp-timeline") || track.closest(".tbp-slider");
+  dragSurface.addEventListener("keydown", function (e) {
     if (e.key === "ArrowLeft") { go(-1); } else if (e.key === "ArrowRight") { go(1); }
   });
   var startX = null;
-  slider.addEventListener("pointerdown", function (e) { startX = e.clientX; });
-  slider.addEventListener("pointerup", function (e) {
+  dragSurface.addEventListener("pointerdown", function (e) { startX = e.clientX; });
+  dragSurface.addEventListener("pointerup", function (e) {
     if (startX === null) return;
     var dx = e.clientX - startX; startX = null;
     if (Math.abs(dx) > 60) go(dx < 0 ? 1 : -1);
   });
-  slider.addEventListener("pointercancel", function () { startX = null; });
+  dragSurface.addEventListener("pointercancel", function () { startX = null; });
+
+  // ---- hover/focus a step's photo stack: the four photos enlarge into a
+  // grid centered on the screen; move the pointer out of the stack and the
+  // grid (with a short grace period to cross the gap between them) and it
+  // reverts. Built once, reused for whichever stack is hovered.
+  var lightbox = document.createElement("div");
+  lightbox.className = "tbp-lightbox";
+  lightbox.setAttribute("aria-hidden", "true");
+  lightbox.innerHTML =
+    '<div class="tbp-lightbox__inner">' +
+    '<p class="tbp-lightbox__title"></p>' +
+    '<div class="tbp-lightbox__grid">' +
+    '<img class="tbp-lightbox__photo" alt="">'.repeat(4) +
+    "</div></div>";
+  document.body.appendChild(lightbox);
+  var lightboxImgs = lightbox.querySelectorAll(".tbp-lightbox__photo");
+  var lightboxTitle = lightbox.querySelector(".tbp-lightbox__title");
+  var hideTimer = null;
+
+  function openLightbox(m) {
+    if (!m) return;
+    clearTimeout(hideTimer);
+    var title = m.title.replace(/<br>/g, " ");
+    lightboxTitle.textContent = title;
+    lightboxImgs.forEach(function (img) {
+      img.src = "images/" + m.img + ".jpg";
+      img.alt = "Construction progress: " + title + ".";
+    });
+    lightbox.classList.add("is-open");
+  }
+  function scheduleClose() {
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(function () { lightbox.classList.remove("is-open"); }, 350);
+  }
+  function cancelClose() { clearTimeout(hideTimer); }
+
+  track.addEventListener("mouseover", function (e) {
+    var stack = e.target.closest(".tbp-stack");
+    if (stack) openLightbox(visible[+stack.getAttribute("data-i")]);
+  });
+  track.addEventListener("mouseout", function (e) {
+    var stack = e.target.closest(".tbp-stack");
+    if (stack && !(e.relatedTarget && stack.contains(e.relatedTarget))) scheduleClose();
+  });
+  track.addEventListener("focusin", function (e) {
+    var stack = e.target.closest(".tbp-stack");
+    if (stack) openLightbox(visible[+stack.getAttribute("data-i")]);
+  });
+  track.addEventListener("focusout", function (e) {
+    var stack = e.target.closest(".tbp-stack");
+    if (stack) scheduleClose();
+  });
+  // only the fitted inner box (photos + title) keeps it open — the dimmed
+  // backdrop fills the whole viewport, so it must NOT count as "still hovering"
+  var lightboxInner = lightbox.querySelector(".tbp-lightbox__inner");
+  lightboxInner.addEventListener("mouseenter", cancelClose);
+  lightboxInner.addEventListener("mouseleave", scheduleClose);
+  lightboxInner.addEventListener("focusin", cancelClose);
+  lightboxInner.addEventListener("focusout", scheduleClose);
 
   render();
 
