@@ -1692,7 +1692,7 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
 .tbp-deckplan__tab:hover { color: var(--paper); }
 .tbp-deckplan__tab.is-active { color: var(--paper); border-color: var(--paper); }
 .tbp-deckplan__stage { position: relative; max-width: 920px; margin-inline: auto; aspect-ratio: 16 / 7; }
-.tbp-deckplan__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.35s var(--ease); }
+.tbp-deckplan__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.35s var(--ease); border: none !important; }
 .tbp-deckplan__img.is-active { opacity: 1; }
 
 /* --- The Making of Waow 2 (timeline) --- */
