@@ -2884,8 +2884,8 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
   /* ---------- Ship diagram (y 1341-2009) ---------- */
   .tbp-page .tbp-diagram { height: calc(668px * var(--z)); }
   .tbp-page .tbp-diagram > .tbp-stage { height: 668px; }
-  .tbp-page .tbp-diagram__lead { position: absolute; left: 195px; top: 50%; transform: translateY(-50%); width: 300px; max-width: none; margin: 0; font-size: 17px; line-height: 24.5px; text-align: right; }
-  .tbp-page .tbp-diagram__art { position: absolute; left: 695px; top: 50%; transform: translateY(-50%); width: 420px; }
+  .tbp-page .tbp-diagram__lead { position: absolute; left: 245px; top: 50%; transform: translateY(-50%); width: 300px; max-width: none; margin: 0; font-size: 17px; line-height: 24.5px; text-align: right; }
+  .tbp-page .tbp-diagram__art { position: absolute; left: 645px; top: 50%; transform: translateY(-50%); width: 525px; }
 
   /* ---------- Key Figures (y 2009-2438) ---------- */
   .tbp-page .tbp-figures { height: calc(600px * var(--z)); text-align: left; }
