@@ -20,6 +20,9 @@
   var map = document.querySelector(".dst-map");
   if (!map) return;
 
+  // Regions whose overview page has real content and is safe to link to.
+  var READY_REGIONS = ["banda-sea"];
+
   var layers = map.querySelectorAll(".dst-map__img--region");
   var itineraryLayer = map.querySelector(".dst-map__img--itinerary");
   var labels = map.querySelectorAll(".dst-map__label");
@@ -71,9 +74,16 @@
     var trips = region.slugs.map(function (sl) { return ITINERARIES.filter(function (t) { return t.slug === sl; })[0]; }).filter(Boolean);
     title.textContent = region.name;
     list.innerHTML = trips.map(rowMarkup).join("");
-    // Region overview pages are unlinked for now (real copy not written yet) —
-    // hide the CTA instead of pointing it at an unfinished page.
-    regionLink.style.display = "none";
+    // Other region overview pages are unlinked for now (real copy not
+    // written yet) — hide the CTA instead of pointing it at an unfinished
+    // page. Banda Sea has real content, so it keeps its link.
+    if (READY_REGIONS.indexOf(id) > -1) {
+      regionLink.style.display = "";
+      regionLink.setAttribute("href", region.page);
+      regionLink.textContent = "Discover " + (/^(banda-sea|sunda-islands|moluccas)$/.test(id) ? "the " : "") + region.name;
+    } else {
+      regionLink.style.display = "none";
+    }
     panel.setAttribute("aria-hidden", "false");
     map.classList.add("is-open");
   }
