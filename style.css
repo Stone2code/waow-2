@@ -2903,7 +2903,7 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
   .tbp-page .tbp-deckplan__tab { white-space: nowrap; }
   .tbp-page .tbp-deckplan__tab:nth-child(2) { left: 519px; width: 140px; }
   .tbp-page .tbp-deckplan__tab:nth-child(3) { left: 782px; width: 140px; }
-  .tbp-page .tbp-deckplan__stage { position: absolute; left: 248px; top: 235px; width: 732px; height: 235px; aspect-ratio: auto; max-width: none; margin: 0; }
+  .tbp-page .tbp-deckplan__stage { position: absolute; left: 155px; top: 210px; width: 880px; height: 330px; aspect-ratio: auto; max-width: none; margin: 0; }
 
   /* ---------- The Making of Waow 2 (y 2936-4021) ---------- */
   .tbp-page .tbp-timeline { height: calc(1085px * var(--z)); text-align: left; }
