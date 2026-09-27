@@ -3543,8 +3543,8 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
 .px-rg .rg-hero__photo img { aspect-ratio: 972 / 368; }
 .px-rg .rg-hero__stamp { aspect-ratio: 183 / 131; }
 .px-rg .rg-key__note { background: #f7eed9 repeating-linear-gradient(to bottom, transparent 0 21px, rgba(200,110,110,.18) 21px 22px); box-shadow: 0 18px 30px -16px rgba(0,0,0,.35); padding: 3rem 1.6rem; text-align: center; transform: rotate(-1.2deg); }
-.px-rg .rg-key__sheet h3 { font-family: var(--font-script); font-weight: 700; text-transform: uppercase; color: var(--open-sea); font-size: 1rem; margin: 0 0 .4rem; }
-.px-rg .rg-key .rg-key__sheet p { font-family: var(--font-script); font-weight: 700; color: var(--abyss); margin: 0 auto 1.4rem; font-size: 0.95rem; }
+.px-rg .rg-key__sheet h3 { font-family: var(--font-script); font-weight: 700; text-transform: uppercase; color: var(--open-sea); font-size: 1.3rem; margin: 0 0 .5rem; }
+.px-rg .rg-key .rg-key__sheet p { font-family: var(--font-script); font-weight: 700; color: var(--abyss); margin: 0 auto 1.9rem; font-size: 1.25rem; line-height: 1.4; }
 .px-rg .rg-key h2 { color: var(--abyss); text-align: center; }
 .px-rg .rg-key p.rg-key__label { font-family: var(--font-display); font-weight: 600; text-transform: uppercase; color: var(--open-sea); text-align: center; }
 .px-rg .rg-key p.rg-key__subname { font-family: var(--font-script); font-weight: 700; color: var(--abyss); text-align: center; text-transform: uppercase; }
@@ -3566,10 +3566,10 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
 .px-rg .rg-ow, .px-rg .rg-t1 { background: var(--open-sea); color: var(--paper); }
 .px-rg .rg-ow h2, .px-rg .rg-t1 h2 { color: var(--paper); text-align: center; }
 .px-rg .rg-ow p, .px-rg .rg-t1 p { color: var(--paper); font-family: var(--font-body); text-align: center; }
-.px-rg .rg-ow__caption { color: var(--paper); text-align: center; }
+.px-rg p.rg-ow__caption { color: var(--paper); text-align: center; font-family: var(--font-script); font-weight: 700; text-shadow: 0 1px 2px rgba(0,0,0,0.85), 0 2px 10px rgba(0,0,0,0.75); }
 .px-rg .rg-quote { background: #ecdfc6 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/><feColorMatrix values='0 0 0 0 .55 0 0 0 0 .45 0 0 0 0 .3 0 0 0 .22 0'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>"); }
 .px-rg .rg-quote__card { background: #fbfbf8; box-shadow: 0 14px 26px -12px rgba(0,0,0,.4); display: flex; align-items: center; justify-content: center; padding: 2rem; text-align: center; }
-.px-rg .rg-quote__card p { color: var(--abyss); font-size: 1.05rem; line-height: 1.85; max-width: none; text-transform: uppercase; }
+.px-rg .rg-quote__card p { color: var(--abyss); font-size: 1.05rem; line-height: 1.45; max-width: none; text-transform: uppercase; text-align: justify; }
 .px-rg .rg-why h2 { color: var(--open-sea); text-align: right; }
 .px-rg .rg-why p, .px-rg .rg-t3 p, .px-rg .rg-t4 p { color: var(--abyss); font-family: var(--font-body); text-align: right; }
 .px-rg .rg-why .link-arrow { color: var(--ironwood); }

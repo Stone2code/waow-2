@@ -21,7 +21,7 @@
   if (!map) return;
 
   // Regions whose overview page has real content and is safe to link to.
-  var READY_REGIONS = ["banda-sea"];
+  var READY_REGIONS = ["banda-sea", "sulawesi"];
 
   var layers = map.querySelectorAll(".dst-map__img--region");
   var itineraryLayer = map.querySelector(".dst-map__img--itinerary");
