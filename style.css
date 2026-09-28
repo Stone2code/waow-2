@@ -2649,16 +2649,16 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
   .hp-home .hp-newsletter__form > * , .hp-home .hp-newsletter__row > p { position: absolute; margin: 0; }
   .hp-home .hp-footer__grid nav li { display: block; position: static; }
 
-  /* ---------- Header (122px) ---------- */
-  .hp-home .site-header { height: 122px; background: var(--bg-page); }
+  /* ---------- Header (122px, matches px-hdA) ---------- */
+  .hp-home .site-header { height: calc(122px * var(--z)); background: var(--bg-page); }
   .hp-home .site-header__row { height: 122px; }
-  .hp-home .logo { position: absolute; left: 63px; top: 60px; }
-  .hp-home .logo img { width: 170px; height: auto; }
-  .hp-home .nav { position: absolute; left: 470px; top: 66px; width: 433px; }
+  .hp-home .logo { position: absolute; left: 97px; top: 58px; }
+  .hp-home .logo img { width: 130px; height: auto; }
+  .hp-home .nav { position: absolute; left: 493px; top: 68px; width: 433px; }
   .hp-home .nav__list { display: flex; justify-content: space-between; gap: 0; }
   .hp-home .nav__list a { font-size: 13px; letter-spacing: 0.06em; }
-  .hp-home .site-header__actions { position: absolute; left: 1123px; top: 60px; width: 156px; height: 35px; }
-  .hp-home .site-header__actions .btn { width: 156px; height: 35px; padding: 0; font-size: 12px; }
+  .hp-home .site-header__actions { position: absolute; left: 1156px; top: 62px; width: 133px; height: 28px; }
+  .hp-home .site-header__actions .btn { width: 133px; height: 28px; padding: 0; font-size: 11px; }
   .hp-home .burger { display: none; }
 
   /* ---------- Hero (y 125-768) ---------- */
@@ -2845,8 +2845,11 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
   .tbp-page .link-arrow svg { display: none; }
   .tbp-page .link-arrow { padding-bottom: 8px; font-size: 16px; letter-spacing: 0; text-transform: none; font-family: var(--font-body); font-weight: 400; }
 
-  .tbp-page .tbp-stage, .tbp-page .site-header__row, .tbp-page .hp-footer__grid, .tbp-page .hp-footer__legal {
+  .tbp-page .tbp-stage, .tbp-page .hp-footer__grid, .tbp-page .hp-footer__legal {
     position: relative; display: block; width: 1190px; max-width: none; margin-inline: auto; padding: 0; zoom: var(--z); box-sizing: border-box;
+  }
+  .tbp-page .site-header__row {
+    position: relative; display: block; width: 1366px; max-width: none; margin-inline: auto; padding: 0; zoom: calc(var(--z) * (1190 / 1366)); box-sizing: border-box;
   }
   .tbp-page main section { position: relative; display: block; padding: 0; overflow: hidden; box-sizing: border-box; min-height: 0; margin: 0; }
   .tbp-page .tbp-hero__head, .tbp-page .tbp-intro__collage, .tbp-page .tbp-intro__copy, .tbp-page .tbp-figures__grid,
@@ -2858,16 +2861,16 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
   .tbp-page .hp-footer__grid h3, .tbp-page .hp-footer__grid address, .tbp-page .hp-footer__grid a, .tbp-page .hp-footer__legal p,
   .tbp-page .hp-footer__policies > *, .tbp-page .hp-footer__social a { position: absolute; margin: 0; }
 
-  /* ---------- Header (110px) ---------- */
-  .tbp-page .site-header { height: calc(110px * var(--z)); background: var(--bg-page); }
-  .tbp-page .site-header__row { height: 110px; }
-  .tbp-page .logo { position: absolute; left: 62px; top: 52px; }
-  .tbp-page .logo img { width: 113px; height: auto; }
-  .tbp-page .nav { position: absolute; left: 379px; top: 57px; width: 433px; }
+  /* ---------- Header (122px, matches px-hdA on a shared 1366px header stage) ---------- */
+  .tbp-page .site-header { height: calc(122px * var(--z) * (1190 / 1366)); background: var(--bg-page); }
+  .tbp-page .site-header__row { height: 122px; }
+  .tbp-page .logo { position: absolute; left: 97px; top: 58px; }
+  .tbp-page .logo img { width: 130px; height: auto; }
+  .tbp-page .nav { position: absolute; left: 493px; top: 68px; width: 433px; }
   .tbp-page .nav__list { display: flex; justify-content: space-between; gap: 0; }
   .tbp-page .nav__list a { font-size: 13px; letter-spacing: 0.06em; }
-  .tbp-page .site-header__actions { position: absolute; left: 984px; top: 54px; width: 116px; height: 25px; }
-  .tbp-page .site-header__actions .btn { width: 116px; height: 25px; padding: 0; font-size: 10.5px; }
+  .tbp-page .site-header__actions { position: absolute; left: 1156px; top: 62px; width: 133px; height: 28px; }
+  .tbp-page .site-header__actions .btn { width: 133px; height: 28px; padding: 0; font-size: 11px; }
   .tbp-page .burger { display: none; }
 
   /* ---------- Title + intro (y 110-1341) ---------- */
