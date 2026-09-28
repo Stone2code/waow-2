@@ -1742,10 +1742,10 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
   box-shadow: 0 10px 22px -14px rgba(16, 35, 63, 0.45); background: var(--white); padding: 6px 6px 18px;
   box-sizing: border-box; transition: transform 0.35s var(--ease), z-index 0s;
 }
-.tbp-stack__photo:nth-child(1) { transform: rotate(-7deg) translate(-7px, 3px); z-index: 1; }
-.tbp-stack__photo:nth-child(2) { transform: rotate(-2deg) translate(-2px, 1px); z-index: 2; }
-.tbp-stack__photo:nth-child(3) { transform: rotate(3deg) translate(2px, -1px); z-index: 3; }
-.tbp-stack__photo:nth-child(4) { transform: rotate(7deg) translate(6px, -2px); z-index: 4; }
+.tbp-stack__photo:nth-child(1) { transform: rotate(-9deg) translate(-17px, 7px); z-index: 1; }
+.tbp-stack__photo:nth-child(2) { transform: rotate(-3deg) translate(-6px, 2px); z-index: 2; }
+.tbp-stack__photo:nth-child(3) { transform: rotate(4deg) translate(6px, -2px); z-index: 3; }
+.tbp-stack__photo:nth-child(4) { transform: rotate(10deg) translate(16px, -6px); z-index: 4; }
 /* Hovering/focusing the stack bursts the four photos outward to scattered,
    noticeably larger, unevenly-rotated spots — an "explosion", not a tidy
    fan or a separate popup. .tbp-slider__step lifts itself above its
@@ -2959,7 +2959,15 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
   .tbp-page .tbp-slider__step:nth-child(1) .tbp-slider__desc, .tbp-page .tbp-slider__step:nth-child(3) .tbp-slider__desc { top: 766px; }
   .tbp-page .tbp-slider__step:nth-child(2) .tbp-slider__date { top: 453px; }
   .tbp-page .tbp-slider__step:nth-child(2) .tbp-slider__desc { top: 501px; }
-  .tbp-page .tbp-slider__nav { position: absolute; left: 445px; width: 300px; top: 958px; margin: 0; gap: 22px; align-items: center; }
+  .tbp-page .tbp-slider__nav {
+    position: absolute; left: 445px; width: 300px; top: 958px; margin: 0; gap: 22px; align-items: center;
+    /* each .tbp-slider__step is a full 1085px-tall click/hover target (see
+       above), and the nav buttons sit geometrically inside the middle
+       step's box; that step jumps to z-index:40 on hover (to let its photo
+       stack burst over its neighbours), which would otherwise cover the
+       nav and swallow the click. Keep the nav above any hovered step. */
+    z-index: 50;
+  }
   .tbp-page .tbp-slider__arrow { width: 34px; height: 34px; }
 
   /* ---------- The Cabins (y 4021-4680) ---------- */
