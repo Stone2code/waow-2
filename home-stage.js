@@ -8,6 +8,12 @@
   function apply() {
     var z = Math.min(1, window.innerWidth / stage);
     document.documentElement.style.setProperty("--z", String(z));
+    // The header is always laid out on its own 1366px-wide reference
+    // (see the "header" blocks in style.css), independently of whatever
+    // stage width this page's own content uses, so every page's header
+    // scales identically at any viewport width instead of capping out
+    // early on pages with a narrower content stage.
+    document.documentElement.style.setProperty("--hz", String(Math.min(1, window.innerWidth / 1366)));
   }
   apply();
   window.addEventListener("resize", apply);
