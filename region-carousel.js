@@ -43,6 +43,39 @@
     render();
   }
   window.fillRegionCarousel = fill;
+
+  /**
+   * Fills the "Explore other regions" carousel: 3 region cards shown at a
+   * time from the 4 other regions (REGIONS minus this page's own), the
+   * arrow advances by one with wraparound. Previously a static, hand-picked
+   * 3-of-4 list with a decorative arrow that did nothing.
+   */
+  function fillOtherRegions(regionId) {
+    var root = document.querySelector(".rg-others");
+    if (!root || typeof REGIONS === "undefined") return;
+    var others = REGIONS.filter(function (r) { return r.id !== regionId; });
+    var cards = root.querySelectorAll(".rg-others__card");
+    var arrow = root.querySelector(".rg-arrow");
+    var start = 0;
+    function render() {
+      cards.forEach(function (card, i) {
+        var r = others[(start + i) % others.length];
+        card.setAttribute("href", r.page);
+        card.querySelector(".dst-region__stamp-name").textContent = r.name;
+      });
+      if (arrow) arrow.style.visibility = others.length > cards.length ? "visible" : "hidden";
+    }
+    if (arrow && !arrow.__bound) {
+      arrow.__bound = true;
+      arrow.addEventListener("click", function () { start = (start + 1) % others.length; render(); });
+    }
+    render();
+  }
+  window.fillOtherRegions = fillOtherRegions;
+
   var m = /px-rg-([a-z-]+)/.exec(document.body.className);
-  if (m && typeof REGIONS !== "undefined") { var root = document.querySelector(".rg-explore"); if (root) fill(root, m[1], null); }
+  if (m && typeof REGIONS !== "undefined") {
+    var root = document.querySelector(".rg-explore"); if (root) fill(root, m[1], null);
+    fillOtherRegions(m[1]);
+  }
 })();
