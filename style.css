@@ -10,7 +10,7 @@
   --open-sea: #4E7495;
   --sea-foam: #AFC2D2;
   --sail-linen: #F4EFE4;
-  --yellaow: #E7C77A;
+  --yellaow: #FFE000;
   --ironwood: #8A6A4A;
 
   /* Derived surfaces (Combo 2 — light dominant, blue in accent) */
@@ -1599,7 +1599,7 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
    (THE BOAT.png), same fidelity approach as the homepage: colours
    colour-picked from the export (all matched existing tokens again), the
    footer/header/.btn--outline/.hp-divider/.link-arrow are reused as-is.
-   Classes here are prefixed "tbp-" (The Boat Page) since the layout
+   Classes here are prefixed "" (The Boat Page) since the layout
    language is specific to this page.
 
    Content note: the mockup's own numbers conflict with the site's
