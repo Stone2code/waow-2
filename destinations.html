@@ -41,14 +41,60 @@
     </a>
 
     <nav class="nav" aria-label="Primary">
-      <ul class="nav__list">
-        <li><a href="the-boat.html">The Boat</a></li>
-        <li><a href="destinations.html" class="is-active" aria-current="page">Destinations</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a href="news.html">News</a></li>
-      </ul>
-    </nav>
+  <ul class="nav__list">
+
+    <!-- THE BOAT -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="the-boat.html">The Boat</a>
+
+      <div class="nav__dropdown">
+        <a href="the-boat.html#decks">Decks</a>
+        <a href="the-boat.html#construction">Construction Steps</a>
+        <a href="the-boat.htmlcabins.html">Cabins</a>
+        <a href="the-boat.html#outdoor">Indoor &amp; Outdoor</a>
+      </div>
+    </li>
+
+    <!-- DESTINATIONS -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="destinations.html">Destinations</a>
+
+      <div class="nav__dropdown">
+        <a href="destinations.html#map">Map</a>
+        <a href="destinations.html#regions">Regions</a>
+      </div>
+    </li>
+
+    <!-- EXPERIENCE -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="experience.html">Experience</a>
+
+      <div class="nav__dropdown">
+        <a href="dive-deep.html">Diving</a>
+        <a href=“experience.html#gastronomy”>Gastronomy</a>
+        <a href=“experience.html#hotel”_service>Hotel Service</a>
+        <a href=“experience.html#included”>What&rsquo;s Included</a>
+      </div>
+    </li>
+
+    <!-- ABOUT US -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="about-us.html">About Us</a>
+
+      <div class="nav__dropdown">
+        <a href=“about-us.html#waow1”>Waow 1</a>
+        <a href=“about-us.html#waow2”>Waow 2</a>
+	      <a href=“about-us.html#team”>Team</a>
+      </div>
+    </li>
+
+    <!-- NEWS -->
+    <li>
+      <a href="news.html">News</a>
+    </li>
+
+  </ul>
+</nav>
 
     <div class="site-header__actions">
       <a class="btn btn--outline" href="booking.html">Rates &amp; Dates</a>
@@ -75,7 +121,7 @@
 <h1 class="p" style="--x:283px;--y:84px;--w:800px;--fs:57px;--lh:66px;--ta:center;">Indonesia, Your Way</h1>
 <p class="dst-hero__subtitle p px-annot" style="--x:283px;--y:172px;--w:800px;--fs:17px;--lh:24px;--ta:center;">16 itineraries. One extraordinary archipelago.</p>
 </div></section>
-<section class="dst-map px-sec" aria-label="Interactive map of Indonesia by region" style="--sh:767px">
+<section class="dst-map px-sec" aria-label="Interactive map of Indonesia by region" style="--sh:767px" id="map">
 <div class="dst-map__stage">
 <img class="dst-map__img dst-map__img--base" src="images/map-base.webp" alt="Map of the Indonesian archipelago, with Sulawesi, the Moluccas, Papua, the Banda Sea and the Sunda Islands.">
 <img class="dst-map__img dst-map__img--region" data-region="sulawesi" src="images/map-sulawesi.webp" alt="" aria-hidden="true" loading="lazy">
@@ -183,9 +229,8 @@
     </aside></section>
 <section class="dst-intro px-sec" id="intro" style="--sh:381px;"><div class="container px-stage">
 <p class="p reveal" style="--x:183px;--y:133px;--w:1000px;--fs:17.5px;--lh:24.5px;--ta:center;">Indonesia is made of thousands of islands, countless reefs and waters that change from one region to the next.<br>From the volcanic islands of the Banda Sea to the reefs of Papua, the remote corners of the Moluccas and the<br>rich waters of Sulawesi, WAOW 2 &nbsp;takes you far beyond the usual routes.<br>Five regions. Sixteen ways to explore them.</p>
-<a class="link-arrow p reveal" href="itineraries.html" style="--x:583px;--y:247px;--w:200px;">find your route <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </div></section>
-<section class="dst-regions px-sec" style="--sh:3843px;"><div class="container px-stage">
+<section class="dst-regions px-sec" style="--sh:3843px;"><div class="container px-stage" id="regions">
 <h2 class="p reveal" style="--x:133px;--y:91px;--w:1100px;--fs:47px;--lh:60px;--ta:center;">Five Regions. Countless Ways to Explore.</h2>
 <div class="dst-region px-flat reveal"><div class="dst-region__copy px-flat">
 <h3 class="p" style="--x:176px;--y:299px;--w:420px;--fs:30px;--lh:40px;--ta:left;">Banda Sea</h3>
@@ -223,20 +268,10 @@
 <div class="dst-region__stamp p" style="--x:759px;--y:3268px;--w:470px;--h:330px; border: none !important"><img src="images/timbre moluccas.png" alt="Moluccas" style="border: none;"></div>
 </div>
 </div></section>
-<section class="hp-newsletter">
-    <div class="container hp-newsletter__row">
-      <p>Stay informed &ndash;<br>sign up to our newsletter for the latest offers and destinations</p>
-      <form class="hp-newsletter__form" id="newsletter-form">
-        <label class="sr-only" for="newsletter-email">Email address</label>
-        <input type="email" id="newsletter-email" placeholder="Your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-      <p class="sr-only" id="newsletter-note" role="status"></p>
-    </div>
-  </section></main>
+</main>
 
 <!-- ================= FOOTER (shared with other pages) ================= -->
-<footer class="hp-footer">
+<footer class="hp-footer" style="border: 1px solid black">
   <div class="container hp-footer__grid">
     <div>
       <h3>Contact Us</h3>

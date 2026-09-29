@@ -48,14 +48,60 @@
     </a>
 
     <nav class="nav" aria-label="Primary">
-      <ul class="nav__list">
-        <li><a href="the-boat.html" class="is-active" aria-current="page">The Boat</a></li>
-        <li><a href="destinations.html">Destinations</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a href="news.html">News</a></li>
-      </ul>
-    </nav>
+  <ul class="nav__list">
+
+    <!-- THE BOAT -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="the-boat.html">The Boat</a>
+
+      <div class="nav__dropdown">
+        <a href="the-boat.html#decks">Decks</a>
+        <a href="the-boat.html#construction">Construction Steps</a>
+        <a href="the-boat.htmlcabins.html">Cabins</a>
+        <a href="the-boat.html#outdoor">Indoor &amp; Outdoor</a>
+      </div>
+    </li>
+
+    <!-- DESTINATIONS -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="destinations.html">Destinations</a>
+
+      <div class="nav__dropdown">
+        <a href="destinations.html#map">Map</a>
+        <a href="destinations.html#regions">Regions</a>
+      </div>
+    </li>
+
+    <!-- EXPERIENCE -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="experience.html">Experience</a>
+
+      <div class="nav__dropdown">
+        <a href="dive-deep.html">Diving</a>
+        <a href=“experience.html#gastronomy”>Gastronomy</a>
+        <a href=“experience.html#hotel”_service>Hotel Service</a>
+        <a href=“experience.html#included”>What&rsquo;s Included</a>
+      </div>
+    </li>
+
+    <!-- ABOUT US -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="about-us.html">About Us</a>
+
+      <div class="nav__dropdown">
+        <a href=“about-us.html#waow1”>Waow 1</a>
+        <a href=“about-us.html#waow2”>Waow 2</a>
+	      <a href=“about-us.html#team”>Team</a>
+      </div>
+    </li>
+
+    <!-- NEWS -->
+    <li>
+      <a href="news.html">News</a>
+    </li>
+
+  </ul>
+</nav>
 
     <div class="site-header__actions">
       <a class="btn btn--outline" href="booking.html">Rates &amp; Dates</a>
@@ -129,7 +175,7 @@
   </section>
 
   <!-- ================= DECK PLAN SELECTOR ================= -->
-  <section class="tbp-deckplan">
+  <section class="tbp-deckplan" id="decks">
     <div class="container tbp-stage">
       <div class="tbp-deckplan__tabs" role="tablist" aria-label="Deck plan">
         <button class="tbp-deckplan__tab is-active" type="button" role="tab" aria-selected="true" aria-controls="deck-upper">Upper Deck</button>
@@ -149,8 +195,6 @@
     <div class="container tbp-stage">
       <h2>The Making of Waow 2.</h2>
       <p class="tbp-timeline__lead">WAOW 2 is being built piece by piece in Indonesia, following the traditions of the phinisi while bringing a new vision to life. Follow her journey from the first day of construction to the moment she sets sail.</p>
-      <a class="link-arrow tbp-timeline__cta" href="#construction">follow the current <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-
       <div class="tbp-slider">
         <div class="tbp-slider__baseline" aria-hidden="true"></div>
         <div class="tbp-slider__track" id="tbp-slider-track">
@@ -220,7 +264,7 @@
         <p>Sun loungers, hammocks, sofas and dining tables: everything is here to read, doze, talk or share a meal with the sea all around.</p>
       </div>
       <figure class="tbp-fullbleed__photo tbp-fullbleed__photo--br reveal reveal--delay-2"><picture><img src="images/tb-4.webp" loading="lazy" alt="Waow 2 seen from above, under full sail." style="transform: rotate(180deg) scale(1.2) translateX(50px); border: none;"></picture></figure>
-      <svg class="dot-icon tbp-outdoor__icon" aria-hidden="true" viewBox="-4 8 326 223"><use href="#icon-phinisi"></use></svg>
+      <img class="dot-icon tbp-outdoor__icon" src="images/icons-2.png" alt="Anchor Icon" style="border: none;">
     </div>
   </section>
 
@@ -265,7 +309,7 @@
       </div>
       <div class="tbp-life__visual reveal reveal--delay-1">
         <figure><picture><img src="images/tb-8.webp" loading="lazy" alt="A guest stretching on deck at sunset."></picture></figure>
-        <svg class="dot-icon" aria-hidden="true" viewBox="15 17 237 240"><use href="#icon-starfish"></use></svg>
+      <img class="dot-icon" src="images/icons-8.png" alt="Anchor Icon" style="border: none;">
       </div>
     </div>
   </section>
@@ -350,10 +394,6 @@
       <div class="tbp-frise__item"><figure><img src="images/waow2-detail.jpg" loading="lazy" alt="Maiden voyage, October 2028 (placeholder)."></figure><p><span class="tbp-frise__date">Oct. 2028</span>Maiden Voyage</p></div>
     </div>
     <p class="tbp-timeline__lead" style="margin-top:2rem;">WAOW 2 is being built piece by piece in Indonesia, following the traditions of the phinisi while bringing a new vision to life. Follow her journey from the first day of construction to the moment she sets sail.</p>
-    <a class="link-arrow" href="#construction" style="color:var(--ironwood); margin-top:1rem;">
-      follow the current
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
   </div>
 </section>
 

@@ -41,14 +41,60 @@
     </a>
 
     <nav class="nav" aria-label="Primary">
-      <ul class="nav__list">
-        <li><a href="the-boat.html">The Boat</a></li>
-        <li><a href="destinations.html">Destinations</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="about-us.html" class="is-active" aria-current="page">About Us</a></li>
-        <li><a href="news.html">News</a></li>
-      </ul>
-    </nav>
+  <ul class="nav__list">
+
+    <!-- THE BOAT -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="the-boat.html">The Boat</a>
+
+      <div class="nav__dropdown">
+        <a href="the-boat.html#decks">Decks</a>
+        <a href="the-boat.html#construction">Construction Steps</a>
+        <a href="the-boat.htmlcabins.html">Cabins</a>
+        <a href="the-boat.html#outdoor">Indoor &amp; Outdoor</a>
+      </div>
+    </li>
+
+    <!-- DESTINATIONS -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="destinations.html">Destinations</a>
+
+      <div class="nav__dropdown">
+        <a href="destinations.html#map">Map</a>
+        <a href="destinations.html#regions">Regions</a>
+      </div>
+    </li>
+
+    <!-- EXPERIENCE -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="experience.html">Experience</a>
+
+      <div class="nav__dropdown">
+        <a href="dive-deep.html">Diving</a>
+        <a href=“experience.html#gastronomy”>Gastronomy</a>
+        <a href=“experience.html#hotel”_service>Hotel Service</a>
+        <a href=“experience.html#included”>What&rsquo;s Included</a>
+      </div>
+    </li>
+
+    <!-- ABOUT US -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="about-us.html">About Us</a>
+
+      <div class="nav__dropdown">
+        <a href=“about-us.html#waow1”>Waow 1</a>
+        <a href=“about-us.html#waow2”>Waow 2</a>
+	      <a href=“about-us.html#team”>Team</a>
+      </div>
+    </li>
+
+    <!-- NEWS -->
+    <li>
+      <a href="news.html">News</a>
+    </li>
+
+  </ul>
+</nav>
 
     <div class="site-header__actions">
       <a class="btn btn--outline" href="booking.html">Rates &amp; Dates</a>
@@ -82,7 +128,7 @@
 <p class="p reveal" style="--x:183px;--y:166px;--w:1000px;--fs:17.5px;--lh:24px;--ta:center;">In 2011, Swiss diver and passionate explorer Michel Deville turned a dream into a boat.<br>From Switzerland to Indonesia, he imagined a boat that would allow divers to discover some<br>of the most remote waters in the world, differently, and on a more personal scale.<br>That dream became WAOW.</p>
 </div></section>
 <section class="ab-w1 px-sec" style="--sh:768px;"><div class="container px-stage ab-w1__grid">
-<div class="ab-w1__copy px-flat reveal">
+<div class="ab-w1__copy px-flat reveal" id="waow1">
 <h2 class="p" style="--x:130px;--y:137px;--w:500px;--fs:55.8px;--lh:60px;--ta:left;">WAOW 1</h2>
 <p class="p" style="--x:130px;--y:272px;--w:560px;--fs:17.5px;--lh:24px;--ta:left;">For seven years, from 2011 to 2018, WAOW sailed across<br>Indonesia, from Raja Ampat to Komodo and beyond.</p>
 <p class="p" style="--x:130px;--y:344px;--w:560px;--fs:17.5px;--lh:24px;--ta:left;">She became much more than a dive boat. She became a home<br>at sea, a place where divers, guides and crew shared long<br>days underwater, slow evenings on deck and countless<br>stories along the way.</p>
@@ -93,7 +139,7 @@
 <svg class="dd-icon ab-w1__anchor p" viewBox="0 0 32 32" aria-hidden="true" style="--x:1123px;--y:524px;--w:135px;--h:185px;"><circle cx="16" cy="6" r="3" fill="none" stroke="currentColor" stroke-width="1"/><line x1="16" y1="9" x2="16" y2="26" stroke="currentColor" stroke-width="1"/><line x1="9" y1="13" x2="23" y2="13" stroke="currentColor" stroke-width="1" stroke-linecap="round"/><path d="M6 18c0 6 4 9 10 9s10-3 10-9" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>
 </div></div></section>
 <section class="ab-w2 px-sec" style="--sh:768px;"><div class="container px-stage ab-w2__grid">
-<div class="ab-w2__copy px-flat reveal">
+<div class="ab-w2__copy px-flat reveal" id="waow2">
 <h2 class="p" style="--x:136px;--y:167px;--w:500px;--fs:58px;--lh:60px;--ta:left;">WAOW 2</h2>
 <p class="p" style="--x:136px;--y:299px;--w:450px;--fs:17.5px;--lh:24px;--ta:left;">Years later, the idea of building another<br>WAOW began to take shape.<br>Not to recreate the first one, but to carry its<br>spirit forward &mdash; with everything learned over<br>those years and a new vision for exploring<br>Indonesia.<br>And so, WAOW II was born.</p>
 </div><div class="ab-w2__visual px-flat reveal reveal--delay-1">
@@ -101,7 +147,7 @@
 <figure class="ab-w2__photo ab-w2__photo--b p" style="--x:705px;--y:271px;--w:226px;--h:340px;"><picture><source srcset="images/deckhand-rope.webp" type="image/webp"><img src="images/deckhand-rope.jpg" loading="lazy" alt="A builder working a plank."></picture></figure>
 </div></div></section>
 <section class="ab-team px-sec" style="--sh:768px;"><div class="container px-stage ab-team__grid">
-<div class="ab-team__copy px-flat reveal">
+<div class="ab-team__copy px-flat reveal" id="team">
 <h2 class="p" style="--x:883px;--y:112px;--w:400px;--fs:36px;--lh:47px;--ta:right;">A Team with<br>a History</h2>
 <p class="p" style="--x:77px;--y:218px;--w:340px;--fs:17.5px;--lh:24px;--ta:left;">WAOW 2 is being brought to life by<br>people who know the story from the<br>inside.</p>
 <p class="p" style="--x:77px;--y:314px;--w:340px;--fs:17.5px;--lh:24px;--ta:left;">Fr&eacute;d&eacute;ric and Camille lead the project<br>alongside Haji Wahab and his<br>boatbuilding crew, the management<br>team, the Indonesian crews and the<br>European coordination team.</p>

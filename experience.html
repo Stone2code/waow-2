@@ -58,14 +58,60 @@
     </a>
 
     <nav class="nav" aria-label="Primary">
-      <ul class="nav__list">
-        <li><a href="the-boat.html">The Boat</a></li>
-        <li><a href="destinations.html">Destinations</a></li>
-        <li><a href="experience.html" class="is-active" aria-current="page">Experience</a></li>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a href="news.html">News</a></li>
-      </ul>
-    </nav>
+  <ul class="nav__list">
+
+    <!-- THE BOAT -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="the-boat.html">The Boat</a>
+
+      <div class="nav__dropdown">
+        <a href="the-boat.html#decks">Decks</a>
+        <a href="the-boat.html#construction">Construction Steps</a>
+        <a href="the-boat.htmlcabins.html">Cabins</a>
+        <a href="the-boat.html#outdoor">Indoor &amp; Outdoor</a>
+      </div>
+    </li>
+
+    <!-- DESTINATIONS -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="destinations.html">Destinations</a>
+
+      <div class="nav__dropdown">
+        <a href="destinations.html#map">Map</a>
+        <a href="destinations.html#regions">Regions</a>
+      </div>
+    </li>
+
+    <!-- EXPERIENCE -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="experience.html">Experience</a>
+
+      <div class="nav__dropdown">
+        <a href="dive-deep.html">Diving</a>
+        <a href=“experience.html#gastronomy”>Gastronomy</a>
+        <a href=“experience.html#hotel”_service>Hotel Service</a>
+        <a href=“experience.html#included”>What&rsquo;s Included</a>
+      </div>
+    </li>
+
+    <!-- ABOUT US -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="about-us.html">About Us</a>
+
+      <div class="nav__dropdown">
+        <a href=“about-us.html#waow1”>Waow 1</a>
+        <a href=“about-us.html#waow2”>Waow 2</a>
+	      <a href=“about-us.html#team”>Team</a>
+      </div>
+    </li>
+
+    <!-- NEWS -->
+    <li>
+      <a href="news.html">News</a>
+    </li>
+
+  </ul>
+</nav>
 
     <div class="site-header__actions">
       <a class="btn btn--outline" href="booking.html">Rates &amp; Dates</a>
@@ -94,8 +140,7 @@
 <div class="xp-hero__collage px-flat reveal">
 <figure class="xp-hero__photo xp-hero__photo--a p" style="--x:241px;--y:290px;--w:559px;--h:441px;"><picture><img src="images/exp-1.webp" loading="lazy" alt="Waow 2 under full sail."></picture></figure>
 <figure class="xp-hero__photo xp-hero__photo--b p" style="--x:768px;--y:434px;--w:425px;--h:337px;"><picture><img src="images/exp-2.webp" loading="lazy" alt="A guest being welcomed aboard Waow 2." style="object-fit: cover; object-position: center bottom;"></picture></figure>
-<svg class="dot-icon p" aria-hidden="true" style="--x:895px;--y:393px;--w:105px;--h:77px;" viewBox="15 17 237 240"><use href="#icon-starfish"></use></svg>
-</div><div class="xp-hero__lead px-flat">
+<img class="dot-icon p" src="images/icons-8.png" style="border: none; --x:895px;--y:380px;--w:105px;--h:77px; width: 150px; height: auto;"></div><div class="xp-hero__lead px-flat">
 <p class="p" style="--x:300px;--y:824px;--w:783px;--fs:19px;--lh:26px;--ta:center;">From four dives a day to long lunches, local flavours, time on deck and excursions ashore, life on WAOW 2 revolves around the sea and everything that comes with it.</p>
 <p class="p" style="--x:300px;--y:902px;--w:783px;--fs:19px;--lh:26px;--ta:center;">Our cruises range from 7 to 12 nights, with at least one land excursion depending on the<br>itinerary, taking you closer to some of Indonesia's most remote gems.</p>
 </div></div></section>
@@ -109,7 +154,7 @@
 <a class="link-arrow p la-l" href="dive-deep.html" style="--x:93px;--y:593px;--fs:17px; color: var(--sail-linen);">dive deeper <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </div><div class="xp-diving__visual px-flat reveal reveal--delay-1">
 <figure class="xp-diving__photo p" style="--x:857px;--y:130px;--w:341px;--h:507px;"><picture><img src="images/exp-3.webp" loading="lazy" alt="A diver and a manta ray on a reef."></picture></figure>
-<svg class="dot-icon p" aria-hidden="true" style="--x:800px;--y:476px;--w:128px;--h:210px;" viewBox="10 -16 238 285"><use href="#icon-dive-tank"></use></svg>
+<img class="dot-icon p" src="images/icons-6.png" style="border: none; --x:700px;--y:476px;--w:128px;--h:210px; width: 300px; height: auto;">
 </div></div></section>
 <section class="xp-lifebetween px-sec px-gold-b" style="--sh:323px;"><div class="container px-stage">
 <h2 class="xp-lifebetween__title p reveal" style="--x:383px;--y:85px;--w:600px;--fs:30px;--lh:36px;--ta:center;">Life between the dives</h2>
@@ -120,7 +165,7 @@
 <figure class="xp-gastro__photo p" style="--x:80px;--y:119px;--w:364px;--h:510px;"><picture><img src="images/exp-4.webp" loading="lazy" alt="Waow 2's chef preparing the day's catch."></picture></figure>
 <p class="xp-gastro__photo-quote p px-annot" style="--x:318px;--y:128px;--w:285px;--fs:17px;--lh:29px;--ta:center;">The first sip of the drink<br>is after the last dip in the sea</p>
 <div class="xp-gastro__menu p" style="--x:368px;--y:223px;--w:184px;--h:462px;"><div class="xp-gastro__q" style="--y:39px"><h3>Early Breakfast</h3><p>Something simple before the first dive.</p></div><div class="xp-gastro__q" style="--y:133px"><h3>Brunch</h3><p>Buffet or &agrave; la carte:<br>your choice, your pace.</p></div><div class="xp-gastro__q" style="--y:209px"><h3>Lunch</h3><p>Served at the table.</p></div><div class="xp-gastro__q" style="--y:285px"><h3>Afternoon Snack</h3><p>A little something<br>between dives.</p></div><div class="xp-gastro__q" style="--y:380px"><h3>Dinner</h3><p>A slower meal to end the day.</p></div></div>
-</div><div class="xp-gastro__copy px-flat reveal reveal--delay-1">
+</div><div class="xp-gastro__copy px-flat reveal reveal--delay-1" id="gastronomy">
 <h2 class="p" style="--x:600px;--y:127px;--w:588px;--fs:51px;--lh:58px;--ta:right;">Gastronomy.</h2>
 <p class="p" style="--x:600px;--y:266px;--w:590px;--fs:17.5px;--lh:24px;--ta:right;">Five moments around the table punctuate each day, a light<br>breakfast before the first dive, a generous one after, then<br>lunch, afternoon snacks and dinner.</p>
 <p class="p" style="--x:600px;--y:362px;--w:590px;--fs:17.5px;--lh:24px;--ta:right;">Our kitchen blends Indonesian flavours with inspirations<br>from around the world, built on fresh, local ingredients. In<br>remote waters, local fishermen sometimes come alongside<br>with the day's catch, fresh from the sea, and sometimes on<br>your plate that evening.</p>
@@ -128,7 +173,7 @@
 <p class="xp-gastro__note p" style="--x:600px;--y:577px;--w:590px;--fs:17.5px;--lh:24px;--ta:right;">Special diets on request.</p>
 </div></div></section>
 <section class="xp-hotel px-sec" style="--sh:761px;"><div class="container px-stage xp-hotel__grid">
-<div class="xp-hotel__copy px-flat reveal">
+<div class="xp-hotel__copy px-flat reveal" id="hotel_service">
 <h2 class="p" style="--x:97px;--y:62px;--w:500px;--fs:49px;--lh:68px;--ta:left;">Hotel<br>Service.</h2>
 <p class="xp-hotel__lead p" style="--x:96px;--y:249px;--w:700px;--fs:17px;--lh:24px;--ta:left;">Housekeeping is done every day, laundry is available on request,<br>and the crew quietly keeps everything running while you get on with your day.</p>
 <div class="xp-hotel__item p" style="--x:96px;--y:370px;--w:600px;"><h3>Housekeeping</h3><p>Every day, while you're out exploring.</p></div>
@@ -150,7 +195,7 @@
 <span class="xp-beyond__tag p" style="--x:333px;--y:637px;--w:220px;--fs:18px;--lh:24px;--ta:left;">Snorkelling</span>
 <span class="xp-beyond__tag p" style="--x:487px;--y:637px;--w:220px;--fs:18px;--lh:24px;--ta:left;">Land Excursions</span>
 <span class="xp-beyond__tag p" style="--x:676px;--y:637px;--w:220px;--fs:18px;--lh:24px;--ta:left;">&Agrave; La Carte Massage</span>
-<svg class="dot-icon p" aria-hidden="true" style="--x:973px;--y:190px;--w:167px;--h:176px;" viewBox="15 17 237 240"><use href="#icon-starfish"></use></svg>
+<img class="dot-icon p" src="images/icons-10.png" style="border: none; --x:973px;--y:190px;--w:167px;--h:176px; width: 300px; height: auto; z-index: 10;">
 </div>
 <figure class="xp-beyond__photo xp-beyond__photo--r reveal reveal--delay-2 p fr" style="--x:1028px;--y:293px;--w:338px;--h:482px;"><picture><img src="images/exp-8-new.jpg" loading="lazy" alt="Two people floating on inflatable rings in deep blue water." style="transform:scale(1.1);"></picture></figure>
 </div></section>
@@ -160,14 +205,14 @@
 <p class="p reveal" style="--x:183px;--y:182px;--w:1000px;--fs:17.5px;--lh:24px;--ta:center;"><em>Drinks are on us.</em><br>Just one of those WAOW moments you don't plan for.</p>
 </div></section>
 <section class="xp-included px-sec" style="--sh:768px;"><div class="container px-stage xp-included__grid">
-<div class="xp-included__col reveal px-flat">
+<div class="xp-included__col reveal px-flat" id="included">
 <h2 class="p" style="--x:99px;--y:127px;--w:420px;--fs:62px;--lh:92px;--ta:left;">What's<br>Included.</h2>
 <h3 class="p px-annot" style="--x:97px;--y:358px;--w:400px;--fs:19px;--lh:26px;--ta:left;">Your stay includes:</h3>
 <ul class="p" style="--x:98px;--y:391px;--w:380px;--fs:17.5px;--lh:24px;--ta:left;"><li>Airport or hotel transfers</li><li>3-4 dives per day</li><li>Nitrox</li><li>5 meals per day</li><li>Non-alcoholic drinks</li><li>Snacks throughout the day</li><li>Daily housekeeping</li><li>Land excursions</li><li>Snorkelling trips for non-diving guests</li><li>Port & Park fees</li></ul>
 <a class="link-arrow p la-l" href="booking.html" style="--x:99px;--y:638px;">sea you there <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </div><div class="xp-included__visual px-flat reveal reveal--delay-1">
 <figure class="xp-included__photo p" style="--x:505px;--y:142px;--w:510px;--h:551px;"><picture><img src="images/exp-9.webp" loading="lazy" alt="Guests jumping into the sea from Waow 2."></picture></figure>
-<svg class="dot-icon p" aria-hidden="true" style="--x:940px;--y:95px;--w:162px;--h:155px;" viewBox="2 28 245 230"><use href="#icon-helm"></use></svg>
+<img class="dot-icon p" src="images/icons-4.png" style="border: none; --x:840px;--y:75px;--w:162px;--h:155px; width: 300px; height: auto; z-index: 10;">
 </div><div class="xp-included__col xp-included__col--r reveal reveal--delay-2 px-flat">
 <h3 class="p px-annot" style="--x:1097px;--y:401px;--w:260px;--fs:19px;--lh:37px;--ta:left;">Not included<br>but available :</h3>
 <ul class="p" style="--x:1098px;--y:485px;--w:260px;--fs:17.5px;--lh:24px;--ta:left;"><li>Rental gear</li><li>Alcohol beverages</li><li>A la carte massage</li><li>Private guide</li><li>Dive courses</li><li>Laundry</li></ul>
@@ -182,7 +227,7 @@
 <figure class="xp-make__photo reveal reveal--delay-1 p" style="--x:511px;--y:309px;--w:344px;--h:368px;"><picture><img src="images/exp-10.webp" loading="lazy" alt="Waow 2 under full sail, ready for a full charter."></picture></figure>
 <div class="xp-make__aside px-flat reveal reveal--delay-2">
 <p class="p" style="--x:920px;--y:409px;--w:300px;--fs:17.5px;--lh:24px;--ta:left;">Your boat.<br>Your people.<br>Your way.</p>
-<a class="link-arrow p la-l" href="mailto:info@waow.ch" style="--x:921px;--y:560px;">Enquire <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a class="link-arrow p la-l" href="mailto:info@waow.ch" style="--x:921px;--y:560px;">enquire <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </div></div></section>
 <section class="xp-closing px-sec" style="--sh:331px;"><div class="container px-stage">
 <h2 class="p reveal" style="--x:383px;--y:48px;--w:600px;--fs:26px;--lh:34px;--ta:center;">Ready for the next dive?</h2>
