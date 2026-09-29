@@ -81,25 +81,41 @@
     return '<div class="tbp-stack" tabindex="0" data-i="' + i + '" aria-label="' + title + " — see all four photos" + '">' + thumbs + "</div>";
   }
 
-  function stepMarkup(m, i) {
-    var dateBlock = '<p class="tbp-slider__date">' + m.label + '<span class="tbp-slider__title"><br>' + m.title + "</span></p>";
-    var descBlock = '<p class="tbp-slider__desc">' + m.desc + "</p>";
-    var tick = '<span class="tbp-slider__tick" aria-hidden="true"></span>';
-    if (m.side === "above") {
-      return '<div class="tbp-slider__step tbp-slider__step--above">' + dateBlock + stackMarkup(m, i) + descBlock + tick + "</div>";
-    }
-    return '<div class="tbp-slider__step tbp-slider__step--below">' + stackMarkup(m, i) + dateBlock + descBlock + tick + "</div>";
+function stepMarkup(m, i) {
+  var dateBlock = '<p class="tbp-slider__date">' + m.label + '<span class="tbp-slider__title"><br>' + m.title + "</span></p>";
+  var descBlock = '<p class="tbp-slider__desc">' + m.desc + "</p>";
+  var diveButton = '<button class="tbp-dive-in" type="button" data-i="' + i + '">dive in</button>';
+  var copyBlock = '<div class="tbp-slider__copy">' + dateBlock + descBlock + diveButton + '</div>';
+  var tick = '<span class="tbp-slider__tick" aria-hidden="true"></span>';
+
+  if (m.side === "above") {
+    return '<div class="tbp-slider__step tbp-slider__step--above">' +
+      copyBlock + stackMarkup(m, i) + tick +
+      "</div>";
   }
+
+  return '<div class="tbp-slider__step tbp-slider__step--below">' +
+    stackMarkup(m, i) + copyBlock + tick +
+    "</div>";
+}
 
   var countEl = document.getElementById("tbp-slider-count");
   var visible = [];
   function render() {
-    visible = [MILESTONES[center - 1], MILESTONES[center], MILESTONES[center + 1]];
-    track.innerHTML = visible.map(stepMarkup).join("");
-    if (prevBtn) prevBtn.disabled = center <= 1;
-    if (nextBtn) nextBtn.disabled = center >= MILESTONES.length - 2;
-    if (countEl) countEl.textContent = center + " / " + (MILESTONES.length - 2);
-  }
+  visible = [
+    { m: MILESTONES[center - 1], i: center - 1 },
+    { m: MILESTONES[center], i: center },
+    { m: MILESTONES[center + 1], i: center + 1 }
+  ];
+
+  track.innerHTML = visible.map(function (item) {
+    return stepMarkup(item.m, item.i);
+  }).join("");
+
+  if (prevBtn) prevBtn.disabled = center <= 1;
+  if (nextBtn) nextBtn.disabled = center >= MILESTONES.length - 2;
+  if (countEl) countEl.textContent = center + " / " + (MILESTONES.length - 2);
+}
 
   // slide out, swap the three visible steps, slide back in (dir: +1 = later, -1 = earlier)
   var busy = false;
@@ -147,6 +163,65 @@
   // grid right on top of the stack itself. Pure CSS (:hover/:focus-within
   // on .tbp-stack — see style.css): no JS involved, so there's nothing to
   // get out of sync.
+  /* ---------- Dive in immersive overlay ---------- */
+
+  var diveOverlay = document.getElementById("tbp-dive-overlay");
+  var diveClose = diveOverlay ? diveOverlay.querySelector(".tbp-dive-overlay__close") : null;
+
+  function openDive(index) {
+    if (!diveOverlay || !MILESTONES[index]) return;
+
+    var m = MILESTONES[index];
+
+    diveOverlay.querySelector(".tbp-dive-overlay__date").textContent = m.label;
+    diveOverlay.querySelector(".tbp-dive-overlay__title").textContent = m.title.replace(/<br>/g, " ");
+    diveOverlay.querySelector(".tbp-dive-overlay__desc").textContent = m.desc;
+
+    var photos = diveOverlay.querySelectorAll(".tbp-dive-overlay__photo img");
+
+    photos.forEach(function (img, i) {
+      img.src = "images/" + m.img + ".jpg";
+      img.alt = i === 0 ? "Construction progress: " + m.title : "";
+    });
+
+    diveOverlay.setAttribute("aria-hidden", "false");
+    diveOverlay.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeDive() {
+    if (!diveOverlay) return;
+
+    diveOverlay.classList.remove("is-open");
+    diveOverlay.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  track.addEventListener("click", function (e) {
+    var button = e.target.closest(".tbp-dive-in");
+    if (!button) return;
+
+    e.stopPropagation();
+
+    var index = parseInt(button.getAttribute("data-i"), 10);
+    if (!isNaN(index)) openDive(index);
+  });
+
+  if (diveClose) {
+    diveClose.addEventListener("click", closeDive);
+  }
+
+  if (diveOverlay) {
+    diveOverlay.addEventListener("click", function (e) {
+      if (e.target === diveOverlay) closeDive();
+    });
+  }
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && diveOverlay && diveOverlay.classList.contains("is-open")) {
+      closeDive();
+    }
+  });
 
   render();
 

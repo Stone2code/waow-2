@@ -26,6 +26,7 @@
   var layers = map.querySelectorAll(".dst-map__img--region");
   var itineraryLayer = map.querySelector(".dst-map__img--itinerary");
   var labels = map.querySelectorAll(".dst-map__label");
+  var hotspots = map.querySelectorAll(".dst-map__hotspot");
   var panel = map.querySelector(".dst-map__panel");
   var title = panel.querySelector(".dst-map__panel-title");
   var list = panel.querySelector(".dst-map__panel-list");
@@ -125,6 +126,24 @@
     btn.addEventListener("focus", function () { if (current !== id) paint(id, "is-peek"); });
     btn.addEventListener("blur", function () { paint(null, "is-peek"); });
   });
+
+  hotspots.forEach(function (hotspot) {
+  var id = hotspot.getAttribute("data-region");
+
+  hotspot.addEventListener("mouseenter", function () {
+    if (current !== id) paint(id, "is-peek");
+  });
+
+  hotspot.addEventListener("mouseleave", function () {
+    if (current !== id) paint(null, "is-peek");
+  });
+
+  hotspot.addEventListener("click", function (e) {
+    e.stopPropagation();
+    if (current === id) close();
+    else open(id);
+  });
+});
 
   closeBtn.addEventListener("click", close);
   panel.addEventListener("click", function (e) { e.stopPropagation(); });
