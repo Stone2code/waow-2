@@ -28,7 +28,7 @@
   var cards = c.slugs.map(function (s) {
     var page = (typeof ITINERARY_CANONICAL !== "undefined" && ITINERARY_CANONICAL[s]) || s;
     var trip = ITINERARIES.filter(function (t) { return t.slug === s; })[0];
-    return '<li><a class="rgx-card" href="' + itineraryHref(s) + '" aria-label="' + esc(trip ? trip.name : s) + '"><span class="rgx-card__photo"><img src="images/it-cover-' + page + '.webp" alt="' + esc(trip ? trip.name : "") + '"></span><span class="rgx-card__more">See more</span></a></li>';
+    return '<li><a class="rgx-card" href="' + itineraryHref(s) + '" aria-label="' + esc(trip ? trip.name : s) + '"><span class="rgx-card__photo"><img src="images/it-cover-' + page + '.webp" alt="' + esc(trip ? trip.name : "") + '"></span><span class="rgx-card__more">sea more</span></a></li>';
   }).join("");
 
   root.innerHTML =

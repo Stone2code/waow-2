@@ -136,7 +136,7 @@
   order.forEach(function (k) {
     var p = ITINERARY_V2[k], nm = p.name || p.card.title;
     var here = k === slug;
-    var inner = '<span class="it2-card__photo"><img src="images/it-cover-' + k + '.webp" alt="' + nm + '"></span><span class="it2-card__route">See more</span>';
+    var inner = '<span class="it2-card__photo"><img src="images/it-cover-' + k + '.webp" alt="' + nm + '"></span><span class="it2-card__route">sea more</span>';
     cards += here
       ? '<li><div class="it2-card is-current" aria-current="page" aria-label="' + nm + ' — you are already here">' + inner + "</div></li>"
       : '<li><a class="it2-card" href="' + itineraryHref(k) + '" aria-label="' + nm + '">' + inner + "</a></li>";

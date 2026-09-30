@@ -2151,8 +2151,8 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
   font-family: var(--font-display); font-weight: 700; text-transform: uppercase; color: var(--ironwood);
   font-size: clamp(1.8rem, 1.4rem + 1.8vw, 2.4rem); margin-bottom: 1.25rem;
 }
-.xp-ashore p:not(.px-annot):not(.hp-family__script):not(.hp-safety__title):not(.p) { font-family: var(--font-body); font-style: italic; color: var(--abyss); max-width: 58ch; margin-inline: auto; }
-.xp-ashore p.p { font-family: var(--font-body); font-style: italic; color: var(--abyss); }
+.xp-ashore p:not(.px-annot):not(.hp-family__script):not(.hp-safety__title):not(.p) { font-family: var(--font-body); font-style: normal; color: var(--abyss); max-width: 58ch; margin-inline: auto; }
+.xp-ashore p.p { font-family: var(--font-body); font-style: normal; color: var(--abyss); }
 .xp-ashore p + p { margin-top: 0.85rem; }
 
 /* --- What's Included (blue) --- */
@@ -3571,7 +3571,7 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
 .px-rg .rg-hero__intro { color: var(--open-sea); font-family: var(--font-body); text-align: center; }
 .px-rg .rg-hero__photo img { aspect-ratio: 972 / 368; }
 .px-rg .rg-hero__stamp { aspect-ratio: 183 / 131; }
-.px-rg .rg-key__note { background: #f7eed9 repeating-linear-gradient(to bottom, transparent 0 21px, rgba(200,110,110,.18) 21px 22px); box-shadow: 0 18px 30px -16px rgba(0,0,0,.35); padding: 3rem 1.6rem; text-align: center; transform: rotate(-1.2deg); }
+.px-rg .rg-key__note { background: url('images/key-regions.webp') center / 100% 100% no-repeat; box-shadow: none; padding: 4.4rem 3.2rem 3.4rem; text-align: center; transform: none; }
 .px-rg .rg-key__sheet h3 { font-family: var(--font-script); font-weight: 700; text-transform: uppercase; color: var(--open-sea); font-size: 1.3rem; margin: 0 0 .5rem; }
 .px-rg .rg-key .rg-key__sheet p { font-family: var(--font-script); font-weight: 700; color: var(--abyss); margin: 0 auto 1.9rem; font-size: 1.25rem; line-height: 1.4; }
 .px-rg .rg-key h2 { color: var(--abyss); text-align: center; }
@@ -4011,13 +4011,13 @@ img, picture, figure, [class*="photo"], [class*="__visual"], [class*="__img"], .
   left: -10px;
   right: -10px;
   top: 100%;
-  height: 14px;
+  height: 6px;
 }
 
 /* Dropdown */
 .nav__dropdown {
   position: absolute;
-  top: calc(100% + 14px);
+  top: calc(100% + 4px);
   left: -18px;
 
   min-width: 230px;
@@ -4505,3 +4505,35 @@ body.nav-blue .nav__dropdown::before { background: #4E7495; }
   .hp-home .hp-testi:nth-child(3) { left: 892px; top: 424px; }
 }
 .px-page.px-mu .px-stage .mu-testi.p.p { height: auto; overflow: visible; }
+
+
+/* The dropdown menus hang ~250px below the top of the page: start every page's content below them
+   so no title sits behind a submenu link (fixed offset, scaled with the stage zoom). */
+@media (min-width: 1100px) {
+  body:is(.px-page,.hp-home,.tbp-page,.cb-page) main { padding-top: calc(130px * var(--z, 1)); }
+}
+
+
+/* Carousel CTA: "sea more", underlined (itinerary + region carousels) */
+.it2-card__route, .rgx-card__more { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; }
+.it2-card__route { width: fit-content; margin-inline: auto; }
+.rgx-card__more { width: fit-content; margin-inline: auto; }
+
+
+/* News: Upcoming events + monthly journal cards that open a PDF in a reader overlay */
+.px-nw .nw-events { background: var(--open-sea); }
+.px-nw .nw-events__title { font-family: var(--font-display); font-weight: 500; text-transform: uppercase; color: var(--paper); margin: 0; text-align: center; }
+.px-nw .nw-poster__cap { font-family: var(--font-body); color: var(--paper); margin: 0; }
+.px-nw .nw-poster { margin: 0; }
+.px-nw .nw-poster img { display: block; width: 100%; height: 100%; object-fit: cover; border: 0 !important; }
+.px-nw .nw-open { background: none; border: 0; padding: 0 0 2px; cursor: pointer; font: inherit; font-family: var(--font-body); }
+.nw-modal { width: min(1000px, 94vw); height: min(92vh, 1200px); padding: 0; border: 1px solid var(--abyss); background: var(--bg-page); color: var(--abyss); overflow: hidden; }
+.nw-modal[open] { display: flex; flex-direction: column; }
+.nw-modal::backdrop { background: rgba(16, 35, 63, .72); }
+.nw-modal__bar { display: flex; align-items: center; justify-content: space-between; padding: .7rem 1.25rem; border-bottom: 3px double var(--abyss); }
+.nw-modal__bar h2 { margin: 0; font-family: var(--font-display); font-weight: 600; text-transform: uppercase; font-size: 1.05rem; }
+.nw-modal__close { background: none; border: 0; font-size: 2rem; line-height: 1; cursor: pointer; color: var(--abyss); padding: 0 .25rem; }
+.nw-modal__frame { flex: 1; width: 100%; border: 0; background: #fff; }
+.nw-modal__fallback { margin: 0; padding: .6rem 1.25rem; font-family: var(--font-body); font-size: .9rem; border-top: 1px solid rgba(16,35,63,.25); }
+.nw-modal__fallback a { text-decoration: underline; }
+@media (max-width: 1099.98px) { .px-nw .nw-events .px-stage { display: grid; gap: 1.25rem; padding-inline: var(--gutter); } .px-nw .nw-poster { max-width: 260px; } }
