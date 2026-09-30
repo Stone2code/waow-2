@@ -4691,3 +4691,23 @@ body.nav-blue .nav__subrow { color: #4E7495; } body.nav-brown .nav__subrow { col
 .nav__subline { display: flex; justify-content: center; gap: 26px; white-space: nowrap; }
 .nav__subrow a:first-child::before { content: none; }
 .nav__subrow > a:first-child::before, .nav__subline:first-child > a:first-child::before { content: ""; }
+/* Nested rows must sit above the dropdown's invisible hover zone (::after), and bridge the gap to their entry */
+.nav__subrow { z-index: 5; }
+.nav__dd { position: static; }
+.nav__dd:hover > .nav__subrow::after, .nav__dd:focus-within > .nav__subrow::after { content: ""; position: absolute; left: -60px; right: -60px; top: -34px; bottom: -20px; z-index: -1; }
+
+/* =========================================================================
+   Submenus: JS keeps .is-open on a hovered entry for a short delay (main.js) → same visuals as :hover.
+   Regions / Itineraries rows moved up 20px: same text-to-text gap (≈7px) as top menu → first submenu row.
+   ========================================================================= */
+.nav__item--dropdown.is-open .nav__dropdown { opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, 0); transition: opacity .25s var(--ease), transform .25s var(--ease); }
+.nav__item--dropdown.is-open > a::after { right: 0; }
+.site-header:has(.nav__item--dropdown.is-open) { border-bottom-color: transparent; box-shadow: none; }
+.site-header:has(.nav__item--dropdown.is-open)::after { opacity: 1; }
+.nav__dd.is-open > .nav__subrow { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity .2s var(--ease); }
+.nav__dd.is-open > a::after { right: 0; }
+.nav__dd.is-open > .nav__subrow::after { content: ""; position: absolute; left: -60px; right: -60px; top: -24px; bottom: -20px; z-index: -1; }
+.nav__subrow { top: 100%; padding-top: 0; }
+.site-header:has(.nav__dd:hover)::after, .site-header:has(.nav__dd:focus-within)::after, .site-header:has(.nav__dd.is-open)::after { height: calc(72px * var(--hz, 1)); }
+.site-header:has(.nav__dd--itineraries:hover)::after, .site-header:has(.nav__dd--itineraries:focus-within)::after, .site-header:has(.nav__dd--itineraries.is-open)::after { height: calc(98px * var(--hz, 1)); }
+.nav__dd:hover > .nav__subrow::after, .nav__dd:focus-within > .nav__subrow::after { top: -24px; }

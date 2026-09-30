@@ -77,4 +77,22 @@
       if (match) dd.children[0].classList.add("is-active");
     });
   })();
+
+  // Desktop submenus: a menu stays open ~350 ms after the pointer leaves it, so moving down (or diagonally)
+  // to the submenu links never closes it; entering a sibling entry switches over immediately.
+  document.querySelectorAll(".nav__item--dropdown, .nav__dd").forEach(function (el) {
+    var timer;
+    function close(node) {
+      node.classList.remove("is-open");
+      node.querySelectorAll(".is-open").forEach(function (n) { n.classList.remove("is-open"); });
+    }
+    el.addEventListener("mouseenter", function () {
+      clearTimeout(timer);
+      Array.prototype.forEach.call(el.parentElement.children, function (sib) { if (sib !== el) close(sib); });
+      el.classList.add("is-open");
+    });
+    el.addEventListener("mouseleave", function () {
+      timer = setTimeout(function () { close(el); }, 350);
+    });
+  });
 })();
