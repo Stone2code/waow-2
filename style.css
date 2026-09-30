@@ -2996,7 +2996,7 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
   .tbp-page .tbp-fullbleed--indoor > .tbp-stage { height: 569px; }
   .tbp-page .tbp-fullbleed__photo { position: absolute; aspect-ratio: auto; box-shadow: none; margin: 0; }
   .tbp-page .tbp-fullbleed__photo--tl { left: 894px; top: 0; width: calc(296px + var(--offz)); height: 441px; }
-  .tbp-page .tbp-fullbleed__photo--br { left: calc(-1 * var(--offz)); top: 222px; right: auto; bottom: auto; width: calc(295px + var(--offz)); height: 443px; }
+  .tbp-page .tbp-fullbleed__photo--br { left: -117px; top: 128px; right: auto; bottom: auto; width: 835px; height: 607px; }
   .tbp-page .tbp-outdoor__icon { position: absolute; left: 848px; top: 400px; bottom: auto; width: 229px; height: 152px; display: block; }
   .tbp-page .tbp-fullbleed__copy h2 { position: absolute; left: 445px; width: 300px; top: 172px; margin: 0; text-align: center; font-size: 34px; line-height: 43px; }
   .tbp-page .tbp-fullbleed__copy p { position: absolute; left: 450px; width: 290px; margin: 0; max-width: none; text-align: center; font-size: 15.5px; line-height: 24px; padding: 0; }
@@ -3102,12 +3102,12 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
   .cb-page .burger { display: none; }
 
   /* Your room at sea (y 130-1198) */
-  .cb-page .cb-hero { height: calc(1068px * var(--z)); }
-  .cb-page .cb-hero > .cb-stage { height: 1068px; }
+  .cb-page .cb-hero { height: calc(1074px * var(--z)); }
+  .cb-page .cb-hero > .cb-stage { height: 1074px; }
   .cb-page .cb-hero h1 { position: absolute; left: 0; width: 1366px; top: 108px; margin: 0; text-align: center; font-size: 64px; line-height: 76px; color: var(--open-sea); }
   .cb-page .cb-hero__lead { position: absolute; left: 333px; width: 700px; top: 221px; margin: 0; max-width: none; text-align: center; font-style: normal; font-size: 19px; line-height: 26px; color: var(--open-sea); }
-  .cb-page .cb-hero__photo--a { left: 181px; top: 354px; width: 846px; height: 540px; aspect-ratio: auto; border-radius: 0; }
-  .cb-page .cb-hero__photo--b { left: 871px; top: 594px; width: 314px; height: 392px; aspect-ratio: auto; border-radius: 0; }
+  .cb-page .cb-hero__photo--a { left: 246px; top: 262px; width: 849px; height: 542px; aspect-ratio: auto; border-radius: 0; }
+  .cb-page .cb-hero__photo--b { left: 631px; top: 608px; width: 488px; height: 394px; aspect-ratio: auto; border-radius: 0; }
 
   /* A place to come back to (y 1198-1982) */
   .cb-page .cb-return { height: calc(784px * var(--z)); }
@@ -3119,7 +3119,7 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
   .cb-page .cb-return::before, .cb-page .cb-closing::before { top: 0; }
   .cb-page .cb-return::after { bottom: 0; }
   .cb-page .cb-return__photo--a { left: calc(-1 * var(--offz)); top: 358px; right: auto; bottom: auto; width: calc(313px + var(--offz)); height: 418px; aspect-ratio: auto; border-radius: 0; }
-  .cb-page .cb-return__photo--b { left: 1033px; top: 8px; right: auto; bottom: auto; width: calc(333px + var(--offz)); height: 443px; aspect-ratio: auto; border-radius: 0; }
+  .cb-page .cb-return__photo--b { left: 1033px; top: 8px; right: auto; bottom: auto; width: calc(333px + var(--offz)); height: 503px; aspect-ratio: auto; border-radius: 0; }
   .cb-page .cb-return__icon { position: absolute; left: 200px; top: 253px; width: 103px; height: 141px; margin: 0; z-index: 3; color: var(--open-sea); }
   .cb-page .cb-return__copy h2 { position: absolute; left: 445px; width: 476px; top: 275px; margin: 0; text-align: center; font-size: 33px; line-height: 40px; color: var(--open-sea); }
   .cb-page .cb-return__copy > p { position: absolute; left: 433px; width: 500px; top: 368px; margin: 0; max-width: none; text-align: center; font-size: 15px; line-height: 20px; }
@@ -3162,7 +3162,7 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
   .cb-page #single-cabins .cb-cabin__annotation { left: 438px; top: 382px; }
   .cb-page #single-cabins .cb-cabin__copy h2, .cb-page #single-cabins .cb-cabin__deck, .cb-page #single-cabins .cb-cabin__copy p:not(.cb-cabin__deck), .cb-page #single-cabins .link-arrow { right: 119px; text-align: right; }
   .cb-page #single-cabins .cb-cabin__copy h2 { top: 97px; } .cb-page #single-cabins .cb-cabin__deck { top: 161px; }
-  .cb-page #single-cabins .cb-cabin__copy p:nth-of-type(2) { top: 220px; } .cb-page #single-cabins .cb-cabin__copy p:nth-of-type(3) { top: 340px; }
+  .cb-page #single-cabins .cb-cabin__copy p:nth-of-type(2) { top: 220px; } .cb-page #single-cabins .cb-cabin__copy p:nth-of-type(3) { top: 364px; }
   .cb-page #single-cabins .link-arrow { top: 434px; }
 
   /* Deluxe Cabins (y 4400-5046): text left, plan right */
@@ -4570,3 +4570,124 @@ body.nav-blue .nav__dropdown::before { background: #4E7495; }
 
 /* Newsletter button: label always centred in the box, whichever page template it sits in */
 .hp-newsletter__form button { display: flex; align-items: center; justify-content: center; line-height: 1; padding-block: 0; }
+
+
+/* =========================================================================
+   Homepage vs Canva: icons sized from the design, life/dive captions, itineraries carousel, postcards slider
+   ========================================================================= */
+.hp-icon { display: block; border: 0 !important; height: auto; }
+.hp-testi-nav, .hp-coming-next__nav { cursor: pointer; background: none; }
+@media (min-width: 1100px) {
+  .hp-home .hp-family__visual .hp-icon--ship { left: 546px; top: 533px; width: 232px; height: auto; }
+  .hp-home .hp-dive__mask-icon { left: -72px; top: -95px; width: 143px; height: auto; }
+  .hp-home .hp-safety__photo .hp-icon--octopus { left: 462px; top: 480px; width: 157px; height: auto; right: auto; bottom: auto; }
+  .hp-home .hp-eyebrow-script { font-size: 52px; white-space: nowrap; }
+  .hp-home .hp-dive__photo--left figcaption { left: calc(30px + var(--offz)); width: 356px; bottom: 16px; font-size: 31px; white-space: nowrap; text-align: center; line-height: 1.1; }
+  .hp-home .hp-dive__caption-out { top: 518px; line-height: 1.1; }
+  /* itineraries carousel (Explore Indonesia section) */
+  .hp-home .hp-coming-next__track { width: 1072px; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; }
+  .hp-home .hp-coming-next__track::-webkit-scrollbar { display: none; }
+  .hp-home .hp-coming-next__card { flex: 0 0 244px; scroll-snap-align: start; display: block; text-decoration: none; color: inherit; position: relative; }
+  .hp-home .hp-coming-next__card figure { position: relative; margin: 0 0 14px; }
+  .hp-home .hp-coming-next__card figure img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .hp-home .hp-coming-next__card p { position: static; color: var(--sea-foam); text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; width: fit-content; margin-inline: auto; }
+  .hp-home .hp-coming-next__nav { color: var(--sea-foam); background: none; padding: 0; }
+  /* postcards slider */
+  .hp-home .hp-testi-track { position: absolute; left: 50px; top: 410px; width: 1200px; display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; }
+  .hp-home .hp-testi-track::-webkit-scrollbar { display: none; }
+  .hp-home .hp-testi { position: static; flex: 0 0 400px; width: 400px; scroll-snap-align: start; }
+  .hp-home .hp-testi:nth-child(n) { left: auto; top: auto; }
+  .hp-home .hp-testi-nav { position: absolute; left: 1262px; top: 520px; width: 56px; height: 84px; border: 0; padding: 0; color: var(--open-sea); }
+  .hp-home .hp-testi-nav svg { width: 100%; height: 100%; stroke-width: 3; }
+}
+.hp-coming-next__track { scrollbar-width: none; }
+@media (max-width: 1099.98px) {
+  .hp-testi-track { display: flex; overflow-x: auto; gap: 1rem; scroll-snap-type: x mandatory; }
+  .hp-testi-track .hp-testi { flex: 0 0 85%; scroll-snap-align: start; }
+  .hp-testi-nav { display: none; }
+}
+@media (min-width: 1100px) {
+  .hp-home .hp-dive__photo--left figcaption { font-size: 48px; bottom: 14px; left: calc(28px + var(--offz)); width: 340px; }
+  .hp-home .hp-dive__caption-out { font-size: 48px; top: 514px; }
+  .hp-home .hp-dive__copy p { width: 316px; left: 525px; }
+}
+@media (min-width: 1100px) {
+  .hp-home .hp-coming-next__card p { font-style: normal; font-size: 17px; }
+  .hp-home .hp-explore { height: calc(1275px * var(--z)); }
+  .hp-home .hp-explore > .container { height: 1275px; }
+  .hp-home .hp-explore > .container::before { content: ""; position: absolute; left: 0; right: 0; top: 742px; height: 1px; background: rgba(175, 194, 210, .3); }
+  .hp-home .hp-memories { }
+}
+
+
+/* =========================================================================
+   The Boat vs Canva: double key-figures frame, cabins spacing, dive stripes, life-at-sea block, gold double rule
+   ========================================================================= */
+.tbp-page .tbp-figures__inner { border: 4px double var(--abyss); }
+.tbp-page .tbp-cabins__grid h3 { font-family: var(--font-display); font-weight: 500; text-transform: uppercase; color: var(--ironwood); }
+.tbp-gold-b { position: relative; }
+.tbp-gold-b::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 7px; z-index: 3; pointer-events: none;
+  background: repeating-linear-gradient(to bottom, var(--yellaow) 0 1.5px, transparent 1.5px 4px) top / 100% 1.5px no-repeat, repeating-linear-gradient(to bottom, var(--yellaow) 0 1.5px, transparent 1.5px 4px) bottom / 100% 1.5px no-repeat; }
+@media (min-width: 1100px) {
+  .tbp-page .tbp-divers__stripes { background-image: repeating-linear-gradient(90deg, var(--abyss) 0 9.5px, var(--bg-page) 9.5px 19px); }
+  .tbp-page .tbp-cabins { height: calc(712px * var(--z)); }
+  .tbp-page .tbp-cabins > .tbp-stage { height: 712px; }
+  .tbp-page .tbp-cabins__grid article { top: 200px; }
+  .tbp-page .tbp-cabins__link { top: 624px; }
+  .tbp-page .tbp-life { height: calc(470px * var(--z)); }
+  .tbp-page .tbp-life > .tbp-stage { height: 470px; }
+  .tbp-page .tbp-life h2 { left: -24px; }
+  .tbp-page .tbp-life__copy p { left: 60px; width: 432px; }
+  .tbp-page .tbp-life__copy .link-arrow { left: 176px; }
+  .tbp-page .tbp-life__visual figure { left: 790px; top: 60px; width: 369px; height: 341px; }
+  .tbp-page .tbp-life__visual .hp-icon { position: absolute; left: 722px; top: 294px; width: 120px; height: auto; bottom: auto; }
+}
+@media (min-width: 1100px) {
+  .tbp-page .tbp-life__copy p { top: 208px; }
+  .tbp-page .tbp-life__copy .link-arrow { top: 308px; }
+}
+
+/* Cabins: amenities as two centered script lines (Canva) */
+.cb-return__script { font-family: var(--font-script); font-weight: 700; color: var(--abyss); text-transform: uppercase; letter-spacing: 0.04em; margin: 0; }
+@media (min-width: 1100px) {
+  .cb-page .cb-return__copy > p.cb-return__script { left: 383px; width: 600px; top: 606px; text-align: center; font-size: 26.5px; line-height: 33px; white-space: nowrap; max-width: none !important; font-family: var(--font-script) !important; color: var(--abyss); }
+  .cb-page .cb-return__copy > p.cb-return__script--2 { top: 645px; }
+}
+@media (min-width: 1100px) {
+  .cb-page .cb-return__icon { display: none; }
+  .cb-page .cb-return__copy > p:not(.cb-return__script) { font-size: 16.5px; line-height: 20px; }
+}
+
+/* =========================================================================
+   Destinations submenu → nested rows: "Regions" and "Itineraries" each open a second centred row
+   just under the first one, with a small corner marker on its left; the yellow underline stays on the
+   parent entry while the pointer is in its row, and on the entry matching the current page.
+   ========================================================================= */
+.nav__dd { display: block; position: static; }
+.nav__dd > a::after { display: block !important; content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 1.5px; background: var(--yellaow); transition: right .25s var(--ease); }
+.nav__dd:hover > a::after, .nav__dd:focus-within > a::after, .nav__dd > a.is-active::after { right: 0; background: var(--yellaow); }
+.nav__subrow {
+  position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2px 26px;
+  width: max-content; max-width: 980px; padding: 14px 0 0 22px;
+  opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .2s var(--ease), visibility 0s linear .2s;
+}
+.nav__dd:hover > .nav__subrow, .nav__dd:focus-within > .nav__subrow { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity .2s var(--ease); }
+.nav__subrow::before { content: ""; position: absolute; left: 0; top: 18px; width: 9px; height: 9px; border-left: 2px solid currentColor; border-bottom: 2px solid currentColor; opacity: .8; }
+.nav__subrow a { font-size: 11px; letter-spacing: 0.04em; }
+body.nav-blue .nav__subrow { color: #4E7495; } body.nav-brown .nav__subrow { color: #8a6a4a; }
+/* second row sits on the same solid header band */
+.site-header:has(.nav__dd:hover)::after, .site-header:has(.nav__dd:focus-within)::after { height: calc(86px * var(--hz, 1)); }
+.nav__subrow a.is-active::after { display: block !important; right: 0; background: var(--yellaow); }
+.nav__subrow a::after { display: block !important; content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 1.5px; background: var(--yellaow); transition: right .25s var(--ease); }
+.nav__subrow a:hover::after { right: 0; }
+.nav__subrow::before { display: none; }
+.nav__subrow a:first-child::before { content: ""; position: absolute; left: -20px; top: 4px; width: 8px; height: 8px; border-left: 2px solid currentColor; border-bottom: 2px solid currentColor; opacity: .8; }
+.nav__dd--itineraries .nav__subrow a:nth-child(6) { margin-right: 100%; }
+.nav__dd--itineraries .nav__subrow { padding-left: 0; }
+.site-header:has(.nav__dd--itineraries:hover)::after, .site-header:has(.nav__dd--itineraries:focus-within)::after { height: calc(112px * var(--hz, 1)); }
+.nav__dd--itineraries .nav__subrow a:nth-child(6) { margin-right: 0; }
+.nav__dd--itineraries .nav__subrow { flex-direction: column; flex-wrap: nowrap; gap: 4px; max-width: none; }
+.nav__subline { display: flex; justify-content: center; gap: 26px; white-space: nowrap; }
+.nav__subrow a:first-child::before { content: none; }
+.nav__subrow > a:first-child::before, .nav__subline:first-child > a:first-child::before { content: ""; }
