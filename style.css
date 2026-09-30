@@ -4537,3 +4537,22 @@ body.nav-blue .nav__dropdown::before { background: #4E7495; }
 .nw-modal__fallback { margin: 0; padding: .6rem 1.25rem; font-family: var(--font-body); font-size: .9rem; border-top: 1px solid rgba(16,35,63,.25); }
 .nw-modal__fallback a { text-decoration: underline; }
 @media (max-width: 1099.98px) { .px-nw .nw-events .px-stage { display: grid; gap: 1.25rem; padding-inline: var(--gutter); } .px-nw .nw-poster { max-width: 260px; } }
+
+/* =========================================================================
+   Horizontal submenu: one row of links, centred under the whole top menu whichever item is hovered,
+   transparent, with a short line on its left. (Dropdown is positioned against .nav, not its <li>.)
+   ========================================================================= */
+.nav { position: relative; }
+.nav__item--dropdown { position: static; }
+.nav__item--dropdown::after { display: none; }
+.nav__dropdown {
+  top: 100%; left: 50%; right: auto; min-width: 0; width: max-content;
+  display: flex; flex-direction: row; align-items: center; gap: 30px;
+  padding: 8px 0 0 18px; background: transparent;
+  transform: translate(-50%, -6px);
+}
+.nav__dropdown::before { top: 8px; bottom: 0; }
+.nav__item--dropdown:hover .nav__dropdown,
+.nav__item--dropdown:focus-within .nav__dropdown { transform: translate(-50%, 0); }
+.nav__dropdown a { padding: 4px 0; white-space: nowrap; }
+.nav__dropdown a:hover { transform: none; }
