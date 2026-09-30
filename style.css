@@ -4507,11 +4507,7 @@ body.nav-blue .nav__dropdown::before { background: #4E7495; }
 .px-page.px-mu .px-stage .mu-testi.p.p { height: auto; overflow: visible; }
 
 
-/* The dropdown menus hang ~250px below the top of the page: start every page's content below them
-   so no title sits behind a submenu link (fixed offset, scaled with the stage zoom). */
-@media (min-width: 1100px) {
-  body:is(.px-page,.hp-home,.tbp-page,.cb-page) main { padding-top: calc(130px * var(--z, 1)); }
-}
+
 
 
 /* Carousel CTA: "sea more", underlined (itinerary + region carousels) */
@@ -4556,3 +4552,15 @@ body.nav-blue .nav__dropdown::before { background: #4E7495; }
 .nav__item--dropdown:focus-within .nav__dropdown { transform: translate(-50%, 0); }
 .nav__dropdown a { padding: 4px 0; white-space: nowrap; }
 .nav__dropdown a:hover { transform: none; }
+
+/* Submenu refinements: no left line, bigger forgiving hover zone, header border/shadow never crosses the links */
+.nav__dropdown::before { display: none; }
+.nav__dropdown { padding: 2px 0 0 0; gap: 34px; }
+.nav__dropdown::after { content: ""; position: absolute; left: -48px; right: -48px; top: -10px; bottom: -36px; }
+.nav__dropdown a { position: relative; z-index: 1; padding: 6px 0; }
+.site-header:has(.nav__item--dropdown:hover), .site-header:has(.nav__item--dropdown:focus-within) { border-bottom-color: transparent; box-shadow: none; }
+
+/* While a submenu is open, the header's own background extends down behind it, so the links sit on a solid band
+   and never straddle the header edge (page content no longer shows through them). */
+.site-header::after { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: calc(40px * var(--hz, 1)); background: inherit; backdrop-filter: inherit; z-index: -1; opacity: 0; pointer-events: none; transition: opacity .2s var(--ease); }
+.site-header:has(.nav__item--dropdown:hover)::after, .site-header:has(.nav__item--dropdown:focus-within)::after { opacity: 1; }
