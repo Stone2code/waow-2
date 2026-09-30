@@ -262,8 +262,55 @@ const ITINERARIES = [
     imageAlt: "A local fisherman paddling a traditional boat near a volcanic coastline in eastern Indonesia.",
     photoCaption: "Spices and Snakes, Sunda Islands",
   },
+  {
+    slug: "sunda-volcanoes-and-villages",
+    name: "Volcanoes and Villages",
+    eyebrow: "Sunda Islands",
+    region: "Sunda Islands",
+    nights: 10,
+    level: "All certified levels",
+    season: "April to May",
+    teaser: "Ten to twelve days out of Maumere and back, entirely inside Alor and Solor.",
+    description: "Most boats treat this archipelago as a stop on the way somewhere, dive four or five sites and carry on. This trip never leaves it.",
+    detailExtra: "Out of Maumere and back, ten to twelve days entirely inside Alor and Solor, long enough to actually know the place instead of sampling it.",
+    image: "alor-island",
+    imageAlt: "A volcanic island seen from the water at Alor.",
+    photoCaption: "Volcanoes and Villages, Sunda Islands",
+  },
+
+  // ---- Banda Sea ----
+  {
+    slug: "banda-spices-and-snakes",
+    name: "Spices and Snakes",
+    eyebrow: "Banda Sea",
+    region: "Banda Sea",
+    nights: 8,
+    level: "Advanced divers",
+    season: "TODO: season",
+    teaser: "TODO: one-line teaser for Spices and Snakes (Banda Sea).",
+    description: "TODO: full description for Spices and Snakes, a Banda Sea route.",
+    detailExtra: "TODO: extra detail paragraph for Spices and Snakes (Banda Sea).",
+    image: "alor-island",
+    imageAlt: "A local fisherman paddling a traditional boat near a volcanic coastline in eastern Indonesia.",
+    photoCaption: "Spices and Snakes, Banda Sea",
+  },
 ];
 
 if (typeof module !== "undefined" && module.exports) {
   module.exports = ITINERARIES;
 }
+
+/**
+ * Routes that exist in two regions (same route, one page). Each region keeps its own entry (roster,
+ * carousel, map panel, route image) but every link goes to the canonical page — always build links
+ * with itineraryHref(slug), never by hand.
+ */
+const ITINERARY_CANONICAL = {
+  "moluccas-corals-and-cloves": "papua-corals-and-cloves",
+  "moluccas-spices-and-snakes": "sunda-spices-and-snakes",
+  "banda-spices-and-snakes": "sunda-spices-and-snakes",
+  "papua-forts-and-forests": "moluccas-forts-and-forests",
+  "sulawesi-nirvana-and-lava": "sunda-nirvana-and-lava",
+  "sulawesi-sultans-and-tarsiers": "moluccas-sultans-and-tarsiers",
+};
+function itineraryHref(slug) { return "itinerary.html?slug=" + encodeURIComponent(ITINERARY_CANONICAL[slug] || slug); }

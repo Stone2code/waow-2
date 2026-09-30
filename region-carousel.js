@@ -26,7 +26,7 @@
         if (list.length < 4 && i >= list.length) t = null;
         var img = card.querySelector("img"), title = card.querySelector(".rc-card__title"), route = card.querySelector(".rc-card__route");
         if (t) {
-          card.setAttribute("href", "itinerary.html?slug=" + t.slug);
+          card.setAttribute("href", itineraryHref(t.slug));
           img.src = "images/" + t.image + ".jpg"; img.alt = t.imageAlt || "";
           title.textContent = t.name; route.textContent = t.nights + " nights · " + t.region;
           card.classList.remove("is-placeholder");

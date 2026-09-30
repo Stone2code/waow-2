@@ -37,11 +37,20 @@
 
   function esc(t) { return String(t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
 
-  function rowMarkup(trip) {
+  // Built pages supply their own subtitle ("Kaimana → Sorong · 12 days"); others fall back to nights · region.
+  // A route shared by two regions reads from the region you opened: in the arrival region it is reversed
+  // ("Sorong → Ternate" under Papua, "Ternate → Sorong" under Moluccas).
+  function rowMeta(trip, regionId) {
+    var page = typeof ITINERARY_V2 !== "undefined" && ITINERARY_V2[typeof ITINERARY_CANONICAL !== "undefined" && ITINERARY_CANONICAL[trip.slug] || trip.slug];
+    if (page && page.route && regionId === page.route.toRegion) return esc(page.route.to + " → " + page.route.from + " · " + page.route.days);
+    return page && page.subtitle ? esc(page.subtitle) : esc(trip.nights) + " nights &middot; " + esc(String(trip.region).split(",")[0]);
+  }
+
+  function rowMarkup(trip, regionId) {
     var hasRoute = Object.prototype.hasOwnProperty.call(routes, trip.slug);
-    return '<li><a href="itinerary.html?slug=' + encodeURIComponent(trip.slug) + '"' + (hasRoute ? ' data-slug="' + esc(trip.slug) + '"' : "") + '>' +
+    return '<li><a href="' + itineraryHref(trip.slug) + '"' + (hasRoute ? ' data-slug="' + esc(trip.slug) + '"' : "") + '>' +
       '<span class="dst-map__row-name">' + esc(trip.name) + "</span>" +
-      '<span class="dst-map__row-meta">' + esc(trip.nights) + " nights &middot; " + esc(String(trip.region).split(",")[0]) + "</span>" +
+      '<span class="dst-map__row-meta">' + rowMeta(trip, regionId) + "</span>" +
       '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
       "</a></li>";
   }
@@ -65,6 +74,7 @@
     var region = REGIONS.filter(function (r) { return r.id === id; })[0];
     if (!region) return;
     current = id;
+    panel.classList.toggle("is-right", id === "sulawesi" || id === "sunda-islands");
     paint(null, "is-peek");
     paint(id, "is-on");
     labels.forEach(function (l) {
@@ -74,7 +84,7 @@
     });
     var trips = region.slugs.map(function (sl) { return ITINERARIES.filter(function (t) { return t.slug === sl; })[0]; }).filter(Boolean);
     title.textContent = region.name;
-    list.innerHTML = trips.map(rowMarkup).join("");
+    list.innerHTML = trips.map(function (t) { return rowMarkup(t, id); }).join("");
     // Other region overview pages are unlinked for now (real copy not
     // written yet) — hide the CTA instead of pointing it at an unfinished
     // page. Banda Sea has real content, so it keeps its link.

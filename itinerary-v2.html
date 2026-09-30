@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Itinerary — Waow Charters</title>
+<meta name="description" content="The WAOW story: from WAOW 1 and the Deville family to a new boat, a team with a history and a dream that becomes a boat again.">
+
+<!-- TODO: replace with real favicon files -->
+<link rel="icon" href="data:,">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--
+  Brand fonts (Lemon Milk, Have Heart Two) are licensed, not on Google Fonts.
+  TODO: once licensed font files are available, replace the @font-face-free
+  stack below with local @font-face declarations for Lemon Milk and Have
+  Heart Two. Outfit and Caveat are close-in-spirit stand-ins used for V1.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<script src="home-stage.js" data-stage="1366"></script>
+</head>
+<body class="px-page px-hdA px-it2">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+<symbol id="icon-helm" viewBox="2 28 245 230"><rect x="39.4" y="57.9" width="170.2" height="170.2" rx="10.2" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.38" stroke-dasharray="4.8 3.4"/><circle cx="106.8" cy="120.0" r="9.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.38"/><path d="M80.2,171.3 L121.0,134.1 L142.2,155.4 L144.0,125.3 L168.8,171.3" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.38" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-starfish" viewBox="15 17 237 240"><rect x="45.8" y="49.3" width="175.4" height="175.4" rx="10.5" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.46" stroke-dasharray="4.9 3.5"/><circle cx="115.3" cy="113.3" r="10.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.46"/><path d="M87.9,166.2 L129.9,127.9 L151.7,149.8 L153.6,118.8 L179.1,166.2" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.46" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+</svg>
+
+<!-- Itinerary template, 1366px canvas (itinerary-v2.js). Reference layout for all route pages. -->
+<header class="site-header" id="site-header">
+  <div class="container site-header__row">
+    <a class="logo" href="index.html" aria-label="Waow Charters, home">
+      <picture>
+        <source srcset="images/logo-waow2.webp" type="image/webp">
+        <img src="images/logo-waow2.png" alt="Waow 2" width="180" height="41">
+      </picture>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+  <ul class="nav__list">
+
+    <!-- THE BOAT -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="the-boat.html">The Boat</a>
+
+      <div class="nav__dropdown">
+        <a href="the-boat.html#decks">Decks</a>
+        <a href="cabins.html">Cabins</a>
+        <a href="the-boat.html#outdoor">Indoor &amp; Outdoor</a>
+        <a href="safety.html">Safety</a>
+      </div>
+    </li>
+
+    <!-- DESTINATIONS -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="destinations.html" class="is-active" aria-current="page">Destinations</a>
+
+      <div class="nav__dropdown">
+        <a href="destinations.html#map">Map</a>
+        <a href="destinations.html#regions">Regions</a>
+      </div>
+    </li>
+
+    <!-- EXPERIENCE -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="experience.html">Experience</a>
+
+      <div class="nav__dropdown">
+        <a href="dive-deep.html">Diving</a>
+        <a href="experience.html#gastronomy">Gastronomy</a>
+        <a href="experience.html#hotel_service">Hotel Service</a>
+        <a href="experience.html#included">What&rsquo;s Included</a>
+      </div>
+    </li>
+
+    <!-- ABOUT US -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="about-us.html">About Us</a>
+
+      <div class="nav__dropdown">
+        <a href="about-us.html#waow1">Waow 1</a>
+        <a href="museum.html">WAOW 1 Museum</a>
+        <a href="about-us.html#waow2">Waow 2</a>
+	      <a href="about-us.html#team">Team</a>
+	      <a href="giving-back.html">Engagement</a>
+      </div>
+    </li>
+
+    <!-- NEWS -->
+    <li>
+      <a href="news.html">News</a>
+    </li>
+
+  </ul>
+</nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--outline" href="booking.html">Rates &amp; Dates</a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <ul>
+      <li><a href="the-boat.html">The Boat</a></li>
+      <li><a href="destinations.html" class="is-active" aria-current="page">Destinations</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a class="btn btn--outline" href="booking.html">Rates &amp; Dates</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main"></main>
+<section class="hp-newsletter">
+    <div class="container hp-newsletter__row">
+      <p>Stay informed &ndash;<br>sign up to our newsletter for the latest offers and destinations</p>
+      <form class="hp-newsletter__form" id="newsletter-form">
+        <label class="sr-only" for="newsletter-email">Email address</label>
+        <input type="email" id="newsletter-email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="sr-only" id="newsletter-note" role="status"></p>
+    </div>
+</section>
+
+<!-- ================= FOOTER (shared with other pages) ================= -->
+<footer class="hp-footer">
+  <div class="container hp-footer__grid">
+    <div>
+      <h3>Contact Us</h3>
+      <a href="mailto:info@waow.ch">info@waow.ch</a>
+    </div>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="the-boat.html">The Boat</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="news.html">Events</a></li>
+        <li><a href="giving-back.html">Engagement</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="hp-divider" aria-hidden="true"></div>
+
+  <div class="container hp-footer__legal">
+    <p>Copyright <span id="year"></span><br>WAOW Charters</p>
+    <div class="hp-footer__policies">
+      <label class="sr-only" for="hp-lang-select">Language</label>
+      <!-- TODO: wire up real localization when a second language is ready -->
+      <select class="hp-footer__lang-select" id="hp-lang-select" disabled>
+        <option>English &or;</option>
+        <option>Fran&ccedil;ais</option>
+      </select>
+      <!-- TODO: link to real legal pages -->
+      <a href="/cookies">Cookies policy</a>
+      <a href="/privacy">Privacy policy</a>
+      <a href="/terms">Terms and conditions</a>
+    </div>
+    <div class="hp-footer__social">
+      <a href="#" aria-label="Waow Charters on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="Waow Charters on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.6 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.5-.2-2.5 0-4.2 1.5-4.2 4.3v2.6H7.5v3.3h2.8V22z" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="Waow Charters on YouTube"><svg viewBox="0 0 94 26" aria-hidden="true"><rect x="0" y="1" width="34" height="24" rx="7" fill="currentColor"/><path d="M14 7.5l9 5.5-9 5.5z" fill="#F4EFE4"/><text x="38" y="21" font-family="'Arial Narrow', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="23" textLength="56" lengthAdjust="spacingAndGlyphs" fill="currentColor">YouTube</text></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script src="itineraries-data.js"></script>
+<script src="itinerary-v2-data.js"></script>
+<script src="itinerary-v2.js"></script>
+</body>
+</html>

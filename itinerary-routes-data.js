@@ -27,4 +27,6 @@ const ITINERARY_ROUTES = {
   "sunda-west-meets-east": "images/route-sunda-west-meets-east.webp",
   "sunda-nirvana-and-lava": "images/route-sunda-nirvana-and-lava.webp",
   "sunda-spices-and-snakes": "images/route-sunda-spices-and-snakes.webp",
+  "banda-spices-and-snakes": "images/route-banda-spices-and-snakes.webp",
+  "sunda-volcanoes-and-villages": "images/route-sunda-volcanoes-and-villages.webp",
 };

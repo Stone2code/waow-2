@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The WAOW 1 Museum — Waow Charters</title>
+<meta name="description" content="The WAOW 1 Museum: the story of the first WAOW, from a dream drawn on paper to seven years at sea.">
+
+<!-- TODO: replace with real favicon files -->
+<link rel="icon" href="data:,">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--
+  Brand fonts (Lemon Milk, Have Heart Two) are licensed, not on Google Fonts.
+  TODO: once licensed font files are available, replace the @font-face-free
+  stack below with local @font-face declarations for Lemon Milk and Have
+  Heart Two. Outfit and Caveat are close-in-spirit stand-ins used for V1.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<script src="home-stage.js" data-stage="1366"></script>
+</head>
+<body class="nav-blue px-page px-hdA px-it2 px-mu">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+<symbol id="icon-helm" viewBox="2 28 245 230"><rect x="39.4" y="57.9" width="170.2" height="170.2" rx="10.2" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.38" stroke-dasharray="4.8 3.4"/><circle cx="106.8" cy="120.0" r="9.7" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.38"/><path d="M80.2,171.3 L121.0,134.1 L142.2,155.4 L144.0,125.3 L168.8,171.3" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.38" stroke-linejoin="round" stroke-linecap="round"/></symbol><symbol id="icon-starfish" viewBox="15 17 237 240"><rect x="45.8" y="49.3" width="175.4" height="175.4" rx="10.5" fill="#AFC2D2" fill-opacity="0.16" stroke="#8A6A4A" stroke-opacity="0.55" stroke-width="2.46" stroke-dasharray="4.9 3.5"/><circle cx="115.3" cy="113.3" r="10.0" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.46"/><path d="M87.9,166.2 L129.9,127.9 L151.7,149.8 L153.6,118.8 L179.1,166.2" fill="none" stroke="#8A6A4A" stroke-opacity="0.6" stroke-width="2.46" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+</svg>
+
+<!-- The WAOW 1 Museum, 1366px canvas (px-mu). Photos are crops of the design export — swap in the originals. -->
+<header class="site-header" id="site-header">
+  <div class="container site-header__row">
+    <a class="logo" href="index.html" aria-label="Waow Charters, home">
+      <picture>
+        <source srcset="images/logo-waow2.webp" type="image/webp">
+        <img src="images/logo-waow2.png" alt="Waow 2" width="180" height="41">
+      </picture>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+  <ul class="nav__list">
+
+    <!-- THE BOAT -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="the-boat.html">The Boat</a>
+
+      <div class="nav__dropdown">
+        <a href="the-boat.html#decks">Decks</a>
+        <a href="cabins.html">Cabins</a>
+        <a href="the-boat.html#outdoor">Indoor &amp; Outdoor</a>
+        <a href="safety.html">Safety</a>
+      </div>
+    </li>
+
+    <!-- DESTINATIONS -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="destinations.html">Destinations</a>
+
+      <div class="nav__dropdown">
+        <a href="destinations.html#map">Map</a>
+        <a href="destinations.html#regions">Regions</a>
+      </div>
+    </li>
+
+    <!-- EXPERIENCE -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="experience.html">Experience</a>
+
+      <div class="nav__dropdown">
+        <a href="dive-deep.html">Diving</a>
+        <a href="experience.html#gastronomy">Gastronomy</a>
+        <a href="experience.html#hotel_service">Hotel Service</a>
+        <a href="experience.html#included">What&rsquo;s Included</a>
+      </div>
+    </li>
+
+    <!-- ABOUT US -->
+    <li class="nav__item nav__item--dropdown">
+      <a href="about-us.html" class="is-active" aria-current="page">About Us</a>
+
+      <div class="nav__dropdown">
+        <a href="about-us.html#waow1">Waow 1</a>
+        <a href="museum.html">WAOW 1 Museum</a>
+        <a href="about-us.html#waow2">Waow 2</a>
+	      <a href="about-us.html#team">Team</a>
+	      <a href="giving-back.html">Engagement</a>
+      </div>
+    </li>
+
+    <!-- NEWS -->
+    <li>
+      <a href="news.html">News</a>
+    </li>
+
+  </ul>
+</nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--outline" href="booking.html">Rates &amp; Dates</a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <ul>
+      <li><a href="the-boat.html">The Boat</a></li>
+      <li><a href="destinations.html">Destinations</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="about-us.html" class="is-active" aria-current="page">About Us</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a class="btn btn--outline" href="booking.html">Rates &amp; Dates</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+<section class="mu-cream px-gold-b px-sec" style="--sh:1045px;"><div class="container px-stage"><h1 class="mu-title p" style="--x:0px;--y:100px;--w:1366px;--fs:54px;--lh:64px;--ta:center;">The WAOW 1 Museum</h1><figure class="mu-photo p " style="--x:385px;--y:236px;--w:603px;--h:433px;"><img src="images/mu-1.webp" alt="A watercolour drawing of WAOW, a three-masted wooden schooner, in a gilded frame." loading="lazy"></figure></div></section>
+<section class="mu-cream px-sec" style="--sh:413px;"><div class="container px-stage"><p class="mu-tag px-annot p" style="--x:0px;--y:110px;--w:1366px;--fs:26px;--lh:32px;--ta:center;">Before WAOW 2, there was WAOW.</p><p class="mu-p p" style="--x:383px;--y:200px;--w:600px;--fs:18px;--lh:24px;--ta:center;">A dream drawn on paper.<br>Four years in the making.<br>Seven years exploring Indonesia.<br>This is where the WAOW story began.<br>2012 — 2018</p></div></section>
+<section class="mu-navy px-sec" style="--sh:770px;"><div class="container px-stage"><h2 class="mu-h p reveal mu-h--light" style="--x:116px;--y:190px;--w:560px;--fs:50px;--lh:64px;">It started<br>with a dream</h2><p class="mu-p p reveal mu-p--light" style="--x:116px;--y:400px;--w:450px;--fs:17.5px;--lh:24px;">WAOW began in the imagination of Michel Deville.<br>His idea was to create a traditional Indonesian sailing boat built around one thing he deeply loved: diving.<br>Michel drew the first plans and surrounded himself with people who could turn that vision into something real.<br>What started on paper would become a 60-metre wooden sailing boat built to explore Indonesia.</p><figure class="mu-photo p " style="--x:778px;--y:126px;--w:410px;--h:545px;"><img src="images/mu-2.webp" alt="Michel Deville and a boatbuilder sitting on the stairs of WAOW." loading="lazy"></figure><img class="mu-anchor it2-nb p" src="images/mu-anchor.png" alt="" aria-hidden="true" style="--x:1165px;--y:505px;--w:90px;--h:135px;"></div></section>
+<section class="mu-cream px-sec" style="--sh:775px;"><div class="container px-stage"><h2 class="mu-h p reveal " style="--x:135px;--y:152px;--w:560px;--fs:50px;--lh:66px;">Four years<br>in the making</h2><p class="mu-p p reveal " style="--x:135px;--y:345px;--w:420px;--fs:17.5px;--lh:24px;">WAOW was built over four years by Haji Wahab and his team of Indonesian shipwrights, using generations of traditional boatbuilding knowledge.<br>Inspired by the Indonesian phinisi and combined with the lines of a schooner, she brought together traditional craftsmanship and a boat designed specifically for long journeys and diving.<br>60 metres · 3 masts · 900 m² of sails · 850+ tonnes</p><figure class="mu-photo p " style="--x:715px;--y:82px;--w:529px;--h:422px;"><img src="images/mu-3.webp" alt="WAOW's hull under construction on the shore." loading="lazy"></figure><figure class="mu-photo p " style="--x:608px;--y:284px;--w:212px;--h:318px;"><img src="images/mu-4.webp" alt="A blessing ceremony with offerings on the deck." loading="lazy"></figure></div></section>
+<section class="mu-navy px-sec" style="--sh:759px;"><div class="container px-stage"><figure class="mu-photo p " style="--x:0px;--y:0px;--w:404px;--h:493px;"><img src="images/mu-5.webp" alt="A crew member's face reflected in a window, with the rigging behind." loading="lazy"></figure><h2 class="mu-h p reveal mu-h--light" style="--x:560px;--y:190px;--w:250px;--fs:36px;--lh:44px;--ta:center;">Why “WAOW”?</h2><p class="mu-p p reveal mu-p--light" style="--x:510px;--y:300px;--w:360px;--fs:17.5px;--lh:24px;--ta:center;">During the design and construction, one reaction kept coming back whenever people discovered the project:<br>“WAOW.”<br>The name stayed.<br>It would later take on another meaning:<br><br>WATER ADVENTURE OCEAN WIDE<br><br>A name that turned out to fit rather well.</p><figure class="mu-photo p " style="--x:1021px;--y:280px;--w:345px;--h:479px;"><img src="images/mu-6.webp" alt="Crew and guests in WAOW black rash guards on deck." loading="lazy"></figure></div></section>
+<section class="mu-cream px-sec" style="--sh:674px;"><div class="container px-stage"><h2 class="mu-h p reveal " style="--x:176px;--y:180px;--w:620px;--fs:40px;--lh:50px;">Seven years at sea</h2><p class="mu-p p reveal " style="--x:176px;--y:262px;--w:470px;--fs:17.5px;--lh:24px;">INDONESIA, ONE JOURNEY AT A TIME.<br>In April 2012, WAOW welcomed her first guests.<br>Over the years, she sailed through some of Indonesia's most remote waters — from Komodo and Raja Ampat to the Banda Sea, Forgotten Islands, Triton Bay, Halmahera, Cenderawasih and beyond.<br>Twenty guests at a time.<br>Long days underwater.<br>Thousands of dives.<br>Countless miles at sea.<br>And a community that grew with every journey.</p><figure class="mu-photo p " style="--x:775px;--y:157px;--w:411px;--h:323px;"><img src="images/mu-7.webp" alt="WAOW anchored below a smoking volcano." loading="lazy"></figure></div></section>
+<section class="mu-navy px-sec" style="--sh:785px;"><div class="container px-stage"><p class="mu-date px-annot p" style="--x:116px;--y:150px;--w:400px;--fs:36px;--lh:44px;">01.02.2018</p><h2 class="mu-h p reveal mu-h--light" style="--x:116px;--y:250px;--w:560px;--fs:50px;--lh:66px;">The day WAOW<br>was lost</h2><p class="mu-p p reveal mu-p--light" style="--x:116px;--y:430px;--w:460px;--fs:17.5px;--lh:24px;">During the night of January 31 to February 1, 2018, WAOW caught fire while in the port of Biak, Indonesia.<br>She was lost to the sea.<br>Everyone on board made it to safety.<br>After years of construction, thousands of miles and seven years of journeys across Indonesia, the first chapter of WAOW came to an end.<br>But not the story.</p><figure class="mu-photo p " style="--x:778px;--y:119px;--w:410px;--h:549px;"><img src="images/mu-8.webp" alt="WAOW on fire at night in the port of Biak." loading="lazy"></figure></div></section>
+<section class="mu-navy px-sec" style="--sh:749px;"><div class="container px-stage"><figure class="mu-photo p " style="--x:0px;--y:0px;--w:640px;--h:749px;"><img src="images/mu-9.webp" alt="A phinisi hull on the slipway at the shipyard." loading="lazy"></figure><h2 class="mu-h p reveal mu-h--light" style="--x:760px;--y:120px;--w:490px;--fs:40px;--lh:48px;--ta:center;">The story wasn't</h2><p class="mu-p p reveal mu-p--light" style="--x:790px;--y:255px;--w:430px;--fs:17.5px;--lh:24px;--ta:center;">WAOW lived on in the people who built her, worked aboard her, travelled on her and grew up with her.<br>Years later, that same spirit would return to the shipyard.<br>Not to rebuild WAOW I.<br>To begin the next chapter.</p><p class="mu-end px-annot p reveal" style="--x:760px;--y:520px;--w:490px;--fs:38px;--lh:46px;--ta:center;">WAOW 2.</p></div></section>
+<section class="mu-cream px-sec" style="--sh:382px;"><div class="container px-stage"><a class="mu-doc p" href="https://www.rts.ch/play/tv/passe-moi-les-jumelles/video/waow-les-abysses-dune-legende-?urn=urn:rts:video:9866543" target="_blank" rel="noopener" style="--x:300px;--y:150px;--w:420px;--fs:18px;--lh:24px;--ta:left;">regarder le documentaire sur le premier WAOW.</a><figure class="mu-photo p " style="--x:782px;--y:32px;--w:378px;--h:256px;"><img src="images/mu-10.webp" alt="WAOW anchored in front of green hills." loading="lazy"></figure></div></section>
+<section class="mu-cream px-sec" style="--sh:573px;"><div class="container px-stage"><h2 class="mu-h p" style="--x:0px;--y:100px;--w:1366px;--fs:40px;--lh:48px;--ta:center;">Stories</h2><p class="mu-p p" style="--x:283px;--y:186px;--w:800px;--fs:17.5px;--lh:24px;--ta:center;">For years, WAOW took divers across Indonesia, from Raja Ampat to Komodo, the Banda Sea and beyond.<br>The boat may now be part of the story, but the memories remain.<br><br>A few words from the people who experienced it for themselves.</p><figure class="mu-testi p" style="--x:151px;--y:281px;--w:380px;"><img src="images/testi-1-fr.webp" loading="lazy" alt="Carte postale d'Anoush, France, Raja Ampat 2018 : « Tout sur ce bateau est WAOW ! Les installations de plongée à bord sont excellentes ! L'équipage est fantastique ! »"></figure><figure class="mu-testi p" style="--x:493px;--y:281px;--w:380px;"><img src="images/testi-2-fr.webp" loading="lazy" alt="Carte postale de Christophe, Suisse, Komodo 2017 : « Mes fils et moi avions fait la croisière magnifique sur Komodo - Rinça : superbe voyage. À bientôt pour un autre voyage sur WAOW : Ambon - Triton par exemple ? »"></figure><figure class="mu-testi p" style="--x:835px;--y:281px;--w:380px;"><img src="images/testi-3-fr.webp" loading="lazy" alt="Carte postale de Claudia, Suisse, Halmahera 2014 : « C'est le plus beau bateau, avec le meilleur équipage et la meilleure direction, sur lequel j'aie jamais navigué. »"></figure></div></section>
+</main>
+<section class="hp-newsletter">
+    <div class="container hp-newsletter__row">
+      <p>Stay informed &ndash;<br>sign up to our newsletter for the latest offers and destinations</p>
+      <form class="hp-newsletter__form" id="newsletter-form">
+        <label class="sr-only" for="newsletter-email">Email address</label>
+        <input type="email" id="newsletter-email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="sr-only" id="newsletter-note" role="status"></p>
+    </div>
+</section>
+
+<!-- ================= FOOTER (shared with other pages) ================= -->
+<footer class="hp-footer">
+  <div class="container hp-footer__grid">
+    <div>
+      <h3>Contact Us</h3>
+      <a href="mailto:info@waow.ch">info@waow.ch</a>
+    </div>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="the-boat.html">The Boat</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="news.html">Events</a></li>
+        <li><a href="giving-back.html">Engagement</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="hp-divider" aria-hidden="true"></div>
+
+  <div class="container hp-footer__legal">
+    <p>Copyright <span id="year"></span><br>WAOW Charters</p>
+    <div class="hp-footer__policies">
+      <label class="sr-only" for="hp-lang-select">Language</label>
+      <!-- TODO: wire up real localization when a second language is ready -->
+      <select class="hp-footer__lang-select" id="hp-lang-select" disabled>
+        <option>English &or;</option>
+        <option>Fran&ccedil;ais</option>
+      </select>
+      <!-- TODO: link to real legal pages -->
+      <a href="/cookies">Cookies policy</a>
+      <a href="/privacy">Privacy policy</a>
+      <a href="/terms">Terms and conditions</a>
+    </div>
+    <div class="hp-footer__social">
+      <a href="#" aria-label="Waow Charters on Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="Waow Charters on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.6 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.5-.2-2.5 0-4.2 1.5-4.2 4.3v2.6H7.5v3.3h2.8V22z" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="Waow Charters on YouTube"><svg viewBox="0 0 94 26" aria-hidden="true"><rect x="0" y="1" width="34" height="24" rx="7" fill="currentColor"/><path d="M14 7.5l9 5.5-9 5.5z" fill="#F4EFE4"/><text x="38" y="21" font-family="'Arial Narrow', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="23" textLength="56" lengthAdjust="spacingAndGlyphs" fill="currentColor">YouTube</text></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

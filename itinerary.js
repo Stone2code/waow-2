@@ -11,6 +11,10 @@
   if (!main || typeof ITINERARIES === "undefined") return;
 
   var slug = new URLSearchParams(window.location.search).get("slug") || "sunda-east-meets-west";
+  // Duplicate-region routes (e.g. moluccas-corals-and-cloves) share one page.
+  if (typeof ITINERARY_CANONICAL !== "undefined" && ITINERARY_CANONICAL[slug]) { window.location.replace(itineraryHref(slug)); return; }
+  // Routes already rebuilt on the 1366px template live in itinerary-v2.html.
+  if (["sunda-spices-and-snakes", "sunda-volcanoes-and-villages", "papua-corals-and-cloves", "papua-tale-of-two-papuas", "moluccas-sultans-and-tarsiers", "sulawesi-sponges-and-stilts", "moluccas-forts-and-forests", "sunda-nirvana-and-lava", "papua-four-kings", "papua-southern-king", "sunda-east-meets-west", "sunda-west-meets-east"].indexOf(slug) > -1) { window.location.replace("itinerary-v2.html?slug=" + encodeURIComponent(slug)); return; }
   var trip = ITINERARIES.filter(function (t) { return t.slug === slug; })[0];
   if (!trip) {
     main.innerHTML = '<section class="it-missing"><div class="container"><h1>We couldn’t find that route.</h1><p>It may have been renamed or retired. <a class="link-arrow" href="itineraries.html">See all itineraries</a></p></div></section>';

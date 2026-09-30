@@ -35,7 +35,7 @@
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5L8 12l7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
               Back
             </button>
-            <a class="itin-card__back-link" href="itinerary.html?slug=${trip.slug}" aria-label="Open the full route for ${trip.name}">
+            <a class="itin-card__back-link" href="${itineraryHref(trip.slug)}" aria-label="Open the full route for ${trip.name}">
               <span class="itin-card__eyebrow">${trip.eyebrow}</span>
               <span class="itin-card__name">${trip.name}</span>
               <span class="itin-card__teaser">${trip.teaser}</span>
