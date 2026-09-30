@@ -4567,3 +4567,6 @@ body.nav-blue .nav__dropdown::before { background: #4E7495; }
 
 /* Keep the top-menu underline (yellow) on the parent item while the pointer is inside its submenu */
 .nav__item--dropdown:hover > a::after, .nav__item--dropdown:focus-within > a::after { right: 0; }
+
+/* Newsletter button: label always centred in the box, whichever page template it sits in */
+.hp-newsletter__form button { display: flex; align-items: center; justify-content: center; line-height: 1; padding-block: 0; }

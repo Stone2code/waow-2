@@ -313,4 +313,4 @@ const ITINERARY_CANONICAL = {
   "sulawesi-nirvana-and-lava": "sunda-nirvana-and-lava",
   "sulawesi-sultans-and-tarsiers": "moluccas-sultans-and-tarsiers",
 };
-function itineraryHref(slug) { return "itinerary.html?slug=" + encodeURIComponent(ITINERARY_CANONICAL[slug] || slug); }
+function itineraryHref(slug) { return "itinerary-v2.html?slug=" + encodeURIComponent(ITINERARY_CANONICAL[slug] || slug); }
