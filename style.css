@@ -4564,3 +4564,6 @@ body.nav-blue .nav__dropdown::before { background: #4E7495; }
    and never straddle the header edge (page content no longer shows through them). */
 .site-header::after { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: calc(40px * var(--hz, 1)); background: inherit; backdrop-filter: inherit; z-index: -1; opacity: 0; pointer-events: none; transition: opacity .2s var(--ease); }
 .site-header:has(.nav__item--dropdown:hover)::after, .site-header:has(.nav__item--dropdown:focus-within)::after { opacity: 1; }
+
+/* Keep the top-menu underline (yellow) on the parent item while the pointer is inside its submenu */
+.nav__item--dropdown:hover > a::after, .nav__item--dropdown:focus-within > a::after { right: 0; }
