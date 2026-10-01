@@ -4867,3 +4867,12 @@ body.nav-blue .nav__subrow { color: #4E7495; } body.nav-brown .nav__subrow { col
   .px-mu .mu-frame { overflow: visible; }
   .px-mu .mu-frame img { object-fit: contain; }
 }
+
+/* News vs Canva: first card cream, 17.5px body, bigger "sea more". */
+@media (min-width: 1100px) {
+  .px-nw .nw-card h2 { font-size: 24.4px; height: 86px; }
+  .px-nw .nw-card::after { top: 86px; }
+  .px-nw .nw-card__body p { top: 113px; font-size: 17.5px; line-height: 24.2px; }
+  .px-nw .nw-card__body .link-arrow { left: 996px; top: 160px; font-size: 17.4px; }
+}
+@media (min-width: 1100px) { .px-nw .nw-card { border-width: 2px; } .px-nw .nw-card::after { border-top-width: 2px; border-bottom-width: 2px; } }
