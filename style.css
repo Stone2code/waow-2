@@ -4473,8 +4473,8 @@ body.nav-blue .nav__dropdown::before { background: #4E7495; }
    measured from the approved design on the shared 1366px canvas.
    ========================================================================= */
 @media (min-width: 1100px) {
-  body:is(.px-page,.hp-home,.tbp-page,.cb-page) .hp-footer__grid, body:is(.px-page,.hp-home,.tbp-page,.cb-page) .hp-footer__legal, body:is(.px-page,.hp-home,.tbp-page,.cb-page) .hp-newsletter__row { width: 1366px; max-width: none; margin-inline: auto; zoom: var(--z); }
-  body:is(.px-page,.hp-home,.tbp-page,.cb-page) .hp-newsletter { height: calc(96px * var(--z)); padding: 0; display: block; border-top: 3px double var(--sea-foam); box-sizing: border-box; }
+  body:is(.px-page,.hp-home,.tbp-page,.cb-page) .hp-footer__grid, body:is(.px-page,.hp-home,.tbp-page,.cb-page) .hp-footer__legal, body:is(.px-page,.hp-home,.tbp-page,.cb-page) .hp-newsletter__row { width: 1366px; max-width: none; margin-inline: auto; zoom: var(--hz, var(--z)); }
+  body:is(.px-page,.hp-home,.tbp-page,.cb-page) .hp-newsletter { height: calc(96px * var(--hz, var(--z))); padding: 0; display: block; border-top: 3px double var(--sea-foam); box-sizing: border-box; }
   body:is(.px-page,.hp-home,.tbp-page,.cb-page) .hp-newsletter__row { height: 93px; }
   body:is(.px-page,.hp-home,.tbp-page,.cb-page) .hp-newsletter__row > p:first-child { left: 61px; top: 21px; font-size: 19px; line-height: 24px; }
   body:is(.px-page,.hp-home,.tbp-page,.cb-page) .hp-newsletter__form input { left: 734px; top: 21px; width: 314px; height: 49px; }
@@ -4812,3 +4812,36 @@ body.nav-blue .nav__subrow { color: #4E7495; } body.nav-brown .nav__subrow { col
   .px-it2 .it2-log__blk--when p { line-height: 22px; }
   .px-it2 .it2-log__blk--route { margin-top: 26px; }
 }
+
+/* =========================================================================
+   Region pages vs Canva (Banda Sea, shared by the five regions): key-infos sheet in italic serif under
+   script headings, bigger explore posters, white tilted Open Water caption, centred quote card,
+   "other regions" stamps as a 3-up carousel with an arrow.
+   ========================================================================= */
+@media (min-width: 1100px) {
+  .px-rg .rg-key__sheet h3 { font-size: 23.7px; line-height: 26px; margin: 0 0 6px; }
+  .px-rg .rg-key .rg-key__sheet p { font-family: var(--font-body); font-style: italic; font-weight: 400; font-size: 13.6px; line-height: 19.4px; margin: 0 auto 24px; color: var(--abyss); }
+  .px-rg .rgx-track li { flex-basis: 228px; }
+  .px-rg .rgx-card__photo { height: 282px; }
+  .px-rg .rgx-card__more { margin-top: 18px; font-size: 15.5px; }
+  .px-rg p.rg-ow__caption { text-shadow: none; text-align: left; transform: rotate(-5deg); transform-origin: left top; }
+  .px-rg .rg-quote__card p { font-size: 19px; line-height: 27.6px; text-align: center; }
+  .px-rg .rg-others__sub { font-family: var(--font-body); text-transform: uppercase; color: var(--paper); margin: 0; }
+  .px-rg .rg-others__track { overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .px-rg .rg-others__track::-webkit-scrollbar { display: none; }
+  .px-rg .rg-others__track ul { display: flex; gap: 36px; margin: 0; padding: 8px 0; list-style: none; width: max-content; }
+  .px-rg .rg-others__track li { flex: 0 0 300px; scroll-snap-align: start; }
+  .px-rg .rg-others__track .rg-others__card { display: block; }
+  .px-rg .rg-others__track .rg-stamp { position: static; width: 100%; height: auto; aspect-ratio: 297 / 210; }
+  .px-rg .rg-others__track .rg-stamp img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .px-rg .rg-others__arrow { background: none; border: 0; padding: 0; color: var(--sea-foam); cursor: pointer; transition: transform .25s var(--ease), color .25s; }
+  .px-rg .rg-others__arrow:hover { transform: translateX(4px); color: var(--paper); }
+  .px-rg .rg-others__arrow svg { width: 100%; height: 100%; display: block; }
+}
+@media (min-width: 1100px) { .px-rg .rg-key .rg-key__sheet p { max-width: 232px; } }
+@media (min-width: 1100px) {
+  .px-rg .rg-quote__card.p { min-height: 394px; }
+  .px-rg .rg-others__arrow svg path { stroke-width: 2.6; vector-effect: non-scaling-stroke; }
+  .px-rg .rg-others__arrow svg path { stroke-width: 15px; }
+}
+@media (min-width: 1100px) { .px-rg-sulawesi .rg-key .rg-key__sheet p { margin-bottom: 18px; } }

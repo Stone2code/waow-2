@@ -5,8 +5,10 @@
 (function () {
   "use strict";
   var stage = parseInt((document.currentScript && document.currentScript.getAttribute("data-stage")) || "1366", 10);
+  // data-max (optional): the stage may also scale UP until it is this wide (region pages: drawn on 1174, shown at 1366 like every other page).
+  var max = parseInt((document.currentScript && document.currentScript.getAttribute("data-max")) || String(stage), 10);
   function apply() {
-    var z = Math.min(1, window.innerWidth / stage);
+    var z = Math.min(max / stage, window.innerWidth / stage);
     document.documentElement.style.setProperty("--z", String(z));
     // The header is always laid out on its own 1366px-wide reference
     // (see the "header" blocks in style.css), independently of whatever

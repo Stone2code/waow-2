@@ -32,10 +32,10 @@
   }).join("");
 
   root.innerHTML =
-    '<h2 class="rgx-title p" style="' + st(0, 83, 1174, null, 24, 30, "center") + '">' + esc(c.title) + "</h2>" +
-    '<p class="rgx-sub p" style="' + st(0, 145, 1174, null, 19.5, 28, "center") + '">' + esc(c.sub) + "</p>" +
-    '<div class="rgx-track p" id="rgx-track" tabindex="0" role="region" aria-label="' + esc(c.title) + '" style="' + (c.slugs.length < 4 ? st(0, 195, 1174, 340) : st(76, 195, 921, 340)) + '"><ul>' + cards + "</ul></div>" +
-    '<button class="rgx-arrow p" id="rgx-arrow" type="button" aria-label="More itineraries" style="' + st(1030, 277, 68, 92) + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>';
+    '<h2 class="rgx-title p" style="' + st(0, 90, 1174, null, 23.4, 30, "center") + '">' + esc(c.title) + "</h2>" +
+    '<p class="rgx-sub p" style="' + st(0, 150, 1174, null, 19.8, 28, "center") + '">' + esc(c.sub) + "</p>" +
+    '<div class="rgx-track p" id="rgx-track" tabindex="0" role="region" aria-label="' + esc(c.title) + '" style="' + (c.slugs.length < 4 ? st(0, 271, 1174, 360) : st(36, 271, 993, 360)) + '"><ul>' + cards + "</ul></div>" +
+    '<button class="rgx-arrow p" id="rgx-arrow" type="button" aria-label="More itineraries" style="' + st(1050, 365, 63, 98) + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>';
 
   var track = document.getElementById("rgx-track"), arrow = document.getElementById("rgx-arrow"), lis = track.querySelectorAll("li");
   function step() { return lis.length > 1 ? lis[1].offsetLeft - lis[0].offsetLeft : track.clientWidth; }
@@ -49,4 +49,17 @@
     if (e.key === "ArrowLeft") track.scrollBy({ left: -step(), behavior: "smooth" });
   });
   window.addEventListener("resize", sync); sync();
+
+  // "Explore other regions": the four other stamps in a track (three visible), the arrow scrolls one stamp and wraps.
+  var ot = document.getElementById("rgo-track"), oa = document.getElementById("rgo-arrow");
+  if (ot && oa) {
+    var ol = ot.querySelectorAll("li");
+    function ostep() { return ol.length > 1 ? ol[1].offsetLeft - ol[0].offsetLeft : ot.clientWidth; }
+    function osync() { oa.style.visibility = ot.scrollWidth - ot.clientWidth > 4 ? "visible" : "hidden"; }
+    oa.addEventListener("click", function () {
+      var atEnd = ot.scrollLeft + ot.clientWidth >= ot.scrollWidth - 4;
+      ot.scrollTo({ left: atEnd ? 0 : ot.scrollLeft + ostep(), behavior: "smooth" });
+    });
+    window.addEventListener("resize", osync); osync();
+  }
 })();
