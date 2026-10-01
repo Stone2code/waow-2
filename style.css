@@ -4760,3 +4760,25 @@ body.nav-blue .nav__subrow { color: #4E7495; } body.nav-brown .nav__subrow { col
   .px-sf .sf-stripes { width: 208px; }
   .px-sf .sf-h--wide { letter-spacing: 0.08em; }
 }
+
+/* Giving Back vs Canva: Lemon Milk (not script) for "Our Promise" and its item titles, brown; 17.5px copy. */
+@media (min-width: 1100px) {
+  .px-gb .gb-promise__intro h2 { font-family: var(--font-display); font-weight: 500; color: var(--ironwood); }
+  .px-gb .gb-promise__item h3 { font-family: var(--font-display); font-weight: 500; font-size: 18.5px; line-height: 24px; letter-spacing: 0; margin: 0; }
+  .px-gb .gb-promise__item { margin-bottom: 0; }
+  .px-gb .gb-forest__caption, .px-gb .gb-promise__caption { left: var(--x); top: var(--y); bottom: auto; }
+  .px-gb .gb-forest__caption { color: var(--paper); text-shadow: none; transform: rotate(-4deg); transform-origin: left top; }
+  .px-gb .gb-forest__copy h2 { color: var(--paper); }
+  .px-gb .gb-forest__star { color: var(--sea-foam); }
+}
+@media (min-width: 1100px) {
+  .px-gb .gb-promise__item h3 { font-size: 17.4px; }
+  .px-gb .gb-promise__item p { font-size: 17.5px !important; line-height: 24px !important; margin: 0 !important; }
+}
+@media (min-width: 1100px) {
+  .px-gb .gb-closing p.p { font-style: normal; color: var(--abyss); max-width: none; }
+}
+@media (min-width: 1100px) {
+  .px-gb .gb-closing p.p { font-style: normal !important; color: var(--abyss) !important; max-width: none !important; }
+  .px-gb .gb-promise__item p { max-width: none !important; }
+}
