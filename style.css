@@ -4754,3 +4754,9 @@ body.nav-blue .nav__subrow { color: #4E7495; } body.nav-brown .nav__subrow { col
   .px-dd .dd-built__item h3, .px-dd .dd-longer__item h3 { font-size: 16.9px; }
   .px-dd .dd-philosophy__cell h3 { font-size: 32.3px; line-height: 36px; margin: 0; }
 }
+
+/* Safety vs Canva: narrower stripe band, wider tracking on "The way out", body copy at 17.5px. */
+@media (min-width: 1100px) {
+  .px-sf .sf-stripes { width: 208px; }
+  .px-sf .sf-h--wide { letter-spacing: 0.08em; }
+}
