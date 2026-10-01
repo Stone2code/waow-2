@@ -29,7 +29,7 @@
   function sec(cls, top, bottom, inner, extra) {
     return '<section class="' + cls + ' px-sec" style="--sh:' + (bottom - top) + "px;" + (extra || "") + '"><div class="container px-stage">' + inner + "</div></section>";
   }
-  function li(list) { return list.join(" • "); }
+  function li(list) { return list.join("&nbsp;· "); }
 
   var h = "";
 
@@ -39,15 +39,15 @@
   h += sec("it2-hero", T, 810,
     '<figure class="it2-hero__photo p" style="' + st(197, 227, 303, 377, null, null, null, T) + '"><img src="images/it-cover-' + slug + '.webp" alt="' + (X.name || X.card.title) + ' — itinerary poster"></figure>' +
     (X.heroTitle ? '<p class="it2-hero__title px-annot p' + (ht.color === "yellow" ? " is-yellow" : ht.color === "dark" ? " is-dark" : ht.color === "brown" ? " is-brown" : "") + '" style="' + st(ht.x || 290, ht.y || 287, ht.w || 170, null, 27, ht.lh || 33, ht.ta || "right", T) + '">' + X.heroTitle.join("<br>") + "</p>" : "") +
-    '<p class="it2-hero__sub px-annot p" style="' + st(X.subX || 778, X.subY || 226, 326, null, 22, 24, "center", T) + '">' + X.subtitle + "</p>" +
+    '<p class="it2-hero__sub px-annot p" style="' + st(X.subX || 769, X.subY || 228, 326, null, 28.3, 30, "center", T) + '">' + X.subtitle + "</p>" +
     '<img class="it2-hero__map it2-nb p" src="' + X.map + '" alt="' + X.mapAlt + '" style="' + st(mb[0], mb[1], mb[2], mb[3], null, null, null, T) + '">' +
-    '<p class="it2-hero__intro p" style="' + st((X.introBox || [678, 557])[0], X.introY || 532, (X.introBox || [678, 557])[1], null, 17.5, 22.6, "center", T) + '">' + X.intro + "</p>");
+    '<p class="it2-hero__intro p" style="' + st((X.introBox || [678, 557])[0], X.introY || 532, (X.introBox || [678, 557])[1], null, 17.5, 24, "center", T) + '">' + X.intro + "</p>");
 
   // ---- 2. sea + logbook card (810 → 1472) -------------------------------
   T = 810;
   var c = X.card;
   h += sec("it2-sea", T, 1472,
-    '<div class="it2-log p" style="' + st(524, 890, 317, 460, null, null, null, T) + '"><img class="it2-log__bg it2-nb" src="images/carnet-itineraire.webp" alt="">' +
+    '<div class="it2-log p" style="' + st(543, 890, 306, 451, null, null, null, T) + '"><img class="it2-log__bg it2-nb" src="images/carnet-itineraire.webp" alt="">' +
       '<div class="it2-log__text"><h2 class="px-annot">' + c.title + '</h2>' +
       '<p class="it2-log__days px-annot">' + c.days + "<br>" + c.path + "</p>" +
       '<div class="it2-log__blk it2-log__blk--when"><h3 class="px-annot">When</h3><p class="px-annot">' + c.when + "</p></div>" +
@@ -67,18 +67,19 @@
     var GAP = cfg.gap || 300, cursor = top + 102, prev = null, out = [], links = [];
     steps.forEach(function (s, i) {
       var side = s.side || (prev ? (prev.side === "L" ? "R" : "L") : "L");
-      var ph = s.photo || [372, 513], px = side === "L" ? 1233 - ph[0] : 95, py = s.top != null ? s.top : cursor;
+      var ph = s.photo || [372, 513], px = side === "L" ? 1234 - ph[0] : 122, py = s.top != null ? s.top : cursor;
       var lines = s.title ? s.title.split("<br>").length : 0;
       var ty = py + (s.titleDy != null ? s.titleDy : (side === "L" ? 60 : 90));
-      var tlh = s.titleLh || 44.5, sy = ty + tlh * lines + (s.subGap != null ? s.subGap : (lines ? 45.5 : 0));
-      var xy = s.sub ? sy + (s.tGap || 36 * (s.subLines || 1) + 34) : ty + tlh * lines + (s.tGap != null ? s.tGap : 40);
-      var tw = s.textW || 500, tx = side === "L" ? [165, tw] : [1200 - tw, tw];
+      var tlh = s.titleLh || 44.5, sy = ty + tlh * lines + (s.subGap != null ? s.subGap : (lines ? 25 : 0));
+      var slh = (s.subFs || 52) * 1.2, xy = s.sub ? sy + Math.max(s.tGap || 0, slh * (s.subLines || 1) + 32) : ty + tlh * lines + (s.tGap != null ? s.tGap : 40);
+      var tw = s.textW || 500, tx = side === "L" ? [165, tw] : [1240 - tw, tw];
       var nl = Math.ceil(s.text.replace(/<br>/g, " ").length / (tw > 500 ? tw / 8.6 : 58)) + (s.text.split("<br>").length - 1);
-      var bottom = Math.max(py + ph[1], xy + nl * 22.6);
+      var bottom = Math.max(py + ph[1], xy + nl * 24);
       var entry = { side: side, photo: [px, py, ph[0], ph[1]], title: ty, sub: sy, text: xy, tx: tx, bottom: bottom, leave: s.leave, leaveX: s.leaveX };
       if (prev && prev.link) {
         var right = side === "R";  // next title on the right → dot lands right of centre
-        links.push({ dir: right ? "right" : "left", a: [prev.leaveX != null ? prev.leaveX : prev.side === "L" ? 575 : 720, prev.leave != null ? prev.leave : prev.bottom + 12], b: [right ? 875 : 600, s.arrive != null ? s.arrive : py - 10] });
+        var ay = prev.leave != null ? prev.leave : prev.bottom + 12;
+        links.push({ dir: right ? "right" : "left", a: [prev.leaveX != null ? prev.leaveX : prev.side === "L" ? 586 : 728, ay], b: [right ? 895 : 618, s.arrive != null ? s.arrive : Math.max(ay + 150, py - (right ? 50 : 73))] });
       }
       entry.link = s.link !== false; out.push(entry); prev = entry;
       cursor = bottom + (s.gapAfter != null ? s.gapAfter : GAP);
@@ -90,15 +91,15 @@
   function storySection(cls, T, steps, cfg) {
     var LAY, LINKS, end;
     if (cfg.layout) { LAY = cfg.layout; LINKS = cfg.links || []; end = cfg.storyEnd; }
-    else { var auto = autoLayout(steps, T, cfg); LAY = auto.layout; LINKS = auto.links; end = cfg.storyEnd || auto.end + (cfg.storyPad != null ? cfg.storyPad : 290); }
+    else { var auto = autoLayout(steps, T, cfg); LAY = auto.layout; LINKS = auto.links; end = Math.max(cfg.storyEnd || 0, auto.end + (cfg.storyPad != null ? cfg.storyPad : 290)); }
     var html = "";
     steps.slice(0, LAY.length).forEach(function (s, i) {
-      var L = LAY[i], ph = L.photo, ta = s.align || (L.side === "R" ? "right" : "left"), subW = s.subW || L.tx[1], titleW = s.titleW || L.tx[1];
+      var L = LAY[i], ph = L.photo, ta = s.align || (L.side === "R" ? "right" : "left"), subW = s.subW || Math.max(L.tx[1], 640), titleW = s.titleW || Math.max(L.tx[1], 640);
       html += '<div class="it2-step px-flat reveal">' +
         '<figure class="it2-step__photo p" style="' + st(ph[0], ph[1], ph[2], ph[3], null, null, null, T) + '"><img src="' + s.image + '" loading="lazy" alt="' + (s.alt || "") + '"></figure>' +
-        (s.title ? '<h2 class="it2-step__title p" style="' + st(ta === "right" ? L.tx[0] + L.tx[1] - titleW : L.tx[0], L.title, titleW, null, 40, s.titleLh || 44.5, ta, T) + '">' + s.title + "</h2>" : "") +
-        (s.sub ? '<p class="it2-step__sub' + (s.subColor === "blue" ? " is-blue" : "") + ' px-annot p" style="' + st(ta === "right" ? L.tx[0] + L.tx[1] - subW : L.tx[0], L.sub, subW, null, s.subFs || 30, s.subLh || (s.subFs || 30) * 1.2, ta, T) + '">' + s.sub + "</p>" : "") +
-        '<p class="it2-step__text p" style="' + st(L.tx[0], L.text, L.tx[1], null, 17.5, 22.6, ta, T) + '">' + s.text + "</p></div>";
+        (s.title ? '<h2 class="it2-step__title p" style="' + st(ta === "right" ? L.tx[0] + L.tx[1] - titleW : L.tx[0], L.title, titleW, null, 42.6, s.titleLh || 44.5, ta, T) + '">' + s.title + "</h2>" : "") +
+        (s.sub ? '<p class="it2-step__sub' + (s.subColor === "blue" ? " is-blue" : "") + ' px-annot p" style="' + st(ta === "right" ? L.tx[0] + L.tx[1] - subW : L.tx[0], L.sub, subW, null, s.subFs || 52, s.subLh || (s.subFs || 52) * 1.2, ta, T) + '">' + s.sub + "</p>" : "") +
+        '<p class="it2-step__text p" style="' + st(L.tx[0], L.text, L.tx[1], null, 17.5, 24, ta, T) + '">' + s.text + "</p></div>";
     });
     LINKS.forEach(function (l) {
       var a = ART[l.dir], sx = l.a[0], sy = l.a[1], ex = l.b[0], ey = l.b[1];
@@ -117,9 +118,9 @@
   if (X.band) {
     var B = X.band, BH = B.h || 620;
     h += sec("it2-band", 0, BH,
-      '<h2 class="it2-band__title p reveal" style="' + st(0, B.titleY || 120, 1366, null, 40, B.titleLh || 44.5, "center", 0) + '">' + B.title + "</h2>" +
+      '<h2 class="it2-band__title p reveal" style="' + st(0, B.titleY || 120, 1366, null, 42.6, B.titleLh || 44.5, "center", 0) + '">' + B.title + "</h2>" +
       (B.sub ? '<p class="it2-band__sub px-annot p reveal" style="' + st(0, 205, 1366, null, 30, 36, "center", 0) + '">' + B.sub + "</p>" : "") +
-      '<p class="it2-band__text p reveal" style="' + st(683 - (B.textW || 520) / 2, B.textY || 272, B.textW || 520, null, 17.5, 22.6, "center", 0) + '">' + B.text + "</p>");
+      '<p class="it2-band__text p reveal" style="' + st(683 - (B.textW || 520) / 2, B.textY || 272, B.textW || 520, null, 17.5, 24, "center", 0) + '">' + B.text + "</p>");
     bandEnd += BH;
   }
 
@@ -141,13 +142,32 @@
       ? '<li><div class="it2-card is-current" aria-current="page" aria-label="' + nm + ' — you are already here">' + inner + "</div></li>"
       : '<li><a class="it2-card" href="' + itineraryHref(k) + '" aria-label="' + nm + '">' + inner + "</a></li>";
   });
-  h += sec("it2-explore", T, 5933,
-    '<h2 class="it2-explore__title p" style="' + st(0, 5416, 1366, null, 26, 34, "center", T) + '">' + ex.title + "</h2>" +
-    '<p class="it2-explore__sub p" style="' + st(0, 5470, 1366, null, 20, 28, "center", T) + '">' + ex.sub + "</p>" +
-    '<div class="it2-track p" id="it2-track" tabindex="0" role="region" aria-label="Other itineraries" style="' + st(111, 5547, 1042, 345, null, null, null, T) + '"><ul>' + cards + "</ul></div>" +
-    '<button class="it2-arrow p" id="it2-arrow" type="button" aria-label="Next itineraries" style="' + st(1182, 5622, 65, 87, null, null, null, T) + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>');
+  h += sec("it2-explore", T, 5971,
+    '<h2 class="it2-explore__title p" style="' + st(0, 5409, 1366, null, 26.6, 34, "center", T) + '">' + ex.title + "</h2>" +
+    '<p class="it2-explore__sub p" style="' + st(0, 5462, 1366, null, 23, 28, "center", T) + '">' + ex.sub + "</p>" +
+    '<div class="it2-track p" id="it2-track" tabindex="0" role="region" aria-label="Other itineraries" style="' + st(85, 5561, 1076, 350, null, null, null, T) + '"><ul>' + cards + "</ul></div>" +
+    '<button class="it2-arrow p" id="it2-arrow" type="button" aria-label="Next itineraries" style="' + st(1191, 5670, 65, 87, null, null, null, T) + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>');
 
   main.innerHTML = h;
+
+  // Step subtitles are 52px script: a long one is shrunk to fit its line (not below 36px); if it still wraps,
+  // the paragraph under it moves down so they never overlap. Runs on the 1366 stage only.
+  function fitSubs() {
+    if (window.innerWidth < 1100) return;
+    main.querySelectorAll(".it2-step").forEach(function (stp) {
+      var sub = stp.querySelector(".it2-step__sub"), txt = stp.querySelector(".it2-step__text");
+      if (!sub || !txt) return;
+      var fs = parseFloat(sub.style.getPropertyValue("--fs")) || 52, lh = parseFloat(sub.style.getPropertyValue("--lh")) || fs * 1.2;
+      sub.style.whiteSpace = "nowrap";
+      var w = sub.scrollWidth, box = sub.clientWidth;
+      sub.style.whiteSpace = "";
+      if (w > box) { var nf = Math.max(36, fs * box / w - 0.5); sub.style.setProperty("--fs", nf.toFixed(1) + "px"); sub.style.setProperty("--lh", (nf * 1.2).toFixed(1) + "px"); }
+      var gap = txt.offsetTop - (sub.offsetTop + sub.offsetHeight);
+      if (gap < 14) txt.style.setProperty("--y", (parseFloat(txt.style.getPropertyValue("--y")) + 14 - gap).toFixed(1) + "px");
+    });
+  }
+  fitSubs();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitSubs);
 
   // ---- carousel behaviour: arrow scrolls one card (wraps at the end); swipe/drag is native scroll ----
   var track = document.getElementById("it2-track"), arrow = document.getElementById("it2-arrow");

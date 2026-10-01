@@ -5,7 +5,7 @@
  *
  * TODO photos: hero/steps/explore images below are the closest existing site
  * photos — swap in the client's final ones (files in images/, any size).
- * TODO sea: images/it-sea-placeholder.jpg is a generated stand-in for the
+ * Sea: images/fond-carnet-itineraire.webp (client photo) is the
  * full-width ocean photo behind the logbook card.
  */
 const ITINERARY_V2 = {
@@ -16,7 +16,7 @@ const ITINERARY_V2 = {
     map: "images/it-zoom-sunda-spices-and-snakes.png",
     mapBox: [771, 285, 340, 214],
     mapAlt: "Route of Spices and Snakes, from Maumere through the Banda Sea to Ambon.",
-    sea: "images/it-sea-placeholder.jpg",
+    sea: "images/fond-carnet-itineraire.webp",
     card: {
       title: "Spices and Snakes",
       days: "10-12 days", path: "Maumere → Maumere",
@@ -60,7 +60,7 @@ ITINERARY_V2["sunda-volcanoes-and-villages"] = {
   map: "images/it-zoom-sunda-volcanoes-and-villages.png",
   mapBox: [680, 330, 532, 136],
   mapAlt: "Route of Volcanoes and Villages, a loop through Adonara, Solor, Lembata, Pantar, Pura and Alor.",
-  sea: "images/it-sea-placeholder.jpg",
+  sea: "images/fond-carnet-itineraire.webp",
   card: {
     title: "Volcanoes and Villages",
     days: "10-12 days", path: "Maumere → Maumere",
@@ -95,7 +95,7 @@ ITINERARY_V2["papua-corals-and-cloves"] = {
   map: "images/it-zoom-papua-corals-and-cloves.png",
   mapBox: [754, 266, 363, 246],
   mapAlt: "Route of Coral and Cloves, from Sorong through Raja Ampat and along Halmahera to Ternate.",
-  sea: "images/it-sea-placeholder.jpg",
+  sea: "images/fond-carnet-itineraire.webp",
   card: {
     title: "Coral and Cloves",
     days: "11 days", path: "Sorong → Ternate",
@@ -126,7 +126,7 @@ ITINERARY_V2["papua-tale-of-two-papuas"] = {
   map: "images/it-zoom-papua-tale-of-two-papuas.png",
   mapBox: [751, 246, 373, 260],
   mapAlt: "Route of Tale of Two Papuas, from Kaimana along the Papuan coast to Sorong.",
-  sea: "images/it-sea-placeholder.jpg",
+  sea: "images/fond-carnet-itineraire.webp",
   card: {
     title: "Tale of Two Papuas",
     days: "12 days", path: "Kaimana → Sorong",
@@ -157,7 +157,7 @@ ITINERARY_V2["moluccas-sultans-and-tarsiers"] = {
   map: "images/it-zoom-moluccas-sultans-and-tarsiers.png",
   mapBox: [752, 245, 373, 270],
   mapAlt: "Route of Sultans and Tarsiers, from Ternate along Halmahera and across the Molucca Sea to Bitung.",
-  sea: "images/it-sea-placeholder.jpg",
+  sea: "images/fond-carnet-itineraire.webp",
   card: {
     title: "Sultans and Tarsiers",
     days: "11 days", path: "Ternate → Bitung",
@@ -193,7 +193,7 @@ ITINERARY_V2["sulawesi-sponges-and-stilts"] = {
   map: "images/it-zoom-sulawesi-sponges-and-stilts.png",
   mapBox: [795, 253, 284, 292],
   mapAlt: "Route of Sponges and Stilts, from Bitung through the Gulf of Tomini and down to Baubau.",
-  sea: "images/it-sea-placeholder.jpg",
+  sea: "images/fond-carnet-itineraire.webp",
   card: {
     title: "Sponges and Stilts",
     days: "11 days", path: "Bitung → Baubau",
@@ -231,7 +231,7 @@ ITINERARY_V2["moluccas-forts-and-forests"] = {
   map: "images/it-zoom-moluccas-forts-and-forests.png",
   mapBox: [790, 285, 326, 204],
   mapAlt: "Route of Forts and Forests, from Ambon across the Banda Sea to Kaimana.",
-  sea: "images/it-sea-placeholder.jpg",
+  sea: "images/fond-carnet-itineraire.webp",
   card: {
     title: "Forts and Forests",
     days: "12 days", path: "Ambon → Kaimana",
@@ -262,7 +262,7 @@ ITINERARY_V2["sunda-nirvana-and-lava"] = {
   map: "images/it-zoom-sunda-nirvana-and-lava.png",
   mapBox: [800, 284, 314, 226],
   mapAlt: "Route of Nirvana and Lava, from Baubau across the Banda Sea to Maumere.",
-  sea: "images/it-sea-placeholder.jpg",
+  sea: "images/fond-carnet-itineraire.webp",
   card: {
     title: "Nirvana and Lava",
     days: "12 days", path: "Baubau → Maumere",
@@ -291,7 +291,7 @@ ITINERARY_V2["papua-four-kings"] = {
   map: "images/it-zoom-papua-four-kings.png",
   mapBox: [767, 262, 384, 296],
   mapAlt: "Route of The Four Kings, a loop through Raja Ampat from Sorong.",
-  sea: "images/it-sea-placeholder.jpg",
+  sea: "images/fond-carnet-itineraire.webp",
   card: {
     title: "The Four Kings",
     days: "11 days", path: "Sorong → Sorong",
@@ -324,7 +324,7 @@ ITINERARY_V2["papua-southern-king"] = {
   map: "images/it-zoom-papua-southern-king.png",
   mapBox: [757, 258, 399, 304],
   mapAlt: "Route of The Southern King, a loop south from Sorong through Misool and back.",
-  sea: "images/it-sea-placeholder.jpg",
+  sea: "images/fond-carnet-itineraire.webp",
   card: {
     title: "The Southern King",
     days: "7 days", path: "Sorong → Sorong",
@@ -357,7 +357,7 @@ ITINERARY_V2["sunda-east-meets-west"] = {
   map: "images/it-zoom-sunda-east-meets-west.png",
   mapBox: [700, 263, 397, 233],
   mapAlt: "Route of East Meets West, from Maumere along Flores and Sumbawa to Bali.",
-  sea: "images/it-sea-placeholder.jpg",
+  sea: "images/fond-carnet-itineraire.webp",
   card: {
     title: "East Meets West",
     days: "11 days", path: "Maumere to Bali",
@@ -391,22 +391,39 @@ ITINERARY_V2["sunda-east-meets-west"] = {
 ITINERARY_V2["sunda-west-meets-east"] = {
   name: "West Meets East",
   subtitle: "Bali to Maumere - 11 days",
-  subX: 741, subY: 203,
-  introBox: [659, 522], introY: 520,
+  subX: 769, subY: 228,
+  introBox: [674, 566], introY: 579,
   intro: "This is the first time WAOW 2 carries guests. Everything on board will be new, the sea trials behind us, and ahead of us eleven days on the route that made this part of Indonesia famous among divers. WAOW 2 will have a long history. This is where it begins, and there is room for twenty people.",
   map: "images/it-zoom-sunda-west-meets-east.png",
-  mapBox: [700, 263, 397, 233],
+  mapBox: [707, 297, 437, 256],
   mapAlt: "Route of West Meets East, from Bali along Sumbawa and Flores to Maumere.",
-  sea: "images/it-sea-placeholder.jpg",
+  sea: "images/fond-carnet-itineraire.webp",
   card: {
-    title: "East Meets West",
+    title: "West Meets East",
     days: "11 days", path: "Bali → Maumere",
     when: "October 2028",
     route: ["Lombok Strait", "Moyo", "Saleh Bay", "Sangeang Api", "Komodo", "North Flores"],
     diving: ["Whale sharks", "Mantas", "Sharks", "Volcanic macro", "Hard coral", "Deep walls", "Night diving"]
   },
+  // Measured from the Canva (page coordinates).
+  layout: [
+    { side: "L", photo: [785, 1574, 536, 515], title: 1571, sub: 1710, text: 1792, tx: [170, 502] },
+    { side: "R", photo: [122, 2432, 389, 486], title: 2415, sub: 2507, text: 2600, tx: [780, 460] },
+    { side: "L", photo: [861, 3106, 373, 516], title: 3172, sub: 3313, text: 3408, tx: [160, 500] },
+    { side: "R", photo: [122, 3969, 389, 487], title: 4010, sub: 4076, text: 4169, tx: [762, 478] },
+    { side: "L", photo: [861, 4643, 373, 515], title: 4660, sub: 4737, text: 4831, tx: [136, 500] },
+    { side: "R", photo: [122, 5506, 389, 486], title: 5547, sub: 5613, text: 5707, tx: [770, 470] }
+  ],
+  links: [
+    { dir: "right", a: [586, 2101], b: [895, 2382] },
+    { dir: "left",  a: [728, 2821], b: [618, 3179] },
+    { dir: "right", a: [586, 3638], b: [895, 3919] },
+    { dir: "left",  a: [728, 4358], b: [618, 4716] },
+    { dir: "right", a: [586, 5175], b: [895, 5456] }
+  ],
+  storyEnd: 6192,
   steps: [
-    { title: "Crossing<br>the line", titleLh: 56, sub: "The journey east", photo: [350, 483], titleDy: -20, subGap: 24, tGap: 85, textW: 470, image: "images/it-sunda-west-meets-east-1.webp", alt: "A quiet beach with a rocky islet.",
+    { title: "Crossing<br>the line", titleLh: 58, sub: "The journey east", photo: [350, 483], titleDy: -20, subGap: 24, tGap: 85, textW: 470, image: "images/it-sunda-west-meets-east-1.webp", alt: "A quiet beach with a rocky islet.",
       text: "The trip runs eastward, which is the direction that makes the geography legible. You leave Bali in the morning and spend the first day crossing the Lombok Strait. Somewhere in that deep water you leave Asia behind, and cross a border that appears on no political map : The Wallace line." },
     { title: "Moyo", sub: "A gentle start", photo: [365, 456], titleDy: -10, subGap: 60, tGap: 85, textW: 450, image: "images/it-sunda-west-meets-east-2.webp", alt: "A waterfall into a green pool.",
       text: "The first diving is the next morning at Moyo, off the north coast of Sumbawa. A gentle way to start: clear water, hard coral gardens, an easy check dive to sort your weighting and get used to a boat nobody has been on before.<br>A waterfall and a swimming hole are waiting inland, if you want an hour somewhere other than on board or underwater." },
@@ -419,18 +436,17 @@ ITINERARY_V2["sunda-west-meets-east"] = {
     { title: "North Flores", sub: "End somewhere quiet", photo: [367, 459], titleDy: 0, subGap: 45, tGap: 85, textW: 500, image: "images/it-sunda-west-meets-east-6.webp", alt: "A three-masted ship anchored below green hills.",
       text: "The journey finishes where many itineraries never go. Along the north coast of Flores, a mountainous volcanic coastline sees very few boats. Below it, deep reefs drop straight into blue water. Big gorgonians. Hard coral. Sites WAOW has dived for years and knows how to approach on the right tide, at the right hour. Eleven days after leaving Bali, you step off in Flores. A long way east of where you started, in every sense that matters." }
   ],
-  gap: 240,
-  storyPad: 200,
   band: {
-    h: 620, titleY: 60, titleLh: 54, textY: 215, textW: 440,
+    h: 651, titleY: 92, titleLh: 59, textY: 263, textW: 470,
     title: "No two days ask the<br>same thing of you",
     text: "Big animal diving and macro diving are usually two different holidays.<br>Here, they are a single cruise.<br>The night diving deserves its own mention. So does the range of levels: Komodo has sites that will test a diver with a thousand logged dives, and sheltered bays half an hour away where somebody fresh out of their course can have the best dive of their life.<br>We split the groups accordingly and say plainly what to expect on each dive.<br>And photographers get to plan properly for once:<br>Wide angle before lunch. Macro after."
   },
   tail: {
-    storyPad: 300,
+    layout: [{ side: "L", photo: [743, 6945, 527, 598], title: 0, sub: 7041, text: 7143, tx: [137, 506] }],
+    storyEnd: 7620,
     steps: [
-      { sub: "The line between two worlds", subColor: "blue", subW: 520, align: "right", photo: [494, 559], titleDy: 100, tGap: 80, textW: 480, image: "images/it-sunda-west-meets-east-7.webp", alt: "Padar Island's hills over the bays of Komodo National Park.",
-        text: "On the last night, somewhere in the deep water of the Lombok Strait, WAOW 2 sails back into Asia.<br>Alfred Russel Wallace spotted that line in the 1850s by paying attention to birds. It carries his name, and it still holds.<br>Bali belongs to Asia, with its monkeys and woodpeckers.<br>Cockatoos and marsupials begin on the other side.<br>Everything you have dived for ten days lies in Wallacea, the transition zone between two continents that were never joined. The animals there belong fully to neither. And more and more, they exist nowhere else on Earth. The crossing takes a night. What it crosses took forty million years to form." }
+      { sub: "The line between two worlds", subColor: "blue", subW: 640, align: "right", image: "images/it-sunda-west-meets-east-7.webp", alt: "Padar Island's hills over the bays of Komodo National Park.",
+        text: "On the last night, somewhere in the deep water of the<br>Lombok Strait, WAOW 2 sails back into Asia.<br>Alfred Russel Wallace spotted that line in the 1850s by paying attention to birds. It carries his name, and it still holds.<br>Bali belongs to Asia, with its monkeys and woodpeckers.<br>Cockatoos and marsupials begin on the other side.<br>Everything you have dived for ten days lies in Wallacea, the transition zone between two continents that were never joined. The animals there belong fully to neither. And more and more, they exist nowhere else on Earth. The crossing takes a night. What it crosses took forty million years to form." }
     ]
   },
 };
