@@ -4851,3 +4851,10 @@ body.nav-blue .nav__subrow { color: #4E7495; } body.nav-brown .nav__subrow { col
   .px-bk .bk-num { font-size: 79.3px; line-height: 80px; }
   .px-bk .bk-label { font-size: 47px; line-height: 50px; margin-top: 36px; }
 }
+
+/* About Us vs Canva: embroidered helm/anchor above photos, "the WAOW story" link, team photo order. */
+@media (min-width: 1100px) {
+  .px-ab .ab-hero__helm, .px-ab .ab-w1__anchor { z-index: 3; }
+  .px-ab .ab-w1 .link-arrow { color: var(--paper); font-size: 17.5px; }
+  .px-ab .ab-team__photo:nth-of-type(3) { z-index: 2; }
+}
