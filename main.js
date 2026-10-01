@@ -79,20 +79,29 @@
   })();
 
   // Desktop submenus: a menu stays open ~350 ms after the pointer leaves it, so moving down (or diagonally)
-  // to the submenu links never closes it; entering a sibling entry switches over immediately.
+  // to its links never closes it. Top-level entries switch over at once; Regions <-> Itineraries switch only
+  // after the pointer rests ~160 ms on the other entry, so crossing it on the way to a link does nothing.
   document.querySelectorAll(".nav__item--dropdown, .nav__dd").forEach(function (el) {
-    var timer;
+    var closeTimer, switchTimer;
+    var nested = el.classList.contains("nav__dd");
     function close(node) {
       node.classList.remove("is-open");
       node.querySelectorAll(".is-open").forEach(function (n) { n.classList.remove("is-open"); });
     }
-    el.addEventListener("mouseenter", function () {
-      clearTimeout(timer);
+    function open() {
       Array.prototype.forEach.call(el.parentElement.children, function (sib) { if (sib !== el) close(sib); });
       el.classList.add("is-open");
+    }
+    el.addEventListener("mouseenter", function () {
+      clearTimeout(closeTimer);
+      var otherOpen = nested && el.parentElement.querySelector(":scope > .nav__dd.is-open:not(:hover)");
+      if (otherOpen && !el.classList.contains("is-open")) switchTimer = setTimeout(open, 160);
+      else open();
     });
     el.addEventListener("mouseleave", function () {
-      timer = setTimeout(function () { close(el); }, 350);
+      clearTimeout(switchTimer);
+      closeTimer = setTimeout(function () { close(el); }, 350);
     });
+    el.addEventListener("focusin", open);
   });
 })();

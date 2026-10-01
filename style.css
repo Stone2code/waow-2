@@ -4665,19 +4665,19 @@ body.nav-blue .nav__dropdown::before { background: #4E7495; }
    ========================================================================= */
 .nav__dd { display: block; position: static; }
 .nav__dd > a::after { display: block !important; content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 1.5px; background: var(--yellaow); transition: right .25s var(--ease); }
-.nav__dd:hover > a::after, .nav__dd:focus-within > a::after, .nav__dd > a.is-active::after { right: 0; background: var(--yellaow); }
+.nav__dd > a:hover::after, .nav__dd.is-open > a::after, .nav__dd.is-open > a::after, .nav__dd > a.is-active::after { right: 0; background: var(--yellaow); }
 .nav__subrow {
   position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
   display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 2px 26px;
   width: max-content; max-width: 980px; padding: 14px 0 0 22px;
   opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .2s var(--ease), visibility 0s linear .2s;
 }
-.nav__dd:hover > .nav__subrow, .nav__dd:focus-within > .nav__subrow { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity .2s var(--ease); }
+.nav__dd.is-open > .nav__subrow, .nav__dd.is-open > .nav__subrow { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity .2s var(--ease); }
 .nav__subrow::before { content: ""; position: absolute; left: 0; top: 18px; width: 9px; height: 9px; border-left: 2px solid currentColor; border-bottom: 2px solid currentColor; opacity: .8; }
 .nav__subrow a { font-size: 11px; letter-spacing: 0.04em; }
 body.nav-blue .nav__subrow { color: #4E7495; } body.nav-brown .nav__subrow { color: #8a6a4a; }
 /* second row sits on the same solid header band */
-.site-header:has(.nav__dd:hover)::after, .site-header:has(.nav__dd:focus-within)::after { height: calc(86px * var(--hz, 1)); }
+.site-header:has(.nav__dd.is-open)::after, .site-header:has(.nav__dd.is-open)::after { height: calc(86px * var(--hz, 1)); }
 .nav__subrow a.is-active::after { display: block !important; right: 0; background: var(--yellaow); }
 .nav__subrow a::after { display: block !important; content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 1.5px; background: var(--yellaow); transition: right .25s var(--ease); }
 .nav__subrow a:hover::after { right: 0; }
@@ -4685,7 +4685,7 @@ body.nav-blue .nav__subrow { color: #4E7495; } body.nav-brown .nav__subrow { col
 .nav__subrow a:first-child::before { content: ""; position: absolute; left: -20px; top: 4px; width: 8px; height: 8px; border-left: 2px solid currentColor; border-bottom: 2px solid currentColor; opacity: .8; }
 .nav__dd--itineraries .nav__subrow a:nth-child(6) { margin-right: 100%; }
 .nav__dd--itineraries .nav__subrow { padding-left: 0; }
-.site-header:has(.nav__dd--itineraries:hover)::after, .site-header:has(.nav__dd--itineraries:focus-within)::after { height: calc(112px * var(--hz, 1)); }
+.site-header:has(.nav__dd--itineraries.is-open)::after, .site-header:has(.nav__dd--itineraries.is-open)::after { height: calc(112px * var(--hz, 1)); }
 .nav__dd--itineraries .nav__subrow a:nth-child(6) { margin-right: 0; }
 .nav__dd--itineraries .nav__subrow { flex-direction: column; flex-wrap: nowrap; gap: 4px; max-width: none; }
 .nav__subline { display: flex; justify-content: center; gap: 26px; white-space: nowrap; }
@@ -4694,7 +4694,7 @@ body.nav-blue .nav__subrow { color: #4E7495; } body.nav-brown .nav__subrow { col
 /* Nested rows must sit above the dropdown's invisible hover zone (::after), and bridge the gap to their entry */
 .nav__subrow { z-index: 5; }
 .nav__dd { position: static; }
-.nav__dd:hover > .nav__subrow::after, .nav__dd:focus-within > .nav__subrow::after { content: ""; position: absolute; left: -60px; right: -60px; top: -34px; bottom: -20px; z-index: -1; }
+.nav__dd.is-open > .nav__subrow::after, .nav__dd.is-open > .nav__subrow::after { content: ""; position: absolute; left: -60px; right: -60px; top: -34px; bottom: -20px; z-index: -1; }
 
 /* =========================================================================
    Submenus: JS keeps .is-open on a hovered entry for a short delay (main.js) → same visuals as :hover.
@@ -4708,6 +4708,49 @@ body.nav-blue .nav__subrow { color: #4E7495; } body.nav-brown .nav__subrow { col
 .nav__dd.is-open > a::after { right: 0; }
 .nav__dd.is-open > .nav__subrow::after { content: ""; position: absolute; left: -60px; right: -60px; top: -24px; bottom: -20px; z-index: -1; }
 .nav__subrow { top: 100%; padding-top: 0; }
-.site-header:has(.nav__dd:hover)::after, .site-header:has(.nav__dd:focus-within)::after, .site-header:has(.nav__dd.is-open)::after { height: calc(72px * var(--hz, 1)); }
-.site-header:has(.nav__dd--itineraries:hover)::after, .site-header:has(.nav__dd--itineraries:focus-within)::after, .site-header:has(.nav__dd--itineraries.is-open)::after { height: calc(98px * var(--hz, 1)); }
-.nav__dd:hover > .nav__subrow::after, .nav__dd:focus-within > .nav__subrow::after { top: -24px; }
+.site-header:has(.nav__dd.is-open)::after, .site-header:has(.nav__dd.is-open)::after, .site-header:has(.nav__dd.is-open)::after { height: calc(72px * var(--hz, 1)); }
+.site-header:has(.nav__dd--itineraries.is-open)::after, .site-header:has(.nav__dd--itineraries.is-open)::after, .site-header:has(.nav__dd--itineraries.is-open)::after { height: calc(98px * var(--hz, 1)); }
+.nav__dd.is-open > .nav__subrow::after, .nav__dd.is-open > .nav__subrow::after { top: -24px; }
+/* Regions / Itineraries rows open only via .is-open (main.js, with a short switch delay) → no more corner "L" marker,
+   tight hover zone that no longer covers the sibling entry; every first-level submenu link gets the yellow hover line. */
+.nav__subrow a::before, .nav__subline a::before { content: none !important; }
+.nav__dd.is-open > .nav__subrow::after { left: -30px; right: -30px; top: 0; bottom: -14px; }
+.nav__dropdown > a::after { display: block; content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 1.5px; background: var(--yellaow); transition: right .25s var(--ease); }
+.nav__dropdown > a:hover::after { right: 0; }
+
+/* =========================================================================
+   Experience vs Canva: gastronomy menu as a perforated postage-stamp card (paper + inner blue frame),
+   bigger menu type, dark "Available for full charters." eyebrow.
+   ========================================================================= */
+@media (min-width: 1100px) {
+  .px-xp .xp-gastro__menu { background: none; box-shadow: none; filter: drop-shadow(0 6px 10px rgba(16, 35, 63, 0.18)); }
+  .px-xp .xp-gastro__menu::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(165deg, #f5f6f7 0%, #e9ecef 55%, #dfe4e9 100%);
+    -webkit-mask: radial-gradient(circle 4px, #0000 97%, #000) -6px -6px / 12px 12px round, linear-gradient(#000 0 0) 6px 6px / calc(100% - 12px) calc(100% - 12px) no-repeat;
+            mask: radial-gradient(circle 4px, #0000 97%, #000) -6px -6px / 12px 12px round, linear-gradient(#000 0 0) 6px 6px / calc(100% - 12px) calc(100% - 12px) no-repeat; }
+  .px-xp .xp-gastro__menu::after { content: ""; position: absolute; inset: 18px 12px 20px 13px; border: 1.2px solid var(--open-sea); pointer-events: none; }
+  .px-xp .xp-gastro__menu { isolation: isolate; }
+  .px-xp .xp-gastro__q h3 { font-size: 14.7px; line-height: 18px; }
+  .px-xp .xp-gastro__q p { font-size: 13.8px; line-height: 17.8px; }
+  .px-xp .xp-make__eyebrow { color: var(--abyss); }
+}
+@media (min-width: 1100px) {
+  .px-xp .xp-hotel__item h3 { font-size: 16.7px; }
+  .px-xp .xp-hotel__item p { font-size: 17.6px; }
+}
+
+/* =========================================================================
+   Diving (dive-deep) vs Canva: light title on the blue "Dive longer" band, brown "book your stay",
+   item headings flush to their text (positions measured from the Canva).
+   ========================================================================= */
+@media (min-width: 1100px) {
+  .px-dd .dd-longer h2 { color: var(--sail-linen); }
+  .px-dd .dd-groups__link { color: var(--ironwood); }
+  .px-dd .dd-built__item h3, .px-dd .dd-longer__item h3 { margin: 0; }
+  .px-dd .dd-built__item, .px-dd .dd-longer__item { margin-bottom: 0; }
+  .px-dd .dd-longer__item p { line-height: 24.1px; }
+}
+@media (min-width: 1100px) {
+  .px-dd .dd-built__item p, .px-dd .dd-philosophy__cell p { font-size: 17.5px !important; line-height: 24.25px !important; }
+  .px-dd .dd-built__item h3, .px-dd .dd-longer__item h3 { font-size: 16.9px; }
+  .px-dd .dd-philosophy__cell h3 { font-size: 32.3px; line-height: 36px; margin: 0; }
+}
