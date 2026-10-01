@@ -4858,3 +4858,12 @@ body.nav-blue .nav__subrow { color: #4E7495; } body.nav-brown .nav__subrow { col
   .px-ab .ab-w1 .link-arrow { color: var(--paper); font-size: 17.5px; }
   .px-ab .ab-team__photo:nth-of-type(3) { z-index: 2; }
 }
+
+/* Museum vs Canva: blue script subtitle, documentary link with a long underline, black headings on cream. */
+@media (min-width: 1100px) {
+  .px-mu .mu-tag--l { color: var(--open-sea); text-align: left; }
+  .px-mu .mu-doc { text-underline-offset: 14px; }
+  .px-mu .mu-cream .mu-h { color: #111; }
+  .px-mu .mu-frame { overflow: visible; }
+  .px-mu .mu-frame img { object-fit: contain; }
+}
