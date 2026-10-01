@@ -19,7 +19,7 @@ const ITINERARY_V2 = {
     sea: "images/fond-carnet-itineraire.webp",
     card: {
       title: "Spices and Snakes",
-      days: "10-12 days", path: "Maumere → Maumere",
+      days: "12 days", path: "Maumere → Ambon",
       when: "Late October → Early November 2028",
       route: ["Maumere", "Alor", "Solor", "Banda Sea", "Gunung Api", "Manuk", "Banda", "Ambon"],
       diving: ["Clean muck", "Sea snakes", "Hammerheads", "Pelagics", "Walls", "Black sand", "Mandarinfish", "Sperm whales", "Blue whales", "Pilot whales"]
@@ -43,7 +43,7 @@ const ITINERARY_V2 = {
       { title: "Alor &amp; Solor", sub: "Where the reefs come alive", image: "images/it-sunda-spices-and-snakes-1.webp", alt: "A reef wall with orange coral.",
         text: "The journey begins around Alor and Solor, where cold, nutrient-rich water from the Ombai Strait feeds hard-coral slopes in exceptional condition.<br>Then there is the black sand. Alor’s version of muck diving is unusually clean: productive slopes without the rubbish, with Rhinopias, ornate ghost pipefish and nudibranchs hidden across them.<br>Ashore, the villages are just as much part of the stop. Children appear on the beach and often follow along for as long as you let them." },
       { title: "Into the Banda Sea", sub: "Beyond the usual route", image: "images/it-sunda-spices-and-snakes-2.webp", alt: "A green volcanic island rising from calm water.",
-        text: "From Alor we leave Nusa Tenggara Timur for Maluku. The exact route depends on the sea, with possibilities including Wetar, Romang, Teun, Serua, Nil Desperandum and Karang Daisburgh.<br>Some are volcanic islands rising from very deep water; others are submerged atolls with nothing visible above the surface. The diving is walls, blue water and reefs that see very few boats." },
+        text: "From Alor we leave Nusa Tenggara Timur for Maluku. The exact route depends on the sea, with possibilities including Wetar, Romang, Teun, Serua, Nil Desperandum and Karang Duisborgh.<br>Some are volcanic islands rising from very deep water; others are submerged atolls with nothing visible above the surface. The diving is walls, blue water and reefs that see very few boats." },
       { title: "Gunung Api<br>&amp; Manuk", sub: "The islands of snakes", image: "images/it-sunda-spices-and-snakes-3.webp", alt: "A sea snake over a fan coral.",
         text: "Gunung Api and Manuk give the itinerary the second half of its name.<br>These remote volcanic islands hold sea snakes in extraordinary numbers. They move through the water around divers with complete indifference, while seabirds gather overhead and sharks patrol below.<br>It is one of those dives that tends to change how people feel about snakes." },
       { title: "Blue Water", sub: "Waiting for the giants", image: "images/it-sunda-spices-and-snakes-4.webp", alt: "Scalloped hammerheads in blue water.",
@@ -56,21 +56,21 @@ const ITINERARY_V2 = {
 
 ITINERARY_V2["sunda-volcanoes-and-villages"] = {
   name: "Volcanoes & Villages",
-  subtitle: "Maumere → Maumere · 10–12 days",
+  subtitle: "Maumere → Maumere · 10 or 11 days",
   poster: [196, 227, 305, 381],
   subX: 761, subY: 223, subW: 360, subFs: 25,
   introBox: [678, 564], introY: 531,
   logBox: [523, 888, 325, 483],
   logIcon: ["images/icons-7.png", 782, 865, 106, 107],
-  intro: "Most boats treat this archipelago as a stop on the way somewhere, dive four or five sites and carry on. This trip never leaves it.<br>Out of Maumere and back, ten to twelve days entirely inside Alor and Solor, long enough to actually know the place instead of sampling it.",
+  intro: "Most boats treat this archipelago as a stop on the way somewhere, dive four or five sites and carry on. This trip never leaves it.<br>Out of Maumere and back, ten or eleven days entirely inside Alor and Solor, long enough to really appreciate the place instead of sampling it.",
   map: "images/it-zoom-sunda-volcanoes-and-villages.png",
   mapBox: [676, 338, 522, 137],
   mapAlt: "Route of Volcanoes and Villages, a loop through Adonara, Solor, Lembata, Pantar, Pura and Alor.",
   sea: "images/fond-carnet-itineraire.webp",
   card: {
     title: "Volcanoes &amp; Villages",
-    days: "10–12 days", path: "Maumere → Maumere",
-    when: "April or May",
+    days: "10 or 11 days", path: "Maumere → Maumere",
+    when: "May 2028",
     route: ["Maumere", "Adonara", "Solor", "Lembata", "Pantar", "Pura", "Alor", "Maumere"],
     diving: ["Hard coral gardens", "Soft coral walls", "Pinnacles & drop-offs", "Volcanic sand", "Macro", "Pelagics", "Night diving"]
   },
@@ -91,7 +91,7 @@ ITINERARY_V2["sunda-volcanoes-and-villages"] = {
   steps: [
     { title: "Maumere → Alor", sub: "Adonara · Solor · Lembata · Pantar · Pura · Alor", subColor: "blue", subFs: 30, subW: 640, align: "left", link: false,
       photo: [495, 560], titleDy: 95, image: "images/it-sunda-volcanoes-and-villages-1.webp", alt: "A volcano erupting above the water, seen from the boat.",
-      text: "The islands run east from Flores in a line: Adonara, Solor, Lembata, Pantar, Pura, Alor. Between them, straits the ocean has to force its way through. That is the engine of the whole region. Cold water loaded with nutrients rises out of the deep and funnels through the gaps, and everything growing on these reefs lives off it. We go in April and May, and that is no accident. The upwelling has slackened, the sea has warmed, the visibility has opened right up." },
+      text: "The islands run east from Flores in a line: Adonara, Solor, Lembata, Pantar, Pura, Alor. Between them, straits the ocean has to force its way through. That is the engine of the whole region. Cold water loaded with nutrients rises out of the deep and funnels through the gaps, and everything growing on these reefs lives off it. We go in May, and that is no accident. The upwelling has slackened, the sea has warmed, the visibility has opened right up." },
     { title: "Adonara &amp; Solor", sub: "Into the straits", side: "L", photo: [349, 484], image: "images/it-sunda-volcanoes-and-villages-2.webp", alt: "A yellow-green nudibranch on red algae.",
       text: "There is also the business of getting through those straits, which is worth being on deck for. The gaps between these islands are narrow, deep and fast. Whirlpools, standing waves, glassy patches of water moving at walking pace in the wrong direction. On a map it is a passage between two islands. From the rail it is a river running through the sea, with volcanoes on either side, close enough to pick out the goats." },
     { title: "Lembata", sub: "Volcanoes above water", photo: [366, 458], titleDy: 30, image: "images/it-sunda-volcanoes-and-villages-3.webp", alt: "A cone volcano rising from the sea under a pastel sky.",
@@ -104,7 +104,7 @@ ITINERARY_V2["sunda-volcanoes-and-villages"] = {
   band: {
     h: 653, titleY: 117, textY: 283, textW: 473,
     title: "The Villages", sub: "Life across the archipelago",
-    text: "It is also a quiet rebuttal to a lot of what people assume about Indonesia from a distance. A village with a church, the next one with a mosque, side by side, and nobody here gives it a second thought.<br>Fishermen still work these reefs with traps and hand spears on a single breath, and meeting one at fifteen metres halfway through his working day is usually the story that comes out at dinner.<br>The kids paddle out to the boat in dugouts and stay as long as anyone will keep playing with them."
+    text: "It is also a quiet rebuttal to a lot of what people assume about Indonesia from a distance. A village with a church, the next one with a mosque, side by side, and nobody here gives it a second thought.<br>Fishermen still work these reefs with traps and hand spears on a single breath, and meeting one at fifteen meters halfway through his working day is usually the story that comes out at dinner.<br>The kids paddle out to the boat in dugouts and stay as long as anyone will keep playing with them."
   },
 };
 
@@ -124,7 +124,7 @@ ITINERARY_V2["papua-corals-and-cloves"] = {
   card: {
     title: "Coral and Cloves",
     days: "11 days", path: "Sorong → Ternate",
-    when: "March",
+    when: "March 2029",
     route: ["Sorong", "Raja Ampat", "Pisang Islands", "Halmahera", "Bacan", "Guraici", "Makian", "Ternate"],
     diving: ["Mantas", "Wobbegongs", "Walking sharks", "Pinnacles", "Walls", "Black sand", "Exploratory diving"]
   },
@@ -150,10 +150,10 @@ ITINERARY_V2["papua-corals-and-cloves"] = {
       text: "Raja Ampat lies on the Australian side of the Lydekker Line; Halmahera sits west of it in Wallacea. Somewhere during the crossing, the boat quietly leaves one biological region for another. The equator is harder to miss. We cross that too, with the traditional ceremony on board. The Pisang Islands sit along the way, remote and rarely visited before the route reaches Halmahera." },
     { title: "Halmahera", sub: "Where the map starts to thin out", subFs: 38, photo: [349, 484], image: "images/it-papua-corals-and-cloves-3.webp", alt: "Two birds of paradise on a branch.",
       text: "Halmahera has long stretches of coastline that have barely been dived. The Patinti Strait funnels water and fish between Halmahera and Bacan, while Bacan, Guraici, Kusu and the islands off the southwest coast offer reefs with very little dive traffic.<br>Rainforest runs down to the coast, home to Wallace’s standardwing, a bird of paradise found only in this part of the Moluccas. At dawn, the males display high in the trees, trailing long white wing pennants." },
-    { title: "Makian", photo: [462, 565], image: "images/it-papua-corals-and-cloves-4.webp", alt: "Sea fans and soft corals on a wall.",
+    { title: "Makian", sub: "Unnamed sites", photo: [462, 565], image: "images/it-papua-corals-and-cloves-4.webp", alt: "Sea fans and soft corals on a wall.",
       text: "Further north, Makian rises as a volcanic cone above fringing reefs, walls and dark sand slopes. At night, Halmahera’s own walking shark moves through the shallows.<br>There is also room here for exploration. Some stretches of coast have no established dive sites at all. When conditions allow, we put the tender in and go and look. Sometimes there is not much there. Sometimes there is." },
     { title: "Ternate &amp; Tidore", sub: "The islands that changed<br>the price of spice", subLines: 2, subFs: 40, subLh: 38, image: "images/it-papua-corals-and-cloves-5.webp", alt: "Dried cloves, close up.",
-      text: "The journey ends between the volcanic cones of Ternate and Tidore, once the centre of the global clove trade.<br>Forts, a sultan’s palace and clove trees still sit on the slopes of Ternate’s active volcano, while the spice itself is still sold in the roadside markets.<br>Alfred Russel Wallace was living on Ternate in 1858 when he wrote down his ideas on natural selection and sent them to Charles Darwin. After eleven days travelling through the region that carries his name, it is a fitting place to finish." }
+      text: "The journey ends between the volcanic cones of Ternate and Tidore, once the center of the global clove trade.<br>Forts, a sultan’s palace and clove trees still sit on the slopes of Ternate’s active volcano, while the spice itself is still sold in the roadside markets.<br>Alfred Russel Wallace was living on Ternate in 1858 when he wrote down his ideas on natural selection and sent them to Charles Darwin. After eleven days traveling through the region that carries his name, it is a fitting place to finish." }
   ],
 };
 
@@ -172,8 +172,8 @@ ITINERARY_V2["papua-tale-of-two-papuas"] = {
   card: {
     title: "Tale of Two Papuas",
     days: "12 days", path: "Kaimana → Sorong",
-    when: "November 2029",
-    route: ["Triton Bay", "Papuan Coast", "Misool", "Kitikiti", "Tanjung Papisoi", "Fakfak", "Koon", "Exploration"],
+    when: "Late November → early December 2028",
+    route: ["Kaimana", "Triton Bay", "Papuan Coast", "Kitikiti", "Tanjung Papisoi", "Fakfak", "Koon", "Misool", "Sorong"],
     diving: ["Soft coral", "Wobbegongs", "Walking sharks", "Mobulas", "Mantas", "Seamounts", "Walls", "Silversides"]
   },
   // Measured from the Canva (page coordinates); connectors keep their original proportions.
@@ -221,9 +221,9 @@ ITINERARY_V2["moluccas-sultans-and-tarsiers"] = {
   card: {
     title: "Sultans and Tarsiers",
     days: "11 days", path: "Ternate → Bitung",
-    when: "March 2029",
+    when: "Late March 2029",
     route: ["Ternate", "Tidore", "Halmahera", "Bacan", "Guraici", "Makian", "Tifore", "Mayu", "Lembeh", "Bitung"],
-    diving: ["Exploratory reefs", "Walls", "Hard coral", "Black sand", "Barracuda", "Bigeye trevally", "Macro", "Night diving"]
+    diving: ["Reef exploring", "Walls", "Hard coral", "Black sand", "Barracuda", "Bigeye trevally", "Macro", "Night diving"]
   },
   // Measured from the Canva (page coordinates); connectors keep their original proportions.
   layout: [
@@ -256,7 +256,7 @@ ITINERARY_V2["moluccas-sultans-and-tarsiers"] = {
     { title: "Mayu", sub: "Further into the Molucca Sea", subFs: 40, image: "images/it-moluccas-sultans-and-tarsiers-5.webp", alt: "A pipefish on the reef.",
       text: "Further along the crossing, Mayu offers the same sense of isolation when conditions allow.<br>These are not stopover dives. For many, they become some of the dives of the trip." },
     { title: "Lembeh", sub: "Where the strange things live", subW: 500, subFs: 40, image: "images/it-moluccas-sultans-and-tarsiers-6.webp", alt: "A hairy frogfish on black sand.",
-      text: "At the Sulawesi end is Lembeh, one of the names macro divers already know.<br>Black sand and rubble hide mimic octopus, hairy frogfish, flamboyant cuttlefish, blue-ringed octopus, wonderpus, Bobbit worms and seahorses. The diving is slow, shallow and usually calm, with even more happening after dark.<br>It is not pretty in the conventional sense. That is precisely the point." },
+      text: "At the Sulawesi end is Lembeh, one of the names macro divers already know.<br>Black sand and rubble hide mimic octopus, hairy frogfish, flamboyant cuttlefish, blue-ringed octopus, wonderpus, Bobbit worms and seahorses. The diving is slow, shallow and usually calm, with even more happening after dark.<br>All is not pretty in the conventional sense. That is precisely the point." },
     { title: "Tangkoko", sub: "Eyes in the dusk", subFs: 40, image: "images/it-moluccas-sultans-and-tarsiers-7.webp", alt: "A spectral tarsier on a branch.",
       text: "From the anchorage, Tangkoko is about an hour away.<br>Black crested macaques move through the forest with little interest in people, while spectral tarsiers emerge from their fig trees at dusk. Hornbills and cuscus share the same forest. A very different end to a journey that began with volcanoes, forts and cloves." }
   ],
@@ -277,7 +277,7 @@ ITINERARY_V2["sulawesi-sponges-and-stilts"] = {
   card: {
     title: "Sponges and Stilts",
     days: "11 days", path: "Bitung → Baubau",
-    when: "March 2029",
+    when: "April 2029",
     route: ["Bitung", "Gorontalo", "Una Una", "Togian Islands", "Walea", "Pulau Dua", "Banggai", "Labengki", "Baubau"],
     diving: ["Sponge walls", "Hard coral", "Barracuda", "Jacks", "Wreck", "Macro", "Soft coral", "Remote reefs"]
   },
@@ -304,15 +304,15 @@ ITINERARY_V2["sulawesi-sponges-and-stilts"] = {
   storyEnd: 7805,
   steps: [
     { title: "Gorontalo", subFs: 38, sub: "Where the walls turn surreal",   image: "images/it-sulawesi-sponges-and-stilts-1.webp", alt: "A diver above a huge barrel sponge.",
-      text: "The Gorontalo coast drops almost straight from shore into one of Indonesia’s most unusual sponge-covered walls.<br>Huge barrel sponges grow beside the patterned sponge locals named after Salvador Dalí, known for the swirling forms across its surface and found here almost nowhere else.<br>Caves, crevices and overhangs cut through the wall, usually in excellent visibility." },
+      text: "The Gorontalo coast drops almost straight from shore into one of Indonesia’s most unusual sponge-covered walls.<br>Huge barrel sponges grow beside the patterned sponge locals named after Salvador Dalí, known for the swirling forms across its surface and found almost nowhere else.<br>Caves, crevices and overhangs cut through the wall, usually in excellent visibility." },
     { title: "Una Una", subFs: 38, sub: "A volcano full of life",    image: "images/it-sulawesi-sponges-and-stilts-2.webp", alt: "Sea fans and soft corals on a reef wall.",
       text: "Una Una is essentially a volcano rising out of the Gulf of Tomini, with a village at its foot and healthy hard-coral reefs running down its flanks.<br>Barracuda school in the blue, jacks form walls, sweetlips gather in numbers and sharks move through reefs that see remarkably few divers." },
     { title: "Togian Islands", subFs: 38, sub: "Still water, wild reefs",   image: "images/it-sulawesi-sponges-and-stilts-3.webp", alt: "Golden jellyfish drifting in a marine lake.",
       text: "Sheltered inside the gulf, the Togian Islands bring calm water, little current and coral gardens in consistently clear conditions.<br>A marine lake holds stingless jellyfish, while a nearly intact B24 Liberator lies in shallow water, a wartime aircraft that can be dived on a single tank without technical qualifications. At the eastern end, Walea adds walls, macro slopes and reefs." },
     { title: "Pulau Dua", subFs: 38, sub: "Where the fish take over", subW: 500,    image: "images/it-sulawesi-sponges-and-stilts-4.webp", alt: "Anthias over a colourful reef wall.",
       text: "Pulau Dua is about sheer numbers.<br>Barracuda hang off walls and pinnacles, jacks turn in columns and snapper pack the drop-offs on sites that remain barely dived." },
-    { title: "Banggai", subFs: 38, sub: "Colour in the middle of nowhere",   image: "images/it-sulawesi-sponges-and-stilts-5.webp", alt: "A striped reef fish among sea urchins.",
-      text: "The Banggai Islands change the mood again, with dense soft coral and unexpected colour in the shallows.<br>Among the sea urchins lives the Banggai cardinalfish, a small striped species that occurs naturally nowhere else in the world." },
+    { title: "Banggai", subFs: 38, sub: "Color in the middle of nowhere",   image: "images/it-sulawesi-sponges-and-stilts-5.webp", alt: "A striped reef fish among sea urchins.",
+      text: "The Banggai Islands change the mood again, with dense soft coral and unexpected color in the shallows.<br>Among the sea urchins lives the Banggai cardinalfish, a small striped species that occurs naturally nowhere else in the world." },
     { title: "Labengki", subFs: 38, sub: "Beyond the hidden lagoons", subW: 500,    image: "images/it-sulawesi-sponges-and-stilts-6.webp", alt: "A karst tower covered in green above turquoise water.",
       text: "Karst towers and hidden bays rise from turquoise water around Labengki, with lagoons that only reveal themselves once the boat is inside.<br>Locals call it the mini Raja Ampat." },
     { title: "Bajau Villages", subFs: 38, sub: "Life above the reef",   image: "images/it-sulawesi-sponges-and-stilts-7.webp", alt: "Stilt houses over shallow water at sunset.",
@@ -330,7 +330,7 @@ ITINERARY_V2["moluccas-forts-and-forests"] = {
   introBox: [677, 567], introY: 549,
   logBox: [520, 888, 322, 485],
   logIcon: ["images/it-helm.png", 798, 934, 90, 86],
-  intro: "There is a reason this trip runs in November and not in any other month. It is the short overlap when the Banda Sea is still in migration mode, with schooling hammerheads and migrating whales, while the nutrient-loaded water of Triton Bay has usually cleared enough to show what is growing below. Either half would justify a trip. Getting both in one crossing takes November.",
+  intro: "There is a reason this trip runs in November. It is the short overlap when the Banda Sea is still in migration mode, with schooling hammerheads and migrating whales, while the nutrient-loaded water of Triton Bay has usually cleared enough to show what is growing below. Either half would justify a trip. Getting both in one crossing takes November.",
   map: "images/it-zoom-moluccas-forts-and-forests.png",
   mapBox: [758, 273, 403, 239],
   mapAlt: "Route of Forts and Forests, from Ambon across the Banda Sea to Kaimana.",
@@ -338,7 +338,7 @@ ITINERARY_V2["moluccas-forts-and-forests"] = {
   card: {
     title: "Forts and Forests",
     days: "12 days", path: "Ambon → Kaimana",
-    when: "November 2028 & 2031",
+    when: "November 2028",
     route: ["Ambon", "Nusa Laut", "Banda", "Watubela", "Papua", "Triton Bay", "Kaimana"],
     diving: ["Hammerheads", "Whales", "Mantas", "Whale sharks", "Soft coral", "Walls", "Night diving"]
   },
@@ -359,18 +359,18 @@ ITINERARY_V2["moluccas-forts-and-forests"] = {
   ],
   storyEnd: 6182,
   steps: [
-    { title: "Ambon &amp; Nusa Laut",      image: "images/it-moluccas-forts-and-forests-1.webp", alt: "A red gorgonian sea whip over a reef.",
+    { title: "Ambon &amp; Nusa Laut", sub: "Starting strong",      image: "images/it-moluccas-forts-and-forests-1.webp", alt: "A red gorgonian sea whip over a reef.",
       text: "It starts near Ambon at Nusa Laut, one of the Lease islands and one of the healthiest reefs in this part of Indonesia, protected by the village that owns it and looking the way reefs looked before most of us started diving.<br>A gentle opening dive, and an unfairly good one." },
     { title: "Banda", sub: "Where the story is still written into<br>the landscape", subFs: 40, subLh: 35, subW: 540,        image: "images/it-moluccas-forts-and-forests-2.webp", alt: "A mandarinfish in close-up.",
       text: "Then Banda.<br>Four hundred years ago these few small islands were the only place on earth where nutmeg grew, which made them the most fought-over ground in the world and pulled every European power with a fleet into the eastern seas.<br>That history has not been tidied away.<br>Banda Neira still has its street plan, its Dutch forts and the volcano standing over the anchorage. The plantations are still worked, the drying racks are still in front of the houses, and the people here will tell you the story themselves.<br>Underwater, the walls fall away straight from the shoreline, the lava flow from the 1988 eruption has grown back into something remarkable, and the mandarinfish come out at dusk." },
     { title: "Watubela", sub: "Fed from below", subFs: 40,        image: "images/it-moluccas-forts-and-forests-3.webp", alt: "Schooling hammerhead sharks in blue water.",
-      text: "Then the horizon opens<br>From there we head east through the Watubela islands, scattered between the Banda and Seram Seas, where almost nobody dives and the reefs show it.<br>This is also where the trip becomes a proper crossing. Days of open water with the boat moving and nothing on the horizon, which is when the good things tend to happen.<br>The Banda Sea in November is one of the better places in the world for schooling hammerheads, and the same water is a migration corridor for whales, sperm whales in these straits most of the year and the big migrating ones passing through in November.<br>Nothing out here is promised. Everything is watched for." },
+      text: "Then the horizon opens.<br>From there we head east through the Watubela islands, scattered between the Banda and Seram Seas, where almost nobody dives and the reefs show it.<br>This is where the trip becomes a proper crossing. Days of open water with the boat moving and nothing on the horizon, which is when the good things tend to happen.<br>The Banda Sea in November is one of the better places in the world for schooling hammerheads. At this time of year, the same water is a migration corridor for whales, while sperm whales stay in these straits most of the year.<br>Nothing out here is promised. Everything is watched for." },
     { title: "Papua", sub: "From Asia to Oceania, without<br>leaving Indonesia", subFs: 40, subLh: 35, subW: 540,        image: "images/it-moluccas-forts-and-forests-4.webp", alt: "A waterfall tumbling into the sea from the rainforest.",
       text: "Then Papua, and the change is abrupt.<br>The coastline turns into jungle running straight down to the water, karst walls, hidden bays, birds calling from inside the trees.<br>There are cuscus in the canopy and kangaroos in these forests.<br>This is the west coast of New Guinea, so the sun goes down into open water with the jungle at your back, and the skies out here are enormous.<br>We stop at the Kitikiti waterfalls, where fresh water comes straight off the rock into the sea and you can swim under it." },
     { title: "Triton Bay &amp; Aiduma", sub: "The reefs do not do subtle", subFs: 40,      image: "images/it-moluccas-forts-and-forests-5.webp", alt: "Orange soft coral on a saturated reef with a school of fish above.",
       text: "Triton Bay and Aiduma are the payoff.<br>The reefs here are the densest and most saturated in Indonesia, orange soft coral packed so tightly the rock underneath disappears, walls of fusiliers and snapper in numbers that look edited, and the whole thing lit up in a way that makes photographers behave strangely.<br>Wobbegongs lie flat on the reef waiting to be noticed, walking sharks come out at night, and the plankton that makes the water rich brings in mantas and mobulas as well as Bryde’s whales, which work these bays and are seen from the boat more often than anyone expects." },
     { title: "Bagans", subFs: 40, subLh: 35, subW: 540, sub: "Where whale sharks come to<br>feed under the nets", image: "images/it-moluccas-forts-and-forests-6.webp", alt: "A bagan fishing platform at sunset.",
-      text: "We time this departure to the right phase of the moon, because the darker nights bring the bagans better catches and the sharks better reasons to stay.<br>Twelve days from a spice island to a rainforest coast, from one continent to another, and the two halves have almost nothing in common except the water in between." }
+      text: "We time this departure to the right phase of the moon, because the darker nights bring the bagans better catches and the whale sharks better reasons to stay.<br>Twelve days from a spice island to a rainforest coast, from one continent to another, and the two halves have almost nothing in common except the water in between." }
   ],
 };
 
@@ -390,7 +390,7 @@ ITINERARY_V2["sunda-nirvana-and-lava"] = {
   card: {
     title: "Nirvana and Lava",
     days: "12 days", path: "Baubau → Maumere",
-    when: "April 2029",
+    when: "Late April 2029",
     route: ["Baubau", "Wakatobi", "Banda Sea", "Batu Tara", "Alor", "Solor", "Pantar Strait", "Savu Sea", "Maumere"],
     diving: ["Walls", "Seamounts", "Soft coral", "Gorgonians", "Black sand", "Volcanic bubbles", "Remote southern reefs"]
   },
@@ -413,14 +413,14 @@ ITINERARY_V2["sunda-nirvana-and-lava"] = {
     { title: "Banda Sea &amp; Batu Tara",  subFs: 40, sub: "Smoke on the horizon",       image: "images/it-sunda-nirvana-and-lava-2.webp", alt: "A nudibranch crawling over black sand.",
       text: "Then the land disappears. Two days across the Banda Sea lead to Batu Tara, a volcanic cone standing alone in open water.<br>Below the surface, volcanic gas rises through black sand in streams of bubbles, with reef growing on the ash around you." },
     { title: "Alor &amp; Solor", subFs: 40, sub: "Fed from below",       image: "images/it-sunda-nirvana-and-lava-3.webp", alt: "A wire coral spiralling in blue water.",
-      text: "Around Alor and Solor, deep, nutrient-rich water feeds steep volcanic slopes covered in hard coral. By April, the strongest upwelling has eased and the water has warmed.<br>There is black-sand diving too, on dark, clean slopes where the guides slow the pace right down. When the anchor drops, dugouts often come out from the villages, with children paddling around the dive deck." },
+      text: "Around Alor and Solor, deep, nutrient-rich water feeds steep volcanic slopes covered in hard coral. By April, the strongest upwelling has eased and the water has warmed.<br>There is black-sand diving too, on dark, clean slopes where the guides slow the pace right down. When the anchor drops, dugouts often come out from the villages, with children paddling around the boarding platform." },
     { title: "Pantar Strait<br>&amp; The Savu Sea", titleLh: 59,  subFs: 40, sub: "A few weeks a year",      image: "images/it-sunda-nirvana-and-lava-4.webp", alt: "Fish over a reef with sea fans.",
       text: "The seasonal shift lets us continue through the Pantar Strait to the exposed southern coast. The sites are bigger, more open and hold more fish than the northern side. This stretch is only reliably diveable for a few weeks a year, and few boats are in position to use that window.<br>The journey ends at Maumere on Flores." }
   ],
 };
 
 ITINERARY_V2["papua-four-kings"] = {
-  subtitle: "Sorong → Sorong · 12 days",
+  subtitle: "Sorong → Sorong · 11 days",
   poster: [194, 234, 305, 381],
   subX: 790, subY: 219, subW: 340, subFs: 25,
   introBox: [677, 566], introY: 594,
@@ -435,7 +435,7 @@ ITINERARY_V2["papua-four-kings"] = {
     title: "The Four Kings",
     days: "11 days", path: "Sorong → Sorong",
     when: "December 2028 – March 2029",
-    route: ["Dampier Strait", "Fam & Penemu", "Waigeo", "Wayag", "Batanta", "Gam", "Misool"],
+    route: ["Sorong", "Dampier Strait", "Fam & Penemu", "Waigeo", "Wayag", "Batanta", "Gam", "Misool", "Sorong"],
     diving: ["Current-swept pinnacles", "Hard coral", "Mantas", "Wobbegongs", "Walking sharks", "Muck", "Macro", "Exploration"]
   },
   layout: [
@@ -458,7 +458,7 @@ ITINERARY_V2["papua-four-kings"] = {
     { title: "Dampier Strait", subFs: 40, subLh: 52, sub: "Where the current brings<br>everything to life",         image: "images/it-papua-four-kings-1.webp", alt: "A wobbegong shark resting beneath table coral.",
       text: "The Dampier Strait is where current drives the action.<br>At Blue Magic, Cape Kri and Sardine Reef, jacks, batfish, barracuda and whitetips gather around pinnacles swept by the flow. Mantas use the cleaning stations at Manta Sandy, while wobbegongs rest beneath table corals and walking sharks appear after dark." },
     { title: "Fam &amp; Penemu", subFs: 40, sub: "The Raja Ampat everyone came to see",        image: "images/it-papua-four-kings-2.webp", alt: "Plate and table corals in a shallow garden.",
-      text: "Around Fam and Penemu, the reefs shift into shallow hard-coral gardens.<br>Melissa’s Garden spreads across hundreds of metres of staghorn and table coral in clear water, while above the surface the climb to Piaynemo opens onto the karst islands and lagoons that have become one of Raja Ampat’s defining views." },
+      text: "Around Fam and Penemu, the reefs shift into shallow hard-coral gardens.<br>Melissa’s Garden spreads across hundreds of meters of staghorn and table coral in clear water, while above the surface the climb to Piaynemo opens onto the karst islands and lagoons that have become one of Raja Ampat’s defining views." },
     { title: "Northern Waigeo", subFs: 40, sub: "Where the crowds disappear",       image: "images/it-papua-four-kings-3.webp", alt: "A banded pipefish against dark water.",
       text: "Further north, the traffic thins out.<br>Aljui Bay brings black sand, mangrove roots and muck diving beside the pearl farm, while Kawe and the reefs towards Wayag are more exposed, current-swept and lightly dived.<br>Above water, limestone islands scatter across turquoise water as far as the eye can see." },
     { title: "Batanta", subFs: 40, sub: "Waterfalls between reefs",        image: "images/it-papua-four-kings-4.webp", alt: "A peacock mantis shrimp, face on.",
@@ -485,8 +485,8 @@ ITINERARY_V2["papua-southern-king"] = {
   card: {
     title: "The Southern King",
     days: "7 days", path: "Sorong → Sorong",
-    when: "December – February",
-    route: ["Sele Strait", "Daram", "Fiabacet", "Boo", "Pele", "Balbulol"],
+    when: "From December to February",
+    route: ["Sorong", "Sele Strait", "Daram", "Fiabacet", "Boo", "Pele", "Balbulol", "Sorong"],
     diving: ["Mantas", "Sharks", "Wobbegongs", "Walking sharks", "Mobulas", "Soft coral", "Pygmy seahorses", "Silversides"]
   },
   layout: [
@@ -516,7 +516,7 @@ ITINERARY_V2["papua-southern-king"] = {
     { title: "Pele", subFs: 40, sub: "When the walls come alive",       image: "images/it-papua-southern-king-5.webp", alt: "A school of batfish against the sunlight.",
       text: "At Pele, the cast changes again.<br>Large groupers hold the reef, mobulas pass through in loose groups and batfish gather in the blue. When the silversides arrive, they can fill overhangs and entire sections of wall, drawing predators in from all around." },
     { title: "Balbulol", subFs: 40, subLh: 33, sub: "Where the reef turns<br>kaleidoscopic",          image: "images/it-papua-southern-king-6.webp", alt: "A frogfish among sea fans.",
-      text: "Balbulol brings layers of soft coral and sea fans, with frogfish sitting in the open and nudibranchs hidden among the colour.<br>In the afternoon, the tenders enter the lagoon system, threading between limestone into still green pools that only reveal themselves once you are inside.<br>That evening, the boat turns north through the Sele Strait for the overnight passage back to Sorong." }
+      text: "Balbulol brings layers of soft coral and sea fans, with frogfish sitting in the open and nudibranchs hidden among the color.<br>In the afternoon, the tenders enter the lagoon system, threading between limestone into still green pools that only reveal themselves once you are inside.<br>That evening, the boat turns north through the Sele Strait for the overnight passage back to Sorong." }
   ],
 };
 
@@ -631,7 +631,7 @@ ITINERARY_V2["sunda-west-meets-east"] = {
     storyEnd: 7620,
     steps: [
       { sub: "The line between two worlds", subColor: "blue", subW: 640, align: "right", image: "images/it-sunda-west-meets-east-7.webp", alt: "Padar Island's hills over the bays of Komodo National Park.",
-        text: "On the last night, somewhere in the deep water of the<br>Lombok Strait, WAOW 2 sails back into Asia.<br>Alfred Russel Wallace spotted that line in the 1850s by paying attention to birds. It carries his name, and it still holds.<br>Bali belongs to Asia, with its monkeys and woodpeckers.<br>Cockatoos and marsupials begin on the other side.<br>Everything you have dived for ten days lies in Wallacea, the transition zone between two continents that were never joined. The animals there belong fully to neither. And more and more, they exist nowhere else on Earth. The crossing takes a night. What it crosses took forty million years to form." }
+        text: "On the first night, somewhere in the deep water of the<br>Lombok Strait, WAOW 2 sails out of Asia.<br>Alfred Russel Wallace spotted that line in the 1850s by paying attention to birds. It carries his name, and it still holds.<br>Bali belongs to Asia, with its monkeys and woodpeckers.<br>Cockatoos and marsupials begin on the other side.<br>Everything you will dive for the next ten days lies in Wallacea, the transition zone between two continents that were never joined. The animals there belong fully to neither. And more and more, they exist nowhere else on Earth. The crossing takes a night. What it crosses took forty million years to form." }
     ]
   },
 };

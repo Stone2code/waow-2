@@ -5011,3 +5011,73 @@ body.nav-blue .nav__subrow { color: #4E7495; } body.nav-brown .nav__subrow { col
   .px-rg-moluccas .rg-key .rg-key__sheet p { margin-bottom: 5px; }
   .px-rg-moluccas .rgx-track ul:has(> li:nth-child(4)) { gap: 35px; }
 }
+
+/* Moluccas: title above the handwritten quote card (EN corrections 2026-10-01) */
+.px-rg .rg-quote__card { flex-direction: column; }
+.rg-quote__title { font-family: var(--font-display); font-weight: 500; text-transform: uppercase; letter-spacing: .04em; color: var(--open-sea); font-size: 20px; line-height: 1.25; text-align: center; margin: 0 0 14px; }
+
+/* =========================================================================
+   French version (html[lang=fr], set by i18n.js): longer words on the fixed desktop canvas
+   ========================================================================= */
+@media (min-width: 1100px) {
+  html[lang="fr"] .nav { width: 513px !important; margin-left: -40px; }
+  html[lang="fr"] .nav__list > li > a { white-space: nowrap; }
+  html[lang="fr"] .px-dd .dd-philosophy__cell { width: 300px !important; }
+  html[lang="fr"] .px-dd .dd-philosophy__cell:nth-of-type(odd) { margin-left: 20px; }
+  html[lang="fr"] .px-dd .dd-philosophy__cell:last-child { width: 700px !important; margin-left: 0; }
+  html[lang="fr"] .hp-safety__title { white-space: nowrap; font-size: 19px !important; }
+  html[lang="fr"] .px-rg main h2.p { font-size: calc(var(--fs) * 0.82) !important; }
+  html[lang="fr"] .px-rg .rg-hero__sub { font-size: 30px !important; white-space: nowrap; left: -100px !important; width: 1060px !important; }
+  html[lang="fr"] .px-xp .xp-beyond__tag { font-size: 14px !important; }
+}
+@media (min-width: 1100px) {
+  html[lang="fr"] .px-dd .dd-philosophy__cell { width: 330px !important; }
+  html[lang="fr"] .px-dd .dd-philosophy__cell:nth-of-type(odd) { margin-left: -10px; }
+  html[lang="fr"] .px-dd .dd-philosophy__cell:nth-of-type(even) { margin-left: 25px; }
+  html[lang="fr"] .px-dd .dd-philosophy__cell:last-child { width: 700px !important; margin-left: 0; }
+  html[lang="fr"] .px-dd .dd-philosophy__cell p { font-size: 15.5px !important; line-height: 21px !important; }
+  html[lang="fr"] .px-xp .xp-beyond__tag:nth-of-type(1) { left: 110px !important; }
+  html[lang="fr"] .px-xp .xp-beyond__tag:nth-of-type(2) { left: 292px !important; }
+  html[lang="fr"] .px-xp .xp-beyond__tag:nth-of-type(3) { left: 432px !important; }
+  html[lang="fr"] .px-xp .xp-beyond__tag:nth-of-type(4) { left: 640px !important; }
+}
+
+/* =========================================================================
+   Header language switch "EN | FR | DE" (added by i18n.js): a touch heavier and darker than the menu links,
+   short yellow rules between; placed between the menu and the Rates & Dates button (Canva, 2026-10-01)
+   ========================================================================= */
+.lang-switch { display: flex; align-items: center; gap: 9px; font-family: var(--font-display); font-weight: 700; font-size: 13px; letter-spacing: 0.06em; line-height: 1; }
+.lang-switch a { color: var(--ls-c, var(--open-sea)); text-decoration: none; text-transform: uppercase; padding: 4px 0; }
+.lang-switch a[aria-current="true"] { cursor: default; }
+.lang-switch a[data-lang]:hover { opacity: .7; }
+.lang-switch a.is-off { cursor: default; }
+.lang-switch span { width: 2px; height: 14px; background: var(--yellaow); }
+@media (min-width: 1100px) {
+  .site-header__row > .lang-switch { position: absolute; top: 65px; left: 1049px; }
+  /* menu text centred on the Rates & Dates button (button centre y = 76) */
+  .site-header__row > .nav { margin-top: -7px; }
+}
+@media (max-width: 1099.98px) {
+  .site-header__row > .lang-switch { margin-left: auto; margin-right: 14px; }
+  .mobile-nav > .lang-switch { padding: 18px var(--gutter, 20px) 4px; font-size: 14px; gap: 12px; }
+}
+@media (min-width: 901px) { .mobile-nav > .lang-switch { display: none; } }
+@media (max-width: 900px) { .site-header__row > .lang-switch { display: none; } }
+
+/* One header layout on every page (desktop): logo and button the same distance from the edges, menu centred on the page,
+   logo / menu / languages / button all centred on one line; button in the menu colour. */
+@media (min-width: 1100px) {
+  .site-header__row > .logo { left: 72px !important; top: 61px !important; }
+  .site-header__row > .nav { left: 467px !important; }
+  html[lang="fr"] .site-header__row > .nav { margin-left: -40px !important; }
+  .site-header__row > .site-header__actions { left: 1161px !important; }
+  .site-header__actions .btn { color: var(--ls-c, var(--abyss)) !important; border-color: var(--ls-c, var(--abyss)) !important; }
+}
+@media (min-width: 1100px) {
+  .site-header__actions .btn:hover { background: var(--ls-c, var(--abyss)) !important; color: var(--bg-page) !important; }
+  .px-nw .site-header__actions .btn:hover { color: var(--open-sea) !important; }
+}
+@media (min-width: 1100px) {
+  html[lang="fr"] .tbp-page .tbp-divers__copy h2 { font-size: 42px; line-height: 54px; }
+  html[lang="fr"] .px-sf .sf-h--c { white-space: normal; }
+}
