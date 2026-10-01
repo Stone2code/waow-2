@@ -3234,6 +3234,7 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
 .px-gold-b::after { bottom: 0; } .px-gold-t::before { top: 0; }
 .px-annot { font-family: var(--font-script); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
 
+
 @media (min-width: 1100px) {
   .px-page { --offz: calc((100vw / var(--z) - var(--W, 1366px)) / 2); --offpx: calc((100vw - var(--W, 1366px) * var(--z)) / 2); --fo: 0px; --lo: 0px; }
   .px-page .link-arrow svg { display: none; }
@@ -4844,7 +4845,7 @@ body.nav-blue .nav__subrow { color: #4E7495; } body.nav-brown .nav__subrow { col
   .px-rg .rg-others__arrow svg path { stroke-width: 2.6; vector-effect: non-scaling-stroke; }
   .px-rg .rg-others__arrow svg path { stroke-width: 15px; }
 }
-@media (min-width: 1100px) { .px-rg-sulawesi .rg-key .rg-key__sheet p { margin-bottom: 18px; } }
+@media (min-width: 1100px) { .px-rg-sulawesi .rg-key .rg-key__sheet p { margin-bottom: 5px; } }
 
 /* Booking vs Canva: bigger countdown digits and script labels. */
 @media (min-width: 1100px) {
@@ -4876,3 +4877,137 @@ body.nav-blue .nav__subrow { color: #4E7495; } body.nav-brown .nav__subrow { col
   .px-nw .nw-card__body .link-arrow { left: 996px; top: 160px; font-size: 17.4px; }
 }
 @media (min-width: 1100px) { .px-nw .nw-card { border-width: 2px; } .px-nw .nw-card::after { border-top-width: 2px; border-bottom-width: 2px; } }
+
+/* =========================================================================
+   Review pass 2 — Cabins
+   ========================================================================= */
+@media (min-width: 1100px) {
+  .cb-page .cb-hero { height: calc(965px * var(--z)); }
+  .cb-page .cb-hero > .cb-stage { height: 965px; }
+  .cb-page .cb-hero h1 { font-size: 42px; line-height: 52px; top: 118px; }
+  .cb-page .cb-hero__photo--a { left: 322px; top: 262px; width: 722px; height: 461px; }
+  .cb-page .cb-hero__photo--b { left: 649px; top: 556px; width: 415px; height: 335px; }
+  .cb-page .cb-hero__photo--b img { object-position: 30% 62%; }
+  /* the plan cards are bigger than their box: let them breathe above/below the section instead of being cropped */
+  .cb-page #master-cabin, .cb-page #superior-cabins, .cb-page #single-cabins, .cb-page #deluxe-cabins { overflow-x: clip; overflow-y: visible; }
+  .cb-page .cb-cabin__copy h2 { font-size: 54px; line-height: 56px; }
+  .cb-page #master-cabin .cb-cabin__deck { top: 249px; } .cb-page #superior-cabins .cb-cabin__deck { top: 225px; }
+  .cb-page #single-cabins .cb-cabin__deck { top: 167px; } .cb-page #deluxe-cabins .cb-cabin__deck { top: 121px; }
+  .cb-page .cb-cabin__copy p.cb-cabin__deck { font-family: var(--font-display) !important; font-weight: 600; font-size: 19px; line-height: 26px; letter-spacing: 0.03em; text-transform: uppercase; color: var(--ironwood) !important; }
+  .cb-page .cb-cabin__annotation { font-size: 25px; line-height: 40px; }
+  .cb-page #superior-cabins .cb-cabin__annotation { left: 958px; width: auto; transform: translateX(-100%); }
+  .cb-page #deluxe-cabins .cb-cabin__annotation { left: 958px; width: auto; transform: translateX(-100%); }
+}
+
+/* =========================================================================
+   Review pass 2 — The Boat: gold double rule lives on the cream side, more room above "The Cabins"
+   ========================================================================= */
+.tbp-gold-b::after { display: none; }
+.tbp-page .tbp-cabins { position: relative; }
+.tbp-page .tbp-cabins::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 7px; z-index: 3; pointer-events: none;
+  background: repeating-linear-gradient(to bottom, var(--yellaow) 0 1.5px, transparent 1.5px 4px) top / 100% 1.5px no-repeat, repeating-linear-gradient(to bottom, var(--yellaow) 0 1.5px, transparent 1.5px 4px) bottom / 100% 1.5px no-repeat; }
+@media (min-width: 1100px) {
+  .tbp-page .tbp-cabins { height: calc(760px * var(--z)); }
+  .tbp-page .tbp-cabins > .tbp-stage { height: 760px; }
+  .tbp-page .tbp-cabins h2 { top: 95px; }
+  .tbp-page .tbp-cabins__grid article { top: 250px; }
+  .tbp-page .tbp-cabins__link { top: 672px; }
+}
+
+/* =========================================================================
+   Review pass 2 — Homepage + footer
+   ========================================================================= */
+@media (min-width: 1100px) {
+  .hp-home .hp-intro__photo--a { left: 862px; }
+  .hp-home .hp-intro__photo--b { left: 604px; }
+  .hp-home .hp-dive__copy .link-arrow { left: 528px; width: 310px; }
+  .hp-home .hp-explore__head .link-arrow { left: 569px; width: 228px; }
+  .hp-home .hp-explore > .container::before { content: none; }
+  .hp-home .hp-explore__head h2, .hp-home .hp-coming-next__head .hp-eyebrow-script { font-size: 30px; line-height: 37px; letter-spacing: 0.05em; }
+  .hp-home .hp-coming-next__card p { font-style: normal !important; }
+  .hp-home .hp-coming-next__prev { position: absolute; left: 8px; top: 940px; width: 75px; height: 113px; border: 0; border-radius: 0; color: var(--sea-foam); background: none; padding: 0; }
+  .hp-home .hp-coming-next__prev svg { width: 75px; height: 113px; stroke-width: 3; }
+  .hp-home .hp-testi-prev { position: absolute; left: 0; top: 529px; width: 44px; height: 66px; border: 0; padding: 0; color: var(--open-sea); background: none; }
+  .hp-home .hp-testi-prev svg { width: 100%; height: 100%; stroke-width: 3; }
+}
+/* stamps: light tilt on hover, the perforated edge follows the shape (no box around it) */
+.hp-stamp-row li { overflow: visible; }
+.hp-stamp-row li a { display: block; }
+.hp-stamp-row li img { transition: transform .3s var(--ease), filter .3s var(--ease); transform-origin: 50% 60%; }
+.hp-stamp-row li a:hover img, .hp-stamp-row li a:focus-visible img { transform: rotate(-2.5deg) translateY(-4px) scale(1.04); filter: drop-shadow(0 8px 10px rgba(0,0,0,.4)); }
+@media (prefers-reduced-motion: reduce) { .hp-stamp-row li a:hover img { transform: none; } }
+/* footer: Contact Us block centred on the two link rows */
+@media (min-width: 1100px) {
+  body:is(.px-page,.hp-home,.tbp-page,.cb-page) .hp-footer__grid h3 { top: 37px; }
+  body:is(.px-page,.hp-home,.tbp-page,.cb-page) .hp-footer__grid > div > a { top: 72px; }
+}
+
+/* =========================================================================
+   Review pass 2 — Regions: key-infos paper grows with its text; hover-safe carousels; centred CTA
+   ========================================================================= */
+.px-rg .rg-key__note { height: auto !important; min-height: var(--h); box-sizing: border-box; padding-bottom: 44px; }
+.px-rg .rg-key__note .rg-key__sheet { display: block; }
+/* rotated cards must not be clipped by their scroller */
+.px-rg .rgx-track { padding: 34px 16px 18px; translate: -16px -24px; box-sizing: content-box; scroll-padding-inline: 16px; }
+.px-it2 .it2-track { padding: 24px 16px 16px; translate: -16px -24px; box-sizing: content-box; scroll-padding-inline: 16px; }
+.px-it2 .it2-track, .px-rg .rgx-track { overflow-y: hidden; }
+.px-rg .rg-key__right .link-arrow { align-self: center; margin-inline: auto; }
+
+/* =========================================================================
+   Review pass 2 — Itineraries: "embark" CTA under the last paragraph
+   ========================================================================= */
+.px-it2 .it2-embark { display: flex; justify-content: center; width: fit-content; margin: 2.5rem auto 0; color: var(--ironwood); }
+@media (min-width: 1100px) {
+  .px-it2 .it2-embark { position: absolute; margin: 0; transform: translateX(-50%); white-space: nowrap; }
+}
+
+/* =========================================================================
+   Review pass 2 — WAOW 1 stories: postcards lean alternately left / right
+   (the photos are pre-rotated: 1 and 3 lean left, 4 leans right → straighten 3 against 4)
+   ========================================================================= */
+.px-page.px-mu .mu-testi:nth-of-type(2) img { transform: rotate(7.3deg); }
+.px-page.px-mu .mu-testi:nth-of-type(3) img { transform: rotate(-7.3deg); }
+
+/* Body copy: Fraunces is 15px everywhere (elements are tagged by main.js) */
+[data-f13] { font-size: 15px !important; }
+
+/* itinerary logbook: text scales with the card when a page's card is wider than the 306px reference (--ls set by itinerary-v2.js) */
+.px-it2 .it2-log__text { zoom: var(--ls, 1); }
+
+/* Region pages: the stage is already zoomed by --z, so the stripe offset must not be scaled a second time */
+@media (min-width: 1100px) {
+  .px-rg .px-stripes { left: var(--sx); }
+}
+@media (min-width: 1100px) {
+  .px-rg .px-stripes { right: auto; width: calc((100vw - var(--offpx)) / var(--z) - var(--sx)); }
+}
+
+/* Sulawesi vs Canva: quote card text column is 442px wide */
+@media (min-width: 1100px) { .px-rg .rg-quote__card { padding-inline: 80px; } }
+
+/* Region pages with exactly three itineraries (Sulawesi): large posters, as in the Canva */
+@media (min-width: 1100px) {
+  .px-rg .rgx-track ul:has(> li:nth-child(3):last-child) { gap: 135px; justify-content: center; }
+  .px-rg .rgx-track ul:has(> li:nth-child(3):last-child) li { flex-basis: 240px; }
+  .px-rg .rgx-track ul:has(> li:nth-child(3):last-child) .rgx-card__photo { height: 297px; }
+}
+
+/* Sunda Islands vs Canva */
+@media (min-width: 1100px) {
+  .px-rg-sunda-islands .rg-key .rg-key__sheet p { margin-bottom: 5px; }
+  .px-rg-sunda-islands .rgx-track ul { gap: 35px; }
+  .px-rg-sunda-islands .rgx-track li { flex-basis: 221px; }
+  .px-rg-sunda-islands .rgx-card__photo { height: 274px; }
+}
+
+/* Papua vs Canva */
+@media (min-width: 1100px) {
+  .px-rg-papua .rg-key .rg-key__sheet p { margin-bottom: 5px; }
+  .px-rg .px-stripes--l { left: calc(-1 * var(--offz)); right: auto; width: calc(var(--offz) + var(--sx)); }
+}
+
+/* Moluccas vs Canva */
+@media (min-width: 1100px) {
+  .px-rg-moluccas .rg-key .rg-key__sheet p { margin-bottom: 5px; }
+  .px-rg-moluccas .rgx-track ul:has(> li:nth-child(4)) { gap: 35px; }
+}

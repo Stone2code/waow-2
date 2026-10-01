@@ -24,6 +24,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="responsive.css">
 <script src="home-stage.js" data-stage="1366"></script>
 </head>
 <body class="nav-blue px-page px-hdA px-xp">
@@ -158,10 +159,10 @@
 
   <div class="mobile-nav" id="mobile-nav" hidden>
     <ul>
-      <li><a href="the-boat.html">The Boat</a></li>
-      <li><a href="destinations.html">Destinations</a></li>
-      <li><a href="experience.html" class="is-active" aria-current="page">Experience</a></li>
-      <li><a href="about-us.html">About Us</a></li>
+      <li class="mobile-nav__group"><details><summary><a href="the-boat.html">The Boat</a></summary><ul class="mobile-nav__sub"><li><a href="the-boat.html#decks">Decks</a></li><li><a href="cabins.html">Cabins</a></li><li><a href="the-boat.html#outdoor">Indoor &amp; Outdoor</a></li><li><a href="safety.html">Safety</a></li></ul></details></li>
+      <li class="mobile-nav__group"><details><summary><a href="destinations.html">Destinations</a></summary><ul class="mobile-nav__sub"><li><a href="destinations.html#map">Map</a></li><li><details class="mobile-nav__nested"><summary><a href="destinations.html#regions">Regions</a></summary><ul><li><a href="sulawesi.html">Sulawesi</a></li><li><a href="moluccas.html">Moluccas</a></li><li><a href="papua.html">Papua</a></li><li><a href="banda-sea.html">Banda Sea</a></li><li><a href="sunda-islands.html">Sunda Islands</a></li></ul></details></li><li><details class="mobile-nav__nested"><summary><a href="destinations.html#map">Itineraries</a></summary><ul><li><a href="itinerary-v2.html?slug=sulawesi-sponges-and-stilts">Sponges and Stilts</a></li><li><a href="itinerary-v2.html?slug=sunda-nirvana-and-lava">Nirvana and Lava</a></li><li><a href="itinerary-v2.html?slug=moluccas-forts-and-forests">Forts and Forests</a></li><li><a href="itinerary-v2.html?slug=moluccas-sultans-and-tarsiers">Sultans and Tarsiers</a></li><li><a href="itinerary-v2.html?slug=papua-corals-and-cloves">Coral and Cloves</a></li><li><a href="itinerary-v2.html?slug=papua-four-kings">The Four Kings</a></li><li><a href="itinerary-v2.html?slug=papua-southern-king">The Southern King</a></li><li><a href="itinerary-v2.html?slug=papua-tale-of-two-papuas">Tale of Two Papuas</a></li><li><a href="itinerary-v2.html?slug=sunda-spices-and-snakes">Spices and Snakes</a></li><li><a href="itinerary-v2.html?slug=sunda-volcanoes-and-villages">Volcanoes and Villages</a></li><li><a href="itinerary-v2.html?slug=sunda-east-meets-west">East Meets West</a></li><li><a href="itinerary-v2.html?slug=sunda-west-meets-east">West Meets East</a></li></ul></details></li></ul></details></li>
+      <li class="mobile-nav__group"><details><summary><a href="experience.html" class="is-active" aria-current="page">Experience</a></summary><ul class="mobile-nav__sub"><li><a href="dive-deep.html">Diving</a></li><li><a href="experience.html#gastronomy">Gastronomy</a></li><li><a href="experience.html#hotel_service">Hotel Service</a></li><li><a href="experience.html#included">What&rsquo;s Included</a></li></ul></details></li>
+      <li class="mobile-nav__group"><details><summary><a href="about-us.html">About Us</a></summary><ul class="mobile-nav__sub"><li><a href="museum.html">The First Waow</a></li><li><a href="about-us.html#waow2">Waow 2</a></li><li><a href="about-us.html#team">Team</a></li><li><a href="giving-back.html">Engagement</a></li></ul></details></li>
       <li><a href="news.html">News</a></li>
       <li><a class="btn btn--outline" href="booking.html">Rates &amp; Dates</a></li>
     </ul>
@@ -207,7 +208,7 @@
 <p class="p" style="--x:600px;--y:506px;--w:590px;--fs:17.5px;--lh:24px;--ta:right;">Vegetarian, vegan and other diets get the same passion and<br>creativity as every menu, never an afterthought.</p>
 <p class="xp-gastro__note p" style="--x:600px;--y:581px;--w:590px;--fs:17.5px;--lh:24px;--ta:right;">Special diets on request.</p>
 </div></div></section>
-<section class="xp-hotel px-sec" style="--sh:761px;" id="hotel_service"><div class="container px-stage xp-hotel__grid">
+<section class="xp-hotel px-sec m-rule" style="--sh:761px;" id="hotel_service"><div class="container px-stage xp-hotel__grid">
 <div class="xp-hotel__copy px-flat reveal">
 <h2 class="p" style="--x:93px;--y:70px;--w:500px;--fs:49px;--lh:68px;--ta:left;">Hotel<br>Service.</h2>
 <p class="xp-hotel__lead p" style="--x:93px;--y:252px;--w:700px;--fs:17.5px;--lh:24px;--ta:left;">Housekeeping is done every day, laundry is available on request,<br>and the crew quietly keeps everything running while you get on with your day.</p>
@@ -244,7 +245,7 @@
 <h2 class="p" style="--x:94px;--y:134px;--w:460px;--fs:66px;--lh:87px;--ta:left;">What&rsquo;s<br>Included</h2>
 <h3 class="p px-annot" style="--x:94px;--y:359px;--w:400px;--fs:28.4px;--lh:30px;--ta:left;">Your stay includes:</h3>
 <ul class="p" style="--x:95px;--y:400px;--w:380px;--fs:17.5px;--lh:24px;--ta:left;"><li>Airport or hotel transfers</li><li>3-4 dives per day</li><li>Nitrox</li><li>5 meals per day</li><li>Non-alcoholic drinks</li><li>Snacks throughout the day</li><li>Daily housekeeping</li><li>Land excursions</li><li>Snorkelling trips for non-diving guests</li><li>Port & Park fees</li></ul>
-<a class="link-arrow p la-l" href="booking.html" style="--x:96px;--y:635px;">sea you there <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a class="link-arrow p la-l" href="booking.html" style="--x:96px;--y:678px;">sea you there <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </div><div class="xp-included__visual px-flat reveal reveal--delay-1">
 <figure class="xp-included__photo p" style="--x:503px;--y:142px;--w:510px;--h:551px;"><picture><img src="images/exp-9.webp" loading="lazy" alt="Guests jumping into the sea from Waow 2."></picture></figure>
 <img class="dot-icon p" src="images/icons-4.png" style="border: none; --x:837px;--y:31px;--w:162px;--h:155px; width: 370px; height: auto; z-index: 10;">

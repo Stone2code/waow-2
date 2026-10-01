@@ -32,6 +32,11 @@
       var p = ITINERARY_V2[k], nm = String(p.name || p.card.title).replace(/"/g, "&quot;");
       return '<a class="hp-coming-next__card" href="' + itineraryHref(k) + '" aria-label="' + nm + '"><figure><img src="images/it-cover-' + k + '.webp" alt="' + nm + '"></figure><p>sea more</p></a>';
     }).join("");
+    var prev = document.getElementById("coming-next-prev");
+    if (prev) prev.addEventListener("click", function () {
+      var cards = track.querySelectorAll(".hp-coming-next__card"), step = cards.length > 1 ? cards[1].offsetLeft - cards[0].offsetLeft : track.clientWidth;
+      track.scrollTo({ left: track.scrollLeft <= 4 ? track.scrollWidth : track.scrollLeft - step, behavior: "smooth" });
+    });
     if (next) next.addEventListener("click", function () {
       var cards = track.querySelectorAll(".hp-coming-next__card"), step = cards.length > 1 ? cards[1].offsetLeft - cards[0].offsetLeft : track.clientWidth;
       var atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
@@ -41,6 +46,11 @@
 
   // ---- 3. postcards slider
   var tt = document.getElementById("hp-testi-track"), tn = document.getElementById("hp-testi-next");
+  var tp = document.getElementById("hp-testi-prev");
+  if (tt && tp) tp.addEventListener("click", function () {
+    var f = tt.querySelectorAll(".hp-testi"), step = f.length > 1 ? f[1].offsetLeft - f[0].offsetLeft : tt.clientWidth;
+    tt.scrollTo({ left: tt.scrollLeft <= 4 ? tt.scrollWidth : tt.scrollLeft - step, behavior: "smooth" });
+  });
   if (tt && tn) tn.addEventListener("click", function () {
     var f = tt.querySelectorAll(".hp-testi"), step = f.length > 1 ? f[1].offsetLeft - f[0].offsetLeft : tt.clientWidth;
     var atEnd = tt.scrollLeft + tt.clientWidth >= tt.scrollWidth - 4;

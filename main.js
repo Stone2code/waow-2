@@ -104,4 +104,55 @@
     });
     el.addEventListener("focusin", open);
   });
+
+  // Body copy (Fraunces) is 13px everywhere: tag every element whose text is set in Fraunces; CSS does the rest ([data-f13]).
+  (function () {
+    if (window.WAOW_KEEP_BODY_SIZE) return;
+    var timer = null;
+    function tag() {
+      var els = document.body.getElementsByTagName("*");
+      for (var i = 0; i < els.length; i++) {
+        var el = els[i], n = el.nodeName;
+        if (n === "SCRIPT" || n === "STYLE" || n === "svg" || n === "path" || el.hasAttribute("data-f13")) continue;
+        var own = false;
+        for (var c = el.firstChild; c; c = c.nextSibling) { if (c.nodeType === 3 && c.nodeValue.trim()) { own = true; break; } }
+        if (own && /fraunces/i.test(getComputedStyle(el).fontFamily)) el.setAttribute("data-f13", "");
+      }
+    }
+    // Desktop hard line breaks inside paragraphs: each <br> gets a sibling space that only shows on phones (CSS), so text re-wraps there.
+    function spaces() {
+      var brs = document.body.querySelectorAll("p br:not(.had), li br:not(.had)");
+      for (var i = 0; i < brs.length; i++) {
+        var br = brs[i];
+        if (br.closest(".cb-closing__copy, .rg-key__sheet, .px-annot, .keep-br")) continue;
+        br.className = "had";
+        var sp = document.createElement("span"); sp.className = "br-sp"; sp.textContent = " ";
+        br.parentNode.insertBefore(sp, br.nextSibling);
+      }
+    }
+    function later() { clearTimeout(timer); timer = setTimeout(function () { tag(); spaces(); }, 60); }
+    tag(); spaces();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { tag(); spaces(); });
+    window.addEventListener("load", tag);
+    if ("MutationObserver" in window) new MutationObserver(later).observe(document.body, { childList: true, subtree: true });
+  })();
+
+  // Museum postcards: on phones they become a one-at-a-time slider (swipe, arrows, dots). Desktop keeps its fixed layout.
+  (function () {
+    var t = document.getElementById("mu-testi-track");
+    if (!t) return;
+    var cards = t.querySelectorAll(".mu-testi"), dots = document.getElementById("mu-testi-dots");
+    var prev = document.getElementById("mu-testi-prev"), next = document.getElementById("mu-testi-next");
+    function idx() { var w = cards[0].offsetWidth || 1; return Math.round(t.scrollLeft / (cards.length > 1 ? cards[1].offsetLeft - cards[0].offsetLeft : w)); }
+    function go(i) { i = (i + cards.length) % cards.length; t.scrollTo({ left: cards[i].offsetLeft - cards[0].offsetLeft, behavior: "smooth" }); }
+    cards.forEach(function (c, i) {
+      var b = document.createElement("button"); b.type = "button"; b.setAttribute("aria-label", "Postcard " + (i + 1));
+      b.addEventListener("click", function () { go(i); }); dots.appendChild(b);
+    });
+    function sync() { var i = idx(); dots.querySelectorAll("button").forEach(function (b, k) { b.classList.toggle("is-on", k === i); }); }
+    prev.addEventListener("click", function () { go(idx() - 1); });
+    next.addEventListener("click", function () { go(idx() + 1); });
+    t.addEventListener("scroll", function () { window.requestAnimationFrame(sync); }, { passive: true });
+    sync();
+  })();
 })();

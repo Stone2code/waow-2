@@ -24,6 +24,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="responsive.css">
 <script src="home-stage.js" data-stage="1366"></script>
 </head>
 <body class="px-page px-hdA px-nw">
@@ -141,10 +142,10 @@
 
   <div class="mobile-nav" id="mobile-nav" hidden>
     <ul>
-      <li><a href="the-boat.html">The Boat</a></li>
-      <li><a href="destinations.html">Destinations</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="about-us.html">About Us</a></li>
+      <li class="mobile-nav__group"><details><summary><a href="the-boat.html">The Boat</a></summary><ul class="mobile-nav__sub"><li><a href="the-boat.html#decks">Decks</a></li><li><a href="cabins.html">Cabins</a></li><li><a href="the-boat.html#outdoor">Indoor &amp; Outdoor</a></li><li><a href="safety.html">Safety</a></li></ul></details></li>
+      <li class="mobile-nav__group"><details><summary><a href="destinations.html">Destinations</a></summary><ul class="mobile-nav__sub"><li><a href="destinations.html#map">Map</a></li><li><details class="mobile-nav__nested"><summary><a href="destinations.html#regions">Regions</a></summary><ul><li><a href="sulawesi.html">Sulawesi</a></li><li><a href="moluccas.html">Moluccas</a></li><li><a href="papua.html">Papua</a></li><li><a href="banda-sea.html">Banda Sea</a></li><li><a href="sunda-islands.html">Sunda Islands</a></li></ul></details></li><li><details class="mobile-nav__nested"><summary><a href="destinations.html#map">Itineraries</a></summary><ul><li><a href="itinerary-v2.html?slug=sulawesi-sponges-and-stilts">Sponges and Stilts</a></li><li><a href="itinerary-v2.html?slug=sunda-nirvana-and-lava">Nirvana and Lava</a></li><li><a href="itinerary-v2.html?slug=moluccas-forts-and-forests">Forts and Forests</a></li><li><a href="itinerary-v2.html?slug=moluccas-sultans-and-tarsiers">Sultans and Tarsiers</a></li><li><a href="itinerary-v2.html?slug=papua-corals-and-cloves">Coral and Cloves</a></li><li><a href="itinerary-v2.html?slug=papua-four-kings">The Four Kings</a></li><li><a href="itinerary-v2.html?slug=papua-southern-king">The Southern King</a></li><li><a href="itinerary-v2.html?slug=papua-tale-of-two-papuas">Tale of Two Papuas</a></li><li><a href="itinerary-v2.html?slug=sunda-spices-and-snakes">Spices and Snakes</a></li><li><a href="itinerary-v2.html?slug=sunda-volcanoes-and-villages">Volcanoes and Villages</a></li><li><a href="itinerary-v2.html?slug=sunda-east-meets-west">East Meets West</a></li><li><a href="itinerary-v2.html?slug=sunda-west-meets-east">West Meets East</a></li></ul></details></li></ul></details></li>
+      <li class="mobile-nav__group"><details><summary><a href="experience.html">Experience</a></summary><ul class="mobile-nav__sub"><li><a href="dive-deep.html">Diving</a></li><li><a href="experience.html#gastronomy">Gastronomy</a></li><li><a href="experience.html#hotel_service">Hotel Service</a></li><li><a href="experience.html#included">What&rsquo;s Included</a></li></ul></details></li>
+      <li class="mobile-nav__group"><details><summary><a href="about-us.html">About Us</a></summary><ul class="mobile-nav__sub"><li><a href="museum.html">The First Waow</a></li><li><a href="about-us.html#waow2">Waow 2</a></li><li><a href="about-us.html#team">Team</a></li><li><a href="giving-back.html">Engagement</a></li></ul></details></li>
       <li><a href="news.html" class="is-active" aria-current="page">News</a></li>
       <li><a class="btn btn--outline" href="booking.html">Rates &amp; Dates</a></li>
     </ul>

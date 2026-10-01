@@ -24,6 +24,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="responsive.css">
 <script src="home-stage.js" data-stage="1366"></script>
 </head>
 <body class="nav-blue px-page px-hdA px-dd">
@@ -157,10 +158,10 @@
 
   <div class="mobile-nav" id="mobile-nav" hidden>
     <ul>
-      <li><a href="the-boat.html">The Boat</a></li>
-      <li><a href="destinations.html">Destinations</a></li>
-      <li><a href="experience.html" class="is-active" aria-current="page">Experience</a></li>
-      <li><a href="about-us.html">About Us</a></li>
+      <li class="mobile-nav__group"><details><summary><a href="the-boat.html">The Boat</a></summary><ul class="mobile-nav__sub"><li><a href="the-boat.html#decks">Decks</a></li><li><a href="cabins.html">Cabins</a></li><li><a href="the-boat.html#outdoor">Indoor &amp; Outdoor</a></li><li><a href="safety.html">Safety</a></li></ul></details></li>
+      <li class="mobile-nav__group"><details><summary><a href="destinations.html">Destinations</a></summary><ul class="mobile-nav__sub"><li><a href="destinations.html#map">Map</a></li><li><details class="mobile-nav__nested"><summary><a href="destinations.html#regions">Regions</a></summary><ul><li><a href="sulawesi.html">Sulawesi</a></li><li><a href="moluccas.html">Moluccas</a></li><li><a href="papua.html">Papua</a></li><li><a href="banda-sea.html">Banda Sea</a></li><li><a href="sunda-islands.html">Sunda Islands</a></li></ul></details></li><li><details class="mobile-nav__nested"><summary><a href="destinations.html#map">Itineraries</a></summary><ul><li><a href="itinerary-v2.html?slug=sulawesi-sponges-and-stilts">Sponges and Stilts</a></li><li><a href="itinerary-v2.html?slug=sunda-nirvana-and-lava">Nirvana and Lava</a></li><li><a href="itinerary-v2.html?slug=moluccas-forts-and-forests">Forts and Forests</a></li><li><a href="itinerary-v2.html?slug=moluccas-sultans-and-tarsiers">Sultans and Tarsiers</a></li><li><a href="itinerary-v2.html?slug=papua-corals-and-cloves">Coral and Cloves</a></li><li><a href="itinerary-v2.html?slug=papua-four-kings">The Four Kings</a></li><li><a href="itinerary-v2.html?slug=papua-southern-king">The Southern King</a></li><li><a href="itinerary-v2.html?slug=papua-tale-of-two-papuas">Tale of Two Papuas</a></li><li><a href="itinerary-v2.html?slug=sunda-spices-and-snakes">Spices and Snakes</a></li><li><a href="itinerary-v2.html?slug=sunda-volcanoes-and-villages">Volcanoes and Villages</a></li><li><a href="itinerary-v2.html?slug=sunda-east-meets-west">East Meets West</a></li><li><a href="itinerary-v2.html?slug=sunda-west-meets-east">West Meets East</a></li></ul></details></li></ul></details></li>
+      <li class="mobile-nav__group"><details><summary><a href="experience.html" class="is-active" aria-current="page">Experience</a></summary><ul class="mobile-nav__sub"><li><a href="dive-deep.html">Diving</a></li><li><a href="experience.html#gastronomy">Gastronomy</a></li><li><a href="experience.html#hotel_service">Hotel Service</a></li><li><a href="experience.html#included">What&rsquo;s Included</a></li></ul></details></li>
+      <li class="mobile-nav__group"><details><summary><a href="about-us.html">About Us</a></summary><ul class="mobile-nav__sub"><li><a href="museum.html">The First Waow</a></li><li><a href="about-us.html#waow2">Waow 2</a></li><li><a href="about-us.html#team">Team</a></li><li><a href="giving-back.html">Engagement</a></li></ul></details></li>
       <li><a href="news.html">News</a></li>
       <li><a class="btn btn--outline" href="booking.html">Rates &amp; Dates</a></li>
     </ul>
@@ -174,9 +175,9 @@
 <p class="p" style="--x:233px;--y:233px;--w:900px;--fs:20.3px;--lh:28.3px;--ta:center;">WAOW 2 was designed around diving.<br>From the first descent to the last surfacing, every detail is there to<br>make your time underwater as seamless as possible.</p></div>
 <div class="dd-hero__collage px-flat reveal">
 <figure class="dd-hero__photo dd-hero__photo--a p" style="--x:180px;--y:368px;--w:850px;--h:542px;"><picture><img src="images/div-10.webp" loading="lazy" alt="A school of fish above a coral reef."></picture></figure>
-<figure class="dd-hero__photo dd-hero__photo--b p" style="--x:783px;--y:609px;--w:442px;--h:393px;"><picture><img src="images/div-2.webp" loading="lazy" alt="Marine life on an Indonesian reef."></picture></figure>
+<figure class="dd-hero__photo dd-hero__photo--b p" style="--x:783px;--y:609px;--w:442px;--h:393px;"><picture><img src="images/div-hero-moray.webp" loading="lazy" alt="A honeycomb moray on an orange coral reef."></picture></figure>
 </div></div></section>
-<section class="dd-newsites px-sec px-gold-b" style="--sh:776px;"><div class="container px-stage dd-newsites__grid">
+<section class="dd-newsites px-sec" style="--sh:776px;"><div class="container px-stage dd-newsites__grid">
 <div class="dd-newsites__copy px-flat reveal">
 <h2 class="p" style="--x:333px;--y:266px;--w:700px;--fs:31.1px;--lh:40px;--ta:center;">New Sites. Every Day.</h2>
 <p class="p" style="--x:423px;--y:349px;--w:540px;--fs:17.5px;--lh:23.9px;--ta:center;">On WAOW 2, the day follows the rhythm of the sea.<br><br>A first dive in the morning. Another after brunch.<br>One in the afternoon.<br>And one more before the sun goes down.<br><br>Up to four dives a day means more time underwater,<br>more sites to discover and more chances to encounter<br>the extraordinary marine life of Indonesia.</p>
@@ -185,7 +186,7 @@
 <figure class="dd-newsites__photo dd-newsites__photo--b p fl" style="--x:0px;--y:319px;--w:332px;--h:457px;"><picture><img src="images/div-4.webp" loading="lazy" alt="A coral wall covered in sea fans."></picture></figure>
 <img class="dot-icon p" src="images/icons-12.png" style="border: none; --x:886px;--y:302px;--w:135px;--h:145px; width: 361px; height: auto; z-index: 10;">
 </div></div></section>
-<section class="dd-groups px-sec" style="--sh:759px;"><div class="container px-stage dd-groups__grid">
+<section class="dd-groups px-sec px-gold-t" style="--sh:759px;"><div class="container px-stage dd-groups__grid">
 <div class="dd-groups__visual px-flat reveal">
 <figure class="dd-groups__photo p" style="--x:99px;--y:96px;--w:420px;--h:576px;"><picture><img src="images/div-5.webp" style="object-position: 78% 50%;" loading="lazy" alt="Sea fans and reef fish in a sunlit cavern."></picture></figure>
 <div class="dd-groups__stats p px-annot" style="--x:468px;--y:135px;--w:300px;--fs:38.9px;--lh:46px;--ta:left;"><p>20 guests.<br>5 guides.<br>Small groups.</p></div>
@@ -251,7 +252,7 @@
 <p class="p" style="--x:857px;--y:284px;--w:400px;--fs:17.5px;--lh:24.1px;--ta:center;">Diving safety is non-negotiable.<br>From the design of our dive facilities<br>and tenders to crew training,<br>procedures and equipment, every<br>detail is considered to ensure safe and<br>well-managed diving operations.<br>Our guides follow conservative dive<br>practices and carefully assess currents<br>and conditions before and during<br>every dive.</p>
 <a class="link-arrow p" href="safety.html" style="--x:907px;--y:548px;--w:300px;">explore our safety standards <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </div></div></section>
-<section class="dd-closing px-sec" style="--sh:339px;"><div class="container px-stage">
+<section class="dd-closing px-sec m-rule" style="--sh:339px;"><div class="container px-stage">
 <h2 class="p reveal" style="--x:233px;--y:58px;--w:900px;--fs:45.9px;--lh:50px;--ta:center;">Ready for your next descent?</h2>
 <p class="p reveal" style="--x:283px;--y:161px;--w:800px;--fs:17.5px;--lh:24px;--ta:center;">More than 10 ways into Indonesia.<br>And an entire world below the surface.</p>
 <a class="link-arrow p" href="destinations.html" style="--x:583px;--y:255px;--w:200px;">destinations <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>

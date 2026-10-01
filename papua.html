@@ -24,6 +24,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="responsive.css">
 <script src="home-stage.js" data-stage="1174" data-max="1366"></script>
 
 </head>
@@ -142,10 +143,10 @@
 
   <div class="mobile-nav" id="mobile-nav" hidden>
     <ul>
-      <li><a href="the-boat.html">The Boat</a></li>
-      <li><a href="destinations.html" class="is-active" aria-current="page">Destinations</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="about-us.html">About Us</a></li>
+      <li class="mobile-nav__group"><details><summary><a href="the-boat.html">The Boat</a></summary><ul class="mobile-nav__sub"><li><a href="the-boat.html#decks">Decks</a></li><li><a href="cabins.html">Cabins</a></li><li><a href="the-boat.html#outdoor">Indoor &amp; Outdoor</a></li><li><a href="safety.html">Safety</a></li></ul></details></li>
+      <li class="mobile-nav__group"><details><summary><a href="destinations.html" class="is-active" aria-current="page">Destinations</a></summary><ul class="mobile-nav__sub"><li><a href="destinations.html#map">Map</a></li><li><details class="mobile-nav__nested"><summary><a href="destinations.html#regions">Regions</a></summary><ul><li><a href="sulawesi.html">Sulawesi</a></li><li><a href="moluccas.html">Moluccas</a></li><li><a href="papua.html">Papua</a></li><li><a href="banda-sea.html">Banda Sea</a></li><li><a href="sunda-islands.html">Sunda Islands</a></li></ul></details></li><li><details class="mobile-nav__nested"><summary><a href="destinations.html#map">Itineraries</a></summary><ul><li><a href="itinerary-v2.html?slug=sulawesi-sponges-and-stilts">Sponges and Stilts</a></li><li><a href="itinerary-v2.html?slug=sunda-nirvana-and-lava">Nirvana and Lava</a></li><li><a href="itinerary-v2.html?slug=moluccas-forts-and-forests">Forts and Forests</a></li><li><a href="itinerary-v2.html?slug=moluccas-sultans-and-tarsiers">Sultans and Tarsiers</a></li><li><a href="itinerary-v2.html?slug=papua-corals-and-cloves">Coral and Cloves</a></li><li><a href="itinerary-v2.html?slug=papua-four-kings">The Four Kings</a></li><li><a href="itinerary-v2.html?slug=papua-southern-king">The Southern King</a></li><li><a href="itinerary-v2.html?slug=papua-tale-of-two-papuas">Tale of Two Papuas</a></li><li><a href="itinerary-v2.html?slug=sunda-spices-and-snakes">Spices and Snakes</a></li><li><a href="itinerary-v2.html?slug=sunda-volcanoes-and-villages">Volcanoes and Villages</a></li><li><a href="itinerary-v2.html?slug=sunda-east-meets-west">East Meets West</a></li><li><a href="itinerary-v2.html?slug=sunda-west-meets-east">West Meets East</a></li></ul></details></li></ul></details></li>
+      <li class="mobile-nav__group"><details><summary><a href="experience.html">Experience</a></summary><ul class="mobile-nav__sub"><li><a href="dive-deep.html">Diving</a></li><li><a href="experience.html#gastronomy">Gastronomy</a></li><li><a href="experience.html#hotel_service">Hotel Service</a></li><li><a href="experience.html#included">What&rsquo;s Included</a></li></ul></details></li>
+      <li class="mobile-nav__group"><details><summary><a href="about-us.html">About Us</a></summary><ul class="mobile-nav__sub"><li><a href="museum.html">The First Waow</a></li><li><a href="about-us.html#waow2">Waow 2</a></li><li><a href="about-us.html#team">Team</a></li><li><a href="giving-back.html">Engagement</a></li></ul></details></li>
       <li><a href="news.html">News</a></li>
       <li><a class="btn btn--outline" href="booking.html">Rates &amp; Dates</a></li>
     </ul>
@@ -154,20 +155,20 @@
 
 <main id="main">
 <section class="rg-hero px-sec px-gold-b" id="top" style="--sh:927px;"><div class="container px-stage">
-<h1 class="p" style="--x:84px;--y:42px;--w:880px;--fs:48.7px;--lh:58px;--ta:center;">Papua</h1>
-<p class="rg-hero__sub p px-annot" style="--x:30px;--y:128px;--w:800px;--fs:44.5px;--lh:50px;--ta:center;">Raja Ampat to Triton Bay.</p>
-<div class="rg-hero__stamp dst-region__stamp p" style="--x:775px;--y:34px;--w:198px;--h:140px; border: none !important;"><img src="images/timbre papua png transparant.png" alt="Papua" style="border: none !important;"></div>
-<figure class="rg-hero__photo p" style="--x:99px;--y:277px;--w:977px;--h:382px;"><picture><img src="images/papua-1.webp" loading="lazy" alt="Aerial view of Papua."></picture></figure>
-<p class="rg-hero__intro p" style="--x:133px;--y:731px;--w:908px;--fs:17.5px;--lh:24px;--ta:center;">If the Coral Triangle is the richest marine region on the planet, this is the middle of it.<br>More coral species grow here than anywhere else on earth, roughly three quarters of all known to science, alongside well over a thousand species of reef fish.</p>
+<h1 class="p" style="--x:146px;--y:54px;--w:880px;--fs:47.2px;--lh:58px;--ta:center;">Papua</h1>
+<p class="rg-hero__sub p px-annot" style="--x:-7px;--y:110px;--w:800px;--fs:34.3px;--lh:50px;--ta:center;">Raja Ampat, the Bird's Head and the Kaimana Coast.</p>
+<div class="rg-hero__stamp dst-region__stamp p" style="--x:775px;--y:48px;--w:198px;--h:140px; border: none !important;"><img src="images/timbre papua png transparant.png" alt="Papua" style="border: none !important;"></div>
+<figure class="rg-hero__photo p" style="--x:99px;--y:227px;--w:977px;--h:370px;"><picture><img src="images/papua-1.webp" loading="lazy" alt="Aerial view of Papua."></picture></figure>
+<p class="rg-hero__intro p" style="--x:133px;--y:671px;--w:908px;--fs:17.5px;--lh:24px;--ta:center;">If the Coral Triangle is the richest marine region on the planet, this is the middle of it.<br>More coral species grow here than anywhere else on earth, roughly three quarters of all known to science, alongside well over a thousand species of reef fish.</p>
 </div></section>
 <section class="rg-key px-sec" id="key-infos" style="--sh:1042px;"><div class="container px-stage">
-<div class="rg-key__note p reveal" style="--x:63px;--y:60px;--w:455px;--h:560px;"><div class="rg-key__sheet"><h3>Diving:</h3><p>Manta cleaning stations, pinnacles thick with schooling fish, wobbegongs and walking sharks, soft coral reefs in Triton Bay, and protected areas with the fish back.</p><h3>Topside:</h3><p>Hidden lagoons, marine lakes, waterfalls, rock art, birds of paradise and limestone viewpoints.</p><h3>What makes it different:</h3><p>The only region on the Australian side of the world's biogeographic divide, and the single richest reef system on the planet.</p><h3>Seasons we are there:</h3><p>November through March.</p></div></div>
-<img class="dot-icon p" src="images/icons-4.png" style="border: none; --x:382px;--y:138px;--w:127px;--h:134px; width: 250px; height: auto;">
+<div class="rg-key__note p reveal" style="--x:63px;--y:47px;--w:455px;--h:547px;"><div class="rg-key__sheet"><h3>Diving:</h3><p>Manta cleaning stations, pinnacles thick with schooling fish, wobbegongs and walking sharks, soft coral reefs in Triton Bay, and protected areas with the fish back.</p><h3>Topside:</h3><p>Hidden lagoons, marine lakes, waterfalls, rock art, birds of paradise and limestone viewpoints.</p><h3>What makes it different:</h3><p>The only region on the Australian side of the world's biogeographic divide, and the single richest reef system on the planet.</p><h3>Seasons we are there:</h3><p>November through March.</p></div></div>
+<img class="dot-icon p" src="images/rg-icon-octopus.png" alt="" aria-hidden="true" style="border: none; --x:421px;--y:111px;--w:128px;--h:104px; width: 128px; height: auto;">
 <h2 class="p reveal" style="--x:690px;--y:77px;--w:400px;--fs:52px;--lh:58px;--ta:left;">Key Infos</h2>
 <div class="rg-key__right p" style="--x:640px;--y:-1039px;--w:440px;top:0;height:683px;display:flex;flex-direction:column;justify-content:center;text-align:center;">
 <p class="rg-key__label" style="font-size:22.9px;line-height:28px;margin:0 0 4px;">SUBREGIONS</p>
 <p class="rg-key__subname px-annot" style="font-size:28.3px;line-height:32px;margin:0 0 26px;">Wetar and the Forgotten Islands.</p>
-<p style="font-size:15.1px;line-height:19.8px;margin:0 0 36px;">Raja Ampat, with Waigeo, Batanta, Salawati and Misool. The Fakfak coast. Triton Bay.</p>
+<p style="font-size:15.1px;line-height:19.8px;margin:0 0 146px;">Raja Ampat, with Waigeo, Batanta, Salawati and Misool. The Fakfak coast. Triton Bay.</p>
 <a class="link-arrow" href="booking.html">book your stay <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </div>
 <figure class="rg-key__thumb p" style="--x:75px;--y:685px;--w:229px;--h:286px;"><picture><img src="images/papua-2.webp" loading="lazy" alt=""></picture></figure>
@@ -181,28 +182,28 @@
 <a class="rc-card p" data-i="0" href="destinations.html" style="--x:76px;--y:187px;--w:211px;--h:258px;"><span class="rc-card__photo"><img alt="" src="images/komodo-island.jpg"></span><span class="rc-card__title px-annot"></span><span class="rc-card__route"></span></a><a class="rc-card p" data-i="1" href="destinations.html" style="--x:315px;--y:187px;--w:211px;--h:258px;"><span class="rc-card__photo"><img alt="" src="images/komodo-island.jpg"></span><span class="rc-card__title px-annot"></span><span class="rc-card__route"></span></a><a class="rc-card p" data-i="2" href="destinations.html" style="--x:554px;--y:187px;--w:211px;--h:258px;"><span class="rc-card__photo"><img alt="" src="images/komodo-island.jpg"></span><span class="rc-card__title px-annot"></span><span class="rc-card__route"></span></a><a class="rc-card p" data-i="3" href="destinations.html" style="--x:793px;--y:187px;--w:211px;--h:258px;"><span class="rc-card__photo"><img alt="" src="images/komodo-island.jpg"></span><span class="rc-card__title px-annot"></span><span class="rc-card__route"></span></a>
 <button class="rg-arrow p" type="button" aria-label="More routes" style="--x:1030px;--y:277px;--w:68px;--h:92px;"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 </div></section>
-<section class="rg-ow px-sec" style="--sh:800px;">
+<section class="rg-ow px-sec" style="--sh:690px;">
   <div class="container px-stage rg-ow__grid">
 
-    <h2 class="p" style="--x:283px;--y:79px;--w:600px;--fs:26.6px;--lh:34px;--ta:center;">
+    <h2 class="p" style="--x:283px;--y:18px;--w:600px;--fs:26.3px;--lh:34px;--ta:center;">
       The Centre of Everything
     </h2>
 
-    <figure class="p" style="--x:178px;--y:156px;--w:818px;--h:232px;">
+    <figure class="p" style="--x:178px;--y:100px;--w:818px;--h:232px;">
       <picture>
         <img src="images/papua-6.webp" loading="lazy" alt="A school of fish in Raja Ampat.">
       </picture>
     </figure>
 
-    <p class="p" style="--x:178px;--y:434px;--w:220px;--fs:17.5px;--lh:21.6px; text-align: justify;">
+    <p class="p" style="--x:176px;--y:378px;--w:217px;--fs:17.5px;--lh:21.6px; text-align: justify;">
       If the Coral Triangle is the richest marine region on the planet, this is the middle of it. More coral species grow here than anywhere else on earth, roughly three quarters of all known to science. The record for the most fish species counted on a single dive belongs to Cape Kri in the Dampier Strait, where 374 were logged in one immersion.
     </p>
 
-    <p class="p" style="--x:427px;--y:434px;--w:336px;--fs:17.5px;--lh:21.6px; text-align: justify;">
+    <p class="p" style="--x:427px;--y:378px;--w:288px;--fs:17.5px;--lh:21.6px; text-align: justify;">
       But the real measure of this place is how little of the tree of life is missing from it. Molluscs, from nudibranchs in colours nobody would design to cephalopods that change texture as well as shade, and giant clams a metre across. Echinoderms everywhere: crinoids on every sea fan, sea stars, urchins, sea cucumbers doing the unglamorous work of processing the sand. Crustaceans by the thousand, from cleaning shrimps to punching shrimps. Sponges the size of bathtubs. Segmented worms, flatworms, hydroids, jellyfish, bryozoans.
     </p>
 
-    <p class="p" style="--x:782px;--y:434px;--w:220px;--fs:17.5px;--lh:21.6px; text-align: justify;">
+    <p class="p" style="--x:748px;--y:378px;--w:248px;--fs:17.5px;--lh:21.6px; text-align: justify;">
       Tunicates, those small colonial animals that look like plants and are in fact closer relatives of ours than anything else on the reef. It is not simply a place with a lot of life in it. It is where much of that life originated and spread outwards from, which is why biologists describe the Bird's Head as a cradle rather than a collection.
     </p>
   </div>
@@ -212,54 +213,53 @@
 </div></section>
 <section class="rg-why px-sec" style="--sh:672px;"><div class="container px-stage rg-why__grid">
 <div class="rg-why__visual px-flat reveal">
-<figure class="rg-why__photo p" style="--x:87px;--y:81px;--w:360px;--h:492px;"><picture><img src="images/papua-7.webp" loading="lazy" alt="A diver and a manta ray in the Papua."></picture></figure>
-<img class="dot-icon p" src="images/icons-10.png" style="border: none; --x:312px;--y:426px;--w:110px;--h:152px; width: 300px; height: auto;">
+<figure class="rg-why__photo p" style="--x:83px;--y:81px;--w:362px;--h:494px;"><picture><img src="images/papua-7.webp" loading="lazy" alt="A Coleman shrimp on a red fire urchin."></picture></figure>
+<img class="dot-icon p" src="images/it-icon-angelfish.png" alt="" aria-hidden="true" style="border: none; --x:323px;--y:480px;--w:181px;--h:91px; width: 181px; height: auto;">
 </div><div class="rg-why__copy px-flat reveal reveal--delay-1">
-<h2 class="p" style="--x:560px;--y:71px;--w:509px;--fs:39.4px;--lh:53px;--ta:right;">A Piece of<br>Australia</h2>
-<p class="p" style="--x:570px;--y:225px;--w:499px;--fs:16px;--lh:20.5px;--ta:justify;">Everything else we sail is in Wallacea, the zone between two continents. Papua is not. New Guinea sits on the Australian continental shelf and is properly part of Oceania, which is why the animals change entirely: tree kangaroos, cuscus in the canopy, bandicoots, and the birds of paradise, thirty-odd species of them, displaying in the treetops at dawn. It is the second largest island on earth, still carrying some of the last great expanses of primary rainforest anywhere, and one of the few genuine wildernesses left.</p>
-<a class="link-arrow p" href="booking.html" style="--x:915px;--y:530px;--w:154px;">book your stay <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<h2 class="p" style="--x:560px;--y:76px;--w:500px;--fs:38px;--lh:54px;--ta:right;">What You<br>Actually Dive</h2>
+<p class="p" style="--x:640px;--y:213px;--w:420px;--fs:16px;--lh:20.8px;--ta:right;">Pinnacles standing in the tidal flow, where jacks, batfish, barracuda and snapper stack up until the blue disappears behind them. Cleaning stations where reef mantas queue and oceanic mantas rise out of the deep, six metres across. Wobbegongs lying flat under table corals. Walking sharks coming out at night to patrol the shallows on their fins. Hard coral gardens in perfect condition in two metres of water, and soft coral walls in the richer southern bays that are as saturated as any reef in the world. Whale sharks feed under the fishing platforms off Kaimana, Bryde's whales work the bays of Triton Bay, and sperm whales, pilot whales and dolphins turn up on the crossings. Add limestone formations underwater as dramatic as the ones above, and a silverside invasion if you are lucky with the timing.</p>
+<a class="link-arrow p" href="booking.html" style="--x:930px;--y:523px;--w:154px;">book your stay <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </div></div></section>
-<section class="rg-why px-sec" style="--sh:672px;"><div class="container px-stage rg-why__grid">
-<div class="rg-why__visual px-flat reveal">
-<figure class="rg-why__photo p" style="--x:87px;--y:81px;--w:360px;--h:492px;"><picture><img src="images/papua-8.webp" loading="lazy" alt="A diver in the Papua."></picture></figure>
-<img class="dot-icon p" src="images/icons-6.png" style="border: none; --x:312px;--y:426px;--w:110px;--h:152px; width: 300px; height: auto;">
-</div><div class="rg-why__copy px-flat reveal reveal--delay-1">
-<h2 class="p" style="--x:560px;--y:71px;--w:509px;--fs:39.4px;--lh:53px;--ta:right;">What You<br>Actually Dive</h2>
-<p class="p" style="--x:570px;--y:225px;--w:499px;--fs:16px;--lh:20.5px;--ta:justify;">Pinnacles standing in the tidal flow, where jacks, batfish, barracuda and snapper stack up until the blue disappears behind them. Cleaning stations where reef mantas queue and oceanic mantas rise out of the deep, six metres across. Wobbegongs lying flat under table corals. Walking sharks coming out at night to patrol the shallows on their fins. Hard coral gardens in perfect condition in two metres of water, and soft coral walls in the richer southern bays that are as saturated as any reef in the world. Whale sharks feed under the fishing platforms off Kaimana, Bryde's whales work the bays of Triton Bay, and sperm whales, pilot whales and dolphins turn up on the crossings. Add limestone formations underwater as dramatic as the ones above, and a silverside invasion if you are lucky with the timing.</p>
-<a class="link-arrow p" href="booking.html" style="--x:915px;--y:530px;--w:154px;">book your stay <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<section class="rg-ow px-sec" style="--sh:642px;"><div class="container px-stage rg-ow__grid">
+<div class="rg-ow__copy px-flat reveal">
+<h2 class="p" style="--x:187px;--y:225px;--w:800px;--fs:35.8px;--lh:42px;--ta:center;white-space:nowrap;">A Piece of Australia</h2>
+<p class="p" style="--x:386px;--y:295px;--w:400px;--fs:17.5px;--lh:20.8px;--ta:center;">Everything else we sail is in Wallacea, the zone between two continents. Papua is not. New Guinea sits on the Australian continental shelf and is properly part of Oceania, which is why the animals change entirely: tree kangaroos, cuscus in the canopy, bandicoots, and the birds of paradise, thirty-odd species of them, displaying in the treetops at dawn. It is the second largest island on earth, still carrying some of the last great expanses of primary rainforest anywhere, and one of the few genuine wildernesses left.</p>
+</div><div class="rg-ow__visual px-flat reveal reveal--delay-1">
+<figure class="rg-ow__photo rg-ow__photo--l p fl" style="--x:0px;--y:0px;--w:268px;--h:394px;"><img src="images/papua-8.webp" loading="lazy" alt="Two red birds of paradise displaying on a branch."></figure>
+<figure class="rg-ow__photo rg-ow__photo--r p fr" style="--x:904px;--y:262px;--w:270px;--h:380px;"><img src="images/papua-9.webp" loading="lazy" alt="A tree kangaroo looking down from a branch."></figure>
+<img class="dot-icon p" src="images/it-icon-starfish.png" alt="" aria-hidden="true" style="border: none; --x:176px;--y:298px;--w:154px;--h:164px; width: 154px; height: auto;">
 </div></div></section>
-<section class="rg-t5 px-sec" style="--sh:663px;"><div class="container px-stage rg-t__grid">
-<div class="rg-t5__stripes px-stripes" style="--sx:978px" aria-hidden="true"></div>
+<section class="rg-t2 px-sec" style="--sh:663px;"><div class="container px-stage rg-t__grid">
+<div class="rg-t2__stripes px-stripes" style="--sx:984px" aria-hidden="true"></div>
 <div class="rg-t__copy px-flat reveal">
-<h2 class="p" style="--x:108px;--y:137px;--w:500px;--fs:38.3px;--lh:54px;--ta:left;">Above the Water</h2>
-<p class="p" style="--x:108px;--y:264px;--w:500px;--fs:16px;--lh:20.5px;--ta:left;">Karst islands scattered across turquoise lagoons, explored by dinghy, kayak or paddleboard, some of which only open up once you are inside them. Marine lakes hidden in the middle of islands. Rivers coming off cliffs straight into the sea. White sand beaches nobody has walked on that week, viewpoints reached by a short sweaty climb, and forest loud enough at dusk to keep people on deck. Birdwatching here is world class, and a dawn walk to watch red birds of paradise display in the canopy is worth the four in the morning start.</p></div>
-<figure class="rg-t2__photo rg-t__photo reveal p" style="--x:665px;--y:93px;--w:352px;--h:468px;"><picture><img src="images/papua-9.webp" loading="lazy" alt="A diver in the Papua."></picture></figure>
+<h2 class="p" style="--x:106px;--y:139px;--w:540px;--fs:38px;--lh:54px;--ta:left;">Above<br>the Water</h2>
+<p class="p" style="--x:106px;--y:282px;--w:428px;--fs:16px;--lh:20.7px;--ta:left;">Karst islands scattered across turquoise lagoons, explored by dinghy, kayak or paddleboard, some of which only open up once you are inside them. Marine lakes hidden in the middle of islands. Rivers coming off cliffs straight into the sea. White sand beaches nobody has walked on that week, viewpoints reached by a short sweaty climb, and forest loud enough at dusk to keep people on deck. Birdwatching here is world class, and a dawn walk to watch red birds of paradise display in the canopy is worth the four in the morning start.</p></div>
+<figure class="rg-t2__photo rg-t__photo reveal p" style="--x:664px;--y:91px;--w:351px;--h:468px;"><picture><img src="images/papua-10.webp" loading="lazy" alt="A waterfall tumbling into a turquoise pool in the rainforest."></picture></figure>
 </div></section>
 <section class="rg-t2 px-sec" style="--sh:663px;"><div class="container px-stage rg-t__grid">
-<div class="rg-t2__stripes px-stripes" style="--sx:978px" aria-hidden="true"></div>
+<div class="rg-t2__stripes px-stripes px-stripes--l" style="--sx:317px" aria-hidden="true"></div>
 <div class="rg-t__copy px-flat reveal">
-<h2 class="p" style="--x:108px;--y:142px;--w:540px;--fs:27px;--lh:38.07px;--ta:left;">Endemics and the<br>Small End of the Scale</h2>
-<p class="p" style="--x:108px;--y:264px;--w:500px;--fs:16px;--lh:20.5px;--ta:left;">That much isolation and that much productivity produces animals found here and nowhere else, and most of them are small, which is why macro photographers keep coming back. The walking sharks are the famous exception, a group of bottom-dwelling sharks that stroll across the reef on their fins at night, with separate species on separate stretches of this coastline. Several pygmy seahorses live here, each on its own kind of sea fan or soft coral and most smaller than a fingernail. Flasher wrasses display at dusk in bursts of electric colour, one of them described from Triton Bay and occurring nowhere but those bays. Ghost pipefish hang head down among the crinoids in ornate, robust and halimeda forms. Add harlequin shrimp, Coleman shrimp on fire urchins, bobtail squid, blue ringed octopus, frogfish, gobies and dottybacks still being described, and mandarinfish coming out at dusk. New species are still being found here, which tells you how recently anyone began looking properly.</p></div>
-<figure class="rg-t2__photo rg-t__photo reveal p" style="--x:665px;--y:93px;--w:352px;--h:468px;"><picture><img src="images/papua-10.webp" loading="lazy" alt="A diver in the Papua."></picture></figure>
+<h2 class="p" style="--x:455px;--y:110px;--w:600px;--fs:38px;--lh:54px;--ta:right;">Endemics and the Small<br>End of the Scale</h2>
+<p class="p" style="--x:493px;--y:276px;--w:564px;--fs:16px;--lh:20.7px;--ta:right;">That much isolation and that much productivity produces animals found here and nowhere else, and most of them are small, which is why macro photographers keep coming back. The walking sharks are the famous exception, a group of bottom-dwelling sharks that stroll across the reef on their fins at night, with separate species on separate stretches of this coastline. Several pygmy seahorses live here, each on its own kind of sea fan or soft coral and most smaller than a fingernail. Flasher wrasses display at dusk in bursts of electric colour, one of them described from Triton Bay and occurring nowhere but those bays. Ghost pipefish hang head down among the crinoids in ornate, robust and halimeda forms. Add harlequin shrimp, Coleman shrimp on fire urchins, bobtail squid, blue ringed octopus, frogfish, gobies and dottybacks still being described, and mandarinfish coming out at dusk. New species are still being found here, which tells you how recently anyone began looking properly.</p></div>
 </div></section>
-<section class="rg-t3 px-sec" style="--sh:556px;"><div class="container px-stage rg-t__grid">
+<section class="rg-t3 px-sec" style="--sh:542px;"><div class="container px-stage rg-t__grid">
 <div class="rg-t__copy px-flat reveal">
-<h2 class="p" style="--x:109px;--y:87px;--w:500px;--fs:39.2px;--lh:54px;--ta:left;">Warm Water That Works</h2>
-<p class="p" style="--x:109px;--y:243px;--w:500px;--fs:16px;--lh:20.5px;--ta:left;">Papua is warm, often 29 or 30 degrees, and wetsuits here are a formality. What makes that remarkable is that these reefs have so far come through the bleaching events that have flattened coral elsewhere in the world. Constant water movement and deep water upwelling keep temperatures from settling into the stagnant heat that kills coral, and some of these corals appear to tolerate warmth that would finish their relatives in other oceans. For anyone who has watched reefs decline elsewhere, diving here is a different experience.</p></div>
-<figure class="rg-t3__photo rg-t__photo reveal p" style="--x:717px;--y:87px;--w:364px;--h:314px;"><picture><img src="images/papua-11.webp" loading="lazy" alt="A coral reef under a school of fish."></picture></figure>
+<h2 class="p" style="--x:107px;--y:103px;--w:560px;--fs:38px;--lh:54px;--ta:left;">Warm Water<br>That Works</h2>
+<p class="p" style="--x:107px;--y:248px;--w:499px;--fs:16px;--lh:20.7px;--ta:left;">Papua is warm, often 29 or 30 degrees, and wetsuits here are a formality. What makes that remarkable is that these reefs have so far come through the bleaching events that have flattened coral elsewhere in the world. Constant water movement and deep water upwelling keep temperatures from settling into the stagnant heat that kills coral, and some of these corals appear to tolerate warmth that would finish their relatives in other oceans. For anyone who has watched reefs decline elsewhere, diving here is a different experience.</p></div>
+<figure class="rg-t3__photo rg-t__photo reveal p" style="--x:716px;--y:92px;--w:365px;--h:315px;"><picture><img src="images/papua-11.webp" loading="lazy" alt="A dense school of fish in blue water."></picture></figure>
 </div></section>
 <section class="rg-t4 px-sec" style="--sh:497px;"><div class="container px-stage rg-t__grid">
-<figure class="rg-t4__photo rg-t__photo reveal p" style="--x:67px;--y:13px;--w:386px;--h:391px;"><picture><img src="images/papua-12.webp" loading="lazy" alt="A beach on a remote island."></picture></figure>
+<figure class="rg-t4__photo rg-t__photo reveal p" style="--x:103px;--y:13px;--w:386px;--h:391px;"><picture><img src="images/papua-12.webp" loading="lazy" alt="Fish swirling around a reef in a wall of silver."></picture></figure>
 <div class="rg-t__copy px-flat reveal">
-<h2 class="p" style="--x:560px;--y:40px;--w:509px;--fs:40px;--lh:54.0px;--ta:right;">The Recovery</h2>
-<p class="p" style="--x:510px;--y:179px;--w:571px;--fs:16px;--lh:22.4px;--ta:right;">Twenty years ago much of this was being fished hard, sharks included. Local communities, working with conservation organisations, closed large areas and began patrolling them themselves. The results are measurable and visible: several times the fish biomass inside the protected zones, sharks back in numbers, manta populations growing rather than collapsing. Crossing from an unprotected reef onto a protected one is something you notice within a single dive, and it means you are diving a recovery rather than a decline.</p></div>
+<h2 class="p" style="--x:558px;--y:72px;--w:522px;--fs:38px;--lh:54px;--ta:right;">The Recovery</h2>
+<p class="p" style="--x:625px;--y:167px;--w:455px;--fs:16px;--lh:20.7px;--ta:right;">Twenty years ago much of this was being fished hard, sharks included. Local communities, working with conservation organisations, closed large areas and began patrolling them themselves. The results are measurable and visible: several times the fish biomass inside the protected zones, sharks back in numbers, manta populations growing rather than collapsing. Crossing from an unprotected reef onto a protected one is something you notice within a single dive, and it means you are diving a recovery rather than a decline.</p></div>
 </div></section>
-<section class="rg-others px-sec px-gold-b" id="other-regions" style="--sh:559px;"><div class="container px-stage">
+<section class="rg-others px-sec" id="other-regions" style="--sh:559px;"><div class="container px-stage">
 <h2 class="p" style="--x:187px;--y:83px;--w:800px;--fs:23.4px;--lh:30px;--ta:center;">Explore other regions</h2>
 <p class="rg-others__sub p" style="--x:187px;--y:147px;--w:800px;--fs:22.6px;--lh:32px;--ta:center;">Five ways.<br>One very big sea.</p>
 <div class="rg-others__track p" id="rgo-track" tabindex="0" role="region" aria-label="Other regions" style="--x:72px;--y:268px;--w:980px;--h:232px;"><ul><li><a href="moluccas.html" class="rg-others__card"><div class="dst-region__stamp rg-stamp" style="position:static;width:100%;height:100%; border: none !important;"><img src="images/timbre moluccas.png" alt="Moluccas" style="border: none;"></div></a></li><li><a href="sunda-islands.html" class="rg-others__card"><div class="dst-region__stamp rg-stamp" style="position:static;width:100%;height:100%; border: none !important;"><img src="images/timbre sunda islands.png" alt="Sunda Islands" style="border: none;"></div></a></li><li><a href="banda-sea.html" class="rg-others__card"><div class="dst-region__stamp rg-stamp" style="position:static;width:100%;height:100%; border: none !important;"><img src="images/timbre banda sea 2.png" alt="Papua" style="border: none;"></div></a></li><li><a href="sulawesi.html" class="rg-others__card"><div class="dst-region__stamp rg-stamp" style="position:static;width:100%;height:100%; border: none !important;"><img src="images/timbre sulawesi.png" alt="Sulawesi" style="border: none;"></div></a></li></ul></div><button class="rg-others__arrow p" id="rgo-arrow" type="button" aria-label="More regions" style="--x:1073px;--y:336px;--w:63px;--h:98px;"><svg viewBox="7.3 3.3 9.4 17.4" preserveAspectRatio="none" aria-hidden="true"><path d="M8 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 </div></section>
-<section class="rg-closing px-sec" style="--sh:300px;"><div class="container px-stage">
+<section class="rg-closing px-sec px-gold-t" style="--sh:300px;"><div class="container px-stage">
 <h2 class="p reveal" style="--x:87px;--y:48px;--w:1000px;--fs:41.4px;--lh:48px;--ta:center;">Ready for your next descent?</h2>
 <p class="p reveal" style="--x:233px;--y:139px;--w:708px;--fs:15px;--lh:21px;--ta:center;">More than ten different ways into Indonesia.<br>And an entire world below the surface.</p>
 <a class="link-arrow p" href="destinations.html#map" style="--x:487px;--y:221px;--w:200px;">itineraries <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>

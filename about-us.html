@@ -24,6 +24,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="responsive.css">
 <script src="home-stage.js" data-stage="1366"></script>
 </head>
 <body class="nav-blue px-page px-hdA px-ab">
@@ -141,10 +142,10 @@
 
   <div class="mobile-nav" id="mobile-nav" hidden>
     <ul>
-      <li><a href="the-boat.html">The Boat</a></li>
-      <li><a href="destinations.html">Destinations</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="about-us.html" class="is-active" aria-current="page">About Us</a></li>
+      <li class="mobile-nav__group"><details><summary><a href="the-boat.html">The Boat</a></summary><ul class="mobile-nav__sub"><li><a href="the-boat.html#decks">Decks</a></li><li><a href="cabins.html">Cabins</a></li><li><a href="the-boat.html#outdoor">Indoor &amp; Outdoor</a></li><li><a href="safety.html">Safety</a></li></ul></details></li>
+      <li class="mobile-nav__group"><details><summary><a href="destinations.html">Destinations</a></summary><ul class="mobile-nav__sub"><li><a href="destinations.html#map">Map</a></li><li><details class="mobile-nav__nested"><summary><a href="destinations.html#regions">Regions</a></summary><ul><li><a href="sulawesi.html">Sulawesi</a></li><li><a href="moluccas.html">Moluccas</a></li><li><a href="papua.html">Papua</a></li><li><a href="banda-sea.html">Banda Sea</a></li><li><a href="sunda-islands.html">Sunda Islands</a></li></ul></details></li><li><details class="mobile-nav__nested"><summary><a href="destinations.html#map">Itineraries</a></summary><ul><li><a href="itinerary-v2.html?slug=sulawesi-sponges-and-stilts">Sponges and Stilts</a></li><li><a href="itinerary-v2.html?slug=sunda-nirvana-and-lava">Nirvana and Lava</a></li><li><a href="itinerary-v2.html?slug=moluccas-forts-and-forests">Forts and Forests</a></li><li><a href="itinerary-v2.html?slug=moluccas-sultans-and-tarsiers">Sultans and Tarsiers</a></li><li><a href="itinerary-v2.html?slug=papua-corals-and-cloves">Coral and Cloves</a></li><li><a href="itinerary-v2.html?slug=papua-four-kings">The Four Kings</a></li><li><a href="itinerary-v2.html?slug=papua-southern-king">The Southern King</a></li><li><a href="itinerary-v2.html?slug=papua-tale-of-two-papuas">Tale of Two Papuas</a></li><li><a href="itinerary-v2.html?slug=sunda-spices-and-snakes">Spices and Snakes</a></li><li><a href="itinerary-v2.html?slug=sunda-volcanoes-and-villages">Volcanoes and Villages</a></li><li><a href="itinerary-v2.html?slug=sunda-east-meets-west">East Meets West</a></li><li><a href="itinerary-v2.html?slug=sunda-west-meets-east">West Meets East</a></li></ul></details></li></ul></details></li>
+      <li class="mobile-nav__group"><details><summary><a href="experience.html">Experience</a></summary><ul class="mobile-nav__sub"><li><a href="dive-deep.html">Diving</a></li><li><a href="experience.html#gastronomy">Gastronomy</a></li><li><a href="experience.html#hotel_service">Hotel Service</a></li><li><a href="experience.html#included">What&rsquo;s Included</a></li></ul></details></li>
+      <li class="mobile-nav__group"><details><summary><a href="about-us.html" class="is-active" aria-current="page">About Us</a></summary><ul class="mobile-nav__sub"><li><a href="museum.html">The First Waow</a></li><li><a href="about-us.html#waow2">Waow 2</a></li><li><a href="about-us.html#team">Team</a></li><li><a href="giving-back.html">Engagement</a></li></ul></details></li>
       <li><a href="news.html">News</a></li>
       <li><a class="btn btn--outline" href="booking.html">Rates &amp; Dates</a></li>
     </ul>
@@ -160,7 +161,7 @@
 <figure class="ab-hero__photo ab-hero__photo--b p" style="--x:897px;--y:512px;--w:315px;--h:394px;"><img src="images/ab-2.webp" loading="lazy" alt="A captain's hands on the wheel."></figure>
 </div></div></section>
 <section class="ab-quote px-sec" style="--sh:415px;"><div class="container px-stage">
-<p class="p reveal" style="--x:183px;--y:174px;--w:1000px;--fs:17.5px;--lh:24px;--ta:center;">In 2011, passionate Swiss diver Michel Deville turned a dream into a boat.<br>From Switzerland to Indonesia, he imagined a vessel that would allow divers to discover<br>some of the most remote waters in the world, differently, and on a more personal scale.<br>That dream became WAOW.</p>
+<p class="p reveal" style="--x:183px;--y:160px;--w:1000px;--fs:17.5px;--lh:24px;--ta:center;">In 2011, passionate Swiss diver Michel Deville turned a dream into a boat.<br>From Switzerland to Indonesia, he imagined a vessel that would allow divers to discover<br>some of the most remote waters in the world, differently, and on a more personal scale.<br>That dream became WAOW.</p>
 </div></section>
 <section class="ab-w1 px-sec" style="--sh:768px;" id="waow1"><div class="container px-stage ab-w1__grid">
 <div class="ab-w1__copy px-flat reveal">
@@ -169,7 +170,7 @@
 <p class="p" style="--x:129px;--y:293px;--w:560px;--fs:17.5px;--lh:24px;--ta:left;">She became much more than a dive boat. She became a home<br>at sea, a place where divers, guides and crew shared long<br>days underwater, slow evenings on deck and countless<br>stories along the way.</p>
 <p class="p" style="--x:129px;--y:414px;--w:560px;--fs:17.5px;--lh:24px;--ta:left;">Camille grew up with WAOW too.</p>
 <p class="p" style="--x:129px;--y:461px;--w:560px;--fs:17.5px;--lh:24px;--ta:left;">She spent her summers on board as a child, surrounded by<br>the sea, the crew and the rhythm of life on a dive boat.<br>WAOW was part of her childhood, long before it became part<br>of her future.<br>Then, in 2018, WAOW was tragically lost to a fire.<br>The boat was gone. The story wasn't.</p>
-<a class="link-arrow p la-l" href="museum.html" style="--x:146px;--y:631px;--w:190px;">the WAOW story <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+<a class="link-arrow p la-l" href="museum.html" style="--x:129px;--y:631px;--w:190px;">the WAOW story <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </div><div class="ab-w1__visual px-flat reveal reveal--delay-1">
 <figure class="ab-w1__photo p" style="--x:781px;--y:122px;--w:407px;--h:544px;"><img src="images/ab-3.webp" loading="lazy" alt="Waow 1 under sail."></figure>
 <img class="dot-icon ab-w1__anchor p" src="images/icons-5.png" alt="" aria-hidden="true" style="border: none; --x:988px;--y:470px;--w:403px;--h:293px; width: 403px; height: auto;">
