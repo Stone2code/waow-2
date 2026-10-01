@@ -4845,3 +4845,9 @@ body.nav-blue .nav__subrow { color: #4E7495; } body.nav-brown .nav__subrow { col
   .px-rg .rg-others__arrow svg path { stroke-width: 15px; }
 }
 @media (min-width: 1100px) { .px-rg-sulawesi .rg-key .rg-key__sheet p { margin-bottom: 18px; } }
+
+/* Booking vs Canva: bigger countdown digits and script labels. */
+@media (min-width: 1100px) {
+  .px-bk .bk-num { font-size: 79.3px; line-height: 80px; }
+  .px-bk .bk-label { font-size: 47px; line-height: 50px; margin-top: 36px; }
+}
