@@ -30,7 +30,7 @@ const ITINERARY_V2 = {
       { side: "R", photo: [76, 2388, 537, 426],  title: 2445, sub: 2534, text: 2600, tx: [720, 500] },
       { side: "L", photo: [860, 3250, 370, 367], title: 3174, sub: 3320, text: 3393, tx: [164, 500] },
       { side: "R", photo: [126, 3850, 487, 562], title: 3970, sub: 4046, text: 4116, tx: [700, 520] },
-      { side: "L", photo: [750, 4577, 322, 444], title: 4692, sub: 4756, text: 4826, tx: [143, 480] }
+      { side: "L", photo: [860, 4577, 322, 444], title: 4692, sub: 4756, text: 4826, tx: [143, 480] }
     ],
     links: [
       { dir: "right", a: [575, 2099], b: [875, 2380] },
@@ -48,7 +48,7 @@ const ITINERARY_V2 = {
         text: "Gunung Api and Manuk give the itinerary the second half of its name.<br>These remote volcanic islands hold sea snakes in extraordinary numbers. They move through the water around divers with complete indifference, while seabirds gather overhead and sharks patrol below.<br>It is one of those dives that tends to change how people feel about snakes." },
       { title: "Blue Water", sub: "Waiting for the giants", image: "images/it-sunda-spices-and-snakes-4.webp", alt: "Scalloped hammerheads in blue water.",
         text: "The Banda Sea is also one of the places where schooling hammerheads can appear, and we cross during the seasonal window when the chances are at their best. Dogtooth tuna, jacks and occasional oceanic mantas work the walls, while the crossing follows an important cetacean corridor. Sperm whales are almost resident in these straits, blue whales migrate through at this time of year, and pilot whales are regularly seen around Banda. Nothing is guaranteed. The boat moves slowly, the horizon is watched, and when a blow appears, everything else stops." },
-      { title: "Banda", sub: "Where the spice story began", image: "images/it-sunda-spices-and-snakes-5.webp", alt: "Spices, red and brown, in close-up.",
+      { title: "Banda", sub: "Where the spice story began", image: "images/it-sunda-spices-and-snakes-5.webp", rot: 180, alt: "Spices, red and brown, in close-up.",
         text: "The final days belong to Banda, once the only place on earth where nutmeg grew. That history is still visible in Banda Neira: Dutch forts above the town, nutmeg plantations, drying racks outside houses and the volcano behind the anchorage.<br>Underwater, walls fall away from the shoreline and mandarinfish appear at dusk.<br>From there, one final passage takes us to Ambon." }
     ],
   }
@@ -90,7 +90,7 @@ ITINERARY_V2["sunda-volcanoes-and-villages"] = {
   storyEnd: 5436,
   steps: [
     { title: "Maumere → Alor", sub: "Adonara · Solor · Lembata · Pantar · Pura · Alor", subColor: "blue", subFs: 30, subW: 640, align: "left", link: false,
-      photo: [495, 560], titleDy: 95, image: "images/it-sunda-volcanoes-and-villages-1.webp", alt: "A volcano erupting above the water, seen from the boat.",
+      photo: [495, 560], titleDy: 95, image: "images/it-sunda-volcanoes-and-villages-1.webp", pos: "72% 50%", alt: "A volcano erupting above the water, seen from the boat.",
       text: "The islands run east from Flores in a line: Adonara, Solor, Lembata, Pantar, Pura, Alor. Between them, straits the ocean has to force its way through. That is the engine of the whole region. Cold water loaded with nutrients rises out of the deep and funnels through the gaps, and everything growing on these reefs lives off it. We go in May, and that is no accident. The upwelling has slackened, the sea has warmed, the visibility has opened right up." },
     { title: "Adonara &amp; Solor", sub: "Into the straits", side: "L", photo: [349, 484], image: "images/it-sunda-volcanoes-and-villages-2.webp", alt: "A yellow-green nudibranch on red algae.",
       text: "There is also the business of getting through those straits, which is worth being on deck for. The gaps between these islands are narrow, deep and fast. Whirlpools, standing waves, glassy patches of water moving at walking pace in the wrong direction. On a map it is a passage between two islands. From the rail it is a river running through the sea, with volcanoes on either side, close enough to pick out the goats." },
@@ -455,7 +455,7 @@ ITINERARY_V2["papua-four-kings"] = {
   ],
   storyEnd: 6184,
   steps: [
-    { title: "Dampier Strait", subFs: 40, subLh: 52, sub: "Where the current brings<br>everything to life",         image: "images/it-papua-four-kings-1.webp", alt: "A wobbegong shark resting beneath table coral.",
+    { title: "Dampier Strait", subFs: 40, subLh: 52, sub: "Where the current brings<br>everything to life",         image: "images/it-papua-four-kings-1.webp", pos: "85% 50%", alt: "A wobbegong shark resting beneath table coral.",
       text: "The Dampier Strait is where current drives the action.<br>At Blue Magic, Cape Kri and Sardine Reef, jacks, batfish, barracuda and whitetips gather around pinnacles swept by the flow. Mantas use the cleaning stations at Manta Sandy, while wobbegongs rest beneath table corals and walking sharks appear after dark." },
     { title: "Fam &amp; Penemu", subFs: 40, sub: "The Raja Ampat everyone came to see",        image: "images/it-papua-four-kings-2.webp", alt: "Plate and table corals in a shallow garden.",
       text: "Around Fam and Penemu, the reefs shift into shallow hard-coral gardens.<br>Melissa’s Garden spreads across hundreds of meters of staghorn and table coral in clear water, while above the surface the climb to Piaynemo opens onto the karst islands and lagoons that have become one of Raja Ampat’s defining views." },
@@ -463,7 +463,7 @@ ITINERARY_V2["papua-four-kings"] = {
       text: "Further north, the traffic thins out.<br>Aljui Bay brings black sand, mangrove roots and muck diving beside the pearl farm, while Kawe and the reefs towards Wayag are more exposed, current-swept and lightly dived.<br>Above water, limestone islands scatter across turquoise water as far as the eye can see." },
     { title: "Batanta", subFs: 40, sub: "Waterfalls between reefs",        image: "images/it-papua-four-kings-4.webp", alt: "A peacock mantis shrimp, face on.",
       text: "Batanta adds another side of Raja Ampat, with rivers, waterfalls and muck sites tucked between the larger reef systems. It breaks up the journey with freshwater, jungle and smaller-scale diving before the route turns south again." },
-    { title: "Gam", subFs: 40, sub: "Dawn with the birds of paradise",       image: "images/it-papua-four-kings-5.webp", alt: "A red bird of paradise displaying in the canopy.",
+    { title: "Gam", subFs: 40, sub: "Dawn with the birds of paradise",       image: "images/it-papua-four-kings-5.webp", pos: "8% 50%", alt: "A red bird of paradise displaying in the canopy.",
       text: "An early morning on Gam offers the chance to watch red birds of paradise display in the canopy.<br>It means being ashore around four in the morning, before the first dive — and seeing one of Raja Ampat’s most distinctive animals away from the reef." },
     { title: "Misool", subFs: 40, sub: "Where life came back",       image: "images/it-papua-four-kings-6.webp", alt: "A reef manta gliding over blue water.",
       text: "Misool shifts the scenery again: clearer water, taller limestone and reefs transformed by protection.<br>Boo Windows, Fiabacet and the seamount cleaning stations bring huge gorgonians, reef mantas and occasional oceanic mantas, while the no-take zones hold noticeably more fish and sharks.<br>Above water, hidden lagoons, marine lakes, viewpoints and ancient ochre handprints complete the change of atmosphere." }

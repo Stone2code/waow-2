@@ -4983,7 +4983,7 @@ body.nav-blue .nav__subrow { color: #4E7495; } body.nav-brown .nav__subrow { col
 }
 
 /* Sulawesi vs Canva: quote card text column is 442px wide */
-@media (min-width: 1100px) { .px-rg .rg-quote__card { padding-inline: 80px; } }
+@media (min-width: 1100px) { .px-rg .rg-quote__card { padding-inline: 46px; } }
 
 /* Region pages with exactly three itineraries (Sulawesi): large posters, as in the Canva */
 @media (min-width: 1100px) {
@@ -5025,9 +5025,10 @@ body.nav-blue .nav__subrow { color: #4E7495; } body.nav-brown .nav__subrow { col
   html[lang="fr"] .px-dd .dd-philosophy__cell { width: 300px !important; }
   html[lang="fr"] .px-dd .dd-philosophy__cell:nth-of-type(odd) { margin-left: 20px; }
   html[lang="fr"] .px-dd .dd-philosophy__cell:last-child { width: 700px !important; margin-left: 0; }
-  html[lang="fr"] .hp-safety__title { white-space: nowrap; font-size: 19px !important; }
+  html[lang="fr"] .hp-home .hp-safety__title { font-size: 28px !important; white-space: nowrap; }
+  html[lang="fr"] .px-dd .hp-safety__title { white-space: nowrap; }
   html[lang="fr"] .px-rg main h2.p { font-size: calc(var(--fs) * 0.82) !important; }
-  html[lang="fr"] .px-rg .rg-hero__sub { font-size: 30px !important; white-space: nowrap; left: -100px !important; width: 1060px !important; }
+  html[lang="fr"] .px-rg .rg-hero__sub { font-size: 30px !important; white-space: nowrap; }
   html[lang="fr"] .px-xp .xp-beyond__tag { font-size: 14px !important; }
 }
 @media (min-width: 1100px) {
@@ -5062,7 +5063,15 @@ body.nav-blue .nav__subrow { color: #4E7495; } body.nav-brown .nav__subrow { col
   .mobile-nav > .lang-switch { padding: 18px var(--gutter, 20px) 4px; font-size: 14px; gap: 12px; }
 }
 @media (min-width: 901px) { .mobile-nav > .lang-switch { display: none; } }
-@media (max-width: 900px) { .site-header__row > .lang-switch { display: none; } }
+@media (max-width: 900px) {
+  .site-header__row > .lang-switch { margin-left: auto; margin-right: 10px; font-size: 12px; gap: 7px; }
+  .site-header__row > .lang-switch span { height: 12px; }
+  .site-header__row > .lang-switch ~ .site-header__actions { margin-left: 0; }
+  .mobile-nav > .lang-switch { display: none; }
+}
+@media (max-width: 479.98px) {
+  .site-header__row > .lang-switch { font-size: 11px; gap: 5px; margin-right: 6px; letter-spacing: 0.03em; }
+}
 
 /* One header layout on every page (desktop): logo and button the same distance from the edges, menu centred on the page,
    logo / menu / languages / button all centred on one line; button in the menu colour. */
@@ -5080,4 +5089,142 @@ body.nav-blue .nav__subrow { color: #4E7495; } body.nav-brown .nav__subrow { col
 @media (min-width: 1100px) {
   html[lang="fr"] .tbp-page .tbp-divers__copy h2 { font-size: 42px; line-height: 54px; }
   html[lang="fr"] .px-sf .sf-h--c { white-space: normal; }
+}
+/* Rates & Dates in the menu colour on every screen size */
+@media (max-width: 1099.98px) {
+  .site-header__actions .btn { color: var(--ls-c, var(--abyss)) !important; border-color: var(--ls-c, var(--abyss)) !important; }
+  .burger { color: var(--ls-c, var(--abyss)); }
+}
+
+/* =========================================================================
+   DESKTOP PASS (2026-10-02)
+   ========================================================================= */
+/* Cabins: handwritten notes sit beside their plan card (they were overlapping the paper since the notes went to 25px) */
+@media (min-width: 1100px) {
+  .cb-page #master-cabin .cb-cabin__annotation { left: 606px; }
+  .cb-page #single-cabins .cb-cabin__annotation { left: 548px; }
+  .cb-page #superior-cabins .cb-cabin__annotation { left: 888px; }
+  .cb-page #deluxe-cabins .cb-cabin__annotation { left: 846px; }
+}
+@media (min-width: 1100px) {
+  /* The Boat — paragraph under the photos: the hero's 52ch cap was narrowing it off-centre */
+  .tbp-page .tbp-intro__copy p { max-width: none !important; }
+  /* The Boat — key figures: even columns (4 + 3) centred in the frame; descriptions wrap inside their column */
+  .tbp-page .tbp-figures__grid > div { width: 150px; }
+  .tbp-page .tbp-figures__grid > div:nth-child(1) { left: 40px; }
+  .tbp-page .tbp-figures__grid > div:nth-child(2) { left: 200px; }
+  .tbp-page .tbp-figures__grid > div:nth-child(3) { left: 360px; }
+  .tbp-page .tbp-figures__grid > div:nth-child(4) { left: 520px; }
+  .tbp-page .tbp-figures__grid > div:nth-child(5) { left: 120px; }
+  .tbp-page .tbp-figures__grid > div:nth-child(6) { left: 280px; }
+  .tbp-page .tbp-figures__grid > div:nth-child(7) { left: 440px; }
+  .tbp-page .tbp-figures__grid dd { line-height: 16px; margin-top: 8px; }
+  /* The Boat — cabin columns a little wider (no orphan word), still centred */
+  .tbp-page .tbp-cabins__grid article { width: 247px; }
+  .tbp-page .tbp-cabins__grid article:nth-child(1) { left: 62px; }
+  .tbp-page .tbp-cabins__grid article:nth-child(2) { left: 335px; }
+  .tbp-page .tbp-cabins__grid article:nth-child(3) { left: 608px; }
+  .tbp-page .tbp-cabins__grid article:nth-child(4) { left: 881px; }
+  /* The Boat — the two photos centred on the striped band (band = 0 → 598 of the stage) */
+  .tbp-page .tbp-divers__photo--a { left: 64px; }
+  .tbp-page .tbp-divers__photo--b { left: 230px; }
+}
+/* Homepage itineraries: arrows hidden when every card is already visible */
+.hp-coming-next__nav[hidden] { display: none !important; }
+@media (min-width: 1100px) {
+  /* Banda Sea "Explore": its single poster uses the same card format as the other region pages */
+  .px-rg .rgx-track ul:has(> li:only-child) li { flex-basis: 240px; }
+  .px-rg .rgx-track ul:has(> li:only-child) .rgx-card__photo { height: 297px; }
+}
+
+/* DESKTOP PASS — itinerary logbook: 14px reference size (no card-width zoom), tighter leading, text block kept clear of the spiral and the bottom edge */
+@media (min-width: 1100px) {
+  .px-it2 .it2-log__text { zoom: 1; padding: 62px 34px 0 48px; }
+  .px-it2 .it2-log h2 { font-size: 21px; line-height: 24px; }
+  .px-it2 .it2-log__days { font-size: 14px; line-height: 19px; margin-top: 24px; }
+  .px-it2 .it2-log h3 { font-size: 15.5px; line-height: 19px; margin: 0 0 4px; }
+  .px-it2 .it2-log__blk p { font-size: 14px; line-height: 19px; }
+  .px-it2 .it2-log__blk, .px-it2 .it2-log__blk--route { margin-top: 26px; }
+  .px-it2 .it2-log__blk--when { margin-top: 26px; }
+  .px-it2 .it2-log__blk--when p { line-height: 19px; }
+}
+
+/* DESKTOP PASS — FR: the WAOW 2 paragraph runs one line longer, keep its CTA clear of it */
+@media (min-width: 1100px) { html[lang="fr"] .hp-home .hp-boat .link-arrow { top: 452px; } }
+
+/* Region pages: the white card is an image, its text has no forced breaks */
+.px-rg .rg-quote__card { background: url('images/fond-carte-blanche-regions.webp') center / 100% 100% no-repeat; box-shadow: 0 14px 26px -12px rgba(0,0,0,.4); }
+.px-rg .rg-quote__card p br { display: none; }
+@media (min-width: 1100px) { .px-rg-moluccas .rg-quote__card { padding-block: 2rem; } .px-rg-moluccas .rg-quote__card p { font-size: 19px; line-height: 27.6px; } }
+
+/* Carousel arrows: a smaller pair (prev / next) flanking a centred track. */
+.px-rg .rgx-arrow, .px-it2 .it2-arrow, .px-rg .rg-others__arrow { stroke-width: 1; }
+.px-rg .rgx-arrow--prev:hover, .px-it2 .it2-arrow--prev:hover, .px-rg .rg-others__arrow--prev:hover { transform: translateX(-4px); }
+.px-rg .rg-others__arrow svg path { stroke-width: 2.6; }
+@media (max-width: 1099.98px) {
+  .px-rg .rgx-arrow, .px-it2 .it2-arrow, .px-rg .rg-others__arrow { display: inline-block; width: 34px; height: 48px; margin: 1rem 0 0 12px; }
+  .px-rg .rgx-arrow--prev, .px-it2 .it2-arrow--prev, .px-rg .rg-others__arrow--prev { margin-left: calc(50% - 46px); }
+}
+
+/* The Boat "Thought by and for divers": the lower photo slides behind the left one (desktop only). */
+@media (min-width: 1100px) {
+  .tbp-page .tbp-divers__photo--a { z-index: 2; }
+  .tbp-page .tbp-divers__photo--b { z-index: 1; }
+}
+
+/* Region key-info sheet: text block vertically centred on the paper image (desktop only). */
+@media (min-width: 1100px) {
+  .px-rg .rg-key__note { display: flex; flex-direction: column; justify-content: center; padding-top: 62px; padding-bottom: 57px; }
+}
+
+/* Region heroes: title and subtitle right-aligned against the stamp (desktop). */
+@media (min-width: 1100px) {
+  .px-rg .rg-hero h1, .px-rg .rg-hero__sub { text-align: right; }
+}
+
+/* Region quote section: textured background image (section-regions-2). */
+.px-rg .rg-quote { background: #f1e8d8 url('images/section-regions-2.webp') center / cover no-repeat; }
+
+/* The Boat hero: first photo cropped to show its left part (desktop only). */
+@media (min-width: 1100px) { .tbp-page .tbp-intro__photo--a img { object-position: 0% 50%; } }
+
+.xp-gastro__menu-img { display: none; }
+
+/* Sulawesi "animals found nowhere else" (French, desktop): title is now two lines; copy block re-centred on the photo. */
+@media (min-width: 1100px) {
+  html[lang="fr"] .px-rg-sulawesi .rg-why__copy > .p { translate: 0 12px; }
+}
+
+/* Banda Sea "Why dive" (French, desktop): narrower copy column so it stays clear of the scuba icon; section made taller to fit. */
+@media (min-width: 1100px) {
+  html[lang="fr"] .px-rg-banda-sea .rg-why { --sh: 735px !important; }
+  html[lang="fr"] .px-rg-banda-sea .rg-why__copy p.p { --x: 601px !important; --w: 470px !important; }
+  html[lang="fr"] .px-rg-banda-sea .rg-why__copy .link-arrow { --y: 598px !important; }
+}
+
+/* Sunda Islands "the line nobody sees" (French, desktop): the longer French copy is re-centred vertically in its section. */
+@media (min-width: 1100px) {
+  html[lang="fr"] .px-rg-sunda-islands .rg-ow__copy > h2.p { --y: 98px !important; }
+  html[lang="fr"] .px-rg-sunda-islands .rg-ow__copy > p.p:not(.rg-ow__caption) { --y: 171px !important; }
+}
+
+/* Destinations (desktop): a bit more cream below the map. */
+@media (min-width: 1100px) {
+  .px-ds main > section.dst-map { margin-bottom: 110px; }
+}
+
+/* Dive Deep "Less people. More ocean." (French, desktop): the three stats start right of the photo instead of over it. */
+@media (min-width: 1100px) {
+  html[lang="fr"] .px-dd .dd-groups__stats { --x: 548px !important; }
+}
+
+/* Destinations, Papua block (French, desktop): narrower description so it stays clear of the stamp; link nudged down for the extra line. */
+@media (min-width: 1100px) {
+  html[lang="fr"] .dst-region[data-dst="papua"] .dst-region__copy p.p:nth-of-type(2) { --w: 500px !important; }
+  html[lang="fr"] .dst-region[data-dst="papua"] .dst-region__copy .link-arrow { --y: 1545px !important; }
+}
+
+/* Giving Back "Our promise" (French, desktop): narrower text blocks so they stop before the photo on the right. */
+@media (min-width: 1100px) {
+  html[lang="fr"] .px-gb .gb-promise__item.p { --w: 610px !important; }
 }

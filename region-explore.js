@@ -34,12 +34,16 @@
   root.innerHTML =
     '<h2 class="rgx-title p" style="' + st(0, 90, 1174, null, 23.4, 30, "center") + '">' + esc(c.title) + "</h2>" +
     '<p class="rgx-sub p" style="' + st(0, 150, 1174, null, 19.8, 28, "center") + '">' + esc(c.sub) + "</p>" +
-    '<div class="rgx-track p" id="rgx-track" tabindex="0" role="region" aria-label="' + esc(c.title) + '" style="' + (c.slugs.length < 4 ? st(0, 271, 1174, 360) : st(36, 271, 993, 360)) + '"><ul>' + cards + "</ul></div>" +
-    '<button class="rgx-arrow p" id="rgx-arrow" type="button" aria-label="More itineraries" style="' + st(1050, 365, 63, 98) + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>';
+    '<div class="rgx-track p" id="rgx-track" tabindex="0" role="region" aria-label="' + esc(c.title) + '" style="' + (c.slugs.length < 4 ? st(0, 271, 1174, 360) : st(92, 271, 990, 360)) + '"><ul>' + cards + "</ul></div>" +
+    '<button class="rgx-arrow rgx-arrow--prev p" id="rgx-prev" type="button" aria-label="Previous itineraries" style="' + st(40, 387, 36, 52) + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
+    '<button class="rgx-arrow p" id="rgx-arrow" type="button" aria-label="More itineraries" style="' + st(1098, 387, 36, 52) + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>';
 
-  var track = document.getElementById("rgx-track"), arrow = document.getElementById("rgx-arrow"), lis = track.querySelectorAll("li");
+  var track = document.getElementById("rgx-track"), arrow = document.getElementById("rgx-arrow"), prevB = document.getElementById("rgx-prev"), lis = track.querySelectorAll("li");
   function step() { return lis.length > 1 ? lis[1].offsetLeft - lis[0].offsetLeft : track.clientWidth; }
-  function sync() { arrow.style.visibility = track.scrollWidth - track.clientWidth > 4 ? "visible" : "hidden"; }
+  function sync() { var v = track.scrollWidth - track.clientWidth > 4 ? "visible" : "hidden"; arrow.style.visibility = prevB.style.visibility = v; arrow.style.display = prevB.style.display = v === "visible" ? "" : "none"; }
+  prevB.addEventListener("click", function () {
+    track.scrollTo({ left: track.scrollLeft <= 4 ? track.scrollWidth : track.scrollLeft - step(), behavior: "smooth" });
+  });
   arrow.addEventListener("click", function () {
     var atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
     track.scrollTo({ left: atEnd ? 0 : track.scrollLeft + step(), behavior: "smooth" });
@@ -51,11 +55,14 @@
   window.addEventListener("resize", sync); sync();
 
   // "Explore other regions": the four other stamps in a track (three visible), the arrow scrolls one stamp and wraps.
-  var ot = document.getElementById("rgo-track"), oa = document.getElementById("rgo-arrow");
+  var ot = document.getElementById("rgo-track"), oa = document.getElementById("rgo-arrow"), op = document.getElementById("rgo-prev");
   if (ot && oa) {
     var ol = ot.querySelectorAll("li");
     function ostep() { return ol.length > 1 ? ol[1].offsetLeft - ol[0].offsetLeft : ot.clientWidth; }
-    function osync() { oa.style.visibility = ot.scrollWidth - ot.clientWidth > 4 ? "visible" : "hidden"; }
+    function osync() { var v = ot.scrollWidth - ot.clientWidth > 4 ? "visible" : "hidden"; oa.style.visibility = v; oa.style.display = v === "visible" ? "" : "none"; if (op) { op.style.visibility = v; op.style.display = oa.style.display; } }
+    if (op) op.addEventListener("click", function () {
+      ot.scrollTo({ left: ot.scrollLeft <= 4 ? ot.scrollWidth : ot.scrollLeft - ostep(), behavior: "smooth" });
+    });
     oa.addEventListener("click", function () {
       var atEnd = ot.scrollLeft + ot.clientWidth >= ot.scrollWidth - 4;
       ot.scrollTo({ left: atEnd ? 0 : ot.scrollLeft + ostep(), behavior: "smooth" });

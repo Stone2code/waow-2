@@ -40,10 +40,11 @@
   // Built pages supply their own subtitle ("Kaimana → Sorong · 12 days"); others fall back to nights · region.
   // A route shared by two regions reads from the region you opened: in the arrival region it is reversed
   // ("Sorong → Ternate" under Papua, "Ternate → Sorong" under Moluccas).
+  function fr(t) { return window.WAOW_LANG === "fr" ? String(t).replace(/(\d+)\s*days?\b/g, "$1 jours").replace(/(\d+)\s*nights?\b/g, "$1 nuits") : t; }
   function rowMeta(trip, regionId) {
     var page = typeof ITINERARY_V2 !== "undefined" && ITINERARY_V2[typeof ITINERARY_CANONICAL !== "undefined" && ITINERARY_CANONICAL[trip.slug] || trip.slug];
-    if (page && page.route && regionId === page.route.toRegion) return esc(page.route.to + " → " + page.route.from + " · " + page.route.days);
-    return page && page.subtitle ? esc(page.subtitle) : esc(trip.nights) + " nights &middot; " + esc(String(trip.region).split(",")[0]);
+    if (page && page.route && regionId === page.route.toRegion) return esc(fr(page.route.to + " → " + page.route.from + " · " + page.route.days));
+    return page && page.subtitle ? esc(fr(page.subtitle)) : esc(trip.nights) + " nights &middot; " + esc(String(trip.region).split(",")[0]);
   }
 
   function rowMarkup(trip, regionId) {
@@ -91,7 +92,12 @@
     if (READY_REGIONS.indexOf(id) > -1) {
       regionLink.style.display = "";
       regionLink.setAttribute("href", region.page);
-      regionLink.textContent = "Discover " + (/^(banda-sea|sunda-islands|moluccas)$/.test(id) ? "the " : "") + region.name;
+      if (window.WAOW_LANG === "fr") {
+        var FR_REGION = { "sulawesi": "Sulawesi", "papua": "la Papouasie", "moluccas": "les Moluques", "banda-sea": "la mer de Banda", "sunda-islands": "les îles de la Sonde" };
+        regionLink.textContent = "Découvrir " + (FR_REGION[id] || region.name);
+      } else {
+        regionLink.textContent = "Discover " + (/^(banda-sea|sunda-islands|moluccas)$/.test(id) ? "the " : "") + region.name;
+      }
     } else {
       regionLink.style.display = "none";
     }

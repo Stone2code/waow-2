@@ -626,3 +626,129 @@
   main .px-stage, main .tbp-stage, main .cb-stage, main .container { max-width: 680px; margin-inline: auto; }
   .px-rg .rg-key__thumb { aspect-ratio: 4 / 5 !important; }
 }
+
+/* Phones: logo + EN|FR|DE + Rates & Dates + burger all fit on one row down to 360px */
+@media (max-width: 479.98px) {
+  .site-header__row { gap: 6px !important; padding-inline: 14px !important; }
+  .logo img { height: 22px !important; width: auto !important; }
+  .site-header__actions .btn { padding: 0.45em 0.5em !important; font-size: 0.56rem !important; letter-spacing: 0.03em !important; }
+  .site-header__row > .lang-switch { margin-right: 2px; }
+  .burger { flex: 0 0 auto; margin-left: 0 !important; }
+}
+
+/* --- Mobile only: bolder striped band behind the top of the photos (sections that open on photos; text-first sections keep the thin band) --- */
+@media (max-width: 1099.98px) {
+  :is(.hp-boat, .tbp-divers, .rg-t2) { isolation: isolate; }
+  .hp-boat__stripes, .tbp-divers__stripes, .rg-t2__stripes { height: 260px !important; z-index: -1 !important; }
+  .hp-boat__stripes { background-image: repeating-linear-gradient(180deg, color-mix(in srgb, var(--sea-foam) 70%, var(--bg-page)) 0 7px, var(--bg-page) 7px 14px) !important; }
+  .tbp-divers__stripes { background-image: repeating-linear-gradient(180deg, color-mix(in srgb, var(--sea-foam) 70%, var(--bg-page)) 0 7px, var(--bg-page) 7px 14px) !important; }
+  .rg-t2__stripes { background-image: repeating-linear-gradient(180deg, var(--sea-foam) 0 7px, var(--abyss) 7px 14px) !important; }
+}
+
+/* About Us (mobile): the lower-right photo is moved down inside its frame so both faces stay in view. */
+@media (max-width: 1099.98px) {
+  .px-ab .ab-hero__collage > figure:nth-of-type(2) img { object-position: 50% 0% !important; }
+}
+
+/* Homepage family photo (mobile): moved down inside its frame so both faces stay in view. */
+@media (max-width: 1099.98px) {
+  .hp-family figure img[src*="captain-wheel"] { object-position: 50% 0% !important; }
+}
+
+/* Homepage "family" section (mobile): no stripes. */
+@media (max-width: 1099.98px) {
+  .hp-family__stripes { display: none !important; }
+}
+
+/* The Boat hero (mobile): first photo moved right inside its frame so its left part (the bow) shows. */
+@media (max-width: 1099.98px) {
+  .tbp-page .tbp-intro__photo--a img { object-position: 0% 50% !important; }
+}
+
+/* The Boat cabins "sea more" CTA (mobile): centred. */
+@media (max-width: 1099.98px) {
+  .tbp-page .tbp-cabins__link { position: relative !important; left: auto !important; width: fit-content !important; margin-inline: auto !important; }
+}
+
+/* The Boat (mobile): gold double rule between "Thought by and for divers" and "Life at sea". */
+@media (max-width: 1099.98px) {
+  .tbp-page .tbp-life { position: relative; }
+  .tbp-page .tbp-life::before {
+    content: ""; position: absolute; left: 0; right: 0; top: 0; height: 6px; z-index: 3; pointer-events: none;
+    background: linear-gradient(var(--yellaow), var(--yellaow)) top / 100% 1.5px no-repeat, linear-gradient(var(--yellaow), var(--yellaow)) bottom / 100% 1.5px no-repeat;
+  }
+}
+
+/* Experience hero (mobile): no octopus icon over the first photo. */
+@media (max-width: 1099.98px) {
+  .px-xp .xp-hero__collage > img.dot-icon[src*="icons-8.png"], .px-xp img.dot-icon[src="images/icons-8.png"] { display: none !important; }
+}
+
+/* Experience gastronomy (mobile): the menu is the stamp-style picture (EN / FR) instead of the text card. */
+@media (max-width: 1099.98px) {
+  .px-xp .xp-gastro__menu { background: none !important; box-shadow: none !important; filter: none !important; padding: 0 !important; height: auto !important; min-height: 0 !important; width: min(100%, 340px) !important; }
+  .px-xp .xp-gastro__menu::before, .px-xp .xp-gastro__menu::after { display: none !important; }
+  .px-xp .xp-gastro__menu > :not(.xp-gastro__menu-img) { display: none !important; }
+  .px-xp .xp-gastro__menu .xp-gastro__menu-img { display: block !important; width: 100%; height: auto; margin: 0 auto; border: 0 !important; box-shadow: none !important; background: none !important; filter: drop-shadow(0 6px 10px rgba(16, 35, 63, 0.18)); }
+}
+
+/* Experience gastronomy (mobile): "Special diets on request" sits directly under the previous paragraph, left-aligned (as if after a <br>). */
+@media (max-width: 1099.98px) {
+  .px-xp p.xp-gastro__note.p { text-align: left !important; margin-top: -14px !important; align-self: stretch !important; width: auto !important; }
+}
+
+/* Experience hotel service (mobile): no white card behind the caption under the photos. */
+@media (max-width: 1099.98px) {
+  .px-xp .xp-hotel__caption { background: none !important; box-shadow: none !important; }
+}
+
+/* Experience "Beyond diving" (mobile): the kayak photo is cropped from the top so the watermark at its bottom edge falls outside the frame. */
+@media (max-width: 1099.98px) {
+  .px-xp .xp-beyond__photo--r img { object-position: 50% 0% !important; }
+}
+
+/* Experience "What's included" (mobile): no helm icon over the photo. */
+@media (max-width: 1099.98px) {
+  .px-xp img.dot-icon[src$="icons-4.png"] { display: none !important; }
+}
+
+/* Dive Deep "New sites" (mobile): no snorkel-mask icon above the photos. */
+@media (max-width: 1099.98px) {
+  .px-dd img.dot-icon[src$="icons-12.png"] { display: none !important; }
+}
+
+/* Dive Deep "Less people. More ocean." (mobile): the three-line stats become one larger line. */
+@media (max-width: 1099.98px) {
+  .px-dd .dd-groups__stats p { display: flex !important; flex-wrap: wrap; gap: 0 .45em; margin: 0; font-size: min(26px, 6.6vw) !important; line-height: 1.3 !important; }
+  .px-dd .dd-groups__stats p br { display: none !important; }
+}
+
+/* Dive Deep "Built for diving" (mobile): no stripes. */
+@media (max-width: 1099.98px) {
+  .dd-built__stripes { display: none !important; }
+}
+
+/* Museum (mobile): the ship icon moves up onto the bottom-left corner of the photo. */
+@media (max-width: 1099.98px) {
+  .px-mu img.mu-anchor { position: relative; z-index: 3; margin-top: -58px !important; margin-left: -6px !important; }
+}
+
+/* Museum "Six years at sea" (mobile): subtitle left-aligned like the text below it. */
+@media (max-width: 1099.98px) {
+  .px-mu .mu-tag.mu-tag--l { text-align: left !important; align-self: stretch !important; width: auto !important; }
+}
+
+/* Region carousels (mobile): the two arrows sit side by side under the posters (left / right), and take no room when hidden. */
+@media (max-width: 1099.98px) {
+  .px-rg .rg-explore .px-stage, .px-rg .rg-others .px-stage { grid-template-columns: 1fr 1fr; }
+  .px-rg :is(.rg-explore, .rg-others) .px-stage > :not(.rgx-arrow):not(.rg-others__arrow) { grid-column: 1 / -1; }
+  .px-rg :is(.rgx-arrow, .rg-others__arrow) { margin: 0 !important; width: 34px; height: 48px; }
+  .px-rg :is(.rgx-arrow--prev, .rg-others__arrow--prev) { justify-self: start; }
+  .px-rg :is(.rgx-arrow, .rg-others__arrow):not(.rgx-arrow--prev):not(.rg-others__arrow--prev) { justify-self: end; }
+}
+
+/* Papua hero (mobile): slight zoom from the top so the watermark at the bottom edge is cropped out. */
+@media (max-width: 1099.98px) {
+  .px-rg-papua .rg-hero__photo { overflow: hidden; }
+  .px-rg-papua .rg-hero__photo img { transform: scale(1.12) !important; transform-origin: 50% 0% !important; }
+}

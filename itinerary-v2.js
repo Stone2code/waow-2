@@ -95,8 +95,9 @@
     var total = 0;
     LINKS.forEach(function (l, k) { if (l.to == null) l.to = k + 1; });
     LINKS.slice().sort(function (p, q) { return p.to - q.to; }).forEach(function (l) {
-      var a = ART[l.dir], k = Math.abs(l.b[0] - l.a[0]) / Math.abs(a[5] - a[3]);
-      if (!(k > 0.3 && k < 0.6)) { k = SCALE[l.dir]; l.b[0] = l.a[0] + (a[5] - a[3]) * k; }
+      // Every connector: same scale per direction, art centred on the page axis (683) = the gutter between text and photo.
+      var a = ART[l.dir], k = SCALE[l.dir];
+      l.a[0] = 683 - a[1] * k / 2 + a[3] * k; l.b[0] = l.a[0] + (a[5] - a[3]) * k;
       var delta = Math.round(l.a[1] + (a[6] - a[4]) * k - l.b[1]);
       if (!delta) return;
       LAY.forEach(function (e, j) { if (j >= l.to) { e.photo[1] += delta; e.title += delta; e.sub += delta; e.text += delta; if (e.bottom != null) e.bottom += delta; if (e.leave != null) e.leave += delta; } });
@@ -116,7 +117,7 @@
     steps.slice(0, LAY.length).forEach(function (s, i) {
       var L = LAY[i], ph = L.photo, ta = s.align || (L.side === "R" ? "right" : "left"), subW = s.subW || Math.max(L.tx[1], 640), titleW = s.titleW || Math.max(L.tx[1], 640);
       html += '<div class="it2-step px-flat reveal">' +
-        '<figure class="it2-step__photo p" style="' + st(ph[0], ph[1], ph[2], ph[3], null, null, null, T) + '"><img src="' + s.image + '" loading="lazy" alt="' + (s.alt || "") + '"></figure>' +
+        '<figure class="it2-step__photo p" style="' + st(ph[0], ph[1], ph[2], ph[3], null, null, null, T) + '"><img src="' + s.image + '"' + ((s.pos || s.rot) ? ' style="' + (s.pos ? "object-position:" + s.pos + ";" : "") + (s.rot ? "transform:rotate(" + s.rot + "deg);" : "") + '"' : "") + ' loading="lazy" alt="' + (s.alt || "") + '"></figure>' +
         (s.title ? '<h2 class="it2-step__title p" style="' + st(ta === "right" ? L.tx[0] + L.tx[1] - titleW : L.tx[0], L.title, titleW, null, 42.6, s.titleLh || 44.5, ta, T) + '">' + s.title + "</h2>" : "") +
         (s.sub ? '<p class="it2-step__sub' + (s.subColor === "blue" ? " is-blue" : "") + ' px-annot p" style="' + st(ta === "right" ? L.tx[0] + L.tx[1] - subW : L.tx[0], L.sub, subW, null, s.subFs || 52, s.subLh || (s.subFs || 52) * 1.2, ta, T) + '">' + s.sub + "</p>" : "") +
         '<p class="it2-step__text p" style="' + st(L.tx[0], L.text, L.tx[1], null, 17.5, 24, ta, T) + '">' + s.text + "</p></div>";
@@ -176,8 +177,9 @@
   h += sec("it2-explore", T, 5971,
     '<h2 class="it2-explore__title p" style="' + st(0, 5409, 1366, null, 26.6, 34, "center", T) + '">' + ex.title + "</h2>" +
     '<p class="it2-explore__sub p" style="' + st(0, 5462, 1366, null, 23, 28, "center", T) + '">' + ex.sub + "</p>" +
-    '<div class="it2-track p" id="it2-track" tabindex="0" role="region" aria-label="Other itineraries" style="' + st(85, 5561, 1076, 350, null, null, null, T) + '"><ul>' + cards + "</ul></div>" +
-    '<button class="it2-arrow p" id="it2-arrow" type="button" aria-label="Next itineraries" style="' + st(1191, 5670, 65, 87, null, null, null, T) + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>');
+    '<div class="it2-track p" id="it2-track" tabindex="0" role="region" aria-label="Other itineraries" style="' + st(145, 5561, 1076, 350, null, null, null, T) + '"><ul>' + cards + "</ul></div>" +
+    '<button class="it2-arrow it2-arrow--prev p" id="it2-prev" type="button" aria-label="Previous itineraries" style="' + st(69, 5687, 36, 52, null, null, null, T) + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
+    '<button class="it2-arrow p" id="it2-arrow" type="button" aria-label="Next itineraries" style="' + st(1261, 5687, 36, 52, null, null, null, T) + '"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>');
 
   main.innerHTML = h;
 
@@ -217,18 +219,41 @@
   fitSubs();
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitSubs);
 
+  // ---- log notebook: centre the text block vertically on the paper (desktop layout only) ----
+  function centreLog() {
+    var box = main.querySelector(".it2-log"), tx = box && box.querySelector(".it2-log__text");
+    if (!tx) return;
+    tx.style.paddingTop = "";
+    if (window.innerWidth < 1100) return;
+    function off() {
+      var kids = tx.children, a = kids[0].getBoundingClientRect(), z = kids[kids.length - 1].getBoundingClientRect(), b = box.getBoundingClientRect();
+      return (a.top + z.bottom) / 2 - (b.top + b.height * 0.495);
+    }
+    var base = parseFloat(getComputedStyle(tx).paddingTop), o0 = off();
+    tx.style.paddingTop = base + 10 + "px";
+    var k = (off() - o0) / 10;
+    if (!k) { tx.style.paddingTop = ""; return; }
+    tx.style.paddingTop = Math.max(0, base - o0 / k) + "px";
+  }
+  centreLog();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(centreLog);
+  window.addEventListener("resize", centreLog);
+
   // ---- carousel behaviour: arrow scrolls one card (wraps at the end); swipe/drag is native scroll ----
-  var track = document.getElementById("it2-track"), arrow = document.getElementById("it2-arrow");
-  if (track && arrow) {
+  var track = document.getElementById("it2-track"), arrow = document.getElementById("it2-arrow"), prevB = document.getElementById("it2-prev");
+  if (track && arrow && prevB) {
     var cardsEls = track.querySelectorAll("li");
     function step() { return cardsEls.length > 1 ? cardsEls[1].offsetLeft - cardsEls[0].offsetLeft : track.clientWidth; }
     function sync() {
       var more = track.scrollWidth - track.clientWidth > 4;
-      arrow.style.visibility = more ? "visible" : "hidden";
+      arrow.style.visibility = prevB.style.visibility = more ? "visible" : "hidden"; arrow.style.display = prevB.style.display = more ? "" : "none";
     }
     arrow.addEventListener("click", function () {
       var atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
       track.scrollTo({ left: atEnd ? 0 : track.scrollLeft + step(), behavior: "smooth" });
+    });
+    prevB.addEventListener("click", function () {
+      track.scrollTo({ left: track.scrollLeft <= 4 ? track.scrollWidth : track.scrollLeft - step(), behavior: "smooth" });
     });
     track.addEventListener("keydown", function (e) {
       if (e.key === "ArrowRight") track.scrollBy({ left: step(), behavior: "smooth" });

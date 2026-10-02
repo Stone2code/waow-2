@@ -33,15 +33,34 @@
       return '<a class="hp-coming-next__card" href="' + itineraryHref(k) + '" aria-label="' + nm + '"><figure><img src="images/it-cover-' + k + '.webp" alt="' + nm + '"></figure><p>sea more</p></a>';
     }).join("");
     var prev = document.getElementById("coming-next-prev");
-    if (prev) prev.addEventListener("click", function () {
-      var cards = track.querySelectorAll(".hp-coming-next__card"), step = cards.length > 1 ? cards[1].offsetLeft - cards[0].offsetLeft : track.clientWidth;
-      track.scrollTo({ left: track.scrollLeft <= 4 ? track.scrollWidth : track.scrollLeft - step, behavior: "smooth" });
-    });
+    // Eased glide (≈700 ms, ease-in-out) instead of the browser's abrupt smooth-scroll; snapping is paused while it runs.
+    var anim = null;
+    function glide(to) {
+      to = Math.max(0, Math.min(to, track.scrollWidth - track.clientWidth));
+      if (reduce) { track.scrollLeft = to; return; }
+      if (anim) cancelAnimationFrame(anim);
+      var from = track.scrollLeft, d = to - from, t0 = performance.now(), dur = 700;
+      track.style.scrollSnapType = "none";
+      (function step(now) {
+        var p = Math.min(1, (now - t0) / dur), e = p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
+        track.scrollLeft = from + d * e;
+        if (p < 1) anim = requestAnimationFrame(step); else { anim = null; track.style.scrollSnapType = ""; }
+      })(t0);
+    }
+    function cardStep() { var c = track.querySelectorAll(".hp-coming-next__card"); return c.length > 1 ? c[1].offsetLeft - c[0].offsetLeft : track.clientWidth; }
+    if (prev) prev.addEventListener("click", function () { glide(track.scrollLeft <= 4 ? track.scrollWidth : track.scrollLeft - cardStep()); });
     if (next) next.addEventListener("click", function () {
-      var cards = track.querySelectorAll(".hp-coming-next__card"), step = cards.length > 1 ? cards[1].offsetLeft - cards[0].offsetLeft : track.clientWidth;
       var atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
-      track.scrollTo({ left: atEnd ? 0 : track.scrollLeft + step, behavior: "smooth" });
+      glide(atEnd ? 0 : track.scrollLeft + cardStep());
     });
+    // Arrows only when there is more than fits: with 4 cards or fewer on desktop, no slider behaviour at all.
+    function syncArrows() {
+      var more = track.scrollWidth - track.clientWidth > 4;
+      [prev, next].forEach(function (b) { if (b) b.hidden = !more; });
+      track.classList.toggle("is-static", !more);
+    }
+    window.addEventListener("resize", syncArrows); syncArrows();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(syncArrows);
   }
 
   // ---- 3. postcards slider

@@ -186,7 +186,7 @@
     <div class="container tbp-diagram__grid tbp-stage">
       <p class="tbp-diagram__lead reveal">Four cabin types, all built for comfort and privacy. <br><br>Around them, wide decks, two dining areas and quiet or sociable corners leave room for every mood: long conversations full of laughter, or calm moments facing the sea.</p>
       <div class="tbp-diagram__art reveal reveal--delay-1">
-        <picture><source srcset="images/boat-model-sketch.webp" type="image/webp"><img class="tbp-diagram__sketch" src="images/boat-model-sketch.png" loading="lazy" alt="Line drawing of Waow 2 under sail."></picture>
+        <picture><img class="tbp-diagram__sketch" src="images/boat-sketch-en.webp" data-fr="images/boat-sketch-fr.webp" loading="lazy" alt="Line drawing of Waow 2 under sail."></picture>
       </div>
     </div>
   </section>
@@ -220,9 +220,9 @@
         <button class="tbp-deckplan__tab" type="button" role="tab" aria-selected="false" aria-controls="deck-lower">Lower Deck</button>
       </div>
       <div class="tbp-deckplan__stage reveal">
-        <picture><img class="tbp-deckplan__img is-active" id="deck-upper" src="images/deckplan-upper.webp" loading="lazy" alt="Upper deck floor plan."></picture>
-        <picture><img class="tbp-deckplan__img" id="deck-main" src="images/deckplan-main.webp" loading="lazy" alt="Main deck floor plan."></picture>
-        <picture><img class="tbp-deckplan__img" id="deck-lower" src="images/deckplan-lower.webp" loading="lazy" alt="Lower deck floor plan."></picture>
+        <picture><img class="tbp-deckplan__img is-active" id="deck-upper" src="images/deckplan-upper.webp" data-fr="images/deckplan-upper-fr.webp" loading="lazy" alt="Upper deck floor plan."></picture>
+        <picture><img class="tbp-deckplan__img" id="deck-main" src="images/deckplan-main.webp" data-fr="images/deckplan-main-fr.webp" loading="lazy" alt="Main deck floor plan."></picture>
+        <picture><img class="tbp-deckplan__img" id="deck-lower" src="images/deckplan-lower.webp" data-fr="images/deckplan-lower-fr.webp" loading="lazy" alt="Lower deck floor plan."></picture>
       </div>
     </div>
   </section>
@@ -438,6 +438,7 @@
 </section>
 
 <script src="the-boat-page.js"></script>
+<script>(function(){if(window.WAOW_LANG!=="fr")return;document.querySelectorAll("img[data-fr]").forEach(function(i){i.src=i.getAttribute("data-fr");});})();</script>
 <script src="main.js"></script>
 </body>
 </html>
