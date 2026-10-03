@@ -117,7 +117,7 @@
     steps.slice(0, LAY.length).forEach(function (s, i) {
       var L = LAY[i], ph = L.photo, ta = s.align || (L.side === "R" ? "right" : "left"), subW = s.subW || Math.max(L.tx[1], 640), titleW = s.titleW || Math.max(L.tx[1], 640);
       html += '<div class="it2-step px-flat reveal">' +
-        '<figure class="it2-step__photo p" style="' + st(ph[0], ph[1], ph[2], ph[3], null, null, null, T) + '"><img src="' + s.image + '"' + ((s.pos || s.rot) ? ' style="' + (s.pos ? "object-position:" + s.pos + ";" : "") + (s.rot ? "transform:rotate(" + s.rot + "deg);" : "") + '"' : "") + ' loading="lazy" alt="' + (s.alt || "") + '"></figure>' +
+        '<figure class="it2-step__photo p" style="' + st(ph[0], ph[1], ph[2], ph[3], null, null, null, T) + '"><img src="' + s.image + '"' + ((s.pos || s.rot || s.zoom) ? ' style="' + (s.pos ? "object-position:" + s.pos + ";" : "") + ((s.rot || s.zoom) ? "transform:" + (s.rot ? "rotate(" + s.rot + "deg) " : "") + (s.zoom ? "scale(" + s.zoom + ")" : "") + ";" : "") + (s.zoom ? "transform-origin:" + (s.zorigin || "100% 50%") + ";" : "") + '"' : "") + ' loading="lazy" alt="' + (s.alt || "") + '"></figure>' +
         (s.title ? '<h2 class="it2-step__title p" style="' + st(ta === "right" ? L.tx[0] + L.tx[1] - titleW : L.tx[0], L.title, titleW, null, 42.6, s.titleLh || 44.5, ta, T) + '">' + s.title + "</h2>" : "") +
         (s.sub ? '<p class="it2-step__sub' + (s.subColor === "blue" ? " is-blue" : "") + ' px-annot p" style="' + st(ta === "right" ? L.tx[0] + L.tx[1] - subW : L.tx[0], L.sub, subW, null, s.subFs || 52, s.subLh || (s.subFs || 52) * 1.2, ta, T) + '">' + s.sub + "</p>" : "") +
         '<p class="it2-step__text p" style="' + st(L.tx[0], L.text, L.tx[1], null, 17.5, 24, ta, T) + '">' + s.text + "</p></div>";

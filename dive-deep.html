@@ -318,6 +318,20 @@
   </div>
 </footer>
 
+<script>
+/* "20 guests. 5 guides. Small groups.": each item gets its own span so phones can show bullets instead of full stops. */
+(function () {
+  function wrap() {
+    var p = document.querySelector(".dd-groups__stats p");
+    if (!p || p.querySelector(".st-i")) return;
+    var items = p.innerHTML.split(/<br\s*\/?>/i).map(function (t) { return t.trim(); }).filter(Boolean);
+    if (items.length < 2) return;
+    p.innerHTML = items.map(function (t) { return '<span class="st-i">' + t.replace(/\.$/, '<span class="st-dot">.</span>') + "</span>"; }).join("<br>");
+  }
+  wrap();
+  window.addEventListener("waow:translated", function () { var p = document.querySelector(".dd-groups__stats p"); if (p && !p.querySelector(".st-i")) wrap(); });
+})();
+</script>
 <script src="main.js"></script>
 </body>
 </html>

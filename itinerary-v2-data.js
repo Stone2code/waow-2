@@ -459,7 +459,7 @@ ITINERARY_V2["papua-four-kings"] = {
       text: "The Dampier Strait is where current drives the action.<br>At Blue Magic, Cape Kri and Sardine Reef, jacks, batfish, barracuda and whitetips gather around pinnacles swept by the flow. Mantas use the cleaning stations at Manta Sandy, while wobbegongs rest beneath table corals and walking sharks appear after dark." },
     { title: "Fam &amp; Penemu", subFs: 40, sub: "The Raja Ampat everyone came to see",        image: "images/it-papua-four-kings-2.webp", alt: "Plate and table corals in a shallow garden.",
       text: "Around Fam and Penemu, the reefs shift into shallow hard-coral gardens.<br>Melissa’s Garden spreads across hundreds of meters of staghorn and table coral in clear water, while above the surface the climb to Piaynemo opens onto the karst islands and lagoons that have become one of Raja Ampat’s defining views." },
-    { title: "Northern Waigeo", subFs: 40, sub: "Where the crowds disappear",       image: "images/it-papua-four-kings-3.webp", alt: "A banded pipefish against dark water.",
+    { title: "Northern Waigeo", subFs: 40, sub: "Where the crowds disappear",       image: "images/it-papua-four-kings-3.webp", zoom: 1.14, zorigin: "100% 50%", alt: "A banded pipefish against dark water.",
       text: "Further north, the traffic thins out.<br>Aljui Bay brings black sand, mangrove roots and muck diving beside the pearl farm, while Kawe and the reefs towards Wayag are more exposed, current-swept and lightly dived.<br>Above water, limestone islands scatter across turquoise water as far as the eye can see." },
     { title: "Batanta", subFs: 40, sub: "Waterfalls between reefs",        image: "images/it-papua-four-kings-4.webp", alt: "A peacock mantis shrimp, face on.",
       text: "Batanta adds another side of Raja Ampat, with rivers, waterfalls and muck sites tucked between the larger reef systems. It breaks up the journey with freshwater, jungle and smaller-scale diving before the route turns south again." },
@@ -567,7 +567,7 @@ ITINERARY_V2["sunda-east-meets-west"] = {
     layout: [{ side: "L", photo: [747, 4585, 527, 598], title: 0, sub: 4681, text: 4783, tx: [137, 506] }],
     storyEnd: 5260,
     steps: [
-      { sub: "The line between two worlds", subColor: "blue", subW: 640, align: "right", image: "images/it-sunda-east-meets-west-5.webp", alt: "A turquoise pit viper coiled on a rock above the sea.",
+      { sub: "The line between two worlds", subColor: "blue", subW: 640, align: "right", image: "images/it-sunda-east-meets-west-5.webp", pos: "50% 100%", alt: "A turquoise pit viper coiled on a rock above the sea.",
         text: "On the last night, somewhere in the deep water of the Lombok Strait, WAOW 2 sails back into Asia.<br>Alfred Russel Wallace spotted that line in the 1850s by paying attention to birds. It carries his name, and it still holds.<br>Bali belongs to Asia, with its monkeys and woodpeckers.<br>Cockatoos and marsupials begin on the other side.<br>Everything you have dived for ten days lies in Wallacea — the transition zone between two continents that were never joined.<br>The animals there belong fully to neither. And more and more, they exist nowhere else on Earth.<br>The crossing takes a night.<br>What it crosses took forty million years to form." }
     ]
   },

@@ -275,8 +275,8 @@
     font-size: 24px !important; line-height: 1.25 !important;
   }
   .bk-label { font-size: 18px !important; }
-  .rg-key__sheet h3 { font-size: 18px !important; }
-  .rg-key .rg-key__sheet p { font-size: 17px !important; line-height: 1.45 !important; }
+  .rg-key__sheet h3 { font-size: 17px !important; }
+  .rg-key .rg-key__sheet p { font-size: 16px !important; line-height: 1.45 !important; }
   .px-rg .rg-quote__card p { font-size: 15px !important; line-height: 1.6 !important; }
   .xp-gastro__q h3 { font-size: 15px !important; } .xp-gastro__q p { font-size: 13px !important; }
 }
@@ -794,4 +794,92 @@
   .tbp-page .tbp-fullbleed .tbp-fullbleed__photo--br { order: 3; }
   .tbp-page .tbp-fullbleed--indoor .tbp-fullbleed__copy { order: 1; }
   .tbp-page .tbp-fullbleed--indoor .tbp-fullbleed__photo--full-right { order: 2; }
+}
+
+/* The Boat outdoor (mobile): more room between the outdoor text and the boat plan. */
+@media (max-width: 1099.98px) {
+  .tbp-page .tbp-fullbleed .tbp-fullbleed__photo--br { margin-top: 40px !important; }
+}
+
+/* Cabins (mobile): round black dots between the items of each script annotation. */
+@media (max-width: 1099.98px) {
+  .cb-cabin__annotation .br-sp::before { content: "\25CF"; display: inline-block; font-size: .5em; line-height: 1; vertical-align: .22em; margin: 0 .3em 0 .7em; color: #000; }
+}
+
+/* Experience "Beyond diving" (mobile): more room between the text and the list of activities. */
+@media (max-width: 1099.98px) {
+  .px-xp .xp-beyond__tag:first-of-type { margin-top: 32px !important; }
+}
+
+/* Dive Deep "New sites" (mobile): the two photos swap stacking order; the left one is zoomed from the top so the credit at its bottom edge is cropped out. */
+@media (max-width: 1099.98px) {
+  .px-dd .dd-newsites__visual > figure:nth-of-type(1) { z-index: 3 !important; }
+  .px-dd .dd-newsites__visual > figure:nth-of-type(2) { z-index: 2 !important; }
+  .px-dd .dd-newsites__visual > figure:nth-of-type(1) img { transform: scale(1.16) !important; transform-origin: 50% 0% !important; }
+  .px-dd .dd-newsites__visual > figure:nth-of-type(1) { overflow: hidden !important; }
+}
+
+/* Dive Deep stats (mobile): bullets between the items instead of full stops. */
+@media (max-width: 1099.98px) {
+  .px-dd .dd-groups__stats .st-dot { display: none; }
+  .px-dd .dd-groups__stats .st-i ~ .st-i::before { content: "\2022"; margin-right: .45em; color: var(--abyss); }
+}
+@media (max-width: 1099.98px) {
+  .px-dd .dd-groups__stats p { font-size: min(23px, 5.8vw) !important; gap: 0 .35em; }
+}
+
+/* Dive Deep "Built for diving" (mobile): photo cropped towards the bottom so the divers are fully in frame. */
+@media (max-width: 1099.98px) {
+  .px-dd .dd-built__photo img { object-position: 50% 100% !important; }
+}
+
+/* About Us "WAOW" (mobile): photo cropped towards the bottom so the hull is fully in frame. */
+@media (max-width: 1099.98px) {
+  .px-ab .ab-w1__photo img { object-position: 50% 100% !important; }
+}
+
+/* About Us team (mobile): the top group photo is moved down in its frame so all the faces are fully in view. */
+@media (max-width: 1099.98px) {
+  .px-ab .ab-team__photo:first-of-type img { object-position: 50% 15% !important; }
+}
+
+/* ---- Rates & Dates (booking) on phones: clean stack, countdown on a single line ---- */
+@media (max-width: 1099.98px) {
+  .px-bk main .px-stage { display: flex !important; flex-direction: column; align-items: center; text-align: center; padding: 28px var(--gutter) 48px !important; gap: 0 !important; }
+  .px-bk .bk-hero { padding-block: 0 !important; }
+  .px-bk .bk-hero h1.p { font-size: 34px !important; line-height: 1.12 !important; margin: 8px 0 22px !important; text-align: center !important; }
+  .px-bk .bk-hero__lead, .px-bk .bk-countdown-head, .px-bk .bk-closing { display: flex !important; flex-direction: column; align-items: center; width: 100%; }
+  .px-bk .bk-hero__lead p.p { font-size: 15px !important; line-height: 1.55 !important; margin: 0 0 8px !important; text-align: center !important; width: auto !important; max-width: 34ch; }
+  .px-bk .bk-hero__lead p.p:nth-child(2)::after { content: "."; }
+  .px-bk .bk-hero__lead p.p:nth-child(3) { display: none !important; }
+  .px-bk .bk-countdown-head h2.p { font-size: 22px !important; line-height: 1.2 !important; margin: 34px 0 18px !important; text-align: center !important; width: auto !important; }
+  .px-bk .bk-countdown { display: flex !important; flex-wrap: nowrap !important; justify-content: center; align-items: flex-start; gap: 0 !important; width: 100%; max-width: none !important; margin: 0 auto !important; }
+  .px-bk .bk-col.p { flex: 0 0 auto !important; width: auto !important; min-width: 0; padding: 0 !important; display: flex; flex-direction: column; align-items: center; }
+  .px-bk .bk-num { font-size: min(27px, 6.9vw) !important; line-height: 1.1 !important; }
+  .px-bk .bk-label.px-annot { font-size: 12px !important; line-height: 1.2 !important; margin-top: 10px !important; letter-spacing: .02em; }
+  .px-bk .bk-sep.p, .px-bk .bk-sep--rowbreak.p { display: flex !important; flex: 0 0 auto !important; width: 9px !important; height: 32px !important; margin: 2px 9px 0 !important; align-self: flex-start; justify-content: space-between; }
+  .px-bk .bk-sep span { width: 2.5px !important; }
+  .px-bk .bk-closing p.p { font-size: 15px !important; line-height: 1.55 !important; margin: 40px 0 14px !important; text-align: center !important; width: auto !important; max-width: 34ch; }
+  .px-bk .bk-newsletter-link.p { margin: 0 !important; width: auto !important; text-align: center !important; }
+}
+
+/* Papua "The center of everything" (mobile): one flowing, centred paragraph. */
+@media (max-width: 1099.98px) {
+  .px-rg .papua-cols { column-count: 1 !important; column-gap: normal !important; height: auto !important; text-align: center !important; text-align-last: auto !important; }
+}
+
+/* Sunda Islands (mobile): the Bali myna photo is cropped so the bird sits in the centre of its frame. */
+@media (max-width: 1099.98px) {
+  .px-rg-sunda-islands .rg-ow__photo--l img { object-position: 90% 50% !important; }
+}
+
+/* Itinerary band with photo (mobile): room between the photo and the title, and a bit more padding all round. */
+@media (max-width: 1099.98px) {
+  .px-it2 .it2-band__photo { margin: 0 0 28px !important; }
+  .px-it2 .it2-band { padding: 40px 0 56px !important; }
+}
+
+/* Homepage itineraries carousel (mobile): the card CTA is uppercase and underlined like the other CTAs. */
+@media (max-width: 1099.98px) {
+  .hp-home .hp-coming-next__card p { text-transform: uppercase !important; letter-spacing: .08em; font-size: 14px !important; text-decoration: underline !important; text-underline-offset: 6px; text-decoration-thickness: 1px !important; width: fit-content !important; margin: 14px auto 0 !important; text-align: center !important; }
 }

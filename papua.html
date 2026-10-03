@@ -196,16 +196,8 @@
       </picture>
     </figure>
 
-    <p class="p" style="--x:176px;--y:434px;--w:256px;--fs:17.5px;--lh:21.6px; text-align: justify; text-align-last: justify;">
-      The record for the most fish species counted on a single dive belongs to Cape Kri in the Dampier Strait, where 374 were logged in one immersion. But the real measure of this place is how little of the tree of life is missing from it. Mollusks, from nudibranchs in colors nobody would design to cephalopods that change texture as well as shade, and
-    </p>
-
-    <p class="p" style="--x:458px;--y:434px;--w:256px;--fs:17.5px;--lh:21.6px; text-align: justify; text-align-last: justify;">
-      giant clams a meter across. Echinoderms everywhere: crinoids on every sea fan, sea stars, urchins, sea cucumbers doing the unglamorous work of processing the sand. Crustaceans by the thousand, from cleaning shrimps to punching shrimps. Sponges the size of bathtubs. Tunicates, those small colonial animals that look like
-    </p>
-
-    <p class="p" style="--x:740px;--y:434px;--w:256px;--fs:17.5px;--lh:21.6px; text-align: justify;">
-      plants and are in fact closer relatives of ours than any other invertebrate on the reef. Segmented worms, flatworms, hydroids, jellyfish, bryozoans. It is not simply a place with a lot of life in it. It is where much of that life originated and spread outwards from, which is why biologists describe the Bird's Head as a cradle rather than a collection.
+    <p class="p papua-cols" style="--x:176px;--y:434px;--w:820px;--fs:17.5px;--lh:21.6px; text-align: justify; column-count:3; column-gap:26px; column-fill:auto;">
+      The record for the most fish species counted on a single dive belongs to Cape Kri in the Dampier Strait, where 374 were logged in one immersion. But the real measure of this place is how little of the tree of life is missing from it. Mollusks, from nudibranchs in colors nobody would design to cephalopods that change texture as well as shade, and giant clams a meter across. Echinoderms everywhere: crinoids on every sea fan, sea stars, urchins, sea cucumbers doing the unglamorous work of processing the sand. Crustaceans by the thousand, from cleaning shrimps to punching shrimps. Sponges the size of bathtubs. Tunicates, those small colonial animals that look like plants and are in fact closer relatives of ours than any other invertebrate on the reef. Segmented worms, flatworms, hydroids, jellyfish, bryozoans. It is not simply a place with a lot of life in it. It is where much of that life originated and spread outwards from, which is why biologists describe the Bird's Head as a cradle rather than a collection.
     </p>
   </div>
 </section>
@@ -327,6 +319,23 @@
   </div>
 </footer>
 
+<script>
+/* "The center of everything": one paragraph set in three justified columns of equal length (the height is searched so exactly three columns are filled; recomputed for every language and width). */
+(function () {
+  var p = document.querySelector(".papua-cols");
+  if (!p) return;
+  function balance() {
+    p.style.height = "";
+    if (window.innerWidth < 1100) return;
+    var lh = parseFloat(getComputedStyle(p).lineHeight);
+    if (!lh) return;
+    for (var n = 6; n <= 60; n++) { p.style.height = n * lh + "px"; if (p.scrollWidth <= p.clientWidth + 1) break; }
+  }
+  balance();
+  window.addEventListener("load", balance); window.addEventListener("resize", balance); window.addEventListener("waow:translated", balance);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(balance);
+})();
+</script>
 <script src="main.js"></script>
 <script src="itineraries-data.js"></script>
 <script src="regions-data.js"></script>
