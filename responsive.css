@@ -786,3 +786,12 @@
 @media (max-width: 1099.98px) {
   .tbp-page .tbp-intro__collage > figure:nth-of-type(2) img { object-position: 25% 50% !important; }
 }
+
+/* The Boat outdoor / indoor (mobile): photo, outdoor text, boat plan, indoor text, cabin plan. */
+@media (max-width: 1099.98px) {
+  .tbp-page .tbp-fullbleed .tbp-fullbleed__photo--tl { order: 1; }
+  .tbp-page .tbp-fullbleed .tbp-fullbleed__copy { order: 2; }
+  .tbp-page .tbp-fullbleed .tbp-fullbleed__photo--br { order: 3; }
+  .tbp-page .tbp-fullbleed--indoor .tbp-fullbleed__copy { order: 1; }
+  .tbp-page .tbp-fullbleed--indoor .tbp-fullbleed__photo--full-right { order: 2; }
+}
