@@ -752,3 +752,32 @@
   .px-rg-papua .rg-hero__photo { overflow: hidden; }
   .px-rg-papua .rg-hero__photo img { transform: scale(1.12) !important; transform-origin: 50% 0% !important; }
 }
+
+/* Homepage "A different world, every day" (mobile): larger and tighter. */
+@media (max-width: 1099.98px) {
+  .hp-dive__photo figcaption { font-size: 27px !important; line-height: 1.1 !important; bottom: 8px !important; }
+  .hp-dive__col .hp-dive__caption-out { font-size: 27px !important; line-height: 1.1 !important; margin-top: 2px !important; }
+}
+
+/* Dive Deep "Less people, more ocean" (mobile): the scuba icon is larger and sits on the photo's bottom-right corner. */
+@media (max-width: 1099.98px) {
+  .px-dd .dd-groups .dd-groups__copy > img.dot-icon { order: 4 !important; align-self: flex-end !important; width: 170px !important; max-width: none !important; margin: -96px -8px 0 0 !important; position: relative; z-index: 3; }
+  .px-dd .dd-groups .link-arrow { order: 5; margin-top: 40px !important; }
+}
+
+/* Dive Deep "The best part is below." (mobile): larger and centred. */
+@media (max-width: 1099.98px) {
+  .px-dd .dd-underwater p.dd-underwater__caption { text-align: center !important; font-size: 28px !important; line-height: 1.25 !important; align-self: stretch; width: auto !important; }
+}
+
+/* Dive Deep "Safety first" (mobile): octopus on the photo's bottom-right corner, larger title. */
+@media (max-width: 1099.98px) {
+  .px-dd .hp-safety__grid > img.dot-icon { align-self: flex-end !important; width: 150px !important; max-width: none !important; margin: -84px -8px 0 0 !important; position: relative; z-index: 3; }
+  .px-dd .hp-safety p.hp-safety__title { font-size: 28px !important; line-height: 1.25 !important; }
+}
+
+/* The Boat hero (mobile): the two photos swap stacking order (first photo on top). */
+@media (max-width: 1099.98px) {
+  .tbp-page .tbp-intro__collage > figure:nth-of-type(1) { z-index: 3 !important; }
+  .tbp-page .tbp-intro__collage > figure:nth-of-type(2) { z-index: 2 !important; }
+}
