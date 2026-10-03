@@ -782,7 +782,7 @@
   .tbp-page .tbp-intro__collage > figure:nth-of-type(2) { z-index: 2 !important; }
 }
 
-/* The Boat hero (mobile): second photo cropped towards the right so its centre moves to the left of the frame. */
+/* The Boat hero (mobile): second photo shifted so the boat sits on the right of the frame. */
 @media (max-width: 1099.98px) {
-  .tbp-page .tbp-intro__collage > figure:nth-of-type(2) img { object-position: 100% 50% !important; }
+  .tbp-page .tbp-intro__collage > figure:nth-of-type(2) img { object-position: 0% 50% !important; }
 }
